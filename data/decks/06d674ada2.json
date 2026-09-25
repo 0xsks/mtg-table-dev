@@ -1,0 +1,590 @@
+{
+  "id": "06d674ada2",
+  "name": "Duel: Knights vs. Dragons — Knights",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "343baad1-dd58-4d64-9b0a-258618094ceb",
+      "name": "Reprisal",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/343baad1-dd58-4d64-9b0a-258618094ceb?size=small"
+    },
+    {
+      "id": "67ba07ca-7be4-400e-a104-f7bbd527b6b4",
+      "name": "Test of Faith",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/67ba07ca-7be4-400e-a104-f7bbd527b6b4?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "99b56515-f688-495c-b721-2b9abc6628c2",
+      "name": "Heroes' Reunion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/99b56515-f688-495c-b721-2b9abc6628c2?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "297316bd-e91b-4b18-9d13-31dd51c92cce",
+      "name": "Silver Knight",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/297316bd-e91b-4b18-9d13-31dd51c92cce?size=small"
+    },
+    {
+      "id": "9c59d43e-0e07-4601-b6df-178010ea909f",
+      "name": "Harm's Way",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9c59d43e-0e07-4601-b6df-178010ea909f?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "0440701b-8df5-4125-8e06-f29f91acba2f",
+      "name": "Reciprocate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0440701b-8df5-4125-8e06-f29f91acba2f?size=small"
+    },
+    {
+      "id": "15d6476c-1944-48e8-9af6-6db78edd58e5",
+      "name": "Leonin Skyhunter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Cat Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/15d6476c-1944-48e8-9af6-6db78edd58e5?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "1c72229c-f3da-4e35-af79-14452efe581b",
+      "name": "Edge of Autumn",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/1c72229c-f3da-4e35-af79-14452efe581b?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b4c55b3a-0cca-4b4f-9915-61847b8f1455",
+      "name": "Mighty Leap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b4c55b3a-0cca-4b4f-9915-61847b8f1455?size=small"
+    },
+    {
+      "id": "660f69ef-c04f-4f53-80e6-8190549ab12a",
+      "name": "White Knight",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/660f69ef-c04f-4f53-80e6-8190549ab12a?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "d84fdc31-43f8-4cb9-b9a8-4ad3d1e90edb",
+      "name": "Plover Knights",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Creature — Kithkin Knight",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d84fdc31-43f8-4cb9-b9a8-4ad3d1e90edb?size=small"
+    },
+    {
+      "id": "9f299f1e-2694-44e6-aad4-1f29c2ee5553",
+      "name": "Juniper Order Ranger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{W}",
+      "type_line": "Creature — Human Knight Ranger",
+      "cmc": 5,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/9f299f1e-2694-44e6-aad4-1f29c2ee5553?size=small"
+    },
+    {
+      "id": "0a818fdf-2cbc-451a-9893-36da510d63e4",
+      "name": "Lionheart Maverick",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0a818fdf-2cbc-451a-9893-36da510d63e4?size=small"
+    },
+    {
+      "id": "9a1c3f32-9add-455d-bb7f-b31c430c6590",
+      "name": "Knight of Cliffhaven",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kor Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9a1c3f32-9add-455d-bb7f-b31c430c6590?size=small"
+    },
+    {
+      "id": "6156d61c-640e-4e8c-bd2f-838dfef0c885",
+      "name": "Knight of Meadowgrain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Kithkin Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6156d61c-640e-4e8c-bd2f-838dfef0c885?size=small"
+    },
+    {
+      "id": "f332cd21-46ed-4fff-9fd9-d5975bf0004d",
+      "name": "Knight of the White Orchid",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f332cd21-46ed-4fff-9fd9-d5975bf0004d?size=small"
+    },
+    {
+      "id": "205df311-a72d-40f1-b2ea-9b30274bc9bd",
+      "name": "Knight of the Reliquary",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/205df311-a72d-40f1-b2ea-9b30274bc9bd?size=small"
+    },
+    {
+      "id": "817602f9-0844-4ba2-bd7c-380fcd0c15ff",
+      "name": "Caravan Escort",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/817602f9-0844-4ba2-bd7c-380fcd0c15ff?size=small"
+    },
+    {
+      "id": "8400f1a7-ebf0-49b2-a51d-3b2056c05b61",
+      "name": "Knight Exemplar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8400f1a7-ebf0-49b2-a51d-3b2056c05b61?size=small"
+    },
+    {
+      "id": "c161772e-d8b1-4ca6-8971-dd46c96fb0f7",
+      "name": "Wilt-Leaf Cavaliers",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G/W}{G/W}{G/W}",
+      "type_line": "Creature — Elf Knight",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/c161772e-d8b1-4ca6-8971-dd46c96fb0f7?size=small"
+    },
+    {
+      "id": "14394198-0993-46ee-a3ea-5c7084a78772",
+      "name": "Treetop Village",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/14394198-0993-46ee-a3ea-5c7084a78772?size=small"
+    },
+    {
+      "id": "8453b08f-34cb-491d-be7d-dc4022f7c131",
+      "name": "Benalish Lancer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8453b08f-34cb-491d-be7d-dc4022f7c131?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "e296cd1a-0508-46c1-aeda-82ecde991caa",
+      "name": "Zhalfirin Commander",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e296cd1a-0508-46c1-aeda-82ecde991caa?size=small"
+    },
+    {
+      "id": "d45b0ed8-8692-4fa7-b32c-30d29028da3d",
+      "name": "Sejiri Steppe",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/d45b0ed8-8692-4fa7-b32c-30d29028da3d?size=small"
+    },
+    {
+      "id": "f01d6807-8fbd-4593-9582-71d4cd720728",
+      "name": "Henge Guardian",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}",
+      "type_line": "Artifact Creature — Dragon Wurm",
+      "cmc": 5,
+      "colors": [],
+      "image_small": "/api/img/f01d6807-8fbd-4593-9582-71d4cd720728?size=small"
+    },
+    {
+      "id": "8877b120-55ee-4e5a-9f51-e72a110f638e",
+      "name": "Alaborn Cavalier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8877b120-55ee-4e5a-9f51-e72a110f638e?size=small"
+    },
+    {
+      "id": "fdc53c6a-8e28-4314-9bcf-b31b6c6f56d7",
+      "name": "Selesnya Sanctuary",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/fdc53c6a-8e28-4314-9bcf-b31b6c6f56d7?size=small"
+    },
+    {
+      "id": "675bfd45-4b73-451c-b1d9-2fe46b5dd5aa",
+      "name": "Skyhunter Patrol",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Cat Knight",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/675bfd45-4b73-451c-b1d9-2fe46b5dd5aa?size=small"
+    },
+    {
+      "id": "bff31eba-8ab3-403e-8d82-37a18b279bec",
+      "name": "Oblivion Ring",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/bff31eba-8ab3-403e-8d82-37a18b279bec?size=small"
+    },
+    {
+      "id": "20bc9c3c-0c20-4ea6-a182-b7f3a75f5982",
+      "name": "Kabira Vindicator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/20bc9c3c-0c20-4ea6-a182-b7f3a75f5982?size=small"
+    },
+    {
+      "id": "ecf52798-b2e0-4d0a-a41b-8927bfa60375",
+      "name": "Grasslands",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/ecf52798-b2e0-4d0a-a41b-8927bfa60375?size=small"
+    },
+    {
+      "id": "bcda21e6-f423-4dd9-a4a3-bacfa83612d0",
+      "name": "Kinsbaile Cavalier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Kithkin Knight",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/bcda21e6-f423-4dd9-a4a3-bacfa83612d0?size=small"
+    },
+    {
+      "id": "e55202a1-c246-4b5b-94d6-43c86a69d61a",
+      "name": "Spidersilk Armor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e55202a1-c246-4b5b-94d6-43c86a69d61a?size=small"
+    },
+    {
+      "id": "39b8cf5e-10f6-49aa-82eb-2f56cc29d393",
+      "name": "Griffin Guide",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/39b8cf5e-10f6-49aa-82eb-2f56cc29d393?size=small"
+    },
+    {
+      "id": "72b5a580-c267-43f7-be77-fbc2928ff0ab",
+      "name": "Sigil Blessing",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/72b5a580-c267-43f7-be77-fbc2928ff0ab?size=small"
+    },
+    {
+      "id": "13eeff85-9e4a-46c9-841f-f3b1c556ef18",
+      "name": "Loxodon Warhammer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/13eeff85-9e4a-46c9-841f-f3b1c556ef18?size=small"
+    },
+    {
+      "id": "4ed9e062-f9aa-4f89-bfb4-cfecae426b27",
+      "name": "Knotvine Paladin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/4ed9e062-f9aa-4f89-bfb4-cfecae426b27?size=small"
+    },
+    {
+      "id": "237c62b7-7c0e-44bb-b420-d41aad2792a0",
+      "name": "Steward of Valeron",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Human Druid Knight",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/237c62b7-7c0e-44bb-b420-d41aad2792a0?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403704,
+  "updated": 1789869403704
+}

@@ -1,0 +1,119 @@
+{
+  "id": "c712a78731",
+  "userId": "u-a0c017dacf",
+  "authorName": "Advent Tester",
+  "name": "🎲 Limited Draft · 2026-09-22",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Uncharted Voyage",
+      "count": 1
+    },
+    {
+      "name": "Bake into a Pie",
+      "count": 1
+    },
+    {
+      "name": "Apothecary Stomper",
+      "count": 1
+    },
+    {
+      "name": "Dimir Guildgate",
+      "count": 1
+    },
+    {
+      "name": "Skyraker Giant",
+      "count": 1
+    },
+    {
+      "name": "Dragon Fodder",
+      "count": 1
+    },
+    {
+      "name": "Aegis Turtle",
+      "count": 1
+    },
+    {
+      "name": "Fierce Empath",
+      "count": 1
+    },
+    {
+      "name": "Helpful Hunter",
+      "count": 1
+    },
+    {
+      "name": "Springbloom Druid",
+      "count": 1
+    },
+    {
+      "name": "Uncharted Voyage",
+      "count": 1
+    },
+    {
+      "name": "Crow of Dark Tidings",
+      "count": 1
+    },
+    {
+      "name": "Pirate's Cutlass",
+      "count": 1
+    },
+    {
+      "name": "Ravenous Amulet",
+      "count": 1
+    },
+    {
+      "name": "Druid of the Cowl",
+      "count": 1
+    },
+    {
+      "name": "Treetop Snarespinner",
+      "count": 1
+    },
+    {
+      "name": "Sanguine Indulgence",
+      "count": 1
+    },
+    {
+      "name": "Bishop's Soldier",
+      "count": 1
+    },
+    {
+      "name": "Cancel",
+      "count": 1
+    },
+    {
+      "name": "Macabre Waltz",
+      "count": 1
+    },
+    {
+      "name": "Arbiter of Woe",
+      "count": 1
+    },
+    {
+      "name": "Plains",
+      "count": 5
+    },
+    {
+      "name": "Island",
+      "count": 3
+    },
+    {
+      "name": "Swamp",
+      "count": 4
+    },
+    {
+      "name": "Mountain",
+      "count": 3
+    },
+    {
+      "name": "Forest",
+      "count": 4
+    }
+  ],
+  "starter": false,
+  "draft": true,
+  "draftSet": "fdn",
+  "created": 1790095112113,
+  "updated": 1790095112113
+}

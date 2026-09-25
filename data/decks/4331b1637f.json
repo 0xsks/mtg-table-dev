@@ -1,0 +1,508 @@
+{
+  "id": "4331b1637f",
+  "name": "Duel: Zendikar vs. Eldrazi — Zendikar",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "c6f1e60f-a195-4590-80b0-86767de6c423",
+      "name": "Avenger of Zendikar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/c6f1e60f-a195-4590-80b0-86767de6c423?size=small"
+    },
+    {
+      "id": "f762546c-f5eb-420d-a8f7-c3566cd8f506",
+      "name": "Affa Guard Hound",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Dog",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f762546c-f5eb-420d-a8f7-c3566cd8f506?size=small"
+    },
+    {
+      "id": "817602f9-0844-4ba2-bd7c-380fcd0c15ff",
+      "name": "Caravan Escort",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/817602f9-0844-4ba2-bd7c-380fcd0c15ff?size=small"
+    },
+    {
+      "id": "20bc9c3c-0c20-4ea6-a182-b7f3a75f5982",
+      "name": "Kabira Vindicator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/20bc9c3c-0c20-4ea6-a182-b7f3a75f5982?size=small"
+    },
+    {
+      "id": "35155ed9-35f4-4b20-8885-c72b8372fa1d",
+      "name": "Stonework Puma",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Cat Ally",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/35155ed9-35f4-4b20-8885-c72b8372fa1d?size=small"
+    },
+    {
+      "id": "9a1c3f32-9add-455d-bb7f-b31c430c6590",
+      "name": "Knight of Cliffhaven",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kor Knight",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9a1c3f32-9add-455d-bb7f-b31c430c6590?size=small"
+    },
+    {
+      "id": "c0318a48-30e4-4ef7-be3d-5e561c5ce428",
+      "name": "Evolving Wilds",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c0318a48-30e4-4ef7-be3d-5e561c5ce428?size=small"
+    },
+    {
+      "id": "05c4a9c4-20d5-457d-9127-c27b8768255a",
+      "name": "Makindi Griffin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Griffin",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/05c4a9c4-20d5-457d-9127-c27b8768255a?size=small"
+    },
+    {
+      "id": "0849b6dd-0330-4b7e-b7da-98e767adb4a0",
+      "name": "Graypelt Refuge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/0849b6dd-0330-4b7e-b7da-98e767adb4a0?size=small"
+    },
+    {
+      "id": "2c655916-08fc-4971-be2a-1e33bf8b22f3",
+      "name": "Oust",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2c655916-08fc-4971-be2a-1e33bf8b22f3?size=small"
+    },
+    {
+      "id": "07ced55b-27e2-4549-90e4-31c9718e1395",
+      "name": "Repel the Darkness",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/07ced55b-27e2-4549-90e4-31c9718e1395?size=small"
+    },
+    {
+      "id": "75c85fa4-862d-4f94-9531-b62775838ab9",
+      "name": "Sheer Drop",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/75c85fa4-862d-4f94-9531-b62775838ab9?size=small"
+    },
+    {
+      "id": "d0c5c07b-df81-4941-ae7e-2d38e317059d",
+      "name": "Turntimber Grove",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/d0c5c07b-df81-4941-ae7e-2d38e317059d?size=small"
+    },
+    {
+      "id": "22f40dfc-a35d-4094-9805-0de8b7f61cb0",
+      "name": "Stirring Wildwood",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/22f40dfc-a35d-4094-9805-0de8b7f61cb0?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b93b6f18-87f1-4b7c-bfdd-1b2a6384b00d",
+      "name": "Graypelt Hunter",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Human Warrior Ally",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b93b6f18-87f1-4b7c-bfdd-1b2a6384b00d?size=small"
+    },
+    {
+      "id": "06dda49d-25a2-4fa3-80f2-0d784e1ad30f",
+      "name": "Grazing Gladehart",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Antelope",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/06dda49d-25a2-4fa3-80f2-0d784e1ad30f?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "7bc8325b-c7a8-49a5-8a54-a419800ffb93",
+      "name": "Daggerback Basilisk",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Basilisk",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/7bc8325b-c7a8-49a5-8a54-a419800ffb93?size=small"
+    },
+    {
+      "id": "2f70f45f-aad0-47d5-9ed1-d5b1d591f775",
+      "name": "Frontier Guide",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Scout",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2f70f45f-aad0-47d5-9ed1-d5b1d591f775?size=small"
+    },
+    {
+      "id": "92144021-7425-44e1-a32b-13252f1b7036",
+      "name": "Primal Command",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/92144021-7425-44e1-a32b-13252f1b7036?size=small"
+    },
+    {
+      "id": "b903472f-bd9b-4d7e-9820-34b7dd601ecb",
+      "name": "Joraga Bard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elf Rogue Bard Ally",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b903472f-bd9b-4d7e-9820-34b7dd601ecb?size=small"
+    },
+    {
+      "id": "553ac818-f476-43fd-841c-c91d78c2506e",
+      "name": "Retreat to Kazandu",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/553ac818-f476-43fd-841c-c91d78c2506e?size=small"
+    },
+    {
+      "id": "159c309c-568d-4780-9db5-b50a997e7bb2",
+      "name": "Khalni Heart Expedition",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/159c309c-568d-4780-9db5-b50a997e7bb2?size=small"
+    },
+    {
+      "id": "821e9cb9-f78e-4d11-9c36-42e8b84b49cd",
+      "name": "Groundswell",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/821e9cb9-f78e-4d11-9c36-42e8b84b49cd?size=small"
+    },
+    {
+      "id": "3e76be46-cf81-4fef-bc5b-f87666cb0413",
+      "name": "Harrow",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/3e76be46-cf81-4fef-bc5b-f87666cb0413?size=small"
+    },
+    {
+      "id": "14024eba-58aa-4c28-afbe-cde407f7ddd7",
+      "name": "Ondu Giant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Giant Druid",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/14024eba-58aa-4c28-afbe-cde407f7ddd7?size=small"
+    },
+    {
+      "id": "3f203c27-0474-449d-aa24-2125ad80fb68",
+      "name": "Turntimber Basilisk",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Basilisk",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/3f203c27-0474-449d-aa24-2125ad80fb68?size=small"
+    },
+    {
+      "id": "0c3d4afc-5bb7-4159-9a11-f9c989dd9043",
+      "name": "Territorial Baloth",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0c3d4afc-5bb7-4159-9a11-f9c989dd9043?size=small"
+    },
+    {
+      "id": "557b2178-2778-4596-9c50-28212616c56c",
+      "name": "Tajuru Archer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Archer Ally",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/557b2178-2778-4596-9c50-28212616c56c?size=small"
+    },
+    {
+      "id": "28d10cf2-c40d-4748-add0-f9cdd606030c",
+      "name": "Scute Mob",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Insect",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/28d10cf2-c40d-4748-add0-f9cdd606030c?size=small"
+    },
+    {
+      "id": "491b8613-d5cd-4749-9c1b-d27a388c616a",
+      "name": "Seer's Sundial",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/491b8613-d5cd-4749-9c1b-d27a388c616a?size=small"
+    },
+    {
+      "id": "9499b38f-5030-4348-a0ff-9002b0e46f2a",
+      "name": "Beastbreaker of Bala Ged",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Warrior",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/9499b38f-5030-4348-a0ff-9002b0e46f2a?size=small"
+    },
+    {
+      "id": "be120499-fe2f-4c21-982c-566d0dbbddff",
+      "name": "Explorer's Scope",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/be120499-fe2f-4c21-982c-566d0dbbddff?size=small"
+    },
+    {
+      "id": "46c7f3e0-b23a-4786-b452-583d905113e2",
+      "name": "Veteran Warleader",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Creature — Human Soldier Ally",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/46c7f3e0-b23a-4786-b452-583d905113e2?size=small"
+    },
+    {
+      "id": "60f42969-bb5c-4183-8bd3-ba87f008391d",
+      "name": "Wildheart Invoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/60f42969-bb5c-4183-8bd3-ba87f008391d?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403707,
+  "updated": 1789869403707
+}

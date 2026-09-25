@@ -1,0 +1,402 @@
+{
+  "id": "7ff9d905a9",
+  "name": "Duel: Garruk vs. Liliana — Garruk",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "e0899da3-7beb-4161-81a3-e2d694e5b8a5",
+      "name": "Invigorate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e0899da3-7beb-4161-81a3-e2d694e5b8a5?size=small"
+    },
+    {
+      "id": "7afc4a15-5ff8-457a-aa62-803b2d78d912",
+      "name": "Nature's Lore",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/7afc4a15-5ff8-457a-aa62-803b2d78d912?size=small"
+    },
+    {
+      "id": "c997fe6c-cb57-4e0e-9267-42bd12cc3b03",
+      "name": "Elephant Guide",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/c997fe6c-cb57-4e0e-9267-42bd12cc3b03?size=small"
+    },
+    {
+      "id": "86d6b411-4a31-4bfc-8dd6-e19f553bb29b",
+      "name": "Rancor",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/86d6b411-4a31-4bfc-8dd6-e19f553bb29b?size=small"
+    },
+    {
+      "id": "23464d53-fa76-40e2-84c3-b6d6cc729be4",
+      "name": "Lignify",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Kindred Enchantment — Treefolk Aura",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/23464d53-fa76-40e2-84c3-b6d6cc729be4?size=small"
+    },
+    {
+      "id": "1254929b-0be1-4068-af69-7e59840c8b98",
+      "name": "Genju of the Cedars",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/1254929b-0be1-4068-af69-7e59840c8b98?size=small"
+    },
+    {
+      "id": "fd1f95bf-48ea-455a-8a6c-0249b11c8900",
+      "name": "Giant Growth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/fd1f95bf-48ea-455a-8a6c-0249b11c8900?size=small"
+    },
+    {
+      "id": "0a368f72-cc88-4f32-aad4-22d92c4d032d",
+      "name": "Krosan Tusker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Creature — Boar Beast",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0a368f72-cc88-4f32-aad4-22d92c4d032d?size=small"
+    },
+    {
+      "id": "941fa83a-cb61-47b1-83a7-7ce7e894c338",
+      "name": "Plated Slagwurm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}{G}{G}",
+      "type_line": "Creature — Wurm",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/941fa83a-cb61-47b1-83a7-7ce7e894c338?size=small"
+    },
+    {
+      "id": "1fa77af1-96e1-445b-a935-a5eb4c23e954",
+      "name": "Indrik Stomphowler",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/1fa77af1-96e1-445b-a935-a5eb4c23e954?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "08cf7ee6-ba30-42cd-a5b3-fd2fe7252f11",
+      "name": "Garruk Wildspeaker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Legendary Planeswalker — Garruk",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/08cf7ee6-ba30-42cd-a5b3-fd2fe7252f11?size=small"
+    },
+    {
+      "id": "114fefca-8472-4c09-ae61-75d300d6e681",
+      "name": "Albino Troll",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Troll",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/114fefca-8472-4c09-ae61-75d300d6e681?size=small"
+    },
+    {
+      "id": "26bfde99-7761-48e1-851a-522f888d0f6c",
+      "name": "Basking Rootwalla",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Lizard",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/26bfde99-7761-48e1-851a-522f888d0f6c?size=small"
+    },
+    {
+      "id": "bd7138fb-6aa7-455e-b1f7-ca08d747277d",
+      "name": "Harmonize",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bd7138fb-6aa7-455e-b1f7-ca08d747277d?size=small"
+    },
+    {
+      "id": "1519b17c-9003-43e0-958f-1fcd20ab2d70",
+      "name": "Serrated Arrows",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/1519b17c-9003-43e0-958f-1fcd20ab2d70?size=small"
+    },
+    {
+      "id": "43baa030-c455-4922-bd42-d36181dbb319",
+      "name": "Windstorm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/43baa030-c455-4922-bd42-d36181dbb319?size=small"
+    },
+    {
+      "id": "1d8e9cbb-8bf4-4a48-a58e-79deb3abdf7f",
+      "name": "Overrun",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}{G}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/1d8e9cbb-8bf4-4a48-a58e-79deb3abdf7f?size=small"
+    },
+    {
+      "id": "011f805f-3ebb-4748-a5de-8a10b5f47dcd",
+      "name": "Beast Attack",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}{G}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/011f805f-3ebb-4748-a5de-8a10b5f47dcd?size=small"
+    },
+    {
+      "id": "019897e4-d3ba-43b1-9bd9-2ebba6e3b349",
+      "name": "Rude Awakening",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/019897e4-d3ba-43b1-9bd9-2ebba6e3b349?size=small"
+    },
+    {
+      "id": "2f48df6c-8d5d-4d8a-b98a-793f6a56184d",
+      "name": "Ravenous Baloth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2f48df6c-8d5d-4d8a-b98a-793f6a56184d?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "3134cf43-7723-4420-be98-c6fc7b5bb49b",
+      "name": "Stampeding Wildebeests",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Antelope Beast",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/3134cf43-7723-4420-be98-c6fc7b5bb49b?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "14394198-0993-46ee-a3ea-5c7084a78772",
+      "name": "Treetop Village",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/14394198-0993-46ee-a3ea-5c7084a78772?size=small"
+    },
+    {
+      "id": "c41073e8-01cc-4d19-acb5-caaf2861bc6a",
+      "name": "Slippery Karst",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c41073e8-01cc-4d19-acb5-caaf2861bc6a?size=small"
+    },
+    {
+      "id": "4683fa31-da33-4313-82b5-0ed91f33e8d3",
+      "name": "Vine Trellis",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Plant Wall",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/4683fa31-da33-4313-82b5-0ed91f33e8d3?size=small"
+    },
+    {
+      "id": "4d5be4ab-f85a-4272-ac08-99cb0105eb11",
+      "name": "Wild Mongrel",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Dog",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/4d5be4ab-f85a-4272-ac08-99cb0105eb11?size=small"
+    },
+    {
+      "id": "a25d3ffa-cd8c-4b6a-ac63-9bb92cb8802c",
+      "name": "Wirewood Savage",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/a25d3ffa-cd8c-4b6a-ac63-9bb92cb8802c?size=small"
+    },
+    {
+      "id": "1aeb6b3a-1e84-4181-9e7f-d5a88ebf08b1",
+      "name": "Blastoderm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/1aeb6b3a-1e84-4181-9e7f-d5a88ebf08b1?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403702,
+  "updated": 1789869403702
+}

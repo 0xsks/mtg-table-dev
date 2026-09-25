@@ -1,0 +1,432 @@
+{
+  "id": "210b78452c",
+  "name": "Duel: Elspeth vs. Kiora — Elspeth",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "c2ef15f8-4d37-4ea1-a8a2-6383f6be088f",
+      "name": "Gustcloak Skirmisher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Bird Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c2ef15f8-4d37-4ea1-a8a2-6383f6be088f?size=small"
+    },
+    {
+      "id": "f6aba9c7-7f91-4f06-915b-70ed7db8f95f",
+      "name": "Gustcloak Sentinel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f6aba9c7-7f91-4f06-915b-70ed7db8f95f?size=small"
+    },
+    {
+      "id": "257c396c-d8cc-487c-a6cb-2892c7e568a1",
+      "name": "Kinsbaile Skirmisher",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kithkin Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/257c396c-d8cc-487c-a6cb-2892c7e568a1?size=small"
+    },
+    {
+      "id": "9ccce13a-77e6-4c74-9acc-d5e7c271872a",
+      "name": "Icatian Javelineers",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9ccce13a-77e6-4c74-9acc-d5e7c271872a?size=small"
+    },
+    {
+      "id": "9fc32454-fc44-454e-ba25-7bd0687cf99d",
+      "name": "Loxodon Partisan",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Elephant Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9fc32454-fc44-454e-ba25-7bd0687cf99d?size=small"
+    },
+    {
+      "id": "d7501662-1216-4e08-bd2b-e0a459057942",
+      "name": "Kor Skyfisher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kor Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d7501662-1216-4e08-bd2b-e0a459057942?size=small"
+    },
+    {
+      "id": "75743f66-fd2d-47e7-b56f-1c95311d09c2",
+      "name": "Mortal's Ardor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/75743f66-fd2d-47e7-b56f-1c95311d09c2?size=small"
+    },
+    {
+      "id": "b4c55b3a-0cca-4b4f-9915-61847b8f1455",
+      "name": "Mighty Leap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b4c55b3a-0cca-4b4f-9915-61847b8f1455?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "46f9c5ab-f793-4cf2-b88a-5af38a7b4616",
+      "name": "Gustcloak Harrier",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Bird Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/46f9c5ab-f793-4cf2-b88a-5af38a7b4616?size=small"
+    },
+    {
+      "id": "5303ce82-e82a-498e-af4f-16a56d8188ff",
+      "name": "Gustcloak Savior",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Bird Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/5303ce82-e82a-498e-af4f-16a56d8188ff?size=small"
+    },
+    {
+      "id": "a91d9163-c1f2-4eae-acab-5dabbc71d7d4",
+      "name": "Elspeth, Sun's Champion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Legendary Planeswalker — Elspeth",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a91d9163-c1f2-4eae-acab-5dabbc71d7d4?size=small"
+    },
+    {
+      "id": "aaa5bee9-3f6a-45b0-a282-6b23222e948f",
+      "name": "Secluded Steppe",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/aaa5bee9-3f6a-45b0-a282-6b23222e948f?size=small"
+    },
+    {
+      "id": "0e518f9e-d74d-4a6f-8fde-5e3ec5834e63",
+      "name": "Banisher Priest",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0e518f9e-d74d-4a6f-8fde-5e3ec5834e63?size=small"
+    },
+    {
+      "id": "e6ac8dd2-f7af-44b6-841a-f0b6a4961e26",
+      "name": "Veteran Swordsmith",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e6ac8dd2-f7af-44b6-841a-f0b6a4961e26?size=small"
+    },
+    {
+      "id": "565c750e-47f9-4878-abff-ec973ec6d8a4",
+      "name": "Veteran Armorsmith",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/565c750e-47f9-4878-abff-ec973ec6d8a4?size=small"
+    },
+    {
+      "id": "82ab72c3-1f76-45ff-84b4-05f403866d44",
+      "name": "Sunlance",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/82ab72c3-1f76-45ff-84b4-05f403866d44?size=small"
+    },
+    {
+      "id": "c45b1d32-5a3a-4ec3-af11-d0ba947de175",
+      "name": "Court Street Denizen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c45b1d32-5a3a-4ec3-af11-d0ba947de175?size=small"
+    },
+    {
+      "id": "75091277-99fe-428b-95bd-5cba9e0146ef",
+      "name": "Standing Troops",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/75091277-99fe-428b-95bd-5cba9e0146ef?size=small"
+    },
+    {
+      "id": "aae001aa-10a0-482a-86fe-bf6ca7fc0866",
+      "name": "Dauntless Onslaught",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/aae001aa-10a0-482a-86fe-bf6ca7fc0866?size=small"
+    },
+    {
+      "id": "0cc10941-25b4-43cb-8689-c96659bd471d",
+      "name": "Soul Parry",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0cc10941-25b4-43cb-8689-c96659bd471d?size=small"
+    },
+    {
+      "id": "6e201980-e220-44dc-beab-ad13c20332bd",
+      "name": "Captain of the Watch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6e201980-e220-44dc-beab-ad13c20332bd?size=small"
+    },
+    {
+      "id": "6c7c8527-55f6-494d-b4f7-c427a5735053",
+      "name": "Raise the Alarm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6c7c8527-55f6-494d-b4f7-c427a5735053?size=small"
+    },
+    {
+      "id": "89bb3b06-b33b-4897-882e-75b75790ea02",
+      "name": "Celestial Flare",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/89bb3b06-b33b-4897-882e-75b75790ea02?size=small"
+    },
+    {
+      "id": "3267bf08-7585-4e2e-b472-97a357d264dc",
+      "name": "Gempalm Avenger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/3267bf08-7585-4e2e-b472-97a357d264dc?size=small"
+    },
+    {
+      "id": "21637fbe-d9d3-4d5b-a361-0687385d4738",
+      "name": "Decree of Justice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{X}{2}{W}{W}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/21637fbe-d9d3-4d5b-a361-0687385d4738?size=small"
+    },
+    {
+      "id": "f964c561-96ac-4558-b46e-ba2c472d5807",
+      "name": "Dictate of Heliod",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Enchantment",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f964c561-96ac-4558-b46e-ba2c472d5807?size=small"
+    },
+    {
+      "id": "82073551-8106-4e88-8d55-913d86bbe48a",
+      "name": "Noble Templar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{W}",
+      "type_line": "Creature — Human Cleric Soldier",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/82073551-8106-4e88-8d55-913d86bbe48a?size=small"
+    },
+    {
+      "id": "fef6faa4-520c-4823-bfdf-715cec7fcd4b",
+      "name": "Precinct Captain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/fef6faa4-520c-4823-bfdf-715cec7fcd4b?size=small"
+    },
+    {
+      "id": "a5e19147-e459-43a6-8ef0-e37968a462e3",
+      "name": "Mother of Runes",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a5e19147-e459-43a6-8ef0-e37968a462e3?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403700,
+  "updated": 1789869403700
+}

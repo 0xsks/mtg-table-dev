@@ -1,0 +1,436 @@
+{
+  "id": "b4a605715d",
+  "name": "Duel: Heroes vs. Monsters — Monsters",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "b82d8359-4841-478c-851b-13a1a0f94737",
+      "name": "Zhur-Taa Druid",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{G}",
+      "type_line": "Creature — Human Druid",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/b82d8359-4841-478c-851b-13a1a0f94737?size=small"
+    },
+    {
+      "id": "3f249a72-7568-4603-94f4-01a605fc1771",
+      "name": "Blood Ogre",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Ogre Warrior",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/3f249a72-7568-4603-94f4-01a605fc1771?size=small"
+    },
+    {
+      "id": "d432d17e-052b-4a81-bad8-14babf6e593f",
+      "name": "Deadly Recluse",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Spider",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d432d17e-052b-4a81-bad8-14babf6e593f?size=small"
+    },
+    {
+      "id": "14fb947c-563e-4811-98de-e25bd141a6e5",
+      "name": "Orcish Lumberjack",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Orc",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/14fb947c-563e-4811-98de-e25bd141a6e5?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 10,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "e8728ed5-02cc-4094-9278-48d22f9568dc",
+      "name": "Kavu Predator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Kavu",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e8728ed5-02cc-4094-9278-48d22f9568dc?size=small"
+    },
+    {
+      "id": "798af7cb-645f-4526-8a19-6e4595b93964",
+      "name": "Destructive Revelry",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{G}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/798af7cb-645f-4526-8a19-6e4595b93964?size=small"
+    },
+    {
+      "id": "88c67e15-833c-406a-b75f-8de97fbacf5a",
+      "name": "Satyr Hedonist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Satyr",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/88c67e15-833c-406a-b75f-8de97fbacf5a?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 11,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "c9767e0b-1284-4c9e-9d0c-fb0d17c35044",
+      "name": "Skarrgan Skybreaker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}{G}",
+      "type_line": "Creature — Giant Shaman",
+      "cmc": 7,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/c9767e0b-1284-4c9e-9d0c-fb0d17c35044?size=small"
+    },
+    {
+      "id": "84875873-46c5-4cd2-bd76-c5a9e7bfdb76",
+      "name": "Shower of Sparks",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/84875873-46c5-4cd2-bd76-c5a9e7bfdb76?size=small"
+    },
+    {
+      "id": "4979cc1b-9c1a-47e4-ae37-7c41798eb89a",
+      "name": "Polukranos, World Eater",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Legendary Creature — Hydra",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/4979cc1b-9c1a-47e4-ae37-7c41798eb89a?size=small"
+    },
+    {
+      "id": "0eb1b036-0856-4cfb-ace5-2731f13696bd",
+      "name": "Prey Upon",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0eb1b036-0856-4cfb-ace5-2731f13696bd?size=small"
+    },
+    {
+      "id": "4391b0af-2f26-4a45-9e2a-5bd8e9838107",
+      "name": "Pyroclasm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4391b0af-2f26-4a45-9e2a-5bd8e9838107?size=small"
+    },
+    {
+      "id": "ac095763-6f4e-4d4e-9c99-414646368f8d",
+      "name": "Emeritus of Abundance // Regrowth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G} // {1}{G}",
+      "type_line": "Creature — Elf Druid // Sorcery",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/ac095763-6f4e-4d4e-9c99-414646368f8d?size=small"
+    },
+    {
+      "id": "070408ff-5f23-4972-a9cc-d5351fd995f7",
+      "name": "Terrifying Presence",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/070408ff-5f23-4972-a9cc-d5351fd995f7?size=small"
+    },
+    {
+      "id": "4398ae9c-4177-4fee-95ba-e98b7f514f57",
+      "name": "Dragon Blood",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/4398ae9c-4177-4fee-95ba-e98b7f514f57?size=small"
+    },
+    {
+      "id": "73d74045-cc9b-4b01-bc5f-0f2eb4b01580",
+      "name": "Volt Charge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/73d74045-cc9b-4b01-bc5f-0f2eb4b01580?size=small"
+    },
+    {
+      "id": "400b43aa-c1d2-4435-b863-061f43889422",
+      "name": "Beast Within",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/400b43aa-c1d2-4435-b863-061f43889422?size=small"
+    },
+    {
+      "id": "0a368f72-cc88-4f32-aad4-22d92c4d032d",
+      "name": "Krosan Tusker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Creature — Boar Beast",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0a368f72-cc88-4f32-aad4-22d92c4d032d?size=small"
+    },
+    {
+      "id": "cf92a04d-279a-4843-949f-6a191fff559e",
+      "name": "Valley Rannet",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{R}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 6,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/cf92a04d-279a-4843-949f-6a191fff559e?size=small"
+    },
+    {
+      "id": "b9d52c11-f955-489e-b3c9-5a7e1a7933e8",
+      "name": "Skarrgan Firebird",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Creature — Phoenix",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b9d52c11-f955-489e-b3c9-5a7e1a7933e8?size=small"
+    },
+    {
+      "id": "ce5c02ae-e390-4da6-9904-ec138abbe047",
+      "name": "Crater Hellion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Creature — Hellion Beast",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/ce5c02ae-e390-4da6-9904-ec138abbe047?size=small"
+    },
+    {
+      "id": "95f5bf3f-3fa7-47db-981b-933cdb505398",
+      "name": "Conquering Manticore",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Creature — Manticore",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/95f5bf3f-3fa7-47db-981b-933cdb505398?size=small"
+    },
+    {
+      "id": "a3b03ce9-a0fb-4b0c-b02d-e4f93ef87445",
+      "name": "Deus of Calamity",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R/G}{R/G}{R/G}{R/G}{R/G}",
+      "type_line": "Creature — Spirit Avatar",
+      "cmc": 5,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/a3b03ce9-a0fb-4b0c-b02d-e4f93ef87445?size=small"
+    },
+    {
+      "id": "6ca097f1-eef0-4e18-ab5d-49bb4aeb74e2",
+      "name": "Kazandu Refuge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/6ca097f1-eef0-4e18-ab5d-49bb4aeb74e2?size=small"
+    },
+    {
+      "id": "4ba15588-01ae-431b-a846-f44df88ca134",
+      "name": "Ghor-Clan Savage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Centaur Berserker",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/4ba15588-01ae-431b-a846-f44df88ca134?size=small"
+    },
+    {
+      "id": "284e165e-9ab6-47fc-9685-0fb03de237df",
+      "name": "Llanowar Reborn",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/284e165e-9ab6-47fc-9685-0fb03de237df?size=small"
+    },
+    {
+      "id": "87573fa7-5593-4810-bc4a-0caa55577be5",
+      "name": "Gorehorn Minotaurs",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Minotaur Warrior",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/87573fa7-5593-4810-bc4a-0caa55577be5?size=small"
+    },
+    {
+      "id": "7294e30f-0356-4bcc-a264-4cd46d8f13a6",
+      "name": "Fires of Yavimaya",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{G}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/7294e30f-0356-4bcc-a264-4cd46d8f13a6?size=small"
+    },
+    {
+      "id": "7cfc5264-e27e-4286-9feb-0dda0b074097",
+      "name": "Crowned Ceratok",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Rhino",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/7cfc5264-e27e-4286-9feb-0dda0b074097?size=small"
+    },
+    {
+      "id": "430fa067-cecd-4958-851b-5908a0765063",
+      "name": "Troll Ascetic",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Troll Shaman",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/430fa067-cecd-4958-851b-5908a0765063?size=small"
+    },
+    {
+      "id": "3340d094-fe13-4087-abba-27e8c9a7f3c7",
+      "name": "Skarrg, the Rage Pits",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3340d094-fe13-4087-abba-27e8c9a7f3c7?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403702,
+  "updated": 1789869403702
+}

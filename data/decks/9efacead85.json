@@ -1,0 +1,466 @@
+{
+  "id": "9efacead85",
+  "name": "Duel: Blessed vs. Cursed — Cursed",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "43297ddd-276f-4d2d-9d9c-937603d0e376",
+      "name": "Abattoir Ghoul",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/43297ddd-276f-4d2d-9d9c-937603d0e376?size=small"
+    },
+    {
+      "id": "58f20b88-7b48-4d3b-b836-c7aef71cd337",
+      "name": "Appetite for Brains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/58f20b88-7b48-4d3b-b836-c7aef71cd337?size=small"
+    },
+    {
+      "id": "082b52c9-c46e-44d3-b723-546ba528e07b",
+      "name": "Dismal Backwater",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/082b52c9-c46e-44d3-b723-546ba528e07b?size=small"
+    },
+    {
+      "id": "23986add-b33d-4bad-86f3-e2d0f99cf949",
+      "name": "Barter in Blood",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/23986add-b33d-4bad-86f3-e2d0f99cf949?size=small"
+    },
+    {
+      "id": "c4ef03c8-2047-4170-9ac4-f26cc14ebf96",
+      "name": "Butcher Ghoul",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c4ef03c8-2047-4170-9ac4-f26cc14ebf96?size=small"
+    },
+    {
+      "id": "34a87901-98bb-41dd-b566-bcb510c20022",
+      "name": "Dread Return",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/34a87901-98bb-41dd-b566-bcb510c20022?size=small"
+    },
+    {
+      "id": "4682012c-d7e0-4257-b538-3de497507464",
+      "name": "Diregraf Ghoul",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4682012c-d7e0-4257-b538-3de497507464?size=small"
+    },
+    {
+      "id": "f38eac93-3a0e-40e0-84f8-3670fd84ca00",
+      "name": "Falkenrath Noble",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Vampire Noble",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f38eac93-3a0e-40e0-84f8-3670fd84ca00?size=small"
+    },
+    {
+      "id": "4443696a-0b9a-4081-91aa-800b5c4065d2",
+      "name": "Driver of the Dead",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4443696a-0b9a-4081-91aa-800b5c4065d2?size=small"
+    },
+    {
+      "id": "6987d609-ba0f-42bf-9b61-bdfb943c03b5",
+      "name": "Gravecrawler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6987d609-ba0f-42bf-9b61-bdfb943c03b5?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "850ccdcb-2cd7-4f27-aa9b-917a62a5e94d",
+      "name": "Ghoulraiser",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/850ccdcb-2cd7-4f27-aa9b-917a62a5e94d?size=small"
+    },
+    {
+      "id": "a2d4152d-c128-453c-86f5-f2ebcfd48b98",
+      "name": "Sever the Bloodline",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a2d4152d-c128-453c-86f5-f2ebcfd48b98?size=small"
+    },
+    {
+      "id": "80b582e3-1e02-4c24-87be-05880b56df70",
+      "name": "Human Frailty",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/80b582e3-1e02-4c24-87be-05880b56df70?size=small"
+    },
+    {
+      "id": "2a1f42ee-7f4e-4b2a-b60b-750662878a5c",
+      "name": "Moan of the Unhallowed",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2a1f42ee-7f4e-4b2a-b60b-750662878a5c?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "b804cb9c-349e-4143-a372-cf65470d5b46",
+      "name": "Mindwrack Demon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b804cb9c-349e-4143-a372-cf65470d5b46?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "62ffc952-b763-4b9e-acdf-164253bdfe72",
+      "name": "Compelling Deterrence",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/62ffc952-b763-4b9e-acdf-164253bdfe72?size=small"
+    },
+    {
+      "id": "870ebc0b-b748-4a21-b939-a48811451bba",
+      "name": "Harvester of Souls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/870ebc0b-b748-4a21-b939-a48811451bba?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "7cf48c1a-5709-4e24-8a85-8292a4457150",
+      "name": "Relentless Skaabs",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Zombie",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/7cf48c1a-5709-4e24-8a85-8292a4457150?size=small"
+    },
+    {
+      "id": "404c6bb8-4c64-458f-a4aa-98beb2c6a77c",
+      "name": "Makeshift Mauler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Zombie Horror",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/404c6bb8-4c64-458f-a4aa-98beb2c6a77c?size=small"
+    },
+    {
+      "id": "cbd27e6f-24e5-4e90-9612-27d8dcd29325",
+      "name": "Havengul Runebinder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/cbd27e6f-24e5-4e90-9612-27d8dcd29325?size=small"
+    },
+    {
+      "id": "e8bb16f6-71b2-4338-a546-27f37f50e811",
+      "name": "Cobbled Wings",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/e8bb16f6-71b2-4338-a546-27f37f50e811?size=small"
+    },
+    {
+      "id": "04def7e3-10e4-4733-8c19-8fa6e4469086",
+      "name": "Forbidden Alchemy",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/04def7e3-10e4-4733-8c19-8fa6e4469086?size=small"
+    },
+    {
+      "id": "158407ad-35a9-40e1-9762-1c0572b56ecb",
+      "name": "Diregraf Captain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Creature — Zombie Soldier",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/158407ad-35a9-40e1-9762-1c0572b56ecb?size=small"
+    },
+    {
+      "id": "febc9f63-a225-438d-b835-07a561ba91f5",
+      "name": "Tooth Collector",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Rogue",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/febc9f63-a225-438d-b835-07a561ba91f5?size=small"
+    },
+    {
+      "id": "c128272d-4611-477c-84b9-081bddcc7188",
+      "name": "Victim of Night",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c128272d-4611-477c-84b9-081bddcc7188?size=small"
+    },
+    {
+      "id": "736f293a-10b5-43bc-8aad-cb63f00601a6",
+      "name": "Stitched Drake",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature — Zombie Drake",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/736f293a-10b5-43bc-8aad-cb63f00601a6?size=small"
+    },
+    {
+      "id": "dd119aa8-8414-4942-9a28-3e68a9a52a8e",
+      "name": "Unbreathing Horde",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/dd119aa8-8414-4942-9a28-3e68a9a52a8e?size=small"
+    },
+    {
+      "id": "0efc87bc-2ae9-423d-8f95-6dbd18b57745",
+      "name": "Screeching Skaab",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Zombie",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/0efc87bc-2ae9-423d-8f95-6dbd18b57745?size=small"
+    },
+    {
+      "id": "11f1b897-bb7d-4217-97a7-c89f2453c8fa",
+      "name": "Tribute to Hunger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/11f1b897-bb7d-4217-97a7-c89f2453c8fa?size=small"
+    },
+    {
+      "id": "740fc68d-1f08-4e9e-a797-427dcd7733ba",
+      "name": "Scrapskin Drake",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Zombie Drake",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/740fc68d-1f08-4e9e-a797-427dcd7733ba?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403699,
+  "updated": 1789869403699
+}

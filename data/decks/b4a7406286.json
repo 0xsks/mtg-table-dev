@@ -1,0 +1,400 @@
+{
+  "id": "b4a7406286",
+  "name": "Duel: Elves vs. Goblins — Elves",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "df88baac-0d92-4b67-a417-aac79c74aa64",
+      "name": "Elvish Eulogist",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/df88baac-0d92-4b67-a417-aac79c74aa64?size=small"
+    },
+    {
+      "id": "15a92571-1409-40c3-84c3-da01d6f1b104",
+      "name": "Wirewood Lodge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/15a92571-1409-40c3-84c3-da01d6f1b104?size=small"
+    },
+    {
+      "id": "8fdaedf0-c4d2-4c2c-a183-026f06f3c360",
+      "name": "Allosaurus Rider",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/8fdaedf0-c4d2-4c2c-a183-026f06f3c360?size=small"
+    },
+    {
+      "id": "7aed7d9d-d796-493e-98fd-c5b1a26621ed",
+      "name": "Tranquil Thicket",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/7aed7d9d-d796-493e-98fd-c5b1a26621ed?size=small"
+    },
+    {
+      "id": "c3d0485a-209d-4040-94ab-856bdee83b81",
+      "name": "Elvish Warrior",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/c3d0485a-209d-4040-94ab-856bdee83b81?size=small"
+    },
+    {
+      "id": "2d016c5f-265b-4426-8dd8-87872f075f33",
+      "name": "Moonglove Extract",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/2d016c5f-265b-4426-8dd8-87872f075f33?size=small"
+    },
+    {
+      "id": "78db70ff-f68c-474a-9785-12a71be4f699",
+      "name": "Elvish Harbinger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/78db70ff-f68c-474a-9785-12a71be4f699?size=small"
+    },
+    {
+      "id": "87809c72-055f-4055-85a7-86d41bd655f1",
+      "name": "Slate of Ancestry",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/87809c72-055f-4055-85a7-86d41bd655f1?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "5ecbf790-619b-4b55-ae4c-29f1459b0031",
+      "name": "Ambush Commander",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/5ecbf790-619b-4b55-ae4c-29f1459b0031?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "bd7138fb-6aa7-455e-b1f7-ca08d747277d",
+      "name": "Harmonize",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bd7138fb-6aa7-455e-b1f7-ca08d747277d?size=small"
+    },
+    {
+      "id": "a8fd3631-af9c-4cf7-9336-95c84c7a925c",
+      "name": "Wildsize",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/a8fd3631-af9c-4cf7-9336-95c84c7a925c?size=small"
+    },
+    {
+      "id": "20602cb8-f925-4de0-ad4b-86d0f5514384",
+      "name": "Elvish Promenade",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Kindred Sorcery — Elf",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/20602cb8-f925-4de0-ad4b-86d0f5514384?size=small"
+    },
+    {
+      "id": "fd1f95bf-48ea-455a-8a6c-0249b11c8900",
+      "name": "Giant Growth",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/fd1f95bf-48ea-455a-8a6c-0249b11c8900?size=small"
+    },
+    {
+      "id": "83b4a09f-ea53-42b4-a41a-4299192a6fd3",
+      "name": "Imperious Perfect",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/83b4a09f-ea53-42b4-a41a-4299192a6fd3?size=small"
+    },
+    {
+      "id": "6a0b230b-d391-4998-a3f7-7b158a0ec2cd",
+      "name": "Llanowar Elves",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6a0b230b-d391-4998-a3f7-7b158a0ec2cd?size=small"
+    },
+    {
+      "id": "574b1d7e-beee-4744-a266-bce9c93bf1ca",
+      "name": "Gempalm Strider",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/574b1d7e-beee-4744-a266-bce9c93bf1ca?size=small"
+    },
+    {
+      "id": "e19879a4-7c77-4bfd-a7fa-5fe5cc82a193",
+      "name": "Heedless One",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elf Avatar",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e19879a4-7c77-4bfd-a7fa-5fe5cc82a193?size=small"
+    },
+    {
+      "id": "38807f17-1cf2-4736-ad10-df6c8b1a9f55",
+      "name": "Timberwatch Elf",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/38807f17-1cf2-4736-ad10-df6c8b1a9f55?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "d7a6315c-aa6f-4be1-a002-d7824bfad622",
+      "name": "Voice of the Woods",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d7a6315c-aa6f-4be1-a002-d7824bfad622?size=small"
+    },
+    {
+      "id": "19dbbecb-b4d0-49d2-b36e-58279e051c5c",
+      "name": "Wellwisher",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/19dbbecb-b4d0-49d2-b36e-58279e051c5c?size=small"
+    },
+    {
+      "id": "bcc492f5-d86d-473c-a316-855588a979bd",
+      "name": "Wirewood Herald",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bcc492f5-d86d-473c-a316-855588a979bd?size=small"
+    },
+    {
+      "id": "d237f5cc-2b9b-4929-9697-72078bac4c77",
+      "name": "Wirewood Symbiote",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Insect",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d237f5cc-2b9b-4929-9697-72078bac4c77?size=small"
+    },
+    {
+      "id": "2476e42b-b209-4207-8ed9-cb668f89b218",
+      "name": "Wood Elves",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Scout",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2476e42b-b209-4207-8ed9-cb668f89b218?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "f61eae36-9c4a-4d72-9431-6cac34dbb527",
+      "name": "Wren's Run Vanquisher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/f61eae36-9c4a-4d72-9431-6cac34dbb527?size=small"
+    },
+    {
+      "id": "0849f67b-da5d-49f7-840f-f87f48518156",
+      "name": "Lys Alana Huntmaster",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0849f67b-da5d-49f7-840f-f87f48518156?size=small"
+    },
+    {
+      "id": "e4ea6aac-d42b-4522-b7a9-4c99ed9c14bd",
+      "name": "Stonewood Invoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Mutant",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e4ea6aac-d42b-4522-b7a9-4c99ed9c14bd?size=small"
+    },
+    {
+      "id": "085f1b89-857b-4e2b-b796-0b95e53322bd",
+      "name": "Sylvan Messenger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elf",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/085f1b89-857b-4e2b-b796-0b95e53322bd?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403701,
+  "updated": 1789869403701
+}

@@ -1,0 +1,501 @@
+{
+  "id": "792cc0fdb4",
+  "name": "Duel: Blessed vs. Cursed — Blessed",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "3e44b411-ccb8-44c8-a021-2372c945f0d3",
+      "name": "Tandem Lookout",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Scout",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3e44b411-ccb8-44c8-a021-2372c945f0d3?size=small"
+    },
+    {
+      "id": "ec9e8653-13ae-446c-b341-85c9b3fa6ca8",
+      "name": "Topplegeist",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Spirit",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ec9e8653-13ae-446c-b341-85c9b3fa6ca8?size=small"
+    },
+    {
+      "id": "b72b39fd-507d-432b-b5b0-5657e5ed0a47",
+      "name": "Village Bell-Ringer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Scout",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b72b39fd-507d-432b-b5b0-5657e5ed0a47?size=small"
+    },
+    {
+      "id": "30a78066-c52e-48fd-bcf9-d0b60f00fddc",
+      "name": "Voice of the Provinces",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/30a78066-c52e-48fd-bcf9-d0b60f00fddc?size=small"
+    },
+    {
+      "id": "aa959355-ffac-442c-9c59-b2a654b4b400",
+      "name": "Captain of the Mists",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/aa959355-ffac-442c-9c59-b2a654b4b400?size=small"
+    },
+    {
+      "id": "53a14ab8-62f4-4873-b4ef-650f0aded095",
+      "name": "Gryff Vanguard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/53a14ab8-62f4-4873-b4ef-650f0aded095?size=small"
+    },
+    {
+      "id": "557b7e56-36f7-489c-a0fe-039c463f8bc5",
+      "name": "Mist Raven",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Bird",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/557b7e56-36f7-489c-a0fe-039c463f8bc5?size=small"
+    },
+    {
+      "id": "6e9a17b5-422c-4add-adbf-63e4492121e8",
+      "name": "Nephalia Smuggler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Human Rogue",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6e9a17b5-422c-4add-adbf-63e4492121e8?size=small"
+    },
+    {
+      "id": "b2288f7b-05b1-4a6c-8d02-42ffcadc6f0b",
+      "name": "Pore Over the Pages",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/b2288f7b-05b1-4a6c-8d02-42ffcadc6f0b?size=small"
+    },
+    {
+      "id": "20eb4f21-2f20-4e4b-998c-a72527585549",
+      "name": "Thraben Heretic",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/20eb4f21-2f20-4e4b-998c-a72527585549?size=small"
+    },
+    {
+      "id": "ca4537d3-c481-49ac-826c-b51c2e9b1fcf",
+      "name": "Slayer of the Wicked",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ca4537d3-c481-49ac-826c-b51c2e9b1fcf?size=small"
+    },
+    {
+      "id": "8f658073-5d90-4dca-b867-35ab827f22fd",
+      "name": "Spectral Gateguards",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Spirit Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8f658073-5d90-4dca-b867-35ab827f22fd?size=small"
+    },
+    {
+      "id": "26c38fbf-09ab-46fc-905e-ca45a85d794b",
+      "name": "Elder Cathar",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/26c38fbf-09ab-46fc-905e-ca45a85d794b?size=small"
+    },
+    {
+      "id": "1c4efa6c-4f29-41cd-a728-bf0e479ace05",
+      "name": "Tranquil Cove",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/1c4efa6c-4f29-41cd-a728-bf0e479ace05?size=small"
+    },
+    {
+      "id": "9d7b1446-7c9f-4b62-9877-e3d1060948aa",
+      "name": "Moorland Inquisitor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9d7b1446-7c9f-4b62-9877-e3d1060948aa?size=small"
+    },
+    {
+      "id": "9671c116-98cb-43b4-ace2-1e4f51a4a4c6",
+      "name": "Rebuke",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9671c116-98cb-43b4-ace2-1e4f51a4a4c6?size=small"
+    },
+    {
+      "id": "8a03d414-bff9-4aba-8b0a-0ed57982251e",
+      "name": "Doomed Traveler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8a03d414-bff9-4aba-8b0a-0ed57982251e?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "36c8cdec-5ca9-40b0-ba90-48966e674546",
+      "name": "Sharpened Pitchfork",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/36c8cdec-5ca9-40b0-ba90-48966e674546?size=small"
+    },
+    {
+      "id": "27c38500-1eb5-4ea5-8dcd-53bf4e1ee09c",
+      "name": "Dearly Departed",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Spirit",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/27c38500-1eb5-4ea5-8dcd-53bf4e1ee09c?size=small"
+    },
+    {
+      "id": "0c786c28-1085-4b3e-9164-5fa3adfa5010",
+      "name": "Increasing Devotion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0c786c28-1085-4b3e-9164-5fa3adfa5010?size=small"
+    },
+    {
+      "id": "e1c1fa29-362f-40b4-b67f-513f6592fb3b",
+      "name": "Seraph Sanctuary",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/e1c1fa29-362f-40b4-b67f-513f6592fb3b?size=small"
+    },
+    {
+      "id": "36fcc018-76c2-4246-8eca-b78115d568be",
+      "name": "Chapel Geist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Spirit",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/36fcc018-76c2-4246-8eca-b78115d568be?size=small"
+    },
+    {
+      "id": "619c620d-1920-40d1-98d4-df5607f84d26",
+      "name": "Momentary Blink",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/619c620d-1920-40d1-98d4-df5607f84d26?size=small"
+    },
+    {
+      "id": "81bd1cd0-fa8c-4e93-aebe-dfde70ac002b",
+      "name": "Gather the Townsfolk",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/81bd1cd0-fa8c-4e93-aebe-dfde70ac002b?size=small"
+    },
+    {
+      "id": "ec2120ff-a6d4-4192-96c0-33c139155ddf",
+      "name": "Champion of the Parish",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ec2120ff-a6d4-4192-96c0-33c139155ddf?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "de3d0a45-3b3a-4718-9cb8-ff0c2464d634",
+      "name": "Cathedral Sanctifier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/de3d0a45-3b3a-4718-9cb8-ff0c2464d634?size=small"
+    },
+    {
+      "id": "9396d218-35e4-4457-9f3a-18bae368b526",
+      "name": "Goldnight Redeemer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9396d218-35e4-4457-9f3a-18bae368b526?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "9b2a972a-a953-485d-920d-8f4f978ef758",
+      "name": "Emancipation Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9b2a972a-a953-485d-920d-8f4f978ef758?size=small"
+    },
+    {
+      "id": "cc5dbb93-63a2-478e-b874-1fdf3a03cbff",
+      "name": "Bonds of Faith",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/cc5dbb93-63a2-478e-b874-1fdf3a03cbff?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "2b497736-e502-4e0c-b5dc-6ce5e9e8d4ab",
+      "name": "Fiend Hunter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2b497736-e502-4e0c-b5dc-6ce5e9e8d4ab?size=small"
+    },
+    {
+      "id": "541b9d55-f237-4ff2-9e47-c58a381f0633",
+      "name": "Geist of Saint Traft",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Legendary Creature — Spirit Cleric",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/541b9d55-f237-4ff2-9e47-c58a381f0633?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "3c55bce1-8746-4554-9876-f443c37a125b",
+      "name": "Butcher's Cleaver",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/3c55bce1-8746-4554-9876-f443c37a125b?size=small"
+    },
+    {
+      "id": "88523d44-4469-4685-8f59-dbcf255e7fe0",
+      "name": "Tower Geist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/88523d44-4469-4685-8f59-dbcf255e7fe0?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403699,
+  "updated": 1789869403699
+}

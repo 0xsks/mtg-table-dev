@@ -1,0 +1,1481 @@
+
+      
+      <header class="topnav">
+        <a class="brand" href="#/">
+          <span class="brand-sparkle">✨</span> MTG Table
+          <small>Cozy Multiverse Sanctuary</small>
+        </a>
+        <nav class="nav-links">
+          <a class="active" href="#/">🧙 Character</a>
+          <a class="" href="#/tables">🏰 Tables</a>
+          <a class="" href="#/builder">📖 Decks</a>
+          <a class="" href="#/guilds">⚔️ Guilds &amp; Leagues</a>
+          <a class="" href="#/dao">🏛️ DAO</a>
+          <a class="" href="#/dnd">🎲 D&amp;D</a>
+          
+        </nav>
+        <div class="spacer"></div>
+        <span class="chip" id="lan-chip">Share <strong>http://192.168.8.136:8877</strong></span>
+
+        <!-- Gold Vault & Wager Hub Button -->
+        <button type="button" class="btn gold small vault-btn" id="vault-btn" title="Gold Vault, Refill &amp; Leaderboard">
+          🪙 <span id="user-gold">1,000</span>
+        </button>
+
+        <!-- Player Auth Profile Button -->
+        <button type="button" class="btn small user-badge-btn" id="auth-btn" title="Account profile, custom decks &amp; avatar">
+          🔑 Log In
+        </button>
+
+        <!-- Web3 Crypto Wallet Navigation Pill -->
+        <button type="button" class="btn small ghost web3-nav-pill" id="web3-nav-btn" title="Connect Faux Web3 Wallet (MetaMask / Phantom / Burner)">
+          👛 Web3
+        </button>
+
+        <!-- Visual Theme Skin Selector Widget -->
+        <div class="skin-widget" id="skin-widget">
+          <button type="button" class="btn small skin-btn" id="skin-btn" title="Switch Multiverse Visual Theme">
+            <span id="skin-btn-icon">✨</span>
+            <span id="skin-btn-label">Classic Arcane</span>
+            <span class="skin-caret">▾</span>
+          </button>
+          <div class="skin-popover" id="skin-popover" hidden="">
+            <div class="skin-popover-head">
+              <span>🎨 Multiverse Themes</span>
+              <button type="button" class="skin-popover-close" id="skin-close" aria-label="Close">✕</button>
+            </div>
+            <div class="skin-opt-list">
+              
+                <button type="button" class="skin-opt-btn active" data-skin-id="classic">
+                  <span class="skin-opt-icon">✨</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Classic Arcane</div>
+                    <div class="skin-opt-desc">Rich tavern felt &amp; warm antiqued fantasy gold</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #d7b45c, #184332);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="fairy">
+                  <span class="skin-opt-icon">🧚</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Forest Fairy Green</div>
+                    <div class="skin-opt-desc">Lush emerald woods, clover accents &amp; enchanted glades</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #4ade80, #0c3820);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="kitty">
+                  <span class="skin-opt-icon">🎀</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Hello Kitty</div>
+                    <div class="skin-opt-desc">Bubblegum pinks, pastel berry felt &amp; soft ribbons</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #ff75a0, #481434);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="princess">
+                  <span class="skin-opt-icon">👑</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Pure White Princess</div>
+                    <div class="skin-opt-desc">Pearlescent whites, moonlit lavender &amp; royal ice gems</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #ffffff, #2c3258);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="metal">
+                  <span class="skin-opt-icon">🤘</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Metalhead Red</div>
+                    <div class="skin-opt-desc">Crimson hellfire, charred obsidian &amp; aggressive distortion</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #ef4444, #45090e);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="cyber">
+                  <span class="skin-opt-icon">🤖</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Cypherpunk Blue</div>
+                    <div class="skin-opt-desc">Electric cyan, holographic gridlines &amp; deep oceanic mesh</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #00f0ff, #0b254a);"></span>
+                </button>
+              
+                <button type="button" class="skin-opt-btn " data-skin-id="edgelord">
+                  <span class="skin-opt-icon">💀</span>
+                  <div class="skin-opt-info">
+                    <div class="skin-opt-name">Edgelord Skull Punk Black</div>
+                    <div class="skin-opt-desc">Jet-black void, skeletal bone, barbed iron &amp; neon lime</div>
+                  </div>
+                  <span class="skin-swatch" style="background: linear-gradient(135deg, #a3e635, #141418);"></span>
+                </button>
+              
+            </div>
+          </div>
+        </div>
+
+        <!-- Audio Control Group -->
+        <div class="sound-controls">
+          <button class="btn gold small sfx-btn" id="sfx-toggle" title="Click to test/toggle sound effects">🔔 Sounds</button>
+          <div class="bgm-widget" id="bgm-widget">
+            <button class="btn gold small bgm-btn" id="bgm-btn" title="Whimsical Background Music (click for playlist)">
+              <span class="bgm-icon ">🎵</span>
+              <span id="bgm-label">🌸 Fairy Glade</span>
+              <span class="bgm-caret">▾</span>
+            </button>
+            <div class="bgm-popover" id="bgm-popover" hidden="">
+              <div class="bgm-popover-head">
+                <span>✨ Whimsical Music</span>
+                <button type="button" class="bgm-popover-close" id="bgm-close" aria-label="Close">✕</button>
+              </div>
+              <div class="bgm-track-list">
+                <button type="button" class="bgm-track-opt active" data-bgm="fairy">🌸 Fairy Glade</button>
+                <button type="button" class="bgm-track-opt " data-bgm="meadow">🍄 Sylvan Meadow</button>
+                <button type="button" class="bgm-track-opt " data-bgm="cyberpop">✨ Starlight Cyberpop</button>
+                <button type="button" class="bgm-track-opt " data-bgm="chiptune">⚔️ 8-Bit Dungeon</button>
+                <button type="button" class="bgm-track-opt " data-bgm="dreamcore">🎀 Kawaii Dreamcore</button>
+                <button type="button" class="bgm-track-opt " data-bgm="castle">🏰 Castle Promenade</button>
+                <button type="button" class="bgm-track-opt " data-bgm="off">🔇 Music Off</button>
+              </div>
+              <div class="bgm-vol-wrap">
+                <div class="bgm-vol-title">
+                  <span>Volume</span>
+                  <span id="bgm-vol-num">35%</span>
+                </div>
+                <input type="range" id="bgm-vol-slider" min="0" max="100" value="35" class="bgm-slider">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <input class="player-name" id="player-name" value="Player 1" maxlength="32" title="Your Wizard Name">
+      </header>
+      <!-- Remilia Net-Art Marquee Ticker -->
+      <div class="remilia-marquee" id="remilia-marquee">
+        <div class="remilia-marquee-track">
+          <span>✦ MULTIVERSE HEARTH · REMILIA NET ART · MILADY WIZARD REVOLUTION · DECENTRALIZED SPELL ENGINE · 100% ON-CHAIN MAGIC · [ MILADY CERTIFIED ] · [ FAUX WEB3 READY ] · FOREVER RUNNING ON THE HEARTH ✦</span>
+          <span>✦ MULTIVERSE HEARTH · REMILIA NET ART · MILADY WIZARD REVOLUTION · DECENTRALIZED SPELL ENGINE · 100% ON-CHAIN MAGIC · [ MILADY CERTIFIED ] · [ FAUX WEB3 READY ] · FOREVER RUNNING ON THE HEARTH ✦</span>
+        </div>
+      </div>
+      <div class="online-bar" id="online-bar">
+        <div class="online-bar-left">
+          <span class="online-pulse-dot"></span>
+          <span class="online-bar-title" id="online-count">Online (2)</span>
+        </div>
+        <div class="online-players-scroll" id="online-players-list">
+        <button type="button" class="online-chip is-me" data-player-key="48d91d56917a94d0474707ea877e7cdb">
+          <span class="online-avatar">🧙</span>
+          <span class="online-name">Player 1 (You)</span>
+          <span class="online-status-tag chip-idle">In Lobby</span>
+        </button>
+      
+        <button type="button" class="online-chip " data-player-key="1a3b450b328f7ab9c42b8eb3ab0ebac7">
+          <span class="online-avatar">🧙</span>
+          <span class="online-name">Player 2</span>
+          <span class="online-status-tag chip-idle">In Lobby</span>
+        </button>
+      </div>
+        <div class="online-bar-right">
+          <button type="button" class="btn small gold friends-nav-btn" id="friends-nav-btn" title="Open Friends Hub">
+            🤝 Friends <span class="badge" id="friends-badge" style="display:none">0</span>
+          </button>
+        </div>
+      </div>
+      <div class="dfk-world-viewport" id="profile-root">
+        <div class="dfk-world-container" id="homeroom-mount"><canvas id="dfk-world-canvas" class="dfk-world-canvas" width="800" height="516" style="width: 800px; height: 516px;"></canvas><div id="dfk-player-card" class="dfk-player-card">
+        <div class="dfk-card-inner">
+          <div class="dfk-portrait-wrap" id="dfk-card-portrait" title="Click to view Planeswalker Profile">
+            <span class="dfk-portrait-sprite">🧙</span>
+            <span class="dfk-level-badge">Lv. 9</span>
+          </div>
+          <div class="dfk-vitals-wrap">
+            <div class="dfk-hero-header">
+              <span class="dfk-hero-name" id="dfk-card-name" title="Player 1">Player 1</span>
+              <span class="dfk-planeswalker-tag">Planeswalker</span>
+            </div>
+            
+            <!-- MTG 5-Color Mana Pips Row -->
+            <div class="dfk-wubrg-row">
+              <span class="dfk-mana-pip pip-w" title="White Mana (Plains)">☀️</span>
+              <span class="dfk-mana-pip pip-u" title="Blue Mana (Island)">💧</span>
+              <span class="dfk-mana-pip pip-b" title="Black Mana (Swamp)">💀</span>
+              <span class="dfk-mana-pip pip-r" title="Red Mana (Mountain)">🔥</span>
+              <span class="dfk-mana-pip pip-g" title="Green Mana (Forest)">🌳</span>
+              <span class="dfk-status-pill" style="margin-left:auto">● Online</span>
+            </div>
+
+            <!-- Life Total Bar -->
+            <div class="dfk-bar-group">
+              <div class="dfk-bar-label"><span>❤️ Life</span><span id="dfk-hp-txt">100/100</span></div>
+              <div class="dfk-bar-track">
+                <div class="dfk-bar-fill hp-fill" id="dfk-hp-fill" style="width:100%"></div>
+              </div>
+            </div>
+
+            <!-- Mana Pool Bar -->
+            <div class="dfk-bar-group">
+              <div class="dfk-bar-label"><span>⚡ Mana</span><span id="dfk-mp-txt">100/100</span></div>
+              <div class="dfk-bar-track">
+                <div class="dfk-bar-fill mp-fill" id="dfk-mp-fill" style="width:100%"></div>
+              </div>
+            </div>
+
+            <!-- Wealth & Lotus Row -->
+            <div class="dfk-wealth-row">
+              <div class="dfk-wealth-badge" title="Gold Coins">🪙 <b id="dfk-card-gold">1,000</b> <small>Gold</small></div>
+              <div class="dfk-wealth-badge" title="Black Lotus Mana Gems">💎 <b>25</b> <small>Lotus</small></div>
+            </div>
+          </div>
+        </div>
+        <div class="dfk-card-actions">
+          <button type="button" class="btn small gold" id="btn-dfk-open-sheet" title="Open Full Character Sheet, Decks Armory &amp; Avatars">📜 Character Sheet</button>
+          <button type="button" class="btn small ghost" id="btn-dfk-open-decks" title="View Saved Decks Armory">🎴 Decks</button>
+        </div>
+      </div><div id="dfk-topright-hud" class="dfk-topright-hud">
+        <button type="button" class="dfk-nav-pill" data-warp="arena" title="Warp to Arena">🏰 Arena</button>
+        <button type="button" class="dfk-nav-pill" data-warp="builder" title="Warp to Tolarian Archive">📖 Decks</button>
+        <button type="button" class="dfk-nav-pill" data-warp="guilds" title="Warp to Citadel">⚔️ Guilds</button>
+        <button type="button" class="dfk-nav-pill" data-warp="dao" title="Warp to DAO Vault">🏛️ DAO</button>
+        <button type="button" class="dfk-nav-pill" data-warp="dnd" title="Warp to Astral Rift">🐉 D&amp;D</button>
+        <button type="button" class="dfk-nav-pill" data-warp="bazaar" title="Warp to Bazaar">🎴 Bazaar</button>
+        <button type="button" class="dfk-nav-pill" id="btn-dfk-music" title="Toggle Background Music">🎵 Music</button>
+        <button type="button" class="dfk-nav-pill" id="btn-dfk-fs" title="Toggle Fullscreen">⛶ Fullscreen</button>
+      </div><div id="dfk-bottom-hotbar" class="dfk-bottom-hotbar">
+        <button type="button" class="dfk-hotbar-btn active" data-spell="fireball" title="[1] Fireball (10 Mana)">🔥 Fireball [1]</button>
+        <button type="button" class="dfk-hotbar-btn " data-spell="frost" title="[2] Frost Nova (15 Mana)">❄️ Frost Nova [2]</button>
+        <button type="button" class="dfk-hotbar-btn " data-spell="sparkle" title="[3] Fairy Sparkles (5 Mana)">✨ Sparkle [3]</button>
+        <button type="button" class="dfk-hotbar-btn " data-spell="heal" title="[4] Healing Light (20 Mana)">💖 Heal [4]</button>
+        <button type="button" class="dfk-hotbar-btn" id="btn-dfk-interact" title="[E] Interact with landmark / NPC">💬 [E] Interact</button>
+      </div><div id="dfk-prompt" class="homeroom-prompt">
+          <div class="homeroom-prompt-content" style="border-color:#10b981;background:rgba(12,16,26,0.96)">
+            <span class="homeroom-prompt-icon">🎴</span>
+            <div class="homeroom-prompt-info">
+              <div style="display:flex;align-items:center;gap:6px">
+                <b style="color:#10b981;font-size:14px">🎴 The Oracle Bazaar</b>
+                <span class="dfk-planeswalker-tag" style="border-color:#10b981">✨ Full Oracle DB</span>
+              </div>
+              <span class="muted" style="font-size:11.5px;margin-top:2px">36,000+ Cards Catalog &amp; Scryfall Market</span>
+            </div>
+            <button type="button" class="btn small gold homeroom-enter-btn" id="dfk-enter-btn">👉 Press [E] to Enter</button>
+          </div>
+        </div><div id="dfk-dialog" class="homeroom-dialog" hidden=""></div></div>
+
+        <!-- Slide-out Character Sheet Drawer (Opened via Player Card or [C] or Mirror) -->
+        <div class="dfk-sheet-drawer" id="dfk-sheet-drawer" hidden="">
+          <div class="dfk-sheet-backdrop" id="dfk-sheet-backdrop"></div>
+          <div class="dfk-sheet-panel">
+            <div class="dfk-sheet-header">
+              <div style="display:flex;align-items:center;gap:10px">
+                <span style="font-size:24px">📜</span>
+                <div>
+                  <h2 style="margin:0;font-size:16px;color:var(--gold-2)">Planeswalker Character Profile</h2>
+                  <div style="font-size:11px;color:var(--muted)">Avatars · Multiverse Skins · Saved Decks · Web3 Wallet</div>
+                </div>
+              </div>
+              <button type="button" class="btn small ghost dfk-sheet-close" id="dfk-sheet-close-btn">✕ Close</button>
+            </div>
+            <div class="dfk-sheet-content" id="classic-profile-sheet">
+          <div class="profile-portal-hero hero">
+            <div>
+              <div class="portal-badge-pill">
+                <span class="pulse-dot"></span>
+                <span>✨ MULTIVERSE HEARTH · CHARACTER PORTAL</span>
+              </div>
+              <h1>Step Into the Hearth · Forge Your Character ✨</h1>
+              <p>Welcome, planeswalker! Create your wizard character, choose a familiar companion, connect your Web3 wallet, or log in to command the tables.</p>
+              
+              <div class="portal-perks-row">
+                <span class="portal-perk-chip">🪙 +1,000 Starter Gold</span>
+                <span class="portal-perk-chip">🎴 Custom Deck Builder</span>
+                <span class="portal-perk-chip">🦊 Faux Web3 Signer</span>
+                <span class="portal-perk-chip">🏆 Multiverse Leaderboard</span>
+              </div>
+
+              <div class="toolbar" style="margin-top:18px">
+                <a class="btn gold" href="#/tables">🏰 Jump Directly to Tables</a>
+                <button type="button" class="btn ghost" id="btn-quick-guest-hero">🌱 Quick Guest Character</button>
+                <a class="btn ghost" href="#/tables?second=1" target="mtg-p2">🧙 Player 2 Window</a>
+              </div>
+            </div>
+            <div class="hero-art"></div>
+          </div>
+
+          <!-- Character Portal Tabs -->
+          <div class="profile-portal-card card-panel">
+            <div class="profile-portal-tabs">
+              <button type="button" class="portal-tab-btn active" data-tab="login">
+                🔑 Character Log In
+              </button>
+              <button type="button" class="portal-tab-btn " data-tab="register">
+                ✨ Create New Character <span class="chip gold" style="font-size:10px;margin-left:4px">+1000 🪙</span>
+              </button>
+              <button type="button" class="portal-tab-btn " data-tab="wallet">
+                👛 Web3 Wallet Signer
+              </button>
+              <button type="button" class="portal-tab-btn " data-tab="guest">
+                🌱 Guest Planeswalker
+              </button>
+            </div>
+
+            <div class="portal-tab-content">
+              
+          <div class="portal-form-wrap">
+            <div id="portal-auth-err" class="auth-err-banner" style="display:none"></div>
+            <form id="portal-login-form" class="auth-form" style="margin-top:12px">
+              <div class="field">
+                <label>Wizard Username</label>
+                <input type="text" id="portal-un" required="" autocomplete="username" placeholder="e.g. jace_beleren" autofocus="">
+              </div>
+              <div class="field">
+                <label>Password</label>
+                <input type="password" id="portal-pw" required="" autocomplete="current-password" placeholder="••••••••">
+              </div>
+              <div class="row" style="margin-top:18px;gap:10px;flex-wrap:wrap">
+                <button type="submit" class="btn gold pulse" id="btn-portal-login-submit" style="padding:10px 24px">
+                  🔑 Log In to Hearth
+                </button>
+                <button type="button" class="btn ghost" id="btn-switch-to-reg">✨ Need a character? Create one (+1,000 🪙)</button>
+              </div>
+            </form>
+          </div>
+        
+            </div>
+          </div>
+
+          <!-- PLAYERS SAVED DECKS APPEAR FIRST -->
+          
+          <!-- Custom Decks Armory (Player Saved Decks First) -->
+          <div class="profile-decks-section card-panel" style="margin-top:20px">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:14px;flex-wrap:wrap;gap:10px">
+              <div>
+                <h2 style="margin:0;display:flex;align-items:center;gap:8px">
+                  <span>🎴</span> Saved Decks Armory
+                  <span class="chip gold" style="font-size:11px">0 Saved</span>
+                  <span class="chip" style="font-size:11px">54 Total</span>
+                </h2>
+                <p class="muted" style="margin:2px 0 0 0">Your personal spellbooks appear first. Take them into live matches or tweak them in the builder:</p>
+              </div>
+              <a class="btn gold small" href="#/builder">+ Create New Deck</a>
+            </div>
+
+            <div class="profile-deck-grid">
+              
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/069cfaa5-bba4-4503-b54e-b98fa9f0a0fc?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">White-Blue Deck</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="520726891e" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/520726891e" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="520726891e" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/c6f1e60f-a195-4590-80b0-86767de6c423?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Zendikar vs. Eldrazi — Zendikar</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="4331b1637f" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/4331b1637f" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="4331b1637f" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/12e7e2b5-3141-4a19-aa49-91ab7e5c211c?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Zendikar vs. Eldrazi — Eldrazi</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="5944bb8459" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/5944bb8459" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="5944bb8459" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/03a32ab2-cc55-43fb-82d8-c51a3849b344?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Venser vs. Koth — Koth</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            59 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="58d65b89f6" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/58d65b89f6" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="58d65b89f6" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/ddd1e712-826a-47ee-9578-ca61f2d65221?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Speed vs. Cunning — Speed</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="80bad76be3" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/80bad76be3" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="80bad76be3" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/ce9ae86a-3a1c-44bc-83bd-ab9422133548?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Venser vs. Koth — Venser</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            59 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="e50bbda0a5" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/e50bbda0a5" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="e50bbda0a5" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/22331eb5-c791-4d38-a6f7-cc5f4ef815ef?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Speed vs. Cunning — Cunning</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="f36f2150a4" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/f36f2150a4" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="f36f2150a4" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/fa4bf664-3b92-4598-b905-2bc090958c8b?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Sorin vs. Tibalt — Tibalt</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="1c9a009845" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/1c9a009845" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="1c9a009845" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/74ee66b2-5b69-461b-9590-1143adc692af?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Phyrexia vs. Coalition — Coalition</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="2d2c9640e7" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/2d2c9640e7" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="2d2c9640e7" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/2c1fa0c5-8eef-484e-9d5f-38e87d99ed73?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Phyrexia vs. Coalition — Phyrexia</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="2fdb016bc7" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/2fdb016bc7" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="2fdb016bc7" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/56a95546-c45a-4da5-b1e8-d5658b5b7d53?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Nissa vs. Ob Nixilis — Ob Nixilis</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="53251fa05b" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/53251fa05b" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="53251fa05b" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/58c45158-7858-409e-ab37-8a9a66ad8714?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Sorin vs. Tibalt — Sorin</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="f789d22a30" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/f789d22a30" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="f789d22a30" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/297316bd-e91b-4b18-9d13-31dd51c92cce?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Knights vs. Dragons — Knights</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="06d674ada2" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/06d674ada2" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="06d674ada2" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/edfbf056-c3b7-40e9-8e2b-333585978ac9?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Jace vs. Vraska — Vraska</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="21d556607d" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/21d556607d" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="21d556607d" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/d33cfe2d-150d-4ab7-990a-c8b0b6ff4d37?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Knights vs. Dragons — Dragons</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="46e4da9a93" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/46e4da9a93" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="46e4da9a93" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/a2e49925-a4ab-4960-ad83-20583dcd2c2c?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Nissa vs. Ob Nixilis — Nissa</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="a71e229632" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/a71e229632" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="a71e229632" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/7c784b00-dcef-4640-a305-5ff1baf2e6fd?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Izzet vs. Golgari — Izzet</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="16838fbf7c" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/16838fbf7c" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="16838fbf7c" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/9ee6c9a1-5e3c-4a3e-8f48-7054c1626bb1?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Jace vs. Chandra — Chandra</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="6b8a81fae1" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/6b8a81fae1" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="6b8a81fae1" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/72bcfb24-1649-4c8f-ba76-346914d11572?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Izzet vs. Golgari — Golgari</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="8e591c6181" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/8e591c6181" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="8e591c6181" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/acfd5dc9-affe-473c-92f6-7d0764332e7a?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Jace vs. Vraska — Jace</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="b6cb0694f9" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/b6cb0694f9" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="b6cb0694f9" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/fdc000af-a161-4803-bd24-4fdde083caec?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Jace vs. Chandra — Jace</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="cfd8e67026" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/cfd8e67026" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="cfd8e67026" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/0a368f72-cc88-4f32-aad4-22d92c4d032d?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Garruk vs. Liliana — Garruk</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="7ff9d905a9" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/7ff9d905a9" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="7ff9d905a9" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/b82d8359-4841-478c-851b-13a1a0f94737?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Heroes vs. Monsters — Monsters</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="b4a605715d" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/b4a605715d" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="b4a605715d" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/dd6e17a2-17f0-4d6b-b41a-3bd081b3ef63?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Garruk vs. Liliana — Liliana</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="b8c2276990" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/b8c2276990" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="b8c2276990" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/c552cb9e-41f2-4006-8ff4-5e214b91652e?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Heroes vs. Monsters — Heroes</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="c5eec1d0f6" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/c5eec1d0f6" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="c5eec1d0f6" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/9e71046b-1284-4d7f-93dd-a632c74d9cca?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elspeth vs. Tezzeret — Elspeth</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            59 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="6ddcfaefba" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/6ddcfaefba" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="6ddcfaefba" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/4ebce261-3a53-48f2-a173-0d98c68aff2c?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elves vs. Goblins — Goblins</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="862ead36b0" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/862ead36b0" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="862ead36b0" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/df88baac-0d92-4b67-a417-aac79c74aa64?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elves vs. Goblins — Elves</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="b4a7406286" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/b4a7406286" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="b4a7406286" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/7269b26a-058c-4a5c-aadf-733ea60f3de0?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elspeth vs. Tezzeret — Tezzeret</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="d83a30b33d" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/d83a30b33d" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="d83a30b33d" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/c2ef15f8-4d37-4ea1-a8a2-6383f6be088f?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elspeth vs. Kiora — Elspeth</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="210b78452c" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/210b78452c" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="210b78452c" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/1b635abe-ad7e-44b8-b3fe-6e365db87c29?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Elspeth vs. Kiora — Kiora</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="9eeecf77c5" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/9eeecf77c5" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="9eeecf77c5" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/f48ce122-b966-4c48-9b6c-b84dd0584cb9?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Divine vs. Demonic — Divine</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="a406abe657" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/a406abe657" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="a406abe657" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/69a41bec-7fb0-4060-918a-38cbbb329543?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Divine vs. Demonic — Demonic</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="e6cac98c52" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/e6cac98c52" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="e6cac98c52" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/27194865-1305-4fbd-8d84-c5201ad0210e?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Ajani vs. Nicol Bolas — Nicol Bolas</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            59 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="0763966c87" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/0763966c87" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="0763966c87" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/3e44b411-ccb8-44c8-a021-2372c945f0d3?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Blessed vs. Cursed — Blessed</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            59 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="792cc0fdb4" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/792cc0fdb4" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="792cc0fdb4" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/43297ddd-276f-4d2d-9d9c-937603d0e376?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Blessed vs. Cursed — Cursed</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="9efacead85" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/9efacead85" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="9efacead85" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/a1214688-084e-4a6a-928e-9434d594725a?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Duel: Ajani vs. Nicol Bolas — Ajani</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="c0e2f077fe" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/c0e2f077fe" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="c0e2f077fe" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/824b2d73-2151-4e5e-9f05-8f63e2bdcaa9?size=normal')">
+                          <span class="deck-format-badge">commander</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Krenko Goblins</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            134 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="8a81a3021b" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/8a81a3021b" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="8a81a3021b" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/3c0f5411-1940-410f-96ce-6f92513f753a?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Red Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="4647164b08" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/4647164b08" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="4647164b08" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/6a0b230b-d391-4998-a3f7-7b158a0ec2cd?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          <span class="deck-starter-pill">⭐ Starter</span>
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">Green Stompy</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards · Starter
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="fcf7f21725" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/fcf7f21725" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="fcf7f21725" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/069cfaa5-bba4-4503-b54e-b98fa9f0a0fc?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">white 1.0</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="940ce48842" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/940ce48842" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="940ce48842" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="bfc30cb59d" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/bfc30cb59d" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="bfc30cb59d" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="7665ac26b7" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/7665ac26b7" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="7665ac26b7" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/api/img/ca4c8b04-66af-4cb3-8003-9088d8344b20?size=normal')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">beeg gr33n d1ck</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="75ee231f28" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/75ee231f28" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="75ee231f28" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="8cfaa25a5f" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/8cfaa25a5f" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="8cfaa25a5f" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="3964f19423" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/3964f19423" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="3964f19423" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="a5cc5c1ef0" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/a5cc5c1ef0" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="a5cc5c1ef0" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="508e611ee3" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/508e611ee3" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="508e611ee3" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="20f312efb5" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/20f312efb5" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="20f312efb5" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="9f24dadf70" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/9f24dadf70" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="9f24dadf70" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="8b5cf6930f" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/8b5cf6930f" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="8b5cf6930f" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="a4c64cad7c" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/a4c64cad7c" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="a4c64cad7c" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">⚡ Dragon Tempest Assault</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="5216536595" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/5216536595" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="5216536595" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+                      <div class="profile-deck-card card-panel ">
+                        <div class="profile-deck-cover" style="background-image:url('/img/cardback.jpg')">
+                          <span class="deck-format-badge">duel</span>
+                          
+                        </div>
+                        <div class="profile-deck-body">
+                          <b class="profile-deck-title">🔥 Chandra's Fury Burn</b>
+                          <div class="faint" style="font-size:11px;margin-top:2px">
+                            60 cards 
+                          </div>
+                          <div class="profile-deck-actions" style="margin-top:12px;display:flex;gap:6px;flex-wrap:wrap">
+                            <button type="button" class="btn small gold btn-char-play-deck" data-did="d29d02762d" title="Play at tables with this deck">⚔️ Play</button>
+                            <a class="btn small ghost" href="#/builder/d29d02762d" title="Edit in deck builder">✏️ Edit</a>
+                            <button type="button" class="btn small ghost btn-char-copy-deck" data-did="d29d02762d" title="Duplicate deck">📋 Copy</button>
+                            
+                          </div>
+                        </div>
+                      </div>
+                    
+            </div>
+          </div>
+        
+
+          <!-- Bottom Showcase: LAN Tables & Leaderboard Preview -->
+          <div class="grid-2" style="margin-top:24px">
+            <!-- Active LAN Tables Preview -->
+            <div class="card-panel">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <h3 style="margin:0">✨ Active Tables on LAN</h3>
+                <a class="btn small gold" href="#/tables">🏰 All Tables</a>
+              </div>
+              <div class="portal-tables-list">
+                
+                        <div class="portal-table-item">
+                          <div>
+                            <b>Reliability Match</b>
+                            <div class="faint" style="font-size:11px">
+                              FL3C7R · duel · 
+                              Casual
+                            </div>
+                          </div>
+                          <a class="btn small gold" href="#/table/FL3C7R">Sit</a>
+                        </div>
+                      
+                        <div class="portal-table-item">
+                          <div>
+                            <b>Reliability Match</b>
+                            <div class="faint" style="font-size:11px">
+                              F53NRT · duel · 
+                              Casual
+                            </div>
+                          </div>
+                          <a class="btn small gold" href="#/table/F53NRT">Sit</a>
+                        </div>
+                      
+                        <div class="portal-table-item">
+                          <div>
+                            <b>P2 Comprehensive Match</b>
+                            <div class="faint" style="font-size:11px">
+                              JHDE47 · duel · 
+                              Casual
+                            </div>
+                          </div>
+                          <a class="btn small gold" href="#/table/JHDE47">Sit</a>
+                        </div>
+                      
+              </div>
+            </div>
+
+            <!-- Top Multiverse Wizards Preview -->
+            <div class="card-panel">
+              <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+                <h3 style="margin:0">🏆 Multiverse Leaderboard</h3>
+                <span class="faint" style="font-size:11px">Top Ranked</span>
+              </div>
+              <div class="portal-lb-list">
+                
+                        <div class="mini-lb-item">
+                          <span class="mini-lb-rank">🥇</span>
+                          <span class="mini-lb-name"><b>amber</b></span>
+                          <span class="mini-lb-score">🪙 11,500</span>
+                          <span class="mini-lb-wl faint">1W</span>
+                        </div>
+                      
+                        <div class="mini-lb-item">
+                          <span class="mini-lb-rank">🥈</span>
+                          <span class="mini-lb-name"><b>Alice Mage</b></span>
+                          <span class="mini-lb-score">🪙 1,700</span>
+                          <span class="mini-lb-wl faint">1W</span>
+                        </div>
+                      
+                        <div class="mini-lb-item">
+                          <span class="mini-lb-rank">🥉</span>
+                          <span class="mini-lb-name"><b>Alice Mage</b></span>
+                          <span class="mini-lb-score">🪙 1,688</span>
+                          <span class="mini-lb-wl faint">1W</span>
+                        </div>
+                      
+                        <div class="mini-lb-item">
+                          <span class="mini-lb-rank">4.</span>
+                          <span class="mini-lb-name"><b>Alice Mage</b></span>
+                          <span class="mini-lb-score">🪙 1,688</span>
+                          <span class="mini-lb-wl faint">1W</span>
+                        </div>
+                      
+              </div>
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+      </div>
+    

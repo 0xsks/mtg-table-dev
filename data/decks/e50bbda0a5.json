@@ -1,0 +1,546 @@
+{
+  "id": "e50bbda0a5",
+  "name": "Duel: Venser vs. Koth — Venser",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "ce9ae86a-3a1c-44bc-83bd-ab9422133548",
+      "name": "Slith Strider",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature — Slith",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/ce9ae86a-3a1c-44bc-83bd-ab9422133548?size=small"
+    },
+    {
+      "id": "bb75ec92-7c8e-47d3-a412-01d0c98321fe",
+      "name": "Cache Raiders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Merfolk Rogue",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/bb75ec92-7c8e-47d3-a412-01d0c98321fe?size=small"
+    },
+    {
+      "id": "a358def9-65a0-4741-896c-b2a8c8947768",
+      "name": "Whitemane Lion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Cat",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a358def9-65a0-4741-896c-b2a8c8947768?size=small"
+    },
+    {
+      "id": "5377e2d9-a846-4533-aeaf-9144ca8765da",
+      "name": "Cryptic Annelid",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Worm Beast",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5377e2d9-a846-4533-aeaf-9144ca8765da?size=small"
+    },
+    {
+      "id": "50ef0ac3-e911-4d67-a751-8d86160ae843",
+      "name": "Azorius Chancery",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/50ef0ac3-e911-4d67-a751-8d86160ae843?size=small"
+    },
+    {
+      "id": "8f61a0ea-c2e8-4571-9669-19abd8bbc874",
+      "name": "Venser, the Sojourner",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{U}",
+      "type_line": "Legendary Planeswalker — Venser",
+      "cmc": 5,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/8f61a0ea-c2e8-4571-9669-19abd8bbc874?size=small"
+    },
+    {
+      "id": "5e648262-3b9b-4c58-8e29-48356e3cb064",
+      "name": "Clone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Shapeshifter",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5e648262-3b9b-4c58-8e29-48356e3cb064?size=small"
+    },
+    {
+      "id": "cef45820-34d9-448e-b38b-176774d3ae49",
+      "name": "Overrule",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{X}{W}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/cef45820-34d9-448e-b38b-176774d3ae49?size=small"
+    },
+    {
+      "id": "3f5882a5-ea4c-4b2b-bcf9-7d15087d8bd4",
+      "name": "Sawtooth Loon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{U}",
+      "type_line": "Creature — Bird",
+      "cmc": 4,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/3f5882a5-ea4c-4b2b-bcf9-7d15087d8bd4?size=small"
+    },
+    {
+      "id": "4f6e1cf2-1c0e-4b9b-9687-dd02ac019fbc",
+      "name": "Coral Fighters",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk Soldier",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4f6e1cf2-1c0e-4b9b-9687-dd02ac019fbc?size=small"
+    },
+    {
+      "id": "a11a0f9c-2253-468f-a9c0-42e1e38aad96",
+      "name": "New Benalia",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a11a0f9c-2253-468f-a9c0-42e1e38aad96?size=small"
+    },
+    {
+      "id": "27064d4f-aeaf-4432-964a-97dfc1db835d",
+      "name": "Primal Plasma",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Elemental Shapeshifter",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/27064d4f-aeaf-4432-964a-97dfc1db835d?size=small"
+    },
+    {
+      "id": "61fc0fba-c285-4fad-85a6-79fd7f3f9c35",
+      "name": "Flood Plain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/61fc0fba-c285-4fad-85a6-79fd7f3f9c35?size=small"
+    },
+    {
+      "id": "4e5b8297-406e-4aef-ba46-867c1bf4cc8e",
+      "name": "Augury Owl",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Bird",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4e5b8297-406e-4aef-ba46-867c1bf4cc8e?size=small"
+    },
+    {
+      "id": "049ce45b-ab07-4bce-bb4a-83f5720b6ee7",
+      "name": "Wall of Denial",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Wall",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/049ce45b-ab07-4bce-bb4a-83f5720b6ee7?size=small"
+    },
+    {
+      "id": "651a1a4f-bdaa-44d6-ac45-050894788063",
+      "name": "Soaring Seacliff",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/651a1a4f-bdaa-44d6-ac45-050894788063?size=small"
+    },
+    {
+      "id": "c0119777-70da-4cba-8104-a7e78604d515",
+      "name": "Mistmeadow Witch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W/U}",
+      "type_line": "Creature — Kithkin Wizard",
+      "cmc": 2,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/c0119777-70da-4cba-8104-a7e78604d515?size=small"
+    },
+    {
+      "id": "62eea10f-eddf-43a1-96fe-5f6f37c42415",
+      "name": "Sky Spirit",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Spirit",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/62eea10f-eddf-43a1-96fe-5f6f37c42415?size=small"
+    },
+    {
+      "id": "b474bfdd-e0b2-4b96-b8eb-84ced9ac5a06",
+      "name": "Sejiri Refuge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b474bfdd-e0b2-4b96-b8eb-84ced9ac5a06?size=small"
+    },
+    {
+      "id": "a598d08d-c9d4-4de5-bef5-998dd115b8b6",
+      "name": "Minamo Sightbender",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a598d08d-c9d4-4de5-bef5-998dd115b8b6?size=small"
+    },
+    {
+      "id": "6226b346-ca4c-45ea-871c-1a8fb7f9be0d",
+      "name": "Kor Cartographer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Kor Scout",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6226b346-ca4c-45ea-871c-1a8fb7f9be0d?size=small"
+    },
+    {
+      "id": "558edff1-c156-4c0e-9991-ae5c8b5062ae",
+      "name": "Neurok Invisimancer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/558edff1-c156-4c0e-9991-ae5c8b5062ae?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "a7caae7e-9b88-4428-b9e3-86cb8c84bd65",
+      "name": "Scroll Thief",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Merfolk Rogue",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a7caae7e-9b88-4428-b9e3-86cb8c84bd65?size=small"
+    },
+    {
+      "id": "222b4c5a-2cd0-4851-9f2f-8685a658ebb4",
+      "name": "Galepowder Mage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Kithkin Wizard",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/222b4c5a-2cd0-4851-9f2f-8685a658ebb4?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "0d3c9145-14d0-4731-bc07-eb4c3f71d7e4",
+      "name": "Steel of the Godhead",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W/U}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/0d3c9145-14d0-4731-bc07-eb4c3f71d7e4?size=small"
+    },
+    {
+      "id": "9fc65c3f-ad29-4368-bf45-8345a7ec6f31",
+      "name": "Safe Passage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9fc65c3f-ad29-4368-bf45-8345a7ec6f31?size=small"
+    },
+    {
+      "id": "dd29a0e5-c1de-4e8a-8866-715e9f9cde1f",
+      "name": "Preordain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/dd29a0e5-c1de-4e8a-8866-715e9f9cde1f?size=small"
+    },
+    {
+      "id": "22e08a78-55b7-46b0-bd1a-a51548fc1861",
+      "name": "Path to Exile",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/22e08a78-55b7-46b0-bd1a-a51548fc1861?size=small"
+    },
+    {
+      "id": "5bd5cd33-20e2-4063-b422-2bde13021888",
+      "name": "Sphinx of Uthuun",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}{U}",
+      "type_line": "Creature — Sphinx",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5bd5cd33-20e2-4063-b422-2bde13021888?size=small"
+    },
+    {
+      "id": "680f7d5c-d518-4ebb-92d5-e835cd9eafe0",
+      "name": "Sunblast Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/680f7d5c-d518-4ebb-92d5-e835cd9eafe0?size=small"
+    },
+    {
+      "id": "bff31eba-8ab3-403e-8d82-37a18b279bec",
+      "name": "Oblivion Ring",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/bff31eba-8ab3-403e-8d82-37a18b279bec?size=small"
+    },
+    {
+      "id": "b5c268cc-891b-49df-8964-736d325b9403",
+      "name": "Angelic Shield",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{U}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/b5c268cc-891b-49df-8964-736d325b9403?size=small"
+    },
+    {
+      "id": "7bd4fc26-8351-4371-948b-f43346c3e771",
+      "name": "Revoke Existence",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/7bd4fc26-8351-4371-948b-f43346c3e771?size=small"
+    },
+    {
+      "id": "13063520-6e2f-4eaa-b84f-a38e5bf486f8",
+      "name": "Sigil of Sleep",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/13063520-6e2f-4eaa-b84f-a38e5bf486f8?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "cd5c0dd3-d210-44c7-a726-dff3c8483fe7",
+      "name": "Windreaver",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/cd5c0dd3-d210-44c7-a726-dff3c8483fe7?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "3f190c65-f939-4453-95d7-9acb36cf97c2",
+      "name": "Jedit's Dragoons",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{W}",
+      "type_line": "Creature — Cat Soldier",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/3f190c65-f939-4453-95d7-9acb36cf97c2?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403706,
+  "updated": 1789869403706
+}

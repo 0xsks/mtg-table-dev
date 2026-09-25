@@ -1,0 +1,594 @@
+{
+  "id": "8e591c6181",
+  "name": "Duel: Izzet vs. Golgari — Golgari",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "72bcfb24-1649-4c8f-ba76-346914d11572",
+      "name": "Plagued Rusalka",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/72bcfb24-1649-4c8f-ba76-346914d11572?size=small"
+    },
+    {
+      "id": "6040ba5e-7042-4095-9000-89bcb8ce1ea6",
+      "name": "Elves of Deep Shadow",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6040ba5e-7042-4095-9000-89bcb8ce1ea6?size=small"
+    },
+    {
+      "id": "6a8c5d3b-71b4-4e99-82e9-dfc0b98698b0",
+      "name": "Golgari Thug",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Human Warrior",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6a8c5d3b-71b4-4e99-82e9-dfc0b98698b0?size=small"
+    },
+    {
+      "id": "f87e5072-525e-4b0b-a5c3-ee5e89a81e1d",
+      "name": "Ravenous Rats",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Rat",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f87e5072-525e-4b0b-a5c3-ee5e89a81e1d?size=small"
+    },
+    {
+      "id": "6870b355-e53d-4fa2-887b-0f0445bcd9c5",
+      "name": "Jarad, Golgari Lich Lord",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}{G}{G}",
+      "type_line": "Legendary Creature — Zombie Elf",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/6870b355-e53d-4fa2-887b-0f0445bcd9c5?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "92105bc6-b64a-4bdc-99fe-7a2ccdbd4486",
+      "name": "Feast or Famine",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/92105bc6-b64a-4bdc-99fe-7a2ccdbd4486?size=small"
+    },
+    {
+      "id": "ad6ed9f1-2014-49e2-91c6-2b55c8d60cdc",
+      "name": "Putrefy",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/ad6ed9f1-2014-49e2-91c6-2b55c8d60cdc?size=small"
+    },
+    {
+      "id": "59587fde-c3f9-48c3-b991-46abb5423314",
+      "name": "Vigor Mortis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/59587fde-c3f9-48c3-b991-46abb5423314?size=small"
+    },
+    {
+      "id": "1dc1d70d-c6ab-4ff7-9665-a92c0b4606fe",
+      "name": "Nightmare Void",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/1dc1d70d-c6ab-4ff7-9665-a92c0b4606fe?size=small"
+    },
+    {
+      "id": "8d03f6eb-a146-45e8-a8e0-a46ec0c20c1d",
+      "name": "Golgari Germination",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/8d03f6eb-a146-45e8-a8e0-a46ec0c20c1d?size=small"
+    },
+    {
+      "id": "72474b66-1dda-409d-8703-b026c1777081",
+      "name": "Dakmor Salvage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/72474b66-1dda-409d-8703-b026c1777081?size=small"
+    },
+    {
+      "id": "a6e04dd2-75ad-4427-93cc-37226340c2fb",
+      "name": "Twilight's Call",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a6e04dd2-75ad-4427-93cc-37226340c2fb?size=small"
+    },
+    {
+      "id": "65222b42-8375-4c7a-b0fc-d6fb81876202",
+      "name": "Grim Flowering",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/65222b42-8375-4c7a-b0fc-d6fb81876202?size=small"
+    },
+    {
+      "id": "380eb7fd-bc79-4cad-9c2b-9b2b10761a72",
+      "name": "Barren Moor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/380eb7fd-bc79-4cad-9c2b-9b2b10761a72?size=small"
+    },
+    {
+      "id": "e16d52ca-f8de-4852-9bff-9d208e5f678f",
+      "name": "Life // Death",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G} // {1}{B}",
+      "type_line": "Sorcery // Sorcery",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/e16d52ca-f8de-4852-9bff-9d208e5f678f?size=small"
+    },
+    {
+      "id": "605038e9-2840-4c2d-bd7a-1004ae210e2a",
+      "name": "Boneyard Wurm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Wurm",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/605038e9-2840-4c2d-bd7a-1004ae210e2a?size=small"
+    },
+    {
+      "id": "42e19e30-3853-49e5-a3a3-5616e25df4ea",
+      "name": "Korozda Guildmage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/42e19e30-3853-49e5-a3a3-5616e25df4ea?size=small"
+    },
+    {
+      "id": "4d431445-d7db-4ce1-b422-41494d9be1b4",
+      "name": "Reassembling Skeleton",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton Warrior",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4d431445-d7db-4ce1-b422-41494d9be1b4?size=small"
+    },
+    {
+      "id": "0e7ed627-6ce3-4629-bcd9-e449642b8d34",
+      "name": "Greater Mossdog",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Plant Dog",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0e7ed627-6ce3-4629-bcd9-e449642b8d34?size=small"
+    },
+    {
+      "id": "21b6b9c8-110a-41ea-815b-17253447a02e",
+      "name": "Shambling Shell",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Creature — Plant Zombie",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/21b6b9c8-110a-41ea-815b-17253447a02e?size=small"
+    },
+    {
+      "id": "c24bd479-c8ac-4141-a40e-956c90ee29f8",
+      "name": "Brain Weevil",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Insect",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c24bd479-c8ac-4141-a40e-956c90ee29f8?size=small"
+    },
+    {
+      "id": "39704000-65d3-4d39-849e-a3b617376bbc",
+      "name": "Eternal Witness",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/39704000-65d3-4d39-849e-a3b617376bbc?size=small"
+    },
+    {
+      "id": "162a865b-617d-40bf-900f-4aeca3602600",
+      "name": "Dreg Mangler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Creature — Plant Zombie",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/162a865b-617d-40bf-900f-4aeca3602600?size=small"
+    },
+    {
+      "id": "c901a8d7-e230-4a08-afe5-00e9d1c85544",
+      "name": "Putrid Leech",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{G}",
+      "type_line": "Creature — Zombie Leech",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/c901a8d7-e230-4a08-afe5-00e9d1c85544?size=small"
+    },
+    {
+      "id": "2ab08d69-210b-4b06-88a2-45281a1a4e1e",
+      "name": "Stinkweed Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2ab08d69-210b-4b06-88a2-45281a1a4e1e?size=small"
+    },
+    {
+      "id": "d482d3d5-d4ad-4e0e-ab92-3246cf684d14",
+      "name": "Golgari Rotwurm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}{G}",
+      "type_line": "Creature — Zombie Wurm",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/d482d3d5-d4ad-4e0e-ab92-3246cf684d14?size=small"
+    },
+    {
+      "id": "ffe08b0f-bb53-40b9-8057-10b60070459b",
+      "name": "Svogthos, the Restless Tomb",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/ffe08b0f-bb53-40b9-8057-10b60070459b?size=small"
+    },
+    {
+      "id": "42486edd-24b7-4299-84fa-50559917b2a8",
+      "name": "Golgari Rot Farm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/42486edd-24b7-4299-84fa-50559917b2a8?size=small"
+    },
+    {
+      "id": "e14e994d-ed2e-451b-a165-93da7e9c3579",
+      "name": "Sadistic Hypnotist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Human Minion",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/e14e994d-ed2e-451b-a165-93da7e9c3579?size=small"
+    },
+    {
+      "id": "18f45424-2c26-43fa-9afe-eeb22ce772e1",
+      "name": "Stingerfling Spider",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Spider",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/18f45424-2c26-43fa-9afe-eeb22ce772e1?size=small"
+    },
+    {
+      "id": "d332acbc-6224-43bc-a509-3a7edc877423",
+      "name": "Golgari Grave-Troll",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Troll Skeleton",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d332acbc-6224-43bc-a509-3a7edc877423?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "7aed7d9d-d796-493e-98fd-c5b1a26621ed",
+      "name": "Tranquil Thicket",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/7aed7d9d-d796-493e-98fd-c5b1a26621ed?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "cdb6432f-3f56-4c92-b09a-2a5b64620c04",
+      "name": "Life from the Loam",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/cdb6432f-3f56-4c92-b09a-2a5b64620c04?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "8786d461-0ea5-4224-82e4-bfbe4d0d8b9f",
+      "name": "Yoke of the Damned",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8786d461-0ea5-4224-82e4-bfbe4d0d8b9f?size=small"
+    },
+    {
+      "id": "a2909e6e-d196-4654-9193-2c9e0cfd90ee",
+      "name": "Ghoul's Feast",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a2909e6e-d196-4654-9193-2c9e0cfd90ee?size=small"
+    },
+    {
+      "id": "95103b4c-d0c0-40fa-9ddd-c7416455ca0c",
+      "name": "Golgari Signet",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/95103b4c-d0c0-40fa-9ddd-c7416455ca0c?size=small"
+    },
+    {
+      "id": "702da51f-c4ec-4073-bee8-f8423f70b163",
+      "name": "Doomgape",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B/G}{B/G}{B/G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 7,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/702da51f-c4ec-4073-bee8-f8423f70b163?size=small"
+    },
+    {
+      "id": "0a721695-8734-47bf-a74d-0dd619f68bde",
+      "name": "Gleancrawler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B/G}{B/G}{B/G}",
+      "type_line": "Creature — Insect Horror",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/0a721695-8734-47bf-a74d-0dd619f68bde?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403703,
+  "updated": 1789869403703
+}

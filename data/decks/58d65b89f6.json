@@ -1,0 +1,422 @@
+{
+  "id": "58d65b89f6",
+  "name": "Duel: Venser vs. Koth — Koth",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "03a32ab2-cc55-43fb-82d8-c51a3849b344",
+      "name": "Chartooth Cougar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Cat Beast",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/03a32ab2-cc55-43fb-82d8-c51a3849b344?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "fbd9a10e-2bf7-4af7-bb34-52de01e03523",
+      "name": "Stone Giant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Giant",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/fbd9a10e-2bf7-4af7-bb34-52de01e03523?size=small"
+    },
+    {
+      "id": "4b215c35-9d76-4a0e-8d01-fdc080d46b5a",
+      "name": "Bloodfire Kavu",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Kavu",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4b215c35-9d76-4a0e-8d01-fdc080d46b5a?size=small"
+    },
+    {
+      "id": "bff49651-3673-4670-9807-3ef3a42b8f8f",
+      "name": "Lithophage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Insect",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/bff49651-3673-4670-9807-3ef3a42b8f8f?size=small"
+    },
+    {
+      "id": "b9b8128f-52b7-4287-be0e-21fa0f9cc607",
+      "name": "Geyser Glider",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Elemental Beast",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b9b8128f-52b7-4287-be0e-21fa0f9cc607?size=small"
+    },
+    {
+      "id": "e886a604-e3ce-4c6a-b63e-2c7f910a177a",
+      "name": "Anger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Incarnation",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/e886a604-e3ce-4c6a-b63e-2c7f910a177a?size=small"
+    },
+    {
+      "id": "b7153854-c548-48de-b9e2-72b7d9397563",
+      "name": "Vulshok Sorcerer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Human Shaman Sorcerer",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b7153854-c548-48de-b9e2-72b7d9397563?size=small"
+    },
+    {
+      "id": "1dd6e25f-e58e-4ff8-83f3-b01d5f783632",
+      "name": "Vulshok Berserker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Human Berserker",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1dd6e25f-e58e-4ff8-83f3-b01d5f783632?size=small"
+    },
+    {
+      "id": "6a8006d8-bcdb-4e1c-bdfa-1e7f46fe425b",
+      "name": "Spire Barrage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/6a8006d8-bcdb-4e1c-bdfa-1e7f46fe425b?size=small"
+    },
+    {
+      "id": "972d0b03-8602-4ada-86b9-4262941bae67",
+      "name": "Seismic Strike",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/972d0b03-8602-4ada-86b9-4262941bae67?size=small"
+    },
+    {
+      "id": "cab3f6db-862f-4d85-9879-6f1b74e67a6a",
+      "name": "Cosi's Ravager",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/cab3f6db-862f-4d85-9879-6f1b74e67a6a?size=small"
+    },
+    {
+      "id": "aecab75c-25e5-4465-9c0a-28c2f6dc2ce5",
+      "name": "Volley of Boulders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{8}{R}",
+      "type_line": "Sorcery",
+      "cmc": 9,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/aecab75c-25e5-4465-9c0a-28c2f6dc2ce5?size=small"
+    },
+    {
+      "id": "5b018d93-a1c5-4729-b9c7-01d6ca5130f6",
+      "name": "Jaws of Stone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5b018d93-a1c5-4729-b9c7-01d6ca5130f6?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 7,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "8363acf3-eff9-4f57-8b8a-683256d279e0",
+      "name": "Vulshok Battlegear",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/8363acf3-eff9-4f57-8b8a-683256d279e0?size=small"
+    },
+    {
+      "id": "8980efa5-bd21-4980-91a7-5e66528b1011",
+      "name": "Fiery Hellhound",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Elemental Dog",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8980efa5-bd21-4980-91a7-5e66528b1011?size=small"
+    },
+    {
+      "id": "f659d464-13dd-49e2-a842-098dcba49659",
+      "name": "Searing Blaze",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/f659d464-13dd-49e2-a842-098dcba49659?size=small"
+    },
+    {
+      "id": "033aa2cd-531c-4594-a7eb-b3cbeb2c5a3c",
+      "name": "Vulshok Morningstar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/033aa2cd-531c-4594-a7eb-b3cbeb2c5a3c?size=small"
+    },
+    {
+      "id": "8be64d5d-779e-4c63-baf4-00a07f73fc9f",
+      "name": "Aether Membrane",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Wall",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8be64d5d-779e-4c63-baf4-00a07f73fc9f?size=small"
+    },
+    {
+      "id": "5440121d-d3b5-4d26-a2d9-674af73d449a",
+      "name": "Journeyer's Kite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/5440121d-d3b5-4d26-a2d9-674af73d449a?size=small"
+    },
+    {
+      "id": "48bfc25b-f73c-431c-b173-adcd65c5d491",
+      "name": "Pilgrim's Eye",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Thopter",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/48bfc25b-f73c-431c-b173-adcd65c5d491?size=small"
+    },
+    {
+      "id": "750d62f6-8fc4-4e61-b9d2-b85a4eb7cc61",
+      "name": "Pygmy Pyrosaur",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Lizard",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/750d62f6-8fc4-4e61-b9d2-b85a4eb7cc61?size=small"
+    },
+    {
+      "id": "80d5fa13-1dc3-4f10-860e-70902aca7ac9",
+      "name": "Plated Geopede",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Insect",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/80d5fa13-1dc3-4f10-860e-70902aca7ac9?size=small"
+    },
+    {
+      "id": "dccb325a-6fba-4a6f-af35-dc9e9de996a9",
+      "name": "Koth of the Hammer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Legendary Planeswalker — Koth",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/dccb325a-6fba-4a6f-af35-dc9e9de996a9?size=small"
+    },
+    {
+      "id": "8d7ef860-f248-4b14-8080-592121983d83",
+      "name": "Downhill Charge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8d7ef860-f248-4b14-8080-592121983d83?size=small"
+    },
+    {
+      "id": "85f04ca1-0199-41d7-a150-93b32a9795f7",
+      "name": "Earth Servant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/85f04ca1-0199-41d7-a150-93b32a9795f7?size=small"
+    },
+    {
+      "id": "af3ae93e-6094-483d-b2c0-ae117ad01293",
+      "name": "Armillary Sphere",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/af3ae93e-6094-483d-b2c0-ae117ad01293?size=small"
+    },
+    {
+      "id": "b279f268-c37e-4a2d-8195-74f4881226fc",
+      "name": "Wayfarer's Bauble",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/b279f268-c37e-4a2d-8195-74f4881226fc?size=small"
+    },
+    {
+      "id": "088f00a5-95b5-4892-9572-9e022b0eb01f",
+      "name": "Bloodfire Colossus",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{R}{R}",
+      "type_line": "Creature — Giant",
+      "cmc": 8,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/088f00a5-95b5-4892-9572-9e022b0eb01f?size=small"
+    },
+    {
+      "id": "4d8755f9-9fc2-46e7-b837-315ad78a91aa",
+      "name": "Greater Stone Spirit",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Creature — Elemental Spirit",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4d8755f9-9fc2-46e7-b837-315ad78a91aa?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403706,
+  "updated": 1789869403706
+}

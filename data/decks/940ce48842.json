@@ -1,0 +1,195 @@
+{
+  "id": "940ce48842",
+  "userId": "u-5e7eae2581",
+  "authorName": "amber",
+  "name": "white 1.0",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "069cfaa5-bba4-4503-b54e-b98fa9f0a0fc",
+      "name": "Healer's Hawk",
+      "count": 15,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/069cfaa5-bba4-4503-b54e-b98fa9f0a0fc?size=small"
+    },
+    {
+      "id": "577e99a7-4a55-4314-8f08-2ae0c33b85c7",
+      "name": "Empyrean Eagle",
+      "count": 8,
+      "board": "main",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Bird Spirit",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/577e99a7-4a55-4314-8f08-2ae0c33b85c7?size=small"
+    },
+    {
+      "id": "4f616706-ec97-4923-bb1e-11a69fbaa1f8",
+      "name": "Counterspell",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4f616706-ec97-4923-bb1e-11a69fbaa1f8?size=small"
+    },
+    {
+      "id": "3c726a60-8de7-4d5e-8ad5-8405e6ac36b5",
+      "name": "Glacial Fortress",
+      "count": 18,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3c726a60-8de7-4d5e-8ad5-8405e6ac36b5?size=small"
+    },
+    {
+      "id": "5041dcfd-c1af-448c-91f7-75fd1d34e93e",
+      "name": "Serra Avatar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}{W}",
+      "type_line": "Creature — Avatar",
+      "cmc": 7,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/5041dcfd-c1af-448c-91f7-75fd1d34e93e?size=small"
+    },
+    {
+      "id": "db113c47-c403-4c7f-9fa9-212c977df8d1",
+      "name": "Abiding Grace",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/db113c47-c403-4c7f-9fa9-212c977df8d1?size=small"
+    },
+    {
+      "id": "e86328b6-ded2-41df-8b6e-4a770e7b171e",
+      "name": "Aerith Gainsborough",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Legendary Creature — Human Cleric",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e86328b6-ded2-41df-8b6e-4a770e7b171e?size=small"
+    },
+    {
+      "id": "0d4032a7-600c-4b30-a012-fe3cde1be9c9",
+      "name": "Boon Reflection",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Enchantment",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0d4032a7-600c-4b30-a012-fe3cde1be9c9?size=small"
+    },
+    {
+      "id": "357cb220-47c4-438d-bc24-abd68ed4273c",
+      "name": "Common Courtesy",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/357cb220-47c4-438d-bc24-abd68ed4273c?size=small"
+    },
+    {
+      "id": "63e5124a-67c0-44ed-8085-28bf37816423",
+      "name": "Levitation",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/63e5124a-67c0-44ed-8085-28bf37816423?size=small"
+    },
+    {
+      "id": "cebf2c16-bd9d-4a8f-a1b6-6e0c393178bc",
+      "name": "Slinn Voda, the Rising Deep",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{U}{U}",
+      "type_line": "Legendary Creature — Leviathan",
+      "cmc": 8,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/cebf2c16-bd9d-4a8f-a1b6-6e0c393178bc?size=small"
+    },
+    {
+      "id": "f1fdb9bb-09a2-4ff7-bcd4-35ea33c1b752",
+      "name": "Icebreaker Kraken",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{10}{U}{U}",
+      "type_line": "Snow Creature — Kraken",
+      "cmc": 12,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/f1fdb9bb-09a2-4ff7-bcd4-35ea33c1b752?size=small"
+    },
+    {
+      "id": "137acb70-a1fd-4ea9-a5d9-f4b438eb5e82",
+      "name": "Hullbreaker Horror",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}{U}",
+      "type_line": "Creature — Kraken Horror",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/137acb70-a1fd-4ea9-a5d9-f4b438eb5e82?size=small"
+    },
+    {
+      "id": "f40ad933-ddd9-4975-a222-21fe3305137c",
+      "name": "Tromokratis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}{U}",
+      "type_line": "Legendary Creature — Kraken",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/f40ad933-ddd9-4975-a222-21fe3305137c?size=small"
+    }
+  ],
+  "starter": false,
+  "forkedFrom": "520726891e",
+  "created": 1790029399785,
+  "updated": 1790031704941
+}

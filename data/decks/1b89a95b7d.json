@@ -1,0 +1,115 @@
+{
+  "id": "1b89a95b7d",
+  "userId": "u-63d84fbb76",
+  "authorName": "Advent Tester",
+  "name": "🎲 Limited Draft · 2026-09-22",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Magnigoth Sentry",
+      "count": 1
+    },
+    {
+      "name": "Ambush Wolf",
+      "count": 1
+    },
+    {
+      "name": "Starlight Snare",
+      "count": 1
+    },
+    {
+      "name": "Tolarian Terror",
+      "count": 1
+    },
+    {
+      "name": "Prideful Parent",
+      "count": 1
+    },
+    {
+      "name": "Armasaur Guide",
+      "count": 1
+    },
+    {
+      "name": "Deadly Riposte",
+      "count": 1
+    },
+    {
+      "name": "Wary Thespian",
+      "count": 1
+    },
+    {
+      "name": "Gnarlid Colony",
+      "count": 1
+    },
+    {
+      "name": "Inspiring Paladin",
+      "count": 1
+    },
+    {
+      "name": "Goldvein Pick",
+      "count": 1
+    },
+    {
+      "name": "Elfsworn Giant",
+      "count": 1
+    },
+    {
+      "name": "Overrun",
+      "count": 1
+    },
+    {
+      "name": "Deathmark",
+      "count": 1
+    },
+    {
+      "name": "Burst Lightning",
+      "count": 1
+    },
+    {
+      "name": "Erudite Wizard",
+      "count": 1
+    },
+    {
+      "name": "Undying Malice",
+      "count": 1
+    },
+    {
+      "name": "Firebrand Archer",
+      "count": 1
+    },
+    {
+      "name": "Wildheart Invoker",
+      "count": 1
+    },
+    {
+      "name": "Helpful Hunter",
+      "count": 1
+    },
+    {
+      "name": "Dive Down",
+      "count": 1
+    },
+    {
+      "name": "Island",
+      "count": 5
+    },
+    {
+      "name": "Swamp",
+      "count": 6
+    },
+    {
+      "name": "Mountain",
+      "count": 7
+    },
+    {
+      "name": "Forest",
+      "count": 1
+    }
+  ],
+  "starter": false,
+  "draft": true,
+  "draftSet": "fdn",
+  "created": 1790055244190,
+  "updated": 1790055244190
+}

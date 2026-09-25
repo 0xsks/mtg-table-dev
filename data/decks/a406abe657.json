@@ -1,0 +1,343 @@
+{
+  "id": "a406abe657",
+  "name": "Duel: Divine vs. Demonic — Divine",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "f48ce122-b966-4c48-9b6c-b84dd0584cb9",
+      "name": "Icatian Priest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f48ce122-b966-4c48-9b6c-b84dd0584cb9?size=small"
+    },
+    {
+      "id": "bf1ef8ec-d915-41f2-b087-3d6d82e3db85",
+      "name": "Akroma, Angel of Wrath",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{W}{W}{W}",
+      "type_line": "Legendary Creature — Angel",
+      "cmc": 8,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/bf1ef8ec-d915-41f2-b087-3d6d82e3db85?size=small"
+    },
+    {
+      "id": "433eed50-81af-4a59-b624-57b6f5f1bb0f",
+      "name": "Pacifism",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/433eed50-81af-4a59-b624-57b6f5f1bb0f?size=small"
+    },
+    {
+      "id": "5cd220e4-2e2a-437e-aa4e-1007247c8e4d",
+      "name": "Otherworldly Journey",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant — Arcane",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/5cd220e4-2e2a-437e-aa4e-1007247c8e4d?size=small"
+    },
+    {
+      "id": "a2a782a3-cc30-47c2-aab3-18abcda3df0a",
+      "name": "Angelic Benediction",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a2a782a3-cc30-47c2-aab3-18abcda3df0a?size=small"
+    },
+    {
+      "id": "eca4d77a-0bb2-464c-a85f-a22b3d15d7cd",
+      "name": "Serra's Boon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/eca4d77a-0bb2-464c-a85f-a22b3d15d7cd?size=small"
+    },
+    {
+      "id": "2d22fdde-5590-4a4c-af2e-09711f4b5ffd",
+      "name": "Angel of Mercy",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2d22fdde-5590-4a4c-af2e-09711f4b5ffd?size=small"
+    },
+    {
+      "id": "d7d48d56-c79e-4c7c-a9a0-92b7fb980e5c",
+      "name": "Serra Advocate",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d7d48d56-c79e-4c7c-a9a0-92b7fb980e5c?size=small"
+    },
+    {
+      "id": "753c4ef2-d61a-4cfe-8e8b-8379402c8713",
+      "name": "Twilight Shepherd",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/753c4ef2-d61a-4cfe-8e8b-8379402c8713?size=small"
+    },
+    {
+      "id": "b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d",
+      "name": "Serra Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b8c5e74c-96e7-4a1f-93b7-14d776fe4b2d?size=small"
+    },
+    {
+      "id": "e9f7e21e-d4d8-4d6c-9530-b17d5204e9e7",
+      "name": "Sustainer of the Realm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e9f7e21e-d4d8-4d6c-9530-b17d5204e9e7?size=small"
+    },
+    {
+      "id": "44b45bdd-829a-4fc1-ad37-17c2bd57fac8",
+      "name": "Reya Dawnbringer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{W}{W}{W}",
+      "type_line": "Legendary Creature — Angel",
+      "cmc": 9,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/44b45bdd-829a-4fc1-ad37-17c2bd57fac8?size=small"
+    },
+    {
+      "id": "8002ca7f-a889-4145-8f1b-5e8417f7c0bf",
+      "name": "Venerable Monk",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Monk Cleric",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8002ca7f-a889-4145-8f1b-5e8417f7c0bf?size=small"
+    },
+    {
+      "id": "c3ac419f-7630-48c7-9039-88ce28898b6d",
+      "name": "Luminous Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 7,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c3ac419f-7630-48c7-9039-88ce28898b6d?size=small"
+    },
+    {
+      "id": "21c85b48-9603-4db3-95d2-b5ce794e4634",
+      "name": "Angelic Protector",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/21c85b48-9603-4db3-95d2-b5ce794e4634?size=small"
+    },
+    {
+      "id": "ddf5db14-f2aa-4088-9894-7bd3a56dfe1e",
+      "name": "Angelic Page",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Angel Spirit",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ddf5db14-f2aa-4088-9894-7bd3a56dfe1e?size=small"
+    },
+    {
+      "id": "dfdf70c7-49e2-4f6a-99e2-075aa826de60",
+      "name": "Angelsong",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/dfdf70c7-49e2-4f6a-99e2-075aa826de60?size=small"
+    },
+    {
+      "id": "a0166403-a801-4ee9-9e04-54455f69e658",
+      "name": "Charging Paladin",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a0166403-a801-4ee9-9e04-54455f69e658?size=small"
+    },
+    {
+      "id": "0ff82aba-9022-4eff-a6dc-67365360d646",
+      "name": "Healing Salve",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0ff82aba-9022-4eff-a6dc-67365360d646?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 24,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "aaa5bee9-3f6a-45b0-a282-6b23222e948f",
+      "name": "Secluded Steppe",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/aaa5bee9-3f6a-45b0-a282-6b23222e948f?size=small"
+    },
+    {
+      "id": "0930f71c-c3c8-4bdd-8468-6a61349cc8ca",
+      "name": "Marble Diamond",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/0930f71c-c3c8-4bdd-8468-6a61349cc8ca?size=small"
+    },
+    {
+      "id": "69cf2f25-dc3e-457d-9d50-22a966a20d5e",
+      "name": "Angel's Feather",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/69cf2f25-dc3e-457d-9d50-22a966a20d5e?size=small"
+    },
+    {
+      "id": "bc632184-b330-42d8-808d-17a94b08c535",
+      "name": "Righteous Cause",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Enchantment",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/bc632184-b330-42d8-808d-17a94b08c535?size=small"
+    },
+    {
+      "id": "2c45c4b3-f652-4b55-a316-55a864ac2342",
+      "name": "Serra's Embrace",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2c45c4b3-f652-4b55-a316-55a864ac2342?size=small"
+    },
+    {
+      "id": "08b62f4c-cc20-40b6-a504-407d53bdf2aa",
+      "name": "Faith's Fetters",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/08b62f4c-cc20-40b6-a504-407d53bdf2aa?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403700,
+  "updated": 1789869403700
+}

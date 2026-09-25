@@ -1,0 +1,456 @@
+{
+  "id": "53251fa05b",
+  "name": "Duel: Nissa vs. Ob Nixilis — Ob Nixilis",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "56a95546-c45a-4da5-b1e8-d5658b5b7d53",
+      "name": "Fetid Imp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/56a95546-c45a-4da5-b1e8-d5658b5b7d53?size=small"
+    },
+    {
+      "id": "2fe63448-1198-4a7c-948b-514fe4934add",
+      "name": "Foul Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2fe63448-1198-4a7c-948b-514fe4934add?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "aaa9c6f1-3938-448b-bdc3-22420c5984d3",
+      "name": "Disfigure",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/aaa9c6f1-3938-448b-bdc3-22420c5984d3?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "5dcd0c4e-4047-47a2-8969-c62616d457c2",
+      "name": "Doom Blade",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5dcd0c4e-4047-47a2-8969-c62616d457c2?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "52bf6460-0df6-4dd3-8af8-df728683bcaa",
+      "name": "Desecration Demon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/52bf6460-0df6-4dd3-8af8-df728683bcaa?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "9f1fb659-70fe-4d8a-ba2c-07ab0d75c218",
+      "name": "Despoiler of Souls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Horror",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9f1fb659-70fe-4d8a-ba2c-07ab0d75c218?size=small"
+    },
+    {
+      "id": "772e551c-0b47-4ccb-8893-f192de92908e",
+      "name": "Carrier Thrall",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/772e551c-0b47-4ccb-8893-f192de92908e?size=small"
+    },
+    {
+      "id": "9dd86d89-22a8-4e27-9991-ef89837d0d83",
+      "name": "Unhallowed Pact",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9dd86d89-22a8-4e27-9991-ef89837d0d83?size=small"
+    },
+    {
+      "id": "a07a0e31-ace6-40ad-8700-2d58135b5320",
+      "name": "Leechridden Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a07a0e31-ace6-40ad-8700-2d58135b5320?size=small"
+    },
+    {
+      "id": "8ee78a0d-8a76-4d21-b65c-03f27f1a96c5",
+      "name": "Demon's Grasp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8ee78a0d-8a76-4d21-b65c-03f27f1a96c5?size=small"
+    },
+    {
+      "id": "517ec1ba-00cd-4883-b298-521dc2d03f81",
+      "name": "Blistergrub",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/517ec1ba-00cd-4883-b298-521dc2d03f81?size=small"
+    },
+    {
+      "id": "694a0e92-8e5c-404e-a8bb-52139884e41a",
+      "name": "Squelching Leeches",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Leech",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/694a0e92-8e5c-404e-a8bb-52139884e41a?size=small"
+    },
+    {
+      "id": "f06ab823-9591-460d-a896-3073d9843df0",
+      "name": "Cadaver Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f06ab823-9591-460d-a896-3073d9843df0?size=small"
+    },
+    {
+      "id": "c338b459-6bb8-4bc7-a6b5-945a09589c05",
+      "name": "Tendrils of Corruption",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c338b459-6bb8-4bc7-a6b5-945a09589c05?size=small"
+    },
+    {
+      "id": "35139a18-28c7-4a8f-986a-47e909cc23eb",
+      "name": "Shadows of the Past",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/35139a18-28c7-4a8f-986a-47e909cc23eb?size=small"
+    },
+    {
+      "id": "c28db9a4-6696-460b-a9d3-98f4a31abe75",
+      "name": "Smallpox",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c28db9a4-6696-460b-a9d3-98f4a31abe75?size=small"
+    },
+    {
+      "id": "b6234dca-088f-4888-98d3-0d5a50eb5e61",
+      "name": "Bala Ged Scorpion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Scorpion",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b6234dca-088f-4888-98d3-0d5a50eb5e61?size=small"
+    },
+    {
+      "id": "1db55625-25a5-46eb-9d9c-9b3ed219359f",
+      "name": "Altar's Reap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/1db55625-25a5-46eb-9d9c-9b3ed219359f?size=small"
+    },
+    {
+      "id": "bbd61cbe-92b8-4141-b11c-04046e35578a",
+      "name": "Renegade Demon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/bbd61cbe-92b8-4141-b11c-04046e35578a?size=small"
+    },
+    {
+      "id": "d560c996-ef80-4117-8642-a632ae51c07d",
+      "name": "Ambition's Cost",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d560c996-ef80-4117-8642-a632ae51c07d?size=small"
+    },
+    {
+      "id": "14db0f35-905b-45c9-a0cc-1c47720380eb",
+      "name": "Priest of the Blood Rite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/14db0f35-905b-45c9-a0cc-1c47720380eb?size=small"
+    },
+    {
+      "id": "5af237ad-9294-47f5-a338-f9ca4fce3e70",
+      "name": "Ob Nixilis Reignited",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Legendary Planeswalker — Nixilis",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5af237ad-9294-47f5-a338-f9ca4fce3e70?size=small"
+    },
+    {
+      "id": "5972edbd-ffe8-46e8-9c3e-5399c7d6879b",
+      "name": "Quest for the Gravelord",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Enchantment",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5972edbd-ffe8-46e8-9c3e-5399c7d6879b?size=small"
+    },
+    {
+      "id": "a7e80be6-bc3b-4331-a5f2-1407a0a5dfe7",
+      "name": "Mire's Toll",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a7e80be6-bc3b-4331-a5f2-1407a0a5dfe7?size=small"
+    },
+    {
+      "id": "058eb32f-2ae2-4276-ae1a-242bbb150418",
+      "name": "Pestilence Demon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{B}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 8,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/058eb32f-2ae2-4276-ae1a-242bbb150418?size=small"
+    },
+    {
+      "id": "af042ca9-c57d-4477-965e-182fc557ca6b",
+      "name": "Indulgent Tormentor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/af042ca9-c57d-4477-965e-182fc557ca6b?size=small"
+    },
+    {
+      "id": "29184c64-03f3-4a50-ac18-e34b6c89635e",
+      "name": "Innocent Blood",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/29184c64-03f3-4a50-ac18-e34b6c89635e?size=small"
+    },
+    {
+      "id": "f6701121-c144-4294-bbeb-66abad198f98",
+      "name": "Grim Discovery",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f6701121-c144-4294-bbeb-66abad198f98?size=small"
+    },
+    {
+      "id": "69ece875-81eb-47fc-9ad9-080b654d49f5",
+      "name": "Hideous End",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/69ece875-81eb-47fc-9ad9-080b654d49f5?size=small"
+    },
+    {
+      "id": "047bb416-1fe7-4965-907f-8e2a5fb4a925",
+      "name": "Giant Scorpion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Scorpion",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/047bb416-1fe7-4965-907f-8e2a5fb4a925?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403705,
+  "updated": 1789869403705
+}

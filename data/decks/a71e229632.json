@@ -1,0 +1,450 @@
+{
+  "id": "a71e229632",
+  "name": "Duel: Nissa vs. Ob Nixilis — Nissa",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "6de97cf1-49b6-40b2-ab7f-1c8eb98f92af",
+      "name": "Nissa, Voice of Zendikar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Legendary Planeswalker — Nissa",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6de97cf1-49b6-40b2-ab7f-1c8eb98f92af?size=small"
+    },
+    {
+      "id": "3e0f6ae6-b303-405a-8efa-91de9692768e",
+      "name": "Khalni Garden",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3e0f6ae6-b303-405a-8efa-91de9692768e?size=small"
+    },
+    {
+      "id": "1490c0dc-06d6-45ee-af3c-2935b0ab1233",
+      "name": "Mosswort Bridge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/1490c0dc-06d6-45ee-af3c-2935b0ab1233?size=small"
+    },
+    {
+      "id": "a2e49925-a4ab-4960-ad83-20583dcd2c2c",
+      "name": "Woodborn Behemoth",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/a2e49925-a4ab-4960-ad83-20583dcd2c2c?size=small"
+    },
+    {
+      "id": "c30fb2f1-f0a6-430f-86e5-817b55da469e",
+      "name": "Fertile Thicket",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c30fb2f1-f0a6-430f-86e5-817b55da469e?size=small"
+    },
+    {
+      "id": "ab879034-2400-4451-9ba2-0325f61db537",
+      "name": "Walker of the Grove",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 8,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/ab879034-2400-4451-9ba2-0325f61db537?size=small"
+    },
+    {
+      "id": "2476e42b-b209-4207-8ed9-cb668f89b218",
+      "name": "Wood Elves",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Scout",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2476e42b-b209-4207-8ed9-cb668f89b218?size=small"
+    },
+    {
+      "id": "189f6199-f2fe-49a5-89ca-3c4cb39fbf2b",
+      "name": "Thornweald Archer",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Archer",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/189f6199-f2fe-49a5-89ca-3c4cb39fbf2b?size=small"
+    },
+    {
+      "id": "02109319-105b-4c00-abf9-1f012ae98e33",
+      "name": "Vines of the Recluse",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/02109319-105b-4c00-abf9-1f012ae98e33?size=small"
+    },
+    {
+      "id": "6244cbd8-8cc4-44a7-b11d-2ab159e92c02",
+      "name": "Seek the Horizon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6244cbd8-8cc4-44a7-b11d-2ab159e92c02?size=small"
+    },
+    {
+      "id": "c5a462ca-0632-410d-9999-a096b71fc3ea",
+      "name": "Thicket Elemental",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/c5a462ca-0632-410d-9999-a096b71fc3ea?size=small"
+    },
+    {
+      "id": "d458e7e4-578d-4e82-b062-1343b1544996",
+      "name": "Scythe Leopard",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Cat",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d458e7e4-578d-4e82-b062-1343b1544996?size=small"
+    },
+    {
+      "id": "572a2dc4-3f8f-4412-8a40-9e61df33db76",
+      "name": "Oran-Rief Invoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/572a2dc4-3f8f-4412-8a40-9e61df33db76?size=small"
+    },
+    {
+      "id": "634f9544-5ac3-4566-aa73-65a3930b559b",
+      "name": "Saddleback Lagac",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Lizard",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/634f9544-5ac3-4566-aa73-65a3930b559b?size=small"
+    },
+    {
+      "id": "7ee2eb87-d70e-49d7-b429-5df70a71c143",
+      "name": "Oakgnarl Warrior",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{G}",
+      "type_line": "Creature — Treefolk Warrior",
+      "cmc": 7,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/7ee2eb87-d70e-49d7-b429-5df70a71c143?size=small"
+    },
+    {
+      "id": "ff8c4bff-d37a-44b0-958f-91f4de6745c9",
+      "name": "Oran-Rief Hydra",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}{G}",
+      "type_line": "Creature — Hydra",
+      "cmc": 6,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/ff8c4bff-d37a-44b0-958f-91f4de6745c9?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b8614b00-bf12-464e-8d13-61310e265ccb",
+      "name": "Natural Connection",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b8614b00-bf12-464e-8d13-61310e265ccb?size=small"
+    },
+    {
+      "id": "8f370eff-3980-4c19-808b-c1099279ef20",
+      "name": "Nissa's Chosen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/8f370eff-3980-4c19-808b-c1099279ef20?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b437bab9-2279-4160-85fd-d29c7a35ca2c",
+      "name": "Gilt-Leaf Seer",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b437bab9-2279-4160-85fd-d29c7a35ca2c?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "2dff438a-925c-4fca-a2e3-3e9519b7afed",
+      "name": "Jaddi Lifestrider",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2dff438a-925c-4fca-a2e3-3e9519b7afed?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "23cf81ed-b86c-42b8-b796-2032b0a3654a",
+      "name": "Gaea's Blessing",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/23cf81ed-b86c-42b8-b796-2032b0a3654a?size=small"
+    },
+    {
+      "id": "14394198-0993-46ee-a3ea-5c7084a78772",
+      "name": "Treetop Village",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/14394198-0993-46ee-a3ea-5c7084a78772?size=small"
+    },
+    {
+      "id": "2d73ea23-52ab-4b92-b263-dc8b9e5a1010",
+      "name": "Fertilid",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2d73ea23-52ab-4b92-b263-dc8b9e5a1010?size=small"
+    },
+    {
+      "id": "6d2f4a37-453f-4a2c-bfba-2d1227394c90",
+      "name": "Elvish Visionary",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6d2f4a37-453f-4a2c-bfba-2d1227394c90?size=small"
+    },
+    {
+      "id": "523414cb-f8db-407a-808a-01454e03d8b9",
+      "name": "Crop Rotation",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/523414cb-f8db-407a-808a-01454e03d8b9?size=small"
+    },
+    {
+      "id": "4e18bff6-bf0b-48f8-93e2-09d435247596",
+      "name": "Cloudthresher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/4e18bff6-bf0b-48f8-93e2-09d435247596?size=small"
+    },
+    {
+      "id": "5e9754ec-18d1-4c0f-abdd-49ce2d778083",
+      "name": "Civic Wayfinder",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Druid Warrior",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/5e9754ec-18d1-4c0f-abdd-49ce2d778083?size=small"
+    },
+    {
+      "id": "b0cd9af6-3729-4c9c-9669-a2800a693b39",
+      "name": "Citanul Woodreaders",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Druid",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b0cd9af6-3729-4c9c-9669-a2800a693b39?size=small"
+    },
+    {
+      "id": "0fd09615-bcd2-4a2e-b9bf-8b4fd83291ce",
+      "name": "Briarhorn",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0fd09615-bcd2-4a2e-b9bf-8b4fd83291ce?size=small"
+    },
+    {
+      "id": "9bc359b0-8886-415b-a497-e98a2241084e",
+      "name": "Abundance",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{G}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/9bc359b0-8886-415b-a497-e98a2241084e?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403704,
+  "updated": 1789869403704
+}

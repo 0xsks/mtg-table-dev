@@ -1,0 +1,482 @@
+{
+  "id": "6ddcfaefba",
+  "name": "Duel: Elspeth vs. Tezzeret — Elspeth",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "6c7c8527-55f6-494d-b4f7-c427a5735053",
+      "name": "Raise the Alarm",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6c7c8527-55f6-494d-b4f7-c427a5735053?size=small"
+    },
+    {
+      "id": "b4c55b3a-0cca-4b4f-9915-61847b8f1455",
+      "name": "Mighty Leap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b4c55b3a-0cca-4b4f-9915-61847b8f1455?size=small"
+    },
+    {
+      "id": "0455bae2-030b-4176-9953-11be82021145",
+      "name": "Razor Barrier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0455bae2-030b-4176-9953-11be82021145?size=small"
+    },
+    {
+      "id": "842e7e6a-c89a-463d-a6e8-743a953c827c",
+      "name": "Abolish",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/842e7e6a-c89a-463d-a6e8-743a953c827c?size=small"
+    },
+    {
+      "id": "d0b15737-1026-407f-b2a8-4f7932b2bb18",
+      "name": "Blinding Beam",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d0b15737-1026-407f-b2a8-4f7932b2bb18?size=small"
+    },
+    {
+      "id": "82ab72c3-1f76-45ff-84b4-05f403866d44",
+      "name": "Sunlance",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/82ab72c3-1f76-45ff-84b4-05f403866d44?size=small"
+    },
+    {
+      "id": "9e71046b-1284-4d7f-93dd-a632c74d9cca",
+      "name": "Angel of Salvation",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 8,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9e71046b-1284-4d7f-93dd-a632c74d9cca?size=small"
+    },
+    {
+      "id": "4686b51c-e02b-48c1-bafe-e8d08a5407b9",
+      "name": "Journey to Nowhere",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/4686b51c-e02b-48c1-bafe-e8d08a5407b9?size=small"
+    },
+    {
+      "id": "9869a753-5e41-4098-ab41-e75b4396ec50",
+      "name": "Emeritus of Truce // Swords to Plowshares",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}{W} // {W}",
+      "type_line": "Creature — Cat Cleric // Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9869a753-5e41-4098-ab41-e75b4396ec50?size=small"
+    },
+    {
+      "id": "e73c5d46-128d-4ab6-901a-6102686a1b22",
+      "name": "Temple Acolyte",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e73c5d46-128d-4ab6-901a-6102686a1b22?size=small"
+    },
+    {
+      "id": "d7501662-1216-4e08-bd2b-e0a459057942",
+      "name": "Kor Skyfisher",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kor Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d7501662-1216-4e08-bd2b-e0a459057942?size=small"
+    },
+    {
+      "id": "2bd51dd3-ce49-41cf-85ef-a5a1428bc71b",
+      "name": "Glory Seeker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2bd51dd3-ce49-41cf-85ef-a5a1428bc71b?size=small"
+    },
+    {
+      "id": "626040ca-adb0-49c8-82cd-d1e27926cb79",
+      "name": "Mosquito Guard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Kithkin Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/626040ca-adb0-49c8-82cd-d1e27926cb79?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "fd872395-f351-4f7e-9290-c34d1c98a567",
+      "name": "Burrenton Bombardier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Kithkin Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/fd872395-f351-4f7e-9290-c34d1c98a567?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "1c77d014-8ea2-4203-88b4-53be3819bf3c",
+      "name": "Kor Hookmaster",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Kor Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/1c77d014-8ea2-4203-88b4-53be3819bf3c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "dd9dc5af-0fc9-4e2a-9980-180459eeba07",
+      "name": "Kor Aeronaut",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{W}",
+      "type_line": "Creature — Kor Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/dd9dc5af-0fc9-4e2a-9980-180459eeba07?size=small"
+    },
+    {
+      "id": "61475a0c-f33a-43a7-937c-5a63fc8a54b4",
+      "name": "Saltblast",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/61475a0c-f33a-43a7-937c-5a63fc8a54b4?size=small"
+    },
+    {
+      "id": "672fc96f-114c-49d8-ad99-f627110f8cc1",
+      "name": "Conclave Equenaut",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/672fc96f-114c-49d8-ad99-f627110f8cc1?size=small"
+    },
+    {
+      "id": "746d56ef-7ac5-403b-bca3-1cd267de97df",
+      "name": "Elspeth, Knight-Errant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Legendary Planeswalker — Elspeth",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/746d56ef-7ac5-403b-bca3-1cd267de97df?size=small"
+    },
+    {
+      "id": "c3181709-42d2-4e1a-8de9-4f1d2deac232",
+      "name": "Stormfront Riders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c3181709-42d2-4e1a-8de9-4f1d2deac232?size=small"
+    },
+    {
+      "id": "544df614-277e-43dd-8611-3ec1e1747f57",
+      "name": "Catapult Master",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/544df614-277e-43dd-8611-3ec1e1747f57?size=small"
+    },
+    {
+      "id": "11fafc94-543b-4e9d-83aa-ac510aed87ea",
+      "name": "Seasoned Marshal",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/11fafc94-543b-4e9d-83aa-ac510aed87ea?size=small"
+    },
+    {
+      "id": "f50160e9-0b25-4e81-814d-cdcda2fb325d",
+      "name": "Rustic Clachan",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f50160e9-0b25-4e81-814d-cdcda2fb325d?size=small"
+    },
+    {
+      "id": "ec4b0fd0-045d-4a96-9a57-c7ba1548b4cd",
+      "name": "Infantry Veteran",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ec4b0fd0-045d-4a96-9a57-c7ba1548b4cd?size=small"
+    },
+    {
+      "id": "7f6a18b8-d490-490d-83a5-227a416ccf92",
+      "name": "Kabira Crossroads",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/7f6a18b8-d490-490d-83a5-227a416ccf92?size=small"
+    },
+    {
+      "id": "04435b25-1a44-493f-810e-23d260f363a6",
+      "name": "Conclave Phalanx",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/04435b25-1a44-493f-810e-23d260f363a6?size=small"
+    },
+    {
+      "id": "8854cc80-6201-4066-80c8-97c0fdc9baa8",
+      "name": "Loyal Sentry",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8854cc80-6201-4066-80c8-97c0fdc9baa8?size=small"
+    },
+    {
+      "id": "12306750-86d6-4f70-820a-365894884e56",
+      "name": "Daru Encampment",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/12306750-86d6-4f70-820a-365894884e56?size=small"
+    },
+    {
+      "id": "b9f20a74-7614-4bd9-ac08-0e098f98df0c",
+      "name": "Kemba's Skyguard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Cat Knight",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b9f20a74-7614-4bd9-ac08-0e098f98df0c?size=small"
+    },
+    {
+      "id": "28a5c350-2ed1-4a25-9626-0f8da5d1aef7",
+      "name": "Elite Vanguard",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/28a5c350-2ed1-4a25-9626-0f8da5d1aef7?size=small"
+    },
+    {
+      "id": "0fddb694-d863-4364-9bf9-650d7be3b471",
+      "name": "Swell of Courage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0fddb694-d863-4364-9bf9-650d7be3b471?size=small"
+    },
+    {
+      "id": "56f371f5-9c2a-4a00-a4d2-e4f97ac0f3e0",
+      "name": "Celestial Crusader",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/56f371f5-9c2a-4a00-a4d2-e4f97ac0f3e0?size=small"
+    },
+    {
+      "id": "e5fc15af-532d-4124-9dd4-2584c00c89da",
+      "name": "Goldmeadow Harrier",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Kithkin Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e5fc15af-532d-4124-9dd4-2584c00c89da?size=small"
+    }
+  ],
+  "unknown": [
+    "Crusade"
+  ],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403701,
+  "updated": 1789869403701
+}

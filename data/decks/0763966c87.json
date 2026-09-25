@@ -1,0 +1,524 @@
+{
+  "id": "0763966c87",
+  "name": "Duel: Ajani vs. Nicol Bolas — Nicol Bolas",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "27194865-1305-4fbd-8d84-c5201ad0210e",
+      "name": "Hellfire Mongrel",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Elemental Dog",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/27194865-1305-4fbd-8d84-c5201ad0210e?size=small"
+    },
+    {
+      "id": "b50f7d5f-8b4d-46d4-86ce-92fbc475c039",
+      "name": "Dimir Cutpurse",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/b50f7d5f-8b4d-46d4-86ce-92fbc475c039?size=small"
+    },
+    {
+      "id": "a96f2106-3524-4fc0-85df-8cf9d0901ea8",
+      "name": "Brackwater Elemental",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a96f2106-3524-4fc0-85df-8cf9d0901ea8?size=small"
+    },
+    {
+      "id": "58cc3ec9-b4ad-4106-b5e9-66ee58e90150",
+      "name": "Elder Mastery",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{B}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/58cc3ec9-b4ad-4106-b5e9-66ee58e90150?size=small"
+    },
+    {
+      "id": "a58ee3b2-45db-48b5-b8fd-f8b9468b17b6",
+      "name": "Morgue Toad",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Frog",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a58ee3b2-45db-48b5-b8fd-f8b9468b17b6?size=small"
+    },
+    {
+      "id": "d71a8ea5-199e-473e-a2b1-e2f7cc804ffc",
+      "name": "Cruel Ultimatum",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{U}{B}{B}{B}{R}{R}",
+      "type_line": "Sorcery",
+      "cmc": 7,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/d71a8ea5-199e-473e-a2b1-e2f7cc804ffc?size=small"
+    },
+    {
+      "id": "4cf1918f-ad58-4f62-bd8c-649919de0e75",
+      "name": "Nightscape Familiar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4cf1918f-ad58-4f62-bd8c-649919de0e75?size=small"
+    },
+    {
+      "id": "a8ead2b6-3bf7-4881-a154-06ab2558052b",
+      "name": "Slavering Nulls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Zombie",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/a8ead2b6-3bf7-4881-a154-06ab2558052b?size=small"
+    },
+    {
+      "id": "b3947ce7-0a14-41d0-9b8f-ee6d62c460fa",
+      "name": "Slave of Bolas",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U/R}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/b3947ce7-0a14-41d0-9b8f-ee6d62c460fa?size=small"
+    },
+    {
+      "id": "ac5a54ca-f175-4005-895f-d76effd6178e",
+      "name": "Icy Manipulator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/ac5a54ca-f175-4005-895f-d76effd6178e?size=small"
+    },
+    {
+      "id": "9e80f2fc-06d4-4ce9-b23b-3e4af1208fa5",
+      "name": "Nicol Bolas, Planeswalker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{B}{B}{R}",
+      "type_line": "Legendary Planeswalker — Bolas",
+      "cmc": 8,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/9e80f2fc-06d4-4ce9-b23b-3e4af1208fa5?size=small"
+    },
+    {
+      "id": "1a297bae-f259-4fc7-b76a-285f972d69e3",
+      "name": "Deep Analysis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/1a297bae-f259-4fc7-b76a-285f972d69e3?size=small"
+    },
+    {
+      "id": "97265692-3b45-47f4-9e9f-e78751240007",
+      "name": "Surveilling Sprite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Faerie Rogue",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/97265692-3b45-47f4-9e9f-e78751240007?size=small"
+    },
+    {
+      "id": "a23735a3-8ec8-48ae-8bd0-3b6b782690c8",
+      "name": "Undermine",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{U}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/a23735a3-8ec8-48ae-8bd0-3b6b782690c8?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "20332354-a294-4448-a66f-533e6b546df6",
+      "name": "Grixis Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{B}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/20332354-a294-4448-a66f-533e6b546df6?size=small"
+    },
+    {
+      "id": "1bf29333-2fe4-4bd3-855b-8eef8d14c5d6",
+      "name": "Obelisk of Grixis",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/1bf29333-2fe4-4bd3-855b-8eef8d14c5d6?size=small"
+    },
+    {
+      "id": "9035dda8-5ad3-4169-b281-83d6ca55b71e",
+      "name": "Recoil",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/9035dda8-5ad3-4169-b281-83d6ca55b71e?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "f99f864e-a10f-47f4-94c5-4571b5c11b3b",
+      "name": "Countersquall",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/f99f864e-a10f-47f4-94c5-4571b5c11b3b?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 7,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "b5a0be3b-ca79-45b9-8e9b-308d93d7ea54",
+      "name": "Igneous Pouncer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/b5a0be3b-ca79-45b9-8e9b-308d93d7ea54?size=small"
+    },
+    {
+      "id": "59f26d0a-e9f3-442f-b5c6-8016cf736432",
+      "name": "Vapor Snag",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/59f26d0a-e9f3-442f-b5c6-8016cf736432?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "1940a64a-51da-4509-b33e-86415aeeafad",
+      "name": "Ogre Savant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Ogre Wizard",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1940a64a-51da-4509-b33e-86415aeeafad?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "82afe98a-1b57-4fe4-8c8c-c8995c313410",
+      "name": "Jhessian Zombies",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/82afe98a-1b57-4fe4-8c8c-c8995c313410?size=small"
+    },
+    {
+      "id": "c7ef4b15-efab-4255-ac2d-7794f253aa52",
+      "name": "Rupture Spire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c7ef4b15-efab-4255-ac2d-7794f253aa52?size=small"
+    },
+    {
+      "id": "0d023dd3-e92f-4b8a-a178-b60db018bf2a",
+      "name": "Fire-Field Ogre",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{B}{R}",
+      "type_line": "Creature — Ogre Mutant",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/0d023dd3-e92f-4b8a-a178-b60db018bf2a?size=small"
+    },
+    {
+      "id": "a81f924b-0527-4311-8120-9bfff71524f6",
+      "name": "Terramorphic Expanse",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a81f924b-0527-4311-8120-9bfff71524f6?size=small"
+    },
+    {
+      "id": "ed2d62c2-85c9-4fd4-8a7e-0017640606be",
+      "name": "Shriekmaw",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/ed2d62c2-85c9-4fd4-8a7e-0017640606be?size=small"
+    },
+    {
+      "id": "3f01c66d-042a-497c-bc86-cad414fa4d60",
+      "name": "Moroii",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/3f01c66d-042a-497c-bc86-cad414fa4d60?size=small"
+    },
+    {
+      "id": "37257329-5946-44df-9f5a-50bd38b6a151",
+      "name": "Rise // Fall",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{B} // {B}{R}",
+      "type_line": "Sorcery // Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/37257329-5946-44df-9f5a-50bd38b6a151?size=small"
+    },
+    {
+      "id": "d28542af-936f-44e5-a4e3-119f23c9f0d6",
+      "name": "Crumbling Necropolis",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/d28542af-936f-44e5-a4e3-119f23c9f0d6?size=small"
+    },
+    {
+      "id": "048dbfec-b1d4-4bb2-8709-21a5f0f3d8ab",
+      "name": "Blazing Specter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{R}",
+      "type_line": "Creature — Specter",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/048dbfec-b1d4-4bb2-8709-21a5f0f3d8ab?size=small"
+    },
+    {
+      "id": "1a83658a-8820-4b71-838f-fe1c2ef822d0",
+      "name": "Spite // Malice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U} // {3}{B}",
+      "type_line": "Instant // Instant",
+      "cmc": 8,
+      "colors": [
+        "B",
+        "U"
+      ],
+      "image_small": "/api/img/1a83658a-8820-4b71-838f-fe1c2ef822d0?size=small"
+    },
+    {
+      "id": "3d11164c-f27b-4cad-8620-d97ed384f0e6",
+      "name": "Pain // Suffering",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B} // {3}{R}",
+      "type_line": "Sorcery // Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/3d11164c-f27b-4cad-8620-d97ed384f0e6?size=small"
+    },
+    {
+      "id": "a60e081e-854f-4bf9-8eac-62bd55403383",
+      "name": "Steamcore Weird",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Weird",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a60e081e-854f-4bf9-8eac-62bd55403383?size=small"
+    },
+    {
+      "id": "7005bb21-0cec-4c19-a95b-99a1bac25aa4",
+      "name": "Profane Command",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7005bb21-0cec-4c19-a95b-99a1bac25aa4?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403699,
+  "updated": 1789869403699
+}

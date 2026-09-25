@@ -1,0 +1,1135 @@
+{
+  "balance": 15246,
+  "feePercent": 3,
+  "totalCollected": 246,
+  "transactions": [
+    {
+      "id": "tx-47c7153d",
+      "timestamp": 1790311579985,
+      "type": "wager_fee",
+      "amount": 6,
+      "pot": 200,
+      "feePercent": 3,
+      "tableCode": "Z5RZG2",
+      "tableName": "⚔️ Duel vs Sparky (AI)",
+      "winner": "🤖 Sparky (AI)",
+      "description": "3% DAO Treasury fee from Match Z5RZG2 (🤖 Sparky (AI) won 194 🪙 of 200 🪙 pot)"
+    },
+    {
+      "id": "tx-9d1ec498",
+      "timestamp": 1790096610873,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-ae1bef08",
+      "timestamp": 1790096610868,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage gi5x6h)"
+    },
+    {
+      "id": "tx-295efcee",
+      "timestamp": 1790096605898,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "Z7845C",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match Z7845C (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-41329eb7",
+      "timestamp": 1790096605154,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-574e6179",
+      "timestamp": 1790096605150,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage w7c2q8)"
+    },
+    {
+      "id": "tx-075d62f3",
+      "timestamp": 1790095914362,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "WPUR2Q",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match WPUR2Q (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-57e58792",
+      "timestamp": 1790095900964,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "ML3AF6",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match ML3AF6 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-47c53c98",
+      "timestamp": 1790095890903,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "U9K2T5",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match U9K2T5 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-035bc184",
+      "timestamp": 1790095843623,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "TEARTX",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match TEARTX (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-51707cd5",
+      "timestamp": 1790095840948,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "AKSKAU",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match AKSKAU (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-d1883110",
+      "timestamp": 1790095840285,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-fc202505",
+      "timestamp": 1790095840282,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 0tmimi)"
+    },
+    {
+      "id": "tx-9d18542a",
+      "timestamp": 1790031661048,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-4725eb5c",
+      "timestamp": 1790031661039,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage n657eh)"
+    },
+    {
+      "id": "tx-3e84b74e",
+      "timestamp": 1790031660666,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "DTZKTH",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match DTZKTH (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-c02c1c6a",
+      "timestamp": 1790030579851,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "TNJJAF",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match TNJJAF (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-ed3406e7",
+      "timestamp": 1790029966130,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "22N369",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match 22N369 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-3e84349c",
+      "timestamp": 1790027780802,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "K4ULJP",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match K4ULJP (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-2cdb1c4b",
+      "timestamp": 1790027780418,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-e18760d7",
+      "timestamp": 1790027780409,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 4ptdki)"
+    },
+    {
+      "id": "tx-069cd320",
+      "timestamp": 1789961463935,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "8VK7X3",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match 8VK7X3 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-0e361f74",
+      "timestamp": 1789961463543,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-18ef7e43",
+      "timestamp": 1789961463534,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 39yl5m)"
+    },
+    {
+      "id": "tx-61481e17",
+      "timestamp": 1789960887336,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "FWDUD7",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match FWDUD7 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-045a3972",
+      "timestamp": 1789960886945,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-a114e56a",
+      "timestamp": 1789960886936,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage ui339p)"
+    },
+    {
+      "id": "tx-3ec3c144",
+      "timestamp": 1789960683083,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "C26NHJ",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match C26NHJ (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-e32e6bd7",
+      "timestamp": 1789960682700,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-cee80575",
+      "timestamp": 1789960682693,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 6cwhjh)"
+    },
+    {
+      "id": "tx-b0983318",
+      "timestamp": 1789942392034,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-a22e38f5",
+      "timestamp": 1789942392025,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 35ddu1)"
+    },
+    {
+      "id": "tx-3c73795b",
+      "timestamp": 1789941344337,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-1afd84b9",
+      "timestamp": 1789941344327,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 5fvp88)"
+    },
+    {
+      "id": "tx-0b4092d5",
+      "timestamp": 1789941343908,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "7WJKYR",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match 7WJKYR (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-742a898c",
+      "timestamp": 1789940555324,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-1b77c5b7",
+      "timestamp": 1789940555309,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage xxobdq)"
+    },
+    {
+      "id": "tx-189249fb",
+      "timestamp": 1789940526394,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-1454ea88",
+      "timestamp": 1789940526386,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage 4y2z66)"
+    },
+    {
+      "id": "tx-fcdaec88",
+      "timestamp": 1789940525980,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "RP4REP",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match RP4REP (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-bc94d11c",
+      "timestamp": 1789940522299,
+      "type": "fee_update",
+      "amount": 3,
+      "feePercent": 3,
+      "description": "DAO Governance updated match wager fee from 5% to 3% (authorized by DAO Community)"
+    },
+    {
+      "id": "tx-85821222",
+      "timestamp": 1789940522290,
+      "type": "fee_update",
+      "amount": 5,
+      "feePercent": 5,
+      "description": "DAO Governance updated match wager fee from 3% to 5% (authorized by Mage gbjb2s)"
+    },
+    {
+      "id": "tx-2f01d93f",
+      "timestamp": 1789940443936,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "LH89ZE",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match LH89ZE (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-ea3cd6aa",
+      "timestamp": 1789939795922,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "B7XRZ2",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match B7XRZ2 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-0220e54e",
+      "timestamp": 1789939608942,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "RLDMD5",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match RLDMD5 (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-1c56fd0c",
+      "timestamp": 1789939599412,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "8F7X5F",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match 8F7X5F (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-5027194b",
+      "timestamp": 1789939570434,
+      "type": "wager_fee",
+      "amount": 12,
+      "pot": 400,
+      "feePercent": 3,
+      "tableCode": "64GCGQ",
+      "tableName": "High Stakes Duel",
+      "winner": "Alice Mage",
+      "description": "3% DAO Treasury fee from Match 64GCGQ (Alice Mage won 388 🪙 of 400 🪙 pot)"
+    },
+    {
+      "id": "tx-genesis",
+      "timestamp": 1789900000000,
+      "type": "genesis",
+      "amount": 15000,
+      "description": "DAO Treasury Genesis Endowment for Multiverse Grants & Match Liquidity"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "prop-91b34894",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_bknaim",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790032103723,
+      "voters": {
+        "u-ec62502c87": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790032103723
+        }
+      }
+    },
+    {
+      "id": "prop-1cb65129",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_0ob7zw",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790031649409,
+      "voters": {
+        "u-34a1e3c4a9": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790031649409
+        }
+      }
+    },
+    {
+      "id": "prop-9b41abd0",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_bxy1ut",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790030580154,
+      "voters": {
+        "u-67c14f2ffa": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790030580154
+        }
+      }
+    },
+    {
+      "id": "prop-3f905aa1",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_cbvq1w",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790030542466,
+      "voters": {
+        "u-aae95d171c": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790030542466
+        }
+      }
+    },
+    {
+      "id": "prop-c3fe2140",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_v05wei",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790029967705,
+      "voters": {
+        "u-09bbe461d6": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790029967705
+        }
+      }
+    },
+    {
+      "id": "prop-64ecd80b",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_5ybctj",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790029022833,
+      "voters": {
+        "u-8aa361740a": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790029022833
+        }
+      }
+    },
+    {
+      "id": "prop-56c0bc8d",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_3bwafr",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790028769649,
+      "voters": {
+        "u-94a9e51dea": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028769649
+        }
+      }
+    },
+    {
+      "id": "prop-b86fbb24",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_hulvoz",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790028406050,
+      "voters": {
+        "u-77fdcc3ed7": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028406050
+        }
+      }
+    },
+    {
+      "id": "prop-436ed86e",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_3kb1fs",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790028119444,
+      "voters": {
+        "u-d10da6adcb": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028119444
+        }
+      }
+    },
+    {
+      "id": "prop-6d76e6b4",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_ptksd3",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790027873277,
+      "voters": {
+        "u-f67e55398d": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027873277
+        }
+      }
+    },
+    {
+      "id": "prop-fad7780d",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_dy5814",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790027785846,
+      "voters": {
+        "u-6826cfcd21": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027785846
+        }
+      }
+    },
+    {
+      "id": "prop-15fa432e",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_mx5bcs",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790027774897,
+      "voters": {
+        "u-bf18114821": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027774897
+        }
+      }
+    },
+    {
+      "id": "prop-bd803518",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_e780yr",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1790027745648,
+      "voters": {
+        "u-1205437f3a": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027745648
+        }
+      }
+    },
+    {
+      "id": "prop-d7c068cf",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_05gqfe",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789961462861,
+      "voters": {
+        "u-b86f2ed181": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789961462861
+        }
+      }
+    },
+    {
+      "id": "prop-95542b50",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_gx80ge",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789960886251,
+      "voters": {
+        "u-037ea6e541": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960886251
+        }
+      }
+    },
+    {
+      "id": "prop-9d048a44",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_v9wo86",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789960883713,
+      "voters": {
+        "u-ff56ffcbe2": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960883713
+        }
+      }
+    },
+    {
+      "id": "prop-bbe40588",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_6ta20v",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789960682064,
+      "voters": {
+        "u-44aafd9175": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960682064
+        }
+      }
+    },
+    {
+      "id": "prop-01c152a2",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_idomhw",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789960330814,
+      "voters": {
+        "u-fb3ed7b5d8": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960330814
+        }
+      }
+    },
+    {
+      "id": "prop-1895ed08",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_arbet6",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789941344184,
+      "voters": {
+        "u-fd2aa80dfe": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789941344184
+        }
+      }
+    },
+    {
+      "id": "prop-189f1688",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_fchh4k",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789940526245,
+      "voters": {
+        "u-d46260ade1": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789940526245
+        }
+      }
+    },
+    {
+      "id": "prop-0d40e1ef",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_2d7ak6",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789940444217,
+      "voters": {
+        "u-b489e7e797": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789940444217
+        }
+      }
+    },
+    {
+      "id": "prop-96a3bf5d",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_yd7236",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789939796210,
+      "voters": {
+        "u-83ee70110c": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939796210
+        }
+      }
+    },
+    {
+      "id": "prop-526159ae",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_cjrveh",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789939737193,
+      "voters": {
+        "u-e243f1212d": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939737193
+        }
+      }
+    },
+    {
+      "id": "prop-8b9e4ebd",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_fxfmis",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789939731215,
+      "voters": {
+        "u-c56d82f493": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939731215
+        }
+      }
+    },
+    {
+      "id": "prop-f2106cc8",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_a5zgvz",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789939707627,
+      "voters": {
+        "u-258327c680": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939707627
+        }
+      }
+    },
+    {
+      "id": "prop-168c99d6",
+      "title": "🌸 Enchanted Meadow Audio Pack",
+      "description": "Commission an indie lo-fi artist to craft 3 fantasy background ambient loops for the Fairy and Princess themes.",
+      "creator": "wizard_25i8e8",
+      "creatorName": "Archmage Lily [Fairy Queen]",
+      "cost": 1800,
+      "votesFor": 1000,
+      "votesAgainst": 0,
+      "status": "active",
+      "created": 1789939700276,
+      "voters": {
+        "u-fbcd494204": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939700276
+        }
+      }
+    },
+    {
+      "id": "prop-1",
+      "title": "🧚 Expand Sylvan Sanctuary Card Art Cache",
+      "description": "Allocate 2,500 Gold to pre-cache high-resolution foil artworks for all retro green cards and commander favorites.",
+      "creator": "amber",
+      "creatorName": "amber (Grand Arbiter)",
+      "cost": 2500,
+      "votesFor": 3400,
+      "votesAgainst": 200,
+      "status": "active",
+      "created": 1789938000000,
+      "voters": {}
+    },
+    {
+      "id": "prop-2",
+      "title": "🤖 Train Sparky AI with a Gruul Stompy Archetype",
+      "description": "Hire a rogue artificer to give Sparky an aggressive Gruul deck with Bloodrush combat tricks.",
+      "creator": "system",
+      "creatorName": "Multiverse Council",
+      "cost": 1500,
+      "votesFor": 30100,
+      "votesAgainst": 600,
+      "status": "active",
+      "created": 1789938100000,
+      "voters": {
+        "u-258327c680": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939707630
+        },
+        "u-c56d82f493": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939731218
+        },
+        "u-e243f1212d": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939737197
+        },
+        "u-83ee70110c": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789939796214
+        },
+        "u-b489e7e797": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789940444222
+        },
+        "u-d46260ade1": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789940526249
+        },
+        "u-fd2aa80dfe": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789941344188
+        },
+        "u-fb3ed7b5d8": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960330816
+        },
+        "u-44aafd9175": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960682068
+        },
+        "u-ff56ffcbe2": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960883717
+        },
+        "u-037ea6e541": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789960886254
+        },
+        "u-b86f2ed181": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1789961462865
+        },
+        "u-1205437f3a": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027745652
+        },
+        "u-bf18114821": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027774901
+        },
+        "u-6826cfcd21": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027785849
+        },
+        "u-f67e55398d": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790027873278
+        },
+        "u-d10da6adcb": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028119448
+        },
+        "u-77fdcc3ed7": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028406053
+        },
+        "u-94a9e51dea": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790028769654
+        },
+        "u-8aa361740a": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790029022835
+        },
+        "u-09bbe461d6": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790029967708
+        },
+        "u-aae95d171c": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790030542470
+        },
+        "u-67c14f2ffa": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790030580158
+        },
+        "u-34a1e3c4a9": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790031649414
+        },
+        "u-ec62502c87": {
+          "vote": "for",
+          "weight": 1000,
+          "time": 1790032103727
+        }
+      }
+    },
+    {
+      "id": "prop-3",
+      "title": "🎲 Host Weekly High-Roller Commander Bounty",
+      "description": "Sponsor a 5,000 Gold matched bounty for 40-life Commander matches hosted on the LAN.",
+      "creator": "alice_muabgqty",
+      "creatorName": "Alice Mage",
+      "cost": 5000,
+      "votesFor": 8900,
+      "votesAgainst": 1200,
+      "status": "active",
+      "created": 1789938200000,
+      "voters": {}
+    }
+  ]
+}

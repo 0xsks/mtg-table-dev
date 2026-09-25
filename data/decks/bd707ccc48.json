@@ -1,0 +1,119 @@
+{
+  "id": "bd707ccc48",
+  "userId": "u-21b95a34db",
+  "authorName": "Advent Tester",
+  "name": "🎲 Limited Draft · 2026-09-22",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Mocking Sprite",
+      "count": 1
+    },
+    {
+      "name": "Gruul Guildgate",
+      "count": 1
+    },
+    {
+      "name": "Suspicious Shambler",
+      "count": 1
+    },
+    {
+      "name": "Magnigoth Sentry",
+      "count": 1
+    },
+    {
+      "name": "Goldvein Pick",
+      "count": 1
+    },
+    {
+      "name": "Fake Your Own Death",
+      "count": 1
+    },
+    {
+      "name": "Firebrand Archer",
+      "count": 1
+    },
+    {
+      "name": "Sanguine Indulgence",
+      "count": 1
+    },
+    {
+      "name": "Hinterland Sanctifier",
+      "count": 1
+    },
+    {
+      "name": "Pirate's Cutlass",
+      "count": 1
+    },
+    {
+      "name": "Ambush Wolf",
+      "count": 1
+    },
+    {
+      "name": "Suspicious Shambler",
+      "count": 1
+    },
+    {
+      "name": "Lightshell Duo",
+      "count": 1
+    },
+    {
+      "name": "Burrog Befuddler",
+      "count": 1
+    },
+    {
+      "name": "Expedition Map",
+      "count": 1
+    },
+    {
+      "name": "Skeleton Archer",
+      "count": 1
+    },
+    {
+      "name": "Elementalist Adept",
+      "count": 1
+    },
+    {
+      "name": "Duress",
+      "count": 1
+    },
+    {
+      "name": "Marauding Blight-Priest",
+      "count": 1
+    },
+    {
+      "name": "Axgard Cavalry",
+      "count": 1
+    },
+    {
+      "name": "Skyraker Giant",
+      "count": 1
+    },
+    {
+      "name": "Plains",
+      "count": 4
+    },
+    {
+      "name": "Island",
+      "count": 3
+    },
+    {
+      "name": "Swamp",
+      "count": 4
+    },
+    {
+      "name": "Mountain",
+      "count": 5
+    },
+    {
+      "name": "Forest",
+      "count": 3
+    }
+  ],
+  "starter": false,
+  "draft": true,
+  "draftSet": "fdn",
+  "created": 1790055607794,
+  "updated": 1790055607794
+}

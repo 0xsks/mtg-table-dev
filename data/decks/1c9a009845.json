@@ -1,0 +1,521 @@
+{
+  "id": "1c9a009845",
+  "name": "Duel: Sorin vs. Tibalt — Tibalt",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "73e348dd-2d8a-4ee6-a834-2d5861566043",
+      "name": "Breaking Point",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/73e348dd-2d8a-4ee6-a834-2d5861566043?size=small"
+    },
+    {
+      "id": "3253a624-50cc-4a8a-9b0c-9902aa53775f",
+      "name": "Sulfuric Vortex",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/3253a624-50cc-4a8a-9b0c-9902aa53775f?size=small"
+    },
+    {
+      "id": "fa4bf664-3b92-4598-b905-2bc090958c8b",
+      "name": "Goblin Arsonist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/fa4bf664-3b92-4598-b905-2bc090958c8b?size=small"
+    },
+    {
+      "id": "15fecad6-5f0f-4d40-98ba-7849cda9ec4d",
+      "name": "Scorched Rusalka",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Spirit",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/15fecad6-5f0f-4d40-98ba-7849cda9ec4d?size=small"
+    },
+    {
+      "id": "ccf0f075-4401-41da-a17f-a209d6a03782",
+      "name": "Blightning",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/ccf0f075-4401-41da-a17f-a209d6a03782?size=small"
+    },
+    {
+      "id": "4d431445-d7db-4ce1-b422-41494d9be1b4",
+      "name": "Reassembling Skeleton",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton Warrior",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4d431445-d7db-4ce1-b422-41494d9be1b4?size=small"
+    },
+    {
+      "id": "77ac0e4e-71ae-4a4b-aa73-64079bd50308",
+      "name": "Recoup",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/77ac0e4e-71ae-4a4b-aa73-64079bd50308?size=small"
+    },
+    {
+      "id": "a2b4cbb7-c9ad-4320-9322-a6a3afbc4a50",
+      "name": "Ashmouth Hound",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Elemental Dog",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/a2b4cbb7-c9ad-4320-9322-a6a3afbc4a50?size=small"
+    },
+    {
+      "id": "ea080c34-8446-429b-a380-3a95f43089fb",
+      "name": "Hellspark Elemental",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/ea080c34-8446-429b-a380-3a95f43089fb?size=small"
+    },
+    {
+      "id": "872d8f4d-6ee5-4494-9900-db62d3e4cedd",
+      "name": "Strangling Soot",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/872d8f4d-6ee5-4494-9900-db62d3e4cedd?size=small"
+    },
+    {
+      "id": "5fdea923-094d-4f43-a5b6-b6e3f4b891d8",
+      "name": "Shambling Remains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Creature — Zombie Horror",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/5fdea923-094d-4f43-a5b6-b6e3f4b891d8?size=small"
+    },
+    {
+      "id": "7e8e9f60-f8ea-4f29-b7e2-ca87f8336fca",
+      "name": "Browbeat",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7e8e9f60-f8ea-4f29-b7e2-ca87f8336fca?size=small"
+    },
+    {
+      "id": "15affc1b-2ebb-4934-87a2-10e89eafe894",
+      "name": "Flame Slash",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/15affc1b-2ebb-4934-87a2-10e89eafe894?size=small"
+    },
+    {
+      "id": "c671b096-17a4-4cdb-b954-7b04981e7aef",
+      "name": "Geistflame",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/c671b096-17a4-4cdb-b954-7b04981e7aef?size=small"
+    },
+    {
+      "id": "4391b0af-2f26-4a45-9e2a-5bd8e9838107",
+      "name": "Pyroclasm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4391b0af-2f26-4a45-9e2a-5bd8e9838107?size=small"
+    },
+    {
+      "id": "fa56d53c-836c-483d-988d-a288d0ad91bb",
+      "name": "Tibalt, the Fiend-Blooded",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{R}",
+      "type_line": "Legendary Planeswalker — Tibalt",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/fa56d53c-836c-483d-988d-a288d0ad91bb?size=small"
+    },
+    {
+      "id": "67c8578e-052f-4182-9bb1-fb35450d22c0",
+      "name": "Coal Stoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/67c8578e-052f-4182-9bb1-fb35450d22c0?size=small"
+    },
+    {
+      "id": "379ffc67-4142-4ead-a871-0f851523745e",
+      "name": "Terminate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/379ffc67-4142-4ead-a871-0f851523745e?size=small"
+    },
+    {
+      "id": "3f4ef04b-5434-480e-82a1-118ed1ff551f",
+      "name": "Corpse Connoisseur",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Zombie Wizard",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/3f4ef04b-5434-480e-82a1-118ed1ff551f?size=small"
+    },
+    {
+      "id": "565033d2-7cb9-4ee2-b952-45745b9a2ecc",
+      "name": "Scourge Devil",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Devil",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/565033d2-7cb9-4ee2-b952-45745b9a2ecc?size=small"
+    },
+    {
+      "id": "7bbfd905-8c71-4389-9174-6e84bcbcf05c",
+      "name": "Hellrider",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Devil",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7bbfd905-8c71-4389-9174-6e84bcbcf05c?size=small"
+    },
+    {
+      "id": "d8634068-0ada-4913-8246-c9ac7e9dbde3",
+      "name": "Skirsdag Cultist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d8634068-0ada-4913-8246-c9ac7e9dbde3?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "87ce6584-0a21-43d0-a2fe-cbdea564927a",
+      "name": "Blazing Salvo",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/87ce6584-0a21-43d0-a2fe-cbdea564927a?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c",
+      "name": "Faithless Looting",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/fc019ffa-4461-4f3d-ab8d-e4d20e77ca0c?size=small"
+    },
+    {
+      "id": "20c799a9-ab94-46e6-9111-00505e071c41",
+      "name": "Rakdos Carnarium",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/20c799a9-ab94-46e6-9111-00505e071c41?size=small"
+    },
+    {
+      "id": "4478151a-5c4e-49dc-9405-2481395ed28f",
+      "name": "Gang of Devils",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Devil",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4478151a-5c4e-49dc-9405-2481395ed28f?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "320e394c-c8b1-42ad-91a5-6d57296f85ab",
+      "name": "Bump in the Night",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/320e394c-c8b1-42ad-91a5-6d57296f85ab?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "d46473a7-69f5-492b-845d-c8862a1fec85",
+      "name": "Devil's Play",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d46473a7-69f5-492b-845d-c8862a1fec85?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "51aecc57-f0cc-4e35-af38-ead25cf8a1b8",
+      "name": "Akoum Refuge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/51aecc57-f0cc-4e35-af38-ead25cf8a1b8?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "dbca500a-f349-4873-a2d5-f8dfbd957a3d",
+      "name": "Vithian Stinger",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/dbca500a-f349-4873-a2d5-f8dfbd957a3d?size=small"
+    },
+    {
+      "id": "47ff534c-a8eb-4303-95bb-00b3df0c5da6",
+      "name": "Flame Javelin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2/R}{2/R}{2/R}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/47ff534c-a8eb-4303-95bb-00b3df0c5da6?size=small"
+    },
+    {
+      "id": "f9ac12fe-f895-4450-8516-1feb6a48f1bc",
+      "name": "Lavaborn Muse",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/f9ac12fe-f895-4450-8516-1feb6a48f1bc?size=small"
+    },
+    {
+      "id": "89a62145-8dad-4385-9c6d-8cf8bfdad681",
+      "name": "Mad Prophet",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/89a62145-8dad-4385-9c6d-8cf8bfdad681?size=small"
+    },
+    {
+      "id": "b60c97a2-52db-4e4b-a075-0120a3ebca75",
+      "name": "Torrent of Souls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B/R}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/b60c97a2-52db-4e4b-a075-0120a3ebca75?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403705,
+  "updated": 1789869403705
+}

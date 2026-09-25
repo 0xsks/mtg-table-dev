@@ -1,0 +1,119 @@
+{
+  "id": "7a1524629d",
+  "userId": "u-adf89ddf7f",
+  "authorName": "Advent Tester",
+  "name": "🎲 Limited Draft · 2026-09-22",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Deadly Riposte",
+      "count": 1
+    },
+    {
+      "name": "Axgard Cavalry",
+      "count": 1
+    },
+    {
+      "name": "Spitfire Lagac",
+      "count": 1
+    },
+    {
+      "name": "Fire Elemental",
+      "count": 1
+    },
+    {
+      "name": "Soul-Shackled Zombie",
+      "count": 1
+    },
+    {
+      "name": "Luminous Rebuke",
+      "count": 1
+    },
+    {
+      "name": "Grow from the Ashes",
+      "count": 1
+    },
+    {
+      "name": "Azorius Guildgate",
+      "count": 1
+    },
+    {
+      "name": "Gutless Plunderer",
+      "count": 1
+    },
+    {
+      "name": "Pulse Tracker",
+      "count": 1
+    },
+    {
+      "name": "Swab Goblin",
+      "count": 1
+    },
+    {
+      "name": "Felidar Savior",
+      "count": 1
+    },
+    {
+      "name": "Felidar Cub",
+      "count": 1
+    },
+    {
+      "name": "Perforating Artist",
+      "count": 1
+    },
+    {
+      "name": "Pilfer",
+      "count": 1
+    },
+    {
+      "name": "Macabre Waltz",
+      "count": 1
+    },
+    {
+      "name": "Axgard Cavalry",
+      "count": 1
+    },
+    {
+      "name": "Vanguard Seraph",
+      "count": 1
+    },
+    {
+      "name": "Burst Lightning",
+      "count": 1
+    },
+    {
+      "name": "Bishop's Soldier",
+      "count": 1
+    },
+    {
+      "name": "Teach by Example",
+      "count": 1
+    },
+    {
+      "name": "Plains",
+      "count": 6
+    },
+    {
+      "name": "Island",
+      "count": 2
+    },
+    {
+      "name": "Swamp",
+      "count": 5
+    },
+    {
+      "name": "Mountain",
+      "count": 3
+    },
+    {
+      "name": "Forest",
+      "count": 3
+    }
+  ],
+  "starter": false,
+  "draft": true,
+  "draftSet": "fdn",
+  "created": 1790055260845,
+  "updated": 1790055260845
+}

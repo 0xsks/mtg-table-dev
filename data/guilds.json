@@ -1,0 +1,556 @@
+[
+  {
+    "id": "guild-sylvan",
+    "name": "Sylvan Grove Druids",
+    "crest": "🌲",
+    "motto": "May the roots run deep and the mana flow eternal.",
+    "level": 3,
+    "vault": 4500,
+    "leader": "amber",
+    "members": [
+      {
+        "id": "u-5e7eae2581",
+        "username": "amber",
+        "displayName": "amber",
+        "role": "Archdruid",
+        "donated": 3000
+      },
+      {
+        "id": "u-lily",
+        "username": "lily_fae",
+        "displayName": "Lily Fae",
+        "role": "Initiate",
+        "donated": 1500
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-1",
+        "author": "amber",
+        "text": "Welcome to Sylvan Grove! All green and ramp decks welcome! 🌿",
+        "timestamp": 1789938000000
+      },
+      {
+        "id": "m-2",
+        "author": "lily_fae",
+        "text": "Gathering mana at Table 2 for practice matches! ✨",
+        "timestamp": 1789938600000
+      }
+    ]
+  },
+  {
+    "id": "guild-cyber",
+    "name": "Cyber Syndicate Netrunners",
+    "crest": "⚡",
+    "motto": "High tech, low life, infinite storm mana loops.",
+    "level": 4,
+    "vault": 8200,
+    "leader": "neon_wizard",
+    "members": [
+      {
+        "id": "u-2",
+        "username": "neon_wizard",
+        "displayName": "Neon Wizard",
+        "role": "Syndicate Prime",
+        "donated": 5000
+      },
+      {
+        "id": "u-3",
+        "username": "glitch_mage",
+        "displayName": "Glitch Mage",
+        "role": "Decker",
+        "donated": 3200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-3",
+        "author": "neon_wizard",
+        "text": "New storm combo analyzed in the lab. Testing on LAN tonight! 💻",
+        "timestamp": 1789938500000
+      }
+    ]
+  },
+  {
+    "id": "guild-rakdos",
+    "name": "Cult of Rakdos Revelers",
+    "crest": "💀",
+    "motto": "Blood, fire, and high-stakes chaos.",
+    "level": 2,
+    "vault": 2900,
+    "leader": "havoc_lord",
+    "members": [
+      {
+        "id": "u-4",
+        "username": "havoc_lord",
+        "displayName": "Havoc Lord",
+        "role": "Ringmaster",
+        "donated": 2000
+      },
+      {
+        "id": "u-5",
+        "username": "skulldugger",
+        "displayName": "Skulldugger",
+        "role": "Carnivalist",
+        "donated": 900
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-4",
+        "author": "havoc_lord",
+        "text": "Wager stakes doubled this weekend! No guts, no glory! 🔥",
+        "timestamp": 1789938700000
+      }
+    ]
+  },
+  {
+    "id": "guild-dragon",
+    "name": "Order of the Astral Wyrm",
+    "crest": "🐉",
+    "motto": "Soar above the heavens, unleash dragonfire.",
+    "level": 5,
+    "vault": 12500,
+    "leader": "karrthus_sky",
+    "members": [
+      {
+        "id": "u-6",
+        "username": "karrthus_sky",
+        "displayName": "Sky Tyrant",
+        "role": "Dragonlord",
+        "donated": 7500
+      },
+      {
+        "id": "u-7",
+        "username": "flame_speaker",
+        "displayName": "Flame Speaker",
+        "role": "Wing Captain",
+        "donated": 5000
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-5",
+        "author": "karrthus_sky",
+        "text": "Dragon commander bounties are open in the sanctuary! 🐉",
+        "timestamp": 1789939000000
+      }
+    ]
+  },
+  {
+    "id": "guild-8cb789fb",
+    "name": "Sanctum of Starlight gbjb2s",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage gbjb2s",
+    "members": [
+      {
+        "id": "u-d09c40426d",
+        "username": "mage_gbjb2s",
+        "displayName": "Mage gbjb2s",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-154e2d",
+        "author": "Mage gbjb2s",
+        "text": "Welcome to Sanctum of Starlight gbjb2s! A new order rises in the multiverse. ✨",
+        "timestamp": 1789940522308
+      },
+      {
+        "id": "m-554a42",
+        "author": "Mage gbjb2s",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789940522319
+      }
+    ]
+  },
+  {
+    "id": "guild-5181d2b9",
+    "name": "Sanctum of Starlight 4y2z66",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 4y2z66",
+    "members": [
+      {
+        "id": "u-757bd18adb",
+        "username": "mage_4y2z66",
+        "displayName": "Mage 4y2z66",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-012c62",
+        "author": "Mage 4y2z66",
+        "text": "Welcome to Sanctum of Starlight 4y2z66! A new order rises in the multiverse. ✨",
+        "timestamp": 1789940526399
+      },
+      {
+        "id": "m-cfd1a6",
+        "author": "Mage 4y2z66",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789940526410
+      }
+    ]
+  },
+  {
+    "id": "guild-a93ae784",
+    "name": "Sanctum of Starlight xxobdq",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage xxobdq",
+    "members": [
+      {
+        "id": "u-71a574d0ab",
+        "username": "mage_xxobdq",
+        "displayName": "Mage xxobdq",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-6a70bd",
+        "author": "Mage xxobdq",
+        "text": "Welcome to Sanctum of Starlight xxobdq! A new order rises in the multiverse. ✨",
+        "timestamp": 1789940555340
+      },
+      {
+        "id": "m-29cb15",
+        "author": "Mage xxobdq",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789940555368
+      }
+    ]
+  },
+  {
+    "id": "guild-cfe90fb2",
+    "name": "Sanctum of Starlight 5fvp88",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 5fvp88",
+    "members": [
+      {
+        "id": "u-9651a6c557",
+        "username": "mage_5fvp88",
+        "displayName": "Mage 5fvp88",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-cdc9ed",
+        "author": "Mage 5fvp88",
+        "text": "Welcome to Sanctum of Starlight 5fvp88! A new order rises in the multiverse. ✨",
+        "timestamp": 1789941344346
+      },
+      {
+        "id": "m-4d272b",
+        "author": "Mage 5fvp88",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789941344355
+      }
+    ]
+  },
+  {
+    "id": "guild-dcb82c33",
+    "name": "Sanctum of Starlight 35ddu1",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 35ddu1",
+    "members": [
+      {
+        "id": "u-098c3311db",
+        "username": "mage_35ddu1",
+        "displayName": "Mage 35ddu1",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-7f987a",
+        "author": "Mage 35ddu1",
+        "text": "Welcome to Sanctum of Starlight 35ddu1! A new order rises in the multiverse. ✨",
+        "timestamp": 1789942392042
+      },
+      {
+        "id": "m-79bdd7",
+        "author": "Mage 35ddu1",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789942392060
+      }
+    ]
+  },
+  {
+    "id": "guild-20bef7d7",
+    "name": "Sanctum of Starlight 6cwhjh",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 6cwhjh",
+    "members": [
+      {
+        "id": "u-cf9f445908",
+        "username": "mage_6cwhjh",
+        "displayName": "Mage 6cwhjh",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-647d7b",
+        "author": "Mage 6cwhjh",
+        "text": "Welcome to Sanctum of Starlight 6cwhjh! A new order rises in the multiverse. ✨",
+        "timestamp": 1789960682707
+      },
+      {
+        "id": "m-9be7c8",
+        "author": "Mage 6cwhjh",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789960682717
+      }
+    ]
+  },
+  {
+    "id": "guild-bda3fad0",
+    "name": "Sanctum of Starlight ui339p",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage ui339p",
+    "members": [
+      {
+        "id": "u-ca5a52490f",
+        "username": "mage_ui339p",
+        "displayName": "Mage ui339p",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-825c1e",
+        "author": "Mage ui339p",
+        "text": "Welcome to Sanctum of Starlight ui339p! A new order rises in the multiverse. ✨",
+        "timestamp": 1789960886953
+      },
+      {
+        "id": "m-e50d6c",
+        "author": "Mage ui339p",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789960886963
+      }
+    ]
+  },
+  {
+    "id": "guild-9e208bb2",
+    "name": "Sanctum of Starlight 39yl5m",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 39yl5m",
+    "members": [
+      {
+        "id": "u-c910c0c689",
+        "username": "mage_39yl5m",
+        "displayName": "Mage 39yl5m",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-2a85f6",
+        "author": "Mage 39yl5m",
+        "text": "Welcome to Sanctum of Starlight 39yl5m! A new order rises in the multiverse. ✨",
+        "timestamp": 1789961463550
+      },
+      {
+        "id": "m-8873ea",
+        "author": "Mage 39yl5m",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1789961463560
+      }
+    ]
+  },
+  {
+    "id": "guild-3a242992",
+    "name": "Sanctum of Starlight 4ptdki",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 4ptdki",
+    "members": [
+      {
+        "id": "u-d62dba6097",
+        "username": "mage_4ptdki",
+        "displayName": "Mage 4ptdki",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-4c7da0",
+        "author": "Mage 4ptdki",
+        "text": "Welcome to Sanctum of Starlight 4ptdki! A new order rises in the multiverse. ✨",
+        "timestamp": 1790027780426
+      },
+      {
+        "id": "m-516711",
+        "author": "Mage 4ptdki",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1790027780435
+      }
+    ]
+  },
+  {
+    "id": "guild-7d3fc352",
+    "name": "Sanctum of Starlight n657eh",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage n657eh",
+    "members": [
+      {
+        "id": "u-c1cf42c83f",
+        "username": "mage_n657eh",
+        "displayName": "Mage n657eh",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-f1f4e3",
+        "author": "Mage n657eh",
+        "text": "Welcome to Sanctum of Starlight n657eh! A new order rises in the multiverse. ✨",
+        "timestamp": 1790031661056
+      },
+      {
+        "id": "m-cb9e94",
+        "author": "Mage n657eh",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1790031661068
+      }
+    ]
+  },
+  {
+    "id": "guild-76f9cfd3",
+    "name": "Sanctum of Starlight 0tmimi",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage 0tmimi",
+    "members": [
+      {
+        "id": "u-dc1810975e",
+        "username": "mage_0tmimi",
+        "displayName": "Mage 0tmimi",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-192860",
+        "author": "Mage 0tmimi",
+        "text": "Welcome to Sanctum of Starlight 0tmimi! A new order rises in the multiverse. ✨",
+        "timestamp": 1790095840289
+      },
+      {
+        "id": "m-bc30ae",
+        "author": "Mage 0tmimi",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1790095840313
+      }
+    ]
+  },
+  {
+    "id": "guild-59df0504",
+    "name": "Sanctum of Starlight w7c2q8",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage w7c2q8",
+    "members": [
+      {
+        "id": "u-05f5d7fb32",
+        "username": "mage_w7c2q8",
+        "displayName": "Mage w7c2q8",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-8539f7",
+        "author": "Mage w7c2q8",
+        "text": "Welcome to Sanctum of Starlight w7c2q8! A new order rises in the multiverse. ✨",
+        "timestamp": 1790096605157
+      },
+      {
+        "id": "m-ce220c",
+        "author": "Mage w7c2q8",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1790096605168
+      }
+    ]
+  },
+  {
+    "id": "guild-d188fcb0",
+    "name": "Sanctum of Starlight gi5x6h",
+    "crest": "🔮",
+    "motto": "Harness celestial mana to guide our kindred.",
+    "level": 1,
+    "vault": 200,
+    "leader": "Mage gi5x6h",
+    "members": [
+      {
+        "id": "u-9fd0bc07f4",
+        "username": "mage_gi5x6h",
+        "displayName": "Mage gi5x6h",
+        "role": "Guildmaster",
+        "donated": 200
+      }
+    ],
+    "messages": [
+      {
+        "id": "m-a87096",
+        "author": "Mage gi5x6h",
+        "text": "Welcome to Sanctum of Starlight gi5x6h! A new order rises in the multiverse. ✨",
+        "timestamp": 1790096610876
+      },
+      {
+        "id": "m-14dae4",
+        "author": "Mage gi5x6h",
+        "text": "All wizards meet at Table 1 for the grand rally!",
+        "timestamp": 1790096610882
+      }
+    ]
+  }
+]

@@ -1,0 +1,119 @@
+{
+  "id": "a8c78d2bad",
+  "userId": "u-1329be35b0",
+  "authorName": "Advent Tester",
+  "name": "🎲 Limited Draft · 2026-09-22",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Ballyrush Banneret",
+      "count": 1
+    },
+    {
+      "name": "Gutless Plunderer",
+      "count": 1
+    },
+    {
+      "name": "Felidar Savior",
+      "count": 1
+    },
+    {
+      "name": "Hinterland Sanctifier",
+      "count": 1
+    },
+    {
+      "name": "Erudite Wizard",
+      "count": 1
+    },
+    {
+      "name": "Goblin Surprise",
+      "count": 1
+    },
+    {
+      "name": "Pilfer",
+      "count": 1
+    },
+    {
+      "name": "Impact Tremors",
+      "count": 1
+    },
+    {
+      "name": "Expedition Map",
+      "count": 1
+    },
+    {
+      "name": "Bake into a Pie",
+      "count": 1
+    },
+    {
+      "name": "Druid of the Cowl",
+      "count": 1
+    },
+    {
+      "name": "Ghitu Lavarunner",
+      "count": 1
+    },
+    {
+      "name": "Quick-Draw Katana",
+      "count": 1
+    },
+    {
+      "name": "Fire Elemental",
+      "count": 1
+    },
+    {
+      "name": "Gorehorn Raider",
+      "count": 1
+    },
+    {
+      "name": "Bite Down",
+      "count": 1
+    },
+    {
+      "name": "Armasaur Guide",
+      "count": 1
+    },
+    {
+      "name": "Macabre Waltz",
+      "count": 1
+    },
+    {
+      "name": "Fleeting Flight",
+      "count": 1
+    },
+    {
+      "name": "Goblin Surprise",
+      "count": 1
+    },
+    {
+      "name": "Bear Cub",
+      "count": 1
+    },
+    {
+      "name": "Plains",
+      "count": 5
+    },
+    {
+      "name": "Island",
+      "count": 7
+    },
+    {
+      "name": "Swamp",
+      "count": 3
+    },
+    {
+      "name": "Mountain",
+      "count": 2
+    },
+    {
+      "name": "Forest",
+      "count": 2
+    }
+  ],
+  "starter": false,
+  "draft": true,
+  "draftSet": "fdn",
+  "created": 1790055279891,
+  "updated": 1790055279891
+}

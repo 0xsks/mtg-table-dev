@@ -1,0 +1,604 @@
+{
+  "id": "21d556607d",
+  "name": "Duel: Jace vs. Vraska — Vraska",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "edfbf056-c3b7-40e9-8e2b-333585978ac9",
+      "name": "River Boa",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Snake",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/edfbf056-c3b7-40e9-8e2b-333585978ac9?size=small"
+    },
+    {
+      "id": "def88ab5-1b82-46f5-a136-ee1addff4214",
+      "name": "Death-Hood Cobra",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Phyrexian Snake",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/def88ab5-1b82-46f5-a136-ee1addff4214?size=small"
+    },
+    {
+      "id": "9861ea61-d635-4f1c-b5eb-d608e12713ec",
+      "name": "Marsh Casualties",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9861ea61-d635-4f1c-b5eb-d608e12713ec?size=small"
+    },
+    {
+      "id": "e1ebaed7-b3d5-4eb8-93f7-3a65fd7b89b6",
+      "name": "Gatecreeper Vine",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Plant",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e1ebaed7-b3d5-4eb8-93f7-3a65fd7b89b6?size=small"
+    },
+    {
+      "id": "b17114ed-f98f-4b82-ba03-ef7ec5f572ba",
+      "name": "Tavern Swindler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Human Rogue",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b17114ed-f98f-4b82-ba03-ef7ec5f572ba?size=small"
+    },
+    {
+      "id": "62e55607-4c1f-46ab-aae7-391b65a125c4",
+      "name": "Hypnotic Cloud",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/62e55607-4c1f-46ab-aae7-391b65a125c4?size=small"
+    },
+    {
+      "id": "32aec0ec-0feb-4276-ab9c-5bb18b5005a0",
+      "name": "Wight of Precinct Six",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/32aec0ec-0feb-4276-ab9c-5bb18b5005a0?size=small"
+    },
+    {
+      "id": "e8399c2e-ecc8-41c9-a690-a0eeafb27f77",
+      "name": "Night's Whisper",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/e8399c2e-ecc8-41c9-a690-a0eeafb27f77?size=small"
+    },
+    {
+      "id": "afbafd6c-15cc-492f-b1e4-c5baa61e4a0b",
+      "name": "Drooling Groodion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/afbafd6c-15cc-492f-b1e4-c5baa61e4a0b?size=small"
+    },
+    {
+      "id": "7bc1441e-7d75-4a74-8733-19077dfa69b2",
+      "name": "Pulse Tracker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Vampire Rogue",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7bc1441e-7d75-4a74-8733-19077dfa69b2?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b2bfa6f0-05d9-4a15-b65c-e40eca10fbfa",
+      "name": "Shadow Alley Denizen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Vampire Rogue",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b2bfa6f0-05d9-4a15-b65c-e40eca10fbfa?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "132ccc20-cb42-4474-b747-7e41a661060e",
+      "name": "Tragic Slip",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/132ccc20-cb42-4474-b747-7e41a661060e?size=small"
+    },
+    {
+      "id": "016d333a-6a04-42ff-ba65-b3a5d251893e",
+      "name": "Reaper of the Wilds",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{G}",
+      "type_line": "Creature — Gorgon",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/016d333a-6a04-42ff-ba65-b3a5d251893e?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "932d48fb-42b5-4aaa-a91c-d35cdb5e41a3",
+      "name": "Acidic Slime",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Ooze",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/932d48fb-42b5-4aaa-a91c-d35cdb5e41a3?size=small"
+    },
+    {
+      "id": "a6ab9d2b-6cb3-4477-8d0e-712c530383bd",
+      "name": "Vraska the Unseen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{G}",
+      "type_line": "Legendary Planeswalker — Vraska",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/a6ab9d2b-6cb3-4477-8d0e-712c530383bd?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "2126c83b-75ce-4526-8f91-5cd8b6ec74a5",
+      "name": "Highway Robber",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Human Mercenary",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2126c83b-75ce-4526-8f91-5cd8b6ec74a5?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "5b3a4f2a-57ea-4fa0-a76f-3e215a36d1f4",
+      "name": "Nekrataal",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Human Assassin",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5b3a4f2a-57ea-4fa0-a76f-3e215a36d1f4?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "9b14ea9c-5bad-499d-8c3d-da72b748769b",
+      "name": "Mold Shambler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Fungus Beast",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/9b14ea9c-5bad-499d-8c3d-da72b748769b?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "4cd6d782-ce5a-4994-8310-34faf9c41de2",
+      "name": "Corpse Traders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Human Rogue",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4cd6d782-ce5a-4994-8310-34faf9c41de2?size=small"
+    },
+    {
+      "id": "b401dba6-c26e-45c1-b10a-12116fb1cb4e",
+      "name": "Festerhide Boar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Boar",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b401dba6-c26e-45c1-b10a-12116fb1cb4e?size=small"
+    },
+    {
+      "id": "3da7ab6b-b10a-4786-b1eb-92de7e66690e",
+      "name": "Tainted Wood",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3da7ab6b-b10a-4786-b1eb-92de7e66690e?size=small"
+    },
+    {
+      "id": "028b8d50-b858-4c64-8eb9-b7699b2134df",
+      "name": "Stonefare Crocodile",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Crocodile",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/028b8d50-b858-4c64-8eb9-b7699b2134df?size=small"
+    },
+    {
+      "id": "2dd1d028-0c7c-450b-a1ae-812b1212fef6",
+      "name": "Ohran Viper",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Snow Creature — Snake",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/2dd1d028-0c7c-450b-a1ae-812b1212fef6?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "92d4646c-a375-4835-aa58-8bb77d1a5abf",
+      "name": "Golgari Guildgate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Gate",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/92d4646c-a375-4835-aa58-8bb77d1a5abf?size=small"
+    },
+    {
+      "id": "50032356-0eb1-4044-9843-d9b5d664b20e",
+      "name": "Oran-Rief Recluse",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Spider",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/50032356-0eb1-4044-9843-d9b5d664b20e?size=small"
+    },
+    {
+      "id": "4493b62b-f354-47ff-9dcf-cc6e29de77c6",
+      "name": "Rogue's Passage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/4493b62b-f354-47ff-9dcf-cc6e29de77c6?size=small"
+    },
+    {
+      "id": "5ba6ee29-fc77-4300-9c5e-1557cabd05e5",
+      "name": "Spawnwrithe",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/5ba6ee29-fc77-4300-9c5e-1557cabd05e5?size=small"
+    },
+    {
+      "id": "db9ee363-40c4-495f-910a-4f4cd6377e84",
+      "name": "Sadistic Augermage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/db9ee363-40c4-495f-910a-4f4cd6377e84?size=small"
+    },
+    {
+      "id": "49b48dd6-3311-44a1-8dbd-6fac1957a61d",
+      "name": "Consume Strength",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/49b48dd6-3311-44a1-8dbd-6fac1957a61d?size=small"
+    },
+    {
+      "id": "d683abb8-46b4-424e-8a10-325519477419",
+      "name": "Slate Street Ruffian",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Warrior",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d683abb8-46b4-424e-8a10-325519477419?size=small"
+    },
+    {
+      "id": "3ce3816e-0f81-40b6-a592-ba2c65243c6d",
+      "name": "Grisly Spectacle",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/3ce3816e-0f81-40b6-a592-ba2c65243c6d?size=small"
+    },
+    {
+      "id": "bcae0517-f7d1-4b67-9ca3-608f2d8a70f9",
+      "name": "Vinelasher Kudzu",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Plant",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bcae0517-f7d1-4b67-9ca3-608f2d8a70f9?size=small"
+    },
+    {
+      "id": "cbe656e7-ae71-45c2-a263-588b73f70d73",
+      "name": "Stab Wound",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/cbe656e7-ae71-45c2-a263-588b73f70d73?size=small"
+    },
+    {
+      "id": "c901a8d7-e230-4a08-afe5-00e9d1c85544",
+      "name": "Putrid Leech",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{G}",
+      "type_line": "Creature — Zombie Leech",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/c901a8d7-e230-4a08-afe5-00e9d1c85544?size=small"
+    },
+    {
+      "id": "1df71add-7bb6-4687-bb69-cf4450adb7dc",
+      "name": "Underworld Connections",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/1df71add-7bb6-4687-bb69-cf4450adb7dc?size=small"
+    },
+    {
+      "id": "9317b616-eabe-461a-bd60-6dd8620becb4",
+      "name": "Treasured Find",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "G"
+      ],
+      "image_small": "/api/img/9317b616-eabe-461a-bd60-6dd8620becb4?size=small"
+    },
+    {
+      "id": "5ac5e741-3eee-4580-a931-7cad50c77934",
+      "name": "Last Kiss",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5ac5e741-3eee-4580-a931-7cad50c77934?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403704,
+  "updated": 1789869403704
+}

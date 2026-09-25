@@ -1,0 +1,419 @@
+{
+  "id": "b8c2276990",
+  "name": "Duel: Garruk vs. Liliana — Liliana",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "f0f85057-5f4b-47d8-bb00-d993bed1a755",
+      "name": "Rise from the Grave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f0f85057-5f4b-47d8-bb00-d993bed1a755?size=small"
+    },
+    {
+      "id": "04587192-e5a6-46f6-98b5-3b349d618880",
+      "name": "Mutilate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/04587192-e5a6-46f6-98b5-3b349d618880?size=small"
+    },
+    {
+      "id": "a00440fc-e3e1-4a1c-b32b-f7946a76cd62",
+      "name": "Enslave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a00440fc-e3e1-4a1c-b32b-f7946a76cd62?size=small"
+    },
+    {
+      "id": "6087f146-f468-472a-b248-fc7386ea3e63",
+      "name": "Liliana Vess",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Legendary Planeswalker — Liliana",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6087f146-f468-472a-b248-fc7386ea3e63?size=small"
+    },
+    {
+      "id": "c92ea561-80da-4fe1-ad87-ce47d9eb80bc",
+      "name": "Corrupt",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{5}{B}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c92ea561-80da-4fe1-ad87-ce47d9eb80bc?size=small"
+    },
+    {
+      "id": "69ece875-81eb-47fc-9ad9-080b654d49f5",
+      "name": "Hideous End",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/69ece875-81eb-47fc-9ad9-080b654d49f5?size=small"
+    },
+    {
+      "id": "dd6e17a2-17f0-4d6b-b41a-3bd081b3ef63",
+      "name": "Ghost-Lit Stalker",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/dd6e17a2-17f0-4d6b-b41a-3bd081b3ef63?size=small"
+    },
+    {
+      "id": "561b8539-cb84-42f0-97f2-2c94839777e3",
+      "name": "Deathgreeter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/561b8539-cb84-42f0-97f2-2c94839777e3?size=small"
+    },
+    {
+      "id": "9db67828-5697-45fd-87db-ff27ef9cec5a",
+      "name": "Ichor Slick",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9db67828-5697-45fd-87db-ff27ef9cec5a?size=small"
+    },
+    {
+      "id": "c338b459-6bb8-4bc7-a6b5-945a09589c05",
+      "name": "Tendrils of Corruption",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c338b459-6bb8-4bc7-a6b5-945a09589c05?size=small"
+    },
+    {
+      "id": "bd6f73bc-3181-40fa-9156-b73e4280e747",
+      "name": "Drudge Skeletons",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Skeleton",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/bd6f73bc-3181-40fa-9156-b73e4280e747?size=small"
+    },
+    {
+      "id": "75bbe89f-09af-494e-b58e-271f64bde4b5",
+      "name": "Snuff Out",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/75bbe89f-09af-494e-b58e-271f64bde4b5?size=small"
+    },
+    {
+      "id": "573c35a4-543b-47fe-80b4-d6462abfb82f",
+      "name": "Vampire Bats",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Bat",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/573c35a4-543b-47fe-80b4-d6462abfb82f?size=small"
+    },
+    {
+      "id": "fce2baa4-2976-4bbd-b6c5-a5a3c6a901be",
+      "name": "Fleshbag Marauder",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie Warrior",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/fce2baa4-2976-4bbd-b6c5-a5a3c6a901be?size=small"
+    },
+    {
+      "id": "f87e5072-525e-4b0b-a5c3-ee5e89a81e1d",
+      "name": "Ravenous Rats",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Rat",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f87e5072-525e-4b0b-a5c3-ee5e89a81e1d?size=small"
+    },
+    {
+      "id": "a9861fb3-6722-43b8-bf0a-af6dd166e59d",
+      "name": "Phyrexian Rager",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a9861fb3-6722-43b8-bf0a-af6dd166e59d?size=small"
+    },
+    {
+      "id": "bb724bec-3509-4f5f-84c0-b1b54063d06f",
+      "name": "Polluted Mire",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/bb724bec-3509-4f5f-84c0-b1b54063d06f?size=small"
+    },
+    {
+      "id": "a232093a-f136-428d-9a6d-c03b1a20126a",
+      "name": "Vicious Hunger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a232093a-f136-428d-9a6d-c03b1a20126a?size=small"
+    },
+    {
+      "id": "d8e06ff3-5fdd-444d-916e-3764f795456e",
+      "name": "Genju of the Fens",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d8e06ff3-5fdd-444d-916e-3764f795456e?size=small"
+    },
+    {
+      "id": "327096bb-78d3-444f-a017-4c504d18203a",
+      "name": "Skeletal Vampire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Creature — Vampire Skeleton",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/327096bb-78d3-444f-a017-4c504d18203a?size=small"
+    },
+    {
+      "id": "7bcaee2c-fad7-4ee2-8fe7-20b2c1eee5c5",
+      "name": "Twisted Abomination",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{5}{B}",
+      "type_line": "Creature — Zombie Mutant",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7bcaee2c-fad7-4ee2-8fe7-20b2c1eee5c5?size=small"
+    },
+    {
+      "id": "80031bc4-28a8-4f57-916f-fcf01dc252f9",
+      "name": "Keening Banshee",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/80031bc4-28a8-4f57-916f-fcf01dc252f9?size=small"
+    },
+    {
+      "id": "ce096d78-e8b0-4ba2-a734-aa1e96d2dabe",
+      "name": "Howling Banshee",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/ce096d78-e8b0-4ba2-a734-aa1e96d2dabe?size=small"
+    },
+    {
+      "id": "62103ceb-b16d-48ea-af42-d3df88d1ee4c",
+      "name": "Faerie Macabre",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Faerie Rogue",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/62103ceb-b16d-48ea-af42-d3df88d1ee4c?size=small"
+    },
+    {
+      "id": "45025791-a94a-4046-8297-3b7a2019e4a3",
+      "name": "Wall of Bone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Skeleton Wall",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/45025791-a94a-4046-8297-3b7a2019e4a3?size=small"
+    },
+    {
+      "id": "cf857d76-f2ca-4323-9611-cb20b9615202",
+      "name": "Urborg Syphon-Mage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Spellshaper",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/cf857d76-f2ca-4323-9611-cb20b9615202?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "fe85a124-0d8b-4a29-8df1-65888a39147f",
+      "name": "Scheming Silvertongue // Sign in Blood",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B} // {B}{B}",
+      "type_line": "Creature — Vampire Warlock // Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/fe85a124-0d8b-4a29-8df1-65888a39147f?size=small"
+    },
+    {
+      "id": "8f8a75da-ea3c-43e7-9d32-1c92f8ec0fd2",
+      "name": "Bad Moon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8f8a75da-ea3c-43e7-9d32-1c92f8ec0fd2?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403702,
+  "updated": 1789869403702
+}

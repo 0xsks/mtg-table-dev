@@ -1,0 +1,554 @@
+{
+  "id": "c0e2f077fe",
+  "name": "Duel: Ajani vs. Nicol Bolas — Ajani",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "179461b8-0a6b-48c5-9d1f-db8bcfecc6f9",
+      "name": "Behemoth Sledge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/179461b8-0a6b-48c5-9d1f-db8bcfecc6f9?size=small"
+    },
+    {
+      "id": "ce1d6f9b-2ca8-48b8-b4a6-46a61c7c3905",
+      "name": "Naya Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{G}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/ce1d6f9b-2ca8-48b8-b4a6-46a61c7c3905?size=small"
+    },
+    {
+      "id": "303d9361-8f03-4f8d-bf5f-70a0e01f24e5",
+      "name": "Recumbent Bliss",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/303d9361-8f03-4f8d-bf5f-70a0e01f24e5?size=small"
+    },
+    {
+      "id": "6f5e0200-21c9-4926-b238-3f9b1f5fc6ed",
+      "name": "Searing Meditation",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{W}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/6f5e0200-21c9-4926-b238-3f9b1f5fc6ed?size=small"
+    },
+    {
+      "id": "9e76b676-c7a3-4de6-a78d-3059a0df83f2",
+      "name": "Lead the Stampede",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/9e76b676-c7a3-4de6-a78d-3059a0df83f2?size=small"
+    },
+    {
+      "id": "39b8cf5e-10f6-49aa-82eb-2f56cc29d393",
+      "name": "Griffin Guide",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/39b8cf5e-10f6-49aa-82eb-2f56cc29d393?size=small"
+    },
+    {
+      "id": "de4da30d-5c72-4323-b305-7277038b4a05",
+      "name": "Ajani's Mantra",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/de4da30d-5c72-4323-b305-7277038b4a05?size=small"
+    },
+    {
+      "id": "4101e3fe-b0e7-4f0f-b9ac-9b61a4d628b3",
+      "name": "Lightning Helix",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/4101e3fe-b0e7-4f0f-b9ac-9b61a4d628b3?size=small"
+    },
+    {
+      "id": "a1214688-084e-4a6a-928e-9434d594725a",
+      "name": "Nacatl Hunt-Pride",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{W}",
+      "type_line": "Creature — Cat Warrior",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a1214688-084e-4a6a-928e-9434d594725a?size=small"
+    },
+    {
+      "id": "16384575-d0bc-4826-966e-a4bf6ae6ab97",
+      "name": "Firemane Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{W}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 6,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/16384575-d0bc-4826-966e-a4bf6ae6ab97?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "222c1a68-e34c-4103-b1be-17d4ceaef6ce",
+      "name": "Ajani's Pridemate",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Cat Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/222c1a68-e34c-4103-b1be-17d4ceaef6ce?size=small"
+    },
+    {
+      "id": "b521602b-d44b-4c7a-8b28-de0a7cda434b",
+      "name": "Pride of Lions",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Cat",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b521602b-d44b-4c7a-8b28-de0a7cda434b?size=small"
+    },
+    {
+      "id": "e36a5be0-a730-4cb7-9d1e-6ae84b5bc872",
+      "name": "Sylvan Ranger",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Scout Ranger",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/e36a5be0-a730-4cb7-9d1e-6ae84b5bc872?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "995140fa-dc1f-4b75-9cea-079ea03c485f",
+      "name": "Jade Mage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Human Shaman",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/995140fa-dc1f-4b75-9cea-079ea03c485f?size=small"
+    },
+    {
+      "id": "d406058e-4d51-42bd-b7c0-664216745ff8",
+      "name": "Marisi's Twinclaws",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R/W}{G}",
+      "type_line": "Creature — Cat Warrior",
+      "cmc": 4,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/d406058e-4d51-42bd-b7c0-664216745ff8?size=small"
+    },
+    {
+      "id": "8fefd7d1-8c70-4d54-be0a-f45833340670",
+      "name": "Ageless Entity",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/8fefd7d1-8c70-4d54-be0a-f45833340670?size=small"
+    },
+    {
+      "id": "4bd2baa7-1264-4139-881d-e8169391c48b",
+      "name": "Canyon Wildcat",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Cat",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4bd2baa7-1264-4139-881d-e8169391c48b?size=small"
+    },
+    {
+      "id": "33145080-077e-4231-96ca-e8b1852b6380",
+      "name": "Vitu-Ghazi, the City-Tree",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/33145080-077e-4231-96ca-e8b1852b6380?size=small"
+    },
+    {
+      "id": "d810da8b-298e-41a4-a962-33b1da5a1866",
+      "name": "Loam Lion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Cat",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d810da8b-298e-41a4-a962-33b1da5a1866?size=small"
+    },
+    {
+      "id": "826f4791-d6ca-4620-bc30-6d11d8d22e81",
+      "name": "Loxodon Hierarch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{W}",
+      "type_line": "Creature — Elephant Cleric",
+      "cmc": 4,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/826f4791-d6ca-4620-bc30-6d11d8d22e81?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "8c9b3151-bc77-499c-85a1-4ce021a4351a",
+      "name": "Spitemare",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R/W}{R/W}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/8c9b3151-bc77-499c-85a1-4ce021a4351a?size=small"
+    },
+    {
+      "id": "5a3bb291-11d1-45e0-a60a-e75c7dc94b94",
+      "name": "Wild Nacatl",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Cat Warrior",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/5a3bb291-11d1-45e0-a60a-e75c7dc94b94?size=small"
+    },
+    {
+      "id": "6ca097f1-eef0-4e18-ab5d-49bb4aeb74e2",
+      "name": "Kazandu Refuge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/6ca097f1-eef0-4e18-ab5d-49bb4aeb74e2?size=small"
+    },
+    {
+      "id": "31ca84d1-30a6-432b-966c-089fb6652a89",
+      "name": "Essence Warden",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Shaman",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/31ca84d1-30a6-432b-966c-089fb6652a89?size=small"
+    },
+    {
+      "id": "cf7188d8-d37f-49ec-ab52-8ea080725ca7",
+      "name": "Woolly Thoctar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{G}{W}",
+      "type_line": "Creature — Beast",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/cf7188d8-d37f-49ec-ab52-8ea080725ca7?size=small"
+    },
+    {
+      "id": "81d3099d-4f22-425c-8955-903b6cfb88d3",
+      "name": "Sapseep Forest",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/81d3099d-4f22-425c-8955-903b6cfb88d3?size=small"
+    },
+    {
+      "id": "0fd09615-bcd2-4a2e-b9bf-8b4fd83291ce",
+      "name": "Briarhorn",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/0fd09615-bcd2-4a2e-b9bf-8b4fd83291ce?size=small"
+    },
+    {
+      "id": "e14a5c79-29a3-4415-9b70-b287a474a0e0",
+      "name": "Kird Ape",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Ape",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/e14a5c79-29a3-4415-9b70-b287a474a0e0?size=small"
+    },
+    {
+      "id": "0849b6dd-0330-4b7e-b7da-98e767adb4a0",
+      "name": "Graypelt Refuge",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/0849b6dd-0330-4b7e-b7da-98e767adb4a0?size=small"
+    },
+    {
+      "id": "06dda49d-25a2-4fa3-80f2-0d784e1ad30f",
+      "name": "Grazing Gladehart",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Antelope",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/06dda49d-25a2-4fa3-80f2-0d784e1ad30f?size=small"
+    },
+    {
+      "id": "f3bf1867-aab4-4935-b891-45489ebeb231",
+      "name": "Ajani Vengeant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{W}",
+      "type_line": "Legendary Planeswalker — Ajani",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/f3bf1867-aab4-4935-b891-45489ebeb231?size=small"
+    },
+    {
+      "id": "0b1a84b6-4202-4413-80ed-4142c51e619a",
+      "name": "Jungle Shrine",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/0b1a84b6-4202-4413-80ed-4142c51e619a?size=small"
+    },
+    {
+      "id": "02db0f8e-5f87-427f-a3ff-0f261da679cd",
+      "name": "Fleetfoot Panther",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Creature — Cat",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/02db0f8e-5f87-427f-a3ff-0f261da679cd?size=small"
+    },
+    {
+      "id": "a9b86d97-3cfa-4510-a3da-1a85cd8d2ba9",
+      "name": "Titanic Ultimatum",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{R}{G}{G}{G}{W}{W}",
+      "type_line": "Sorcery",
+      "cmc": 7,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/a9b86d97-3cfa-4510-a3da-1a85cd8d2ba9?size=small"
+    },
+    {
+      "id": "c0318a48-30e4-4ef7-be3d-5e561c5ce428",
+      "name": "Evolving Wilds",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c0318a48-30e4-4ef7-be3d-5e561c5ce428?size=small"
+    },
+    {
+      "id": "a103646d-b363-4896-a48f-0527d746587e",
+      "name": "Qasali Pridemage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Creature — Cat Wizard",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/a103646d-b363-4896-a48f-0527d746587e?size=small"
+    },
+    {
+      "id": "53e467a6-810b-4caa-bc56-aec7272177b4",
+      "name": "Sylvan Bounty",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{5}{G}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/53e467a6-810b-4caa-bc56-aec7272177b4?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403699,
+  "updated": 1789869403699
+}

@@ -1,0 +1,404 @@
+{
+  "id": "862ead36b0",
+  "name": "Duel: Elves vs. Goblins — Goblins",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "4ebce261-3a53-48f2-a173-0d98c68aff2c",
+      "name": "Mogg War Marshal",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4ebce261-3a53-48f2-a173-0d98c68aff2c?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "d479ca28-bdc2-4b87-abf7-5aeb229a3f1e",
+      "name": "Mogg Fanatic",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d479ca28-bdc2-4b87-abf7-5aeb229a3f1e?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "e950415c-2abe-4afe-9ef4-6d63eba2c833",
+      "name": "Ib Halfheart, Goblin Tactician",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Legendary Creature — Goblin Advisor",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/e950415c-2abe-4afe-9ef4-6d63eba2c833?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "5bac033c-dc4e-40a0-b103-4892e4b50249",
+      "name": "Goblin Warchief",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5bac033c-dc4e-40a0-b103-4892e4b50249?size=small"
+    },
+    {
+      "id": "12af10e9-19b7-4177-b556-a446f2788da7",
+      "name": "Goblin Sledder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/12af10e9-19b7-4177-b556-a446f2788da7?size=small"
+    },
+    {
+      "id": "6911af4e-4abd-4cf9-8a86-ae5d680c6f12",
+      "name": "Goblin Ringleader",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/6911af4e-4abd-4cf9-8a86-ae5d680c6f12?size=small"
+    },
+    {
+      "id": "da50d139-bf87-4fae-a41a-d2c343b7992b",
+      "name": "Skirk Drill Sergeant",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/da50d139-bf87-4fae-a41a-d2c343b7992b?size=small"
+    },
+    {
+      "id": "e1d31dd2-7b09-487a-b869-eb10dfcc6dcc",
+      "name": "Reckless One",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Goblin Avatar",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/e1d31dd2-7b09-487a-b869-eb10dfcc6dcc?size=small"
+    },
+    {
+      "id": "3480927c-10da-4817-9954-10aea2bc7100",
+      "name": "Raging Goblin",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Berserker",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/3480927c-10da-4817-9954-10aea2bc7100?size=small"
+    },
+    {
+      "id": "20c19ccf-999b-4c7d-ae5b-f93555d08a7a",
+      "name": "Mudbutton Torchrunner",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/20c19ccf-999b-4c7d-ae5b-f93555d08a7a?size=small"
+    },
+    {
+      "id": "aac5a2ff-c9fc-4ae1-8207-69d7fe4fd11f",
+      "name": "Skirk Fire Marshal",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/aac5a2ff-c9fc-4ae1-8207-69d7fe4fd11f?size=small"
+    },
+    {
+      "id": "7d67e614-03d2-4034-b82f-25962fc378d4",
+      "name": "Siege-Gang Commander",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7d67e614-03d2-4034-b82f-25962fc378d4?size=small"
+    },
+    {
+      "id": "59b675da-f709-4aa3-8967-c9771234f9d8",
+      "name": "Skirk Shaman",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/59b675da-f709-4aa3-8967-c9771234f9d8?size=small"
+    },
+    {
+      "id": "3ab74f04-8aaa-438e-97b4-bfa1db4c5442",
+      "name": "Clickslither",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}{R}",
+      "type_line": "Creature — Insect",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/3ab74f04-8aaa-438e-97b4-bfa1db4c5442?size=small"
+    },
+    {
+      "id": "7bc508b3-8b38-4cf0-89a7-a2cb247ed083",
+      "name": "Skirk Prospector",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7bc508b3-8b38-4cf0-89a7-a2cb247ed083?size=small"
+    },
+    {
+      "id": "2c7067f4-8578-4e5e-886a-c9b14729c4b6",
+      "name": "Akki Coalflinger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/2c7067f4-8578-4e5e-886a-c9b14729c4b6?size=small"
+    },
+    {
+      "id": "b52534b3-5dfe-4019-a518-4e15899988f4",
+      "name": "Boggart Shenanigans",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Kindred Enchantment — Goblin",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b52534b3-5dfe-4019-a518-4e15899988f4?size=small"
+    },
+    {
+      "id": "30f40e38-2fcc-4927-9ce2-2080fa2d832c",
+      "name": "Tar Pitcher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/30f40e38-2fcc-4927-9ce2-2080fa2d832c?size=small"
+    },
+    {
+      "id": "5841e5dd-2a4a-42b9-a04f-d7c5c4840d74",
+      "name": "Tarfire",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Kindred Instant — Goblin",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5841e5dd-2a4a-42b9-a04f-d7c5c4840d74?size=small"
+    },
+    {
+      "id": "de1aa8f9-8200-4ddd-9ab5-1a8181cc1792",
+      "name": "Spitting Earth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/de1aa8f9-8200-4ddd-9ab5-1a8181cc1792?size=small"
+    },
+    {
+      "id": "dc36acc6-db4b-45b7-b526-7966ff82a44f",
+      "name": "Goblin Burrows",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dc36acc6-db4b-45b7-b526-7966ff82a44f?size=small"
+    },
+    {
+      "id": "62b0b5f8-6b51-4fa5-85ae-290475525a9d",
+      "name": "Forgotten Cave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/62b0b5f8-6b51-4fa5-85ae-290475525a9d?size=small"
+    },
+    {
+      "id": "8ee0fdd4-1fb5-4160-b408-2c51ef4f85d0",
+      "name": "Goblin Matron",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8ee0fdd4-1fb5-4160-b408-2c51ef4f85d0?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "d14eb0c1-7709-44da-ba7a-1aa033efb4f8",
+      "name": "Flamewave Invoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Mutant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d14eb0c1-7709-44da-ba7a-1aa033efb4f8?size=small"
+    },
+    {
+      "id": "9a118b11-c9b9-423e-8cad-839f8e6aa0ec",
+      "name": "Emberwilde Augur",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/9a118b11-c9b9-423e-8cad-839f8e6aa0ec?size=small"
+    },
+    {
+      "id": "faa652d7-16d3-400f-9ba4-7ba8078d4a08",
+      "name": "Goblin Cohort",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/faa652d7-16d3-400f-9ba4-7ba8078d4a08?size=small"
+    },
+    {
+      "id": "0ac7667c-2526-4f4b-8886-2516d4a8fbae",
+      "name": "Gempalm Incinerator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/0ac7667c-2526-4f4b-8886-2516d4a8fbae?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403701,
+  "updated": 1789869403701
+}

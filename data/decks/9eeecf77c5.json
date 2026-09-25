@@ -1,0 +1,421 @@
+{
+  "id": "9eeecf77c5",
+  "name": "Duel: Elspeth vs. Kiora — Kiora",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "1b635abe-ad7e-44b8-b3fe-6e365db87c29",
+      "name": "Omenspeaker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/1b635abe-ad7e-44b8-b3fe-6e365db87c29?size=small"
+    },
+    {
+      "id": "a1ef40d5-c287-4229-8059-3505d9f251ca",
+      "name": "Man-o'-War",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Jellyfish",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a1ef40d5-c287-4229-8059-3505d9f251ca?size=small"
+    },
+    {
+      "id": "ad88e5ee-0eee-47af-a7b4-9bac044e1c8c",
+      "name": "Accumulated Knowledge",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/ad88e5ee-0eee-47af-a7b4-9bac044e1c8c?size=small"
+    },
+    {
+      "id": "0c5c6b15-b72d-4341-92c2-7469210452da",
+      "name": "Kiora, the Crashing Wave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{U}",
+      "type_line": "Legendary Planeswalker — Kiora",
+      "cmc": 4,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/0c5c6b15-b72d-4341-92c2-7469210452da?size=small"
+    },
+    {
+      "id": "9f7a6dfb-a8f8-4899-b2db-c48d542dfd55",
+      "name": "Inkwell Leviathan",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{7}{U}{U}",
+      "type_line": "Artifact Creature — Leviathan",
+      "cmc": 9,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/9f7a6dfb-a8f8-4899-b2db-c48d542dfd55?size=small"
+    },
+    {
+      "id": "1e5530fc-0291-4a17-b048-c5d24e6f51d8",
+      "name": "Aetherize",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/1e5530fc-0291-4a17-b048-c5d24e6f51d8?size=small"
+    },
+    {
+      "id": "f791b7fa-3d12-409d-b017-cb9fd8b71af7",
+      "name": "Simic Sky Swallower",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{G}{U}",
+      "type_line": "Creature — Leviathan",
+      "cmc": 7,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/f791b7fa-3d12-409d-b017-cb9fd8b71af7?size=small"
+    },
+    {
+      "id": "85df7b1b-7cd6-499d-aa9d-5599a79a3512",
+      "name": "Urban Evolution",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{U}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/85df7b1b-7cd6-499d-aa9d-5599a79a3512?size=small"
+    },
+    {
+      "id": "c0318a48-30e4-4ef7-be3d-5e561c5ce428",
+      "name": "Evolving Wilds",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c0318a48-30e4-4ef7-be3d-5e561c5ce428?size=small"
+    },
+    {
+      "id": "1024f555-e0d7-48ac-b86e-c87290eac832",
+      "name": "Temple of the False God",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/1024f555-e0d7-48ac-b86e-c87290eac832?size=small"
+    },
+    {
+      "id": "559ff1b1-018c-4e08-9531-8af20af47d05",
+      "name": "Coiling Oracle",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}{U}",
+      "type_line": "Creature — Snake Elf Druid",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/559ff1b1-018c-4e08-9531-8af20af47d05?size=small"
+    },
+    {
+      "id": "86e89e51-fd37-4f41-ad13-d1b8a93e5277",
+      "name": "Time to Feed",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/86e89e51-fd37-4f41-ad13-d1b8a93e5277?size=small"
+    },
+    {
+      "id": "3be31fb0-115e-4e62-babd-16870f249f06",
+      "name": "Lorescale Coatl",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}{U}",
+      "type_line": "Creature — Snake",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/3be31fb0-115e-4e62-babd-16870f249f06?size=small"
+    },
+    {
+      "id": "3666d3eb-fc62-4966-9149-aa3435650c29",
+      "name": "Kiora's Follower",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{U}",
+      "type_line": "Creature — Merfolk",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/3666d3eb-fc62-4966-9149-aa3435650c29?size=small"
+    },
+    {
+      "id": "11ee15d5-1c93-4c30-911f-32e2aabf020e",
+      "name": "Plasm Capture",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{G}{U}{U}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/11ee15d5-1c93-4c30-911f-32e2aabf020e?size=small"
+    },
+    {
+      "id": "1efbf7be-bc11-4285-a37d-83790b292b3a",
+      "name": "Nimbus Swimmer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{G}{U}",
+      "type_line": "Creature — Leviathan",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "U"
+      ],
+      "image_small": "/api/img/1efbf7be-bc11-4285-a37d-83790b292b3a?size=small"
+    },
+    {
+      "id": "06dda49d-25a2-4fa3-80f2-0d784e1ad30f",
+      "name": "Grazing Gladehart",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Antelope",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/06dda49d-25a2-4fa3-80f2-0d784e1ad30f?size=small"
+    },
+    {
+      "id": "bf6eae62-5a42-42e9-ba65-84500cdff95a",
+      "name": "Nessian Asp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{G}",
+      "type_line": "Creature — Snake",
+      "cmc": 5,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bf6eae62-5a42-42e9-ba65-84500cdff95a?size=small"
+    },
+    {
+      "id": "ab9dbf0b-2c1d-463c-b675-ff711c282e56",
+      "name": "Explore",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/ab9dbf0b-2c1d-463c-b675-ff711c282e56?size=small"
+    },
+    {
+      "id": "8de3fdf8-d55e-4ffc-8f8b-6314d4d467ce",
+      "name": "Explosive Vegetation",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/8de3fdf8-d55e-4ffc-8f8b-6314d4d467ce?size=small"
+    },
+    {
+      "id": "07c95074-32c8-426e-b615-8ad5427c6c1c",
+      "name": "Netcaster Spider",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Spider",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/07c95074-32c8-426e-b615-8ad5427c6c1c?size=small"
+    },
+    {
+      "id": "55aec3bd-b52f-4b23-a86a-429fa78a5a6a",
+      "name": "Peel from Reality",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/55aec3bd-b52f-4b23-a86a-429fa78a5a6a?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "ddb863a0-3ff8-42a3-a151-4ea9aa433336",
+      "name": "Whelming Wave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/ddb863a0-3ff8-42a3-a151-4ea9aa433336?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "bd577743-43af-4215-8585-52f714694c6e",
+      "name": "Surrakar Banisher",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Surrakar",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/bd577743-43af-4215-8585-52f714694c6e?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "cdd98556-42d5-497e-90c7-f3255c0a8863",
+      "name": "Sealock Monster",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Octopus",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/cdd98556-42d5-497e-90c7-f3255c0a8863?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "a79471f9-5cc0-48f5-9fa4-1f1374993825",
+      "name": "Scourge of Fleets",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}{U}",
+      "type_line": "Creature — Kraken",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a79471f9-5cc0-48f5-9fa4-1f1374993825?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403700,
+  "updated": 1789869403700
+}

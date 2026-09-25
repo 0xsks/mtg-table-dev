@@ -1,0 +1,12 @@
+node_modules/
+certs/
+scratch/
+*.log
+*.zip
+
+# live accounts, sessions, portraits, and in-progress matches
+data/users.json
+data/sessions.json
+data/avatars/
+data/tables.json
+data/friends.json

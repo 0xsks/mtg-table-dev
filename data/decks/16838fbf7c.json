@@ -1,0 +1,568 @@
+{
+  "id": "16838fbf7c",
+  "name": "Duel: Izzet vs. Golgari — Izzet",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "795a7929-2c32-4006-bdf1-def0a4400f59",
+      "name": "Pyromatics",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/795a7929-2c32-4006-bdf1-def0a4400f59?size=small"
+    },
+    {
+      "id": "15af0592-a1cb-4b1e-b051-dde978939706",
+      "name": "Izzet Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/15af0592-a1cb-4b1e-b051-dde978939706?size=small"
+    },
+    {
+      "id": "63bd18e9-7c55-4456-8f3d-9bea6606cbb4",
+      "name": "Reminisce",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/63bd18e9-7c55-4456-8f3d-9bea6606cbb4?size=small"
+    },
+    {
+      "id": "bf0a2851-946d-4f10-b43b-7444daa54ae1",
+      "name": "Thunderheads",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/bf0a2851-946d-4f10-b43b-7444daa54ae1?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "32dfe9aa-8303-460b-a4c3-e5533af2e1fd",
+      "name": "Vacuumelt",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/32dfe9aa-8303-460b-a4c3-e5533af2e1fd?size=small"
+    },
+    {
+      "id": "4689b3f2-e4b7-448e-b3d4-ab33194aafb2",
+      "name": "Dissipate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4689b3f2-e4b7-448e-b3d4-ab33194aafb2?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "138d2d9d-d5ab-400f-a714-cd38212a0dae",
+      "name": "Quicksilver Dagger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/138d2d9d-d5ab-400f-a714-cd38212a0dae?size=small"
+    },
+    {
+      "id": "94b79c31-597f-484b-a684-f1520cae314a",
+      "name": "Prophetic Bolt",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{R}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/94b79c31-597f-484b-a684-f1520cae314a?size=small"
+    },
+    {
+      "id": "df04c110-25f8-4989-ab82-265fb9cb89e5",
+      "name": "Sphinx-Bone Wand",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{7}",
+      "type_line": "Artifact",
+      "cmc": 7,
+      "colors": [],
+      "image_small": "/api/img/df04c110-25f8-4989-ab82-265fb9cb89e5?size=small"
+    },
+    {
+      "id": "9624bbf9-15b0-40f9-9f02-f2af3f1220f8",
+      "name": "Overwhelming Intellect",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/9624bbf9-15b0-40f9-9f02-f2af3f1220f8?size=small"
+    },
+    {
+      "id": "2aa24fe0-e275-4307-b26c-2a656068a451",
+      "name": "Isochron Scepter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/2aa24fe0-e275-4307-b26c-2a656068a451?size=small"
+    },
+    {
+      "id": "988a7993-eb7d-4ae2-8a22-1676f517558b",
+      "name": "Magma Spray",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/988a7993-eb7d-4ae2-8a22-1676f517558b?size=small"
+    },
+    {
+      "id": "97a6c6c9-dd26-4ce7-850f-0b3fc49245bd",
+      "name": "Force Spike",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/97a6c6c9-dd26-4ce7-850f-0b3fc49245bd?size=small"
+    },
+    {
+      "id": "ec7d6864-7b6b-4f74-8474-9b9ec96b1d33",
+      "name": "Brainstorm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/ec7d6864-7b6b-4f74-8474-9b9ec96b1d33?size=small"
+    },
+    {
+      "id": "7c784b00-dcef-4640-a305-5ff1baf2e6fd",
+      "name": "Djinn Illuminatus",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U/R}{U/R}",
+      "type_line": "Creature — Djinn",
+      "cmc": 7,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/7c784b00-dcef-4640-a305-5ff1baf2e6fd?size=small"
+    },
+    {
+      "id": "753bc05b-cb42-4b83-a69d-cad2b94cfd46",
+      "name": "Street Spasm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/753bc05b-cb42-4b83-a69d-cad2b94cfd46?size=small"
+    },
+    {
+      "id": "d2f8fe93-8d20-41d4-8205-597a9c9b8bbe",
+      "name": "Izzet Chronarch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{R}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 5,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/d2f8fe93-8d20-41d4-8205-597a9c9b8bbe?size=small"
+    },
+    {
+      "id": "23f2e251-1a90-433e-b63a-1a361f5dc6b3",
+      "name": "Galvanoth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Beast",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/23f2e251-1a90-433e-b63a-1a361f5dc6b3?size=small"
+    },
+    {
+      "id": "62b0b5f8-6b51-4fa5-85ae-290475525a9d",
+      "name": "Forgotten Cave",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/62b0b5f8-6b51-4fa5-85ae-290475525a9d?size=small"
+    },
+    {
+      "id": "bfac9395-7ca5-48dd-ab83-7c26ada12f61",
+      "name": "Izzet Boilerworks",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/bfac9395-7ca5-48dd-ab83-7c26ada12f61?size=small"
+    },
+    {
+      "id": "df4863dc-3545-4ee7-a3c8-beed109a7f38",
+      "name": "Invoke the Firemind",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{U}{U}{R}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/df4863dc-3545-4ee7-a3c8-beed109a7f38?size=small"
+    },
+    {
+      "id": "18303862-4726-4136-814f-157aa7006579",
+      "name": "Fire // Ice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R} // {1}{U}",
+      "type_line": "Instant // Instant",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/18303862-4726-4136-814f-157aa7006579?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "42f8591e-df30-49ec-962c-a75d32e6d9f5",
+      "name": "Lonely Sandbar",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/42f8591e-df30-49ec-962c-a75d32e6d9f5?size=small"
+    },
+    {
+      "id": "a025a42d-cbcc-4bd2-9331-5c7dc677da20",
+      "name": "Nivix, Aerie of the Firemind",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a025a42d-cbcc-4bd2-9331-5c7dc677da20?size=small"
+    },
+    {
+      "id": "a2ad045c-fb4f-45aa-9559-785285c6be19",
+      "name": "Gelectrode",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Creature — Weird",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/a2ad045c-fb4f-45aa-9559-785285c6be19?size=small"
+    },
+    {
+      "id": "5058ac2d-7b16-4b1c-acdd-e328bc5adc1a",
+      "name": "Izzet Guildmage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U/R}{U/R}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/5058ac2d-7b16-4b1c-acdd-e328bc5adc1a?size=small"
+    },
+    {
+      "id": "bd9eca71-2430-4112-a23a-fba76ca2efb4",
+      "name": "Goblin Electromancer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}{R}",
+      "type_line": "Creature — Goblin Wizard",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/bd9eca71-2430-4112-a23a-fba76ca2efb4?size=small"
+    },
+    {
+      "id": "6c957c94-3d2d-4b98-8990-cd8909462081",
+      "name": "Kiln Fiend",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Elemental Beast",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/6c957c94-3d2d-4b98-8990-cd8909462081?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "1940a64a-51da-4509-b33e-86415aeeafad",
+      "name": "Ogre Savant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Ogre Wizard",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1940a64a-51da-4509-b33e-86415aeeafad?size=small"
+    },
+    {
+      "id": "3de4e3f7-bef1-419b-963e-9fee4ee23b0e",
+      "name": "Shrewd Hatchling",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{U/R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/3de4e3f7-bef1-419b-963e-9fee4ee23b0e?size=small"
+    },
+    {
+      "id": "a60e081e-854f-4bf9-8eac-62bd55403383",
+      "name": "Steamcore Weird",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Weird",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a60e081e-854f-4bf9-8eac-62bd55403383?size=small"
+    },
+    {
+      "id": "37ee17a1-76ce-4ae8-9109-ba32457cbeec",
+      "name": "Wee Dragonauts",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}{R}",
+      "type_line": "Creature — Faerie Wizard",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/37ee17a1-76ce-4ae8-9109-ba32457cbeec?size=small"
+    },
+    {
+      "id": "395465b8-f5ed-4668-9e6a-82257150c52c",
+      "name": "Niv-Mizzet, the Firemind",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}{R}{R}",
+      "type_line": "Legendary Creature — Dragon Wizard",
+      "cmc": 6,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/395465b8-f5ed-4668-9e6a-82257150c52c?size=small"
+    },
+    {
+      "id": "a9c1c674-0742-45be-afd5-2dbcd6b499ae",
+      "name": "Train of Thought",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a9c1c674-0742-45be-afd5-2dbcd6b499ae?size=small"
+    },
+    {
+      "id": "d5e141ad-5cb8-416b-9acf-bce1baeb6b6b",
+      "name": "Izzet Signet",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/d5e141ad-5cb8-416b-9acf-bce1baeb6b6b?size=small"
+    },
+    {
+      "id": "bdedbb84-7abe-420d-8429-c2d77ee0ae36",
+      "name": "Call to Heel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/bdedbb84-7abe-420d-8429-c2d77ee0ae36?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403703,
+  "updated": 1789869403703
+}

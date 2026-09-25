@@ -1,0 +1,426 @@
+{
+  "id": "cfd8e67026",
+  "name": "Duel: Jace vs. Chandra — Jace",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "fdc000af-a161-4803-bd24-4fdde083caec",
+      "name": "Voidmage Apprentice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/fdc000af-a161-4803-bd24-4fdde083caec?size=small"
+    },
+    {
+      "id": "4d461acf-f7dc-4f57-be58-48d3e1018959",
+      "name": "Fledgling Mawcor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Creature — Beast",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4d461acf-f7dc-4f57-be58-48d3e1018959?size=small"
+    },
+    {
+      "id": "6eab8bfb-6e46-44b7-8fb1-72bb1c1d04cc",
+      "name": "Wall of Deceit",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Wall",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6eab8bfb-6e46-44b7-8fb1-72bb1c1d04cc?size=small"
+    },
+    {
+      "id": "0e7c25c9-1634-4675-b975-e9d477d1f8e1",
+      "name": "Martyr of Frost",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/0e7c25c9-1634-4675-b975-e9d477d1f8e1?size=small"
+    },
+    {
+      "id": "3de308cc-14ac-407e-99e7-568572ecd0e7",
+      "name": "Mulldrifter",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3de308cc-14ac-407e-99e7-568572ecd0e7?size=small"
+    },
+    {
+      "id": "0c4d3ffe-3e4d-496f-98d7-60f3b1757b67",
+      "name": "Waterspout Djinn",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Djinn",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/0c4d3ffe-3e4d-496f-98d7-60f3b1757b67?size=small"
+    },
+    {
+      "id": "6c0f831e-2eb0-499f-9502-418c04ac34a0",
+      "name": "Fathom Seer",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Illusion",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6c0f831e-2eb0-499f-9502-418c04ac34a0?size=small"
+    },
+    {
+      "id": "b9021f91-0b92-44ff-9ccb-bcf1e81232c2",
+      "name": "Guile",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}{U}",
+      "type_line": "Creature — Elemental Incarnation",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/b9021f91-0b92-44ff-9ccb-bcf1e81232c2?size=small"
+    },
+    {
+      "id": "a1ef40d5-c287-4229-8059-3505d9f251ca",
+      "name": "Man-o'-War",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Jellyfish",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a1ef40d5-c287-4229-8059-3505d9f251ca?size=small"
+    },
+    {
+      "id": "a27efec0-40c4-48bc-a21a-3af28a6529b5",
+      "name": "Air Elemental",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a27efec0-40c4-48bc-a21a-3af28a6529b5?size=small"
+    },
+    {
+      "id": "03be605e-dddf-4a1f-a4ee-0d71ab771e47",
+      "name": "Ophidian",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Snake",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/03be605e-dddf-4a1f-a4ee-0d71ab771e47?size=small"
+    },
+    {
+      "id": "6e6a3551-250c-4563-8c30-6d8f49e6429f",
+      "name": "Willbender",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6e6a3551-250c-4563-8c30-6d8f49e6429f?size=small"
+    },
+    {
+      "id": "b299c599-1a10-4122-ac0b-8f52a9cec7b6",
+      "name": "Spire Golem",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Golem",
+      "cmc": 6,
+      "colors": [],
+      "image_small": "/api/img/b299c599-1a10-4122-ac0b-8f52a9cec7b6?size=small"
+    },
+    {
+      "id": "1a2b228d-db4d-44a3-b208-6cf7a9f57da6",
+      "name": "Riftwing Cloudskate",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Creature — Illusion",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/1a2b228d-db4d-44a3-b208-6cf7a9f57da6?size=small"
+    },
+    {
+      "id": "fa29a4ce-a8fa-499d-9994-f294c38b2ce5",
+      "name": "Bottle Gnomes",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Gnome",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/fa29a4ce-a8fa-499d-9994-f294c38b2ce5?size=small"
+    },
+    {
+      "id": "eb038efc-2cb2-4635-a183-42b6e0b6b5f8",
+      "name": "Brine Elemental",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/eb038efc-2cb2-4635-a183-42b6e0b6b5f8?size=small"
+    },
+    {
+      "id": "2cc9b5ee-4d6d-42ea-8b13-b8a7059781c9",
+      "name": "Aethersnipe",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/2cc9b5ee-4d6d-42ea-8b13-b8a7059781c9?size=small"
+    },
+    {
+      "id": "a8943e2c-8a85-4ca4-a7b1-87b89e697877",
+      "name": "Quicksilver Dragon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature — Dragon",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/a8943e2c-8a85-4ca4-a7b1-87b89e697877?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "806d4e61-004f-4e52-b2e8-ba11b922cc7d",
+      "name": "Jace Beleren",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{U}",
+      "type_line": "Legendary Planeswalker — Jace",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/806d4e61-004f-4e52-b2e8-ba11b922cc7d?size=small"
+    },
+    {
+      "id": "f05e9a3e-8a35-4687-85cb-e31b3927a5e2",
+      "name": "Daze",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/f05e9a3e-8a35-4687-85cb-e31b3927a5e2?size=small"
+    },
+    {
+      "id": "b30a8f92-ce42-4b27-a893-bcf97fde228d",
+      "name": "Mind Stone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/b30a8f92-ce42-4b27-a893-bcf97fde228d?size=small"
+    },
+    {
+      "id": "9ec075ba-db56-4dcf-b1dc-fe6270b7ab36",
+      "name": "Ancestral Vision",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Sorcery",
+      "cmc": 0,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/9ec075ba-db56-4dcf-b1dc-fe6270b7ab36?size=small"
+    },
+    {
+      "id": "3779a76a-0171-4714-9713-a65dc173a33f",
+      "name": "Errant Ephemeron",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{U}",
+      "type_line": "Creature — Illusion",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3779a76a-0171-4714-9713-a65dc173a33f?size=small"
+    },
+    {
+      "id": "d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1",
+      "name": "Gush",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/d4a3a921-3b7f-474c-b8c3-67a1a6ba5cc1?size=small"
+    },
+    {
+      "id": "eb1a25c5-1918-40f3-b54f-5d31cf6b4eb2",
+      "name": "Fact or Fiction",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/eb1a25c5-1918-40f3-b54f-5d31cf6b4eb2?size=small"
+    },
+    {
+      "id": "4dc7777b-6e9e-4889-91da-fb5283340fa1",
+      "name": "Repulse",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4dc7777b-6e9e-4889-91da-fb5283340fa1?size=small"
+    },
+    {
+      "id": "4f616706-ec97-4923-bb1e-11a69fbaa1f8",
+      "name": "Counterspell",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4f616706-ec97-4923-bb1e-11a69fbaa1f8?size=small"
+    },
+    {
+      "id": "f40e9f0f-8c0d-4bfd-9872-370ce3763006",
+      "name": "Terrain Generator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f40e9f0f-8c0d-4bfd-9872-370ce3763006?size=small"
+    },
+    {
+      "id": "5ba16c0f-dd42-4a2a-8f08-bc8c8478952b",
+      "name": "Condescend",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{X}{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5ba16c0f-dd42-4a2a-8f08-bc8c8478952b?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403703,
+  "updated": 1789869403703
+}

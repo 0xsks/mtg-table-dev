@@ -1,0 +1,397 @@
+{
+  "id": "e6cac98c52",
+  "name": "Duel: Divine vs. Demonic — Demonic",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "69a41bec-7fb0-4060-918a-38cbbb329543",
+      "name": "Abyssal Specter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Specter",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/69a41bec-7fb0-4060-918a-38cbbb329543?size=small"
+    },
+    {
+      "id": "23986add-b33d-4bad-86f3-e2d0f99cf949",
+      "name": "Barter in Blood",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/23986add-b33d-4bad-86f3-e2d0f99cf949?size=small"
+    },
+    {
+      "id": "39abb31a-15af-4182-a33b-ecdb63e09e3e",
+      "name": "Breeding Pit",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/39abb31a-15af-4182-a33b-ecdb63e09e3e?size=small"
+    },
+    {
+      "id": "b1b54b37-69f4-46bd-8ee7-216e65507478",
+      "name": "Promise of Power",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b1b54b37-69f4-46bd-8ee7-216e65507478?size=small"
+    },
+    {
+      "id": "c92ea561-80da-4fe1-ad87-ce47d9eb80bc",
+      "name": "Corrupt",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{B}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c92ea561-80da-4fe1-ad87-ce47d9eb80bc?size=small"
+    },
+    {
+      "id": "48c03fa5-c8cc-4b39-a673-c23e41a5802a",
+      "name": "Souldrinker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/48c03fa5-c8cc-4b39-a673-c23e41a5802a?size=small"
+    },
+    {
+      "id": "ca8d42f5-99a6-4fc1-a539-831cbfd9763e",
+      "name": "Consume Spirit",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/ca8d42f5-99a6-4fc1-a539-831cbfd9763e?size=small"
+    },
+    {
+      "id": "cd708b10-472f-44b1-9b62-668da6104ef5",
+      "name": "Demon's Horn",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/cd708b10-472f-44b1-9b62-668da6104ef5?size=small"
+    },
+    {
+      "id": "f4213f45-e8b6-4d90-a3b0-e3d37f745c97",
+      "name": "Demon's Jester",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f4213f45-e8b6-4d90-a3b0-e3d37f745c97?size=small"
+    },
+    {
+      "id": "380eb7fd-bc79-4cad-9c2b-9b2b10761a72",
+      "name": "Barren Moor",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/380eb7fd-bc79-4cad-9c2b-9b2b10761a72?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 24,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "8227e2fc-259d-4470-8522-d550746dbc4a",
+      "name": "Overeager Apprentice",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Human Minion",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8227e2fc-259d-4470-8522-d550746dbc4a?size=small"
+    },
+    {
+      "id": "a7590768-1286-4b85-8b31-80e577e6d733",
+      "name": "Dusk Imp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a7590768-1286-4b85-8b31-80e577e6d733?size=small"
+    },
+    {
+      "id": "7df777c3-281b-4a2d-b852-4e2663672c06",
+      "name": "Soot Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7df777c3-281b-4a2d-b852-4e2663672c06?size=small"
+    },
+    {
+      "id": "2ab08d69-210b-4b06-88a2-45281a1a4e1e",
+      "name": "Stinkweed Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2ab08d69-210b-4b06-88a2-45281a1a4e1e?size=small"
+    },
+    {
+      "id": "6d2a66f0-1afe-41e6-a597-ec2e95685191",
+      "name": "Abyssal Gatekeeper",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Horror",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6d2a66f0-1afe-41e6-a597-ec2e95685191?size=small"
+    },
+    {
+      "id": "5b626ab2-4cf6-42e8-a7e2-9c9f310d2f00",
+      "name": "Lord of the Pit",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 7,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/5b626ab2-4cf6-42e8-a7e2-9c9f310d2f00?size=small"
+    },
+    {
+      "id": "8b7b62ea-39cb-4150-965d-930344705033",
+      "name": "Daggerclaw Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8b7b62ea-39cb-4150-965d-930344705033?size=small"
+    },
+    {
+      "id": "2fe63448-1198-4a7c-948b-514fe4934add",
+      "name": "Foul Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2fe63448-1198-4a7c-948b-514fe4934add?size=small"
+    },
+    {
+      "id": "65404e7b-acce-4e5b-82b7-3d7ce9572eec",
+      "name": "Oni Possession",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/65404e7b-acce-4e5b-82b7-3d7ce9572eec?size=small"
+    },
+    {
+      "id": "141dbd31-b813-46da-849e-e13d97dd2e17",
+      "name": "Dark Banishing",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/141dbd31-b813-46da-849e-e13d97dd2e17?size=small"
+    },
+    {
+      "id": "3e0de032-a107-4095-b475-28f3f13b2c6e",
+      "name": "Reiver Demon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}{B}{B}",
+      "type_line": "Creature — Demon",
+      "cmc": 8,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/3e0de032-a107-4095-b475-28f3f13b2c6e?size=small"
+    },
+    {
+      "id": "e1f9531a-7201-4dfc-beb1-4128ec41728c",
+      "name": "Kuro, Pitlord",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{B}{B}{B}",
+      "type_line": "Legendary Creature — Demon Spirit",
+      "cmc": 9,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/e1f9531a-7201-4dfc-beb1-4128ec41728c?size=small"
+    },
+    {
+      "id": "351e65ac-25d4-4916-aa33-5bfd9df19b25",
+      "name": "Cackling Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/351e65ac-25d4-4916-aa33-5bfd9df19b25?size=small"
+    },
+    {
+      "id": "d3baa621-1b50-4a7f-9ed4-4ae0e0e9e4e7",
+      "name": "Fallen Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Angel",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d3baa621-1b50-4a7f-9ed4-4ae0e0e9e4e7?size=small"
+    },
+    {
+      "id": "f42c9574-2f09-4cb0-80cb-10fb8c592e6f",
+      "name": "Unholy Strength",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f42c9574-2f09-4cb0-80cb-10fb8c592e6f?size=small"
+    },
+    {
+      "id": "54151d43-2e22-4e6c-a6fe-327959382dd1",
+      "name": "Cruel Edict",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/54151d43-2e22-4e6c-a6fe-327959382dd1?size=small"
+    },
+    {
+      "id": "11e12a84-e7be-4afc-a230-c2e644743fa8",
+      "name": "Dark Ritual",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/11e12a84-e7be-4afc-a230-c2e644743fa8?size=small"
+    },
+    {
+      "id": "34c3a894-ee75-4db9-a69f-711bb3cc150a",
+      "name": "Duress",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/34c3a894-ee75-4db9-a69f-711bb3cc150a?size=small"
+    },
+    {
+      "id": "a24b4cb6-cebb-428b-8654-74347a6a8d63",
+      "name": "Demonic Tutor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/a24b4cb6-cebb-428b-8654-74347a6a8d63?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403700,
+  "updated": 1789869403700
+}

@@ -1,0 +1,565 @@
+{
+  "id": "80bad76be3",
+  "name": "Duel: Speed vs. Cunning — Speed",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "0afae574-aa96-4500-9882-a4b10337b6f5",
+      "name": "Orcish Cannonade",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/0afae574-aa96-4500-9882-a4b10337b6f5?size=small"
+    },
+    {
+      "id": "1ed3229f-40ab-420d-a41a-57f1ff8ab7ad",
+      "name": "Fiery Fall",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1ed3229f-40ab-420d-a41a-57f1ff8ab7ad?size=small"
+    },
+    {
+      "id": "a1a9d323-fb40-411b-a0e7-64024bc6ba58",
+      "name": "Act of Treason",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/a1a9d323-fb40-411b-a0e7-64024bc6ba58?size=small"
+    },
+    {
+      "id": "aae001aa-10a0-482a-86fe-bf6ca7fc0866",
+      "name": "Dauntless Onslaught",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/aae001aa-10a0-482a-86fe-bf6ca7fc0866?size=small"
+    },
+    {
+      "id": "e262f55e-9239-4a97-a19e-9b08fb34502e",
+      "name": "Goblin Bombardment",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/e262f55e-9239-4a97-a19e-9b08fb34502e?size=small"
+    },
+    {
+      "id": "b07d96a1-87a0-45ff-ae6e-230deaf44dca",
+      "name": "Krenko's Command",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b07d96a1-87a0-45ff-ae6e-230deaf44dca?size=small"
+    },
+    {
+      "id": "106b5c96-d1bd-433d-955e-ace0b60d3bc3",
+      "name": "Bone Splinters",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/106b5c96-d1bd-433d-955e-ace0b60d3bc3?size=small"
+    },
+    {
+      "id": "56306d90-7f58-4559-954c-f8ca43d04be8",
+      "name": "Arc Trail",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/56306d90-7f58-4559-954c-f8ca43d04be8?size=small"
+    },
+    {
+      "id": "4327fd85-eb89-4707-80f8-bdf41179eda5",
+      "name": "Reckless Abandon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4327fd85-eb89-4707-80f8-bdf41179eda5?size=small"
+    },
+    {
+      "id": "b23900fb-efe9-43ab-9f67-4545dd01fb9c",
+      "name": "Shock",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b23900fb-efe9-43ab-9f67-4545dd01fb9c?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "ddd1e712-826a-47ee-9578-ca61f2d65221",
+      "name": "Oni of Wild Places",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Demon Spirit",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/ddd1e712-826a-47ee-9578-ca61f2d65221?size=small"
+    },
+    {
+      "id": "fe7db99b-903f-43d8-bc60-cab2d914a0cb",
+      "name": "Flame-Kin Zealot",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}{W}",
+      "type_line": "Creature — Elemental Berserker",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/fe7db99b-903f-43d8-bc60-cab2d914a0cb?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "565033d2-7cb9-4ee2-b952-45745b9a2ecc",
+      "name": "Scourge Devil",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Devil",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/565033d2-7cb9-4ee2-b952-45745b9a2ecc?size=small"
+    },
+    {
+      "id": "824b2d73-2151-4e5e-9f05-8f63e2bdcaa9",
+      "name": "Krenko, Mob Boss",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Legendary Creature — Goblin Warrior",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/824b2d73-2151-4e5e-9f05-8f63e2bdcaa9?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "49998b89-61ae-4b10-903b-9eb24ce50d4b",
+      "name": "Ogre Battledriver",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Ogre Warrior",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/49998b89-61ae-4b10-903b-9eb24ce50d4b?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "d17b6eee-da22-48aa-ba8a-cbd1a3389bcb",
+      "name": "Mardu Heart-Piercer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Creature — Human Archer",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d17b6eee-da22-48aa-ba8a-cbd1a3389bcb?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2d19a474-b008-4088-8a31-333c0b2d9d65",
+      "name": "Beetleback Chief",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/2d19a474-b008-4088-8a31-333c0b2d9d65?size=small"
+    },
+    {
+      "id": "3dafece7-c3a0-465b-84c2-e095890a7a8b",
+      "name": "Kathari Bomber",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Creature — Bird Shaman",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/3dafece7-c3a0-465b-84c2-e095890a7a8b?size=small"
+    },
+    {
+      "id": "b6af3085-a24c-4a76-b4c0-a27a50993f1c",
+      "name": "Ghitu Encampment",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b6af3085-a24c-4a76-b4c0-a27a50993f1c?size=small"
+    },
+    {
+      "id": "5fdea923-094d-4f43-a5b6-b6e3f4b891d8",
+      "name": "Shambling Remains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{R}",
+      "type_line": "Creature — Zombie Horror",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/5fdea923-094d-4f43-a5b6-b6e3f4b891d8?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "a68fbeaa-941f-4d53-becd-f93ed22b9a54",
+      "name": "Nomad Outpost",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a68fbeaa-941f-4d53-becd-f93ed22b9a54?size=small"
+    },
+    {
+      "id": "5b012532-1186-4dc8-9d42-867e418b0280",
+      "name": "Banefire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5b012532-1186-4dc8-9d42-867e418b0280?size=small"
+    },
+    {
+      "id": "c3661c2d-f211-4e32-8edb-bb73617537e2",
+      "name": "Hell's Thunder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/c3661c2d-f211-4e32-8edb-bb73617537e2?size=small"
+    },
+    {
+      "id": "c0318a48-30e4-4ef7-be3d-5e561c5ce428",
+      "name": "Evolving Wilds",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c0318a48-30e4-4ef7-be3d-5e561c5ce428?size=small"
+    },
+    {
+      "id": "5bac033c-dc4e-40a0-b103-4892e4b50249",
+      "name": "Goblin Warchief",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5bac033c-dc4e-40a0-b103-4892e4b50249?size=small"
+    },
+    {
+      "id": "fce2baa4-2976-4bbd-b6c5-a5a3c6a901be",
+      "name": "Fleshbag Marauder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Zombie Warrior",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/fce2baa4-2976-4bbd-b6c5-a5a3c6a901be?size=small"
+    },
+    {
+      "id": "52dd1712-6937-4630-b44c-952699307da4",
+      "name": "Fury of the Horde",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Sorcery",
+      "cmc": 7,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/52dd1712-6937-4630-b44c-952699307da4?size=small"
+    },
+    {
+      "id": "c6d4ab45-ab42-4144-9c57-ba046b76860c",
+      "name": "Hellraiser Goblin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Berserker",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/c6d4ab45-ab42-4144-9c57-ba046b76860c?size=small"
+    },
+    {
+      "id": "0c0b85d3-ce46-4f12-8315-4cbf338eb8f0",
+      "name": "Goblin Deathraiders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "R"
+      ],
+      "image_small": "/api/img/0c0b85d3-ce46-4f12-8315-4cbf338eb8f0?size=small"
+    },
+    {
+      "id": "db87a2be-4490-45af-89d7-540549d1d6af",
+      "name": "Dregscape Zombie",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/db87a2be-4490-45af-89d7-540549d1d6af?size=small"
+    },
+    {
+      "id": "9745cc70-d6a0-43c5-b8d7-a930d95e94c7",
+      "name": "Leonin Snarecaster",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Cat Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9745cc70-d6a0-43c5-b8d7-a930d95e94c7?size=small"
+    },
+    {
+      "id": "ec4b0fd0-045d-4a96-9a57-c7ba1548b4cd",
+      "name": "Infantry Veteran",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ec4b0fd0-045d-4a96-9a57-c7ba1548b4cd?size=small"
+    },
+    {
+      "id": "d5592573-2889-40b1-b1d5-c2802482549a",
+      "name": "Frenzied Goblin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin Berserker",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d5592573-2889-40b1-b1d5-c2802482549a?size=small"
+    },
+    {
+      "id": "13f4bafe-0d21-47ba-8f16-0274107d618c",
+      "name": "Zurgo Helmsmasher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{W}{B}",
+      "type_line": "Legendary Creature — Orc Warrior",
+      "cmc": 5,
+      "colors": [
+        "B",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/13f4bafe-0d21-47ba-8f16-0274107d618c?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403706,
+  "updated": 1789869403706
+}

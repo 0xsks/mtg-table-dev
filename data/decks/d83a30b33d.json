@@ -1,0 +1,486 @@
+{
+  "id": "d83a30b33d",
+  "name": "Duel: Elspeth vs. Tezzeret — Tezzeret",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "6741ab27-9e1f-4aa5-96b9-b450eda7c5c2",
+      "name": "Elixir of Immortality",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/6741ab27-9e1f-4aa5-96b9-b450eda7c5c2?size=small"
+    },
+    {
+      "id": "edd7f08a-3baf-4fb0-921e-b0e7b4a1a545",
+      "name": "Contagion Clasp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/edd7f08a-3baf-4fb0-921e-b0e7b4a1a545?size=small"
+    },
+    {
+      "id": "e4ed0052-d6dd-4f69-8313-10863baefac9",
+      "name": "Everflowing Chalice",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{0}",
+      "type_line": "Artifact",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/e4ed0052-d6dd-4f69-8313-10863baefac9?size=small"
+    },
+    {
+      "id": "a54e8ce9-edd7-4ae7-9521-6fb6727cf63b",
+      "name": "Aether Spellbomb",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/a54e8ce9-edd7-4ae7-9521-6fb6727cf63b?size=small"
+    },
+    {
+      "id": "5d987d26-c8e8-4edf-8ac0-6a2980265710",
+      "name": "Echoing Truth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5d987d26-c8e8-4edf-8ac0-6a2980265710?size=small"
+    },
+    {
+      "id": "2d016c5f-265b-4426-8dd8-87872f075f33",
+      "name": "Moonglove Extract",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/2d016c5f-265b-4426-8dd8-87872f075f33?size=small"
+    },
+    {
+      "id": "f4e2f775-75dd-4c18-a378-b503b29a6388",
+      "name": "Energy Chamber",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/f4e2f775-75dd-4c18-a378-b503b29a6388?size=small"
+    },
+    {
+      "id": "ac039d9a-d248-497f-ac84-16ccc568f283",
+      "name": "Trip Noose",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/ac039d9a-d248-497f-ac84-16ccc568f283?size=small"
+    },
+    {
+      "id": "5f4f77e5-0019-4a5f-bae6-136121946929",
+      "name": "Thirst for Knowledge",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5f4f77e5-0019-4a5f-bae6-136121946929?size=small"
+    },
+    {
+      "id": "3f14b3a6-5490-4a50-9449-542e23f1d6b1",
+      "name": "Argivian Restoration",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3f14b3a6-5490-4a50-9449-542e23f1d6b1?size=small"
+    },
+    {
+      "id": "7269b26a-058c-4a5c-aadf-733ea60f3de0",
+      "name": "Esperzoa",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Artifact Creature — Jellyfish",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/7269b26a-058c-4a5c-aadf-733ea60f3de0?size=small"
+    },
+    {
+      "id": "cc2e3173-d2d5-4c6b-8156-0d78f8b1b5d1",
+      "name": "Serrated Biskelion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/cc2e3173-d2d5-4c6b-8156-0d78f8b1b5d1?size=small"
+    },
+    {
+      "id": "9a7800f7-95cd-4f5c-b054-4afad8924367",
+      "name": "Trinket Mage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/9a7800f7-95cd-4f5c-b054-4afad8924367?size=small"
+    },
+    {
+      "id": "3efa70d4-d58c-4a43-bc4e-ffa9a91b0e5e",
+      "name": "Master of Etherium",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Artifact Creature — Vedalken Wizard",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3efa70d4-d58c-4a43-bc4e-ffa9a91b0e5e?size=small"
+    },
+    {
+      "id": "3ebcc053-21c6-4708-b9fc-532e3749962f",
+      "name": "Silver Myr",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Myr",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/3ebcc053-21c6-4708-b9fc-532e3749962f?size=small"
+    },
+    {
+      "id": "efedf97b-8901-4558-8bd0-3f488097f686",
+      "name": "Runed Servitor",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/efedf97b-8901-4558-8bd0-3f488097f686?size=small"
+    },
+    {
+      "id": "e72daa68-0680-431c-a616-b3693fd58813",
+      "name": "Assembly-Worker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Token Artifact Creature — Assembly-Worker",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/e72daa68-0680-431c-a616-b3693fd58813?size=small"
+    },
+    {
+      "id": "7601fbf2-916f-44b2-837a-201fd8304613",
+      "name": "Steel Overseer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/7601fbf2-916f-44b2-837a-201fd8304613?size=small"
+    },
+    {
+      "id": "e8b39fd6-9240-4f76-b12c-e7d9aa88f061",
+      "name": "Foil",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/e8b39fd6-9240-4f76-b12c-e7d9aa88f061?size=small"
+    },
+    {
+      "id": "43dc4ff6-c26c-4dba-ac7f-6dee7c9e5345",
+      "name": "Steel Wall",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact Creature — Wall",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/43dc4ff6-c26c-4dba-ac7f-6dee7c9e5345?size=small"
+    },
+    {
+      "id": "fdfc2453-5a2b-4104-bf82-84f935de7b99",
+      "name": "Arcbound Worker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/fdfc2453-5a2b-4104-bf82-84f935de7b99?size=small"
+    },
+    {
+      "id": "466a0be8-31b9-4ea0-9a96-b09a76f4ec69",
+      "name": "Thoughtcast",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/466a0be8-31b9-4ea0-9a96-b09a76f4ec69?size=small"
+    },
+    {
+      "id": "2ba7597d-6d76-45b8-b172-342999e401bd",
+      "name": "Darksteel Citadel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Artifact Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2ba7597d-6d76-45b8-b172-342999e401bd?size=small"
+    },
+    {
+      "id": "6e9fec20-a52c-42c0-9928-c572d9e1b21f",
+      "name": "Mishra's Factory",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/6e9fec20-a52c-42c0-9928-c572d9e1b21f?size=small"
+    },
+    {
+      "id": "57a194b3-2899-4dee-977a-c77df0b94dfe",
+      "name": "Seat of the Synod",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Artifact Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/57a194b3-2899-4dee-977a-c77df0b94dfe?size=small"
+    },
+    {
+      "id": "27856bc5-4f39-4461-baa0-700442942aff",
+      "name": "Stalking Stones",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/27856bc5-4f39-4461-baa0-700442942aff?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "357aa2a1-4f72-4890-aa46-d212292ab837",
+      "name": "Qumulox",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{U}{U}",
+      "type_line": "Creature — Beast",
+      "cmc": 8,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/357aa2a1-4f72-4890-aa46-d212292ab837?size=small"
+    },
+    {
+      "id": "abf08ea2-187c-4067-81b6-a63db49b50ab",
+      "name": "Pentavus",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 7,
+      "colors": [],
+      "image_small": "/api/img/abf08ea2-187c-4067-81b6-a63db49b50ab?size=small"
+    },
+    {
+      "id": "cf339735-eb1a-46f0-8c3e-eae06f278eca",
+      "name": "Tezzeret the Seeker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Legendary Planeswalker — Tezzeret",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/cf339735-eb1a-46f0-8c3e-eae06f278eca?size=small"
+    },
+    {
+      "id": "63349fa3-4462-413c-bd96-bbc1049165a0",
+      "name": "Triskelion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 6,
+      "colors": [],
+      "image_small": "/api/img/63349fa3-4462-413c-bd96-bbc1049165a0?size=small"
+    },
+    {
+      "id": "5e40c79e-3177-416f-b10e-036553d611d7",
+      "name": "Razormane Masticore",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}",
+      "type_line": "Artifact Creature — Masticore",
+      "cmc": 5,
+      "colors": [],
+      "image_small": "/api/img/5e40c79e-3177-416f-b10e-036553d611d7?size=small"
+    },
+    {
+      "id": "babba9f7-86e4-4e11-9fb8-acd50fbd8031",
+      "name": "Clockwork Hydra",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}",
+      "type_line": "Artifact Creature — Hydra",
+      "cmc": 5,
+      "colors": [],
+      "image_small": "/api/img/babba9f7-86e4-4e11-9fb8-acd50fbd8031?size=small"
+    },
+    {
+      "id": "e3b14d57-a856-49d4-931f-ff5a0407b135",
+      "name": "Faerie Mechanist",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}",
+      "type_line": "Artifact Creature — Faerie Artificer",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/e3b14d57-a856-49d4-931f-ff5a0407b135?size=small"
+    },
+    {
+      "id": "6e2c0a63-5128-408a-bf95-2489b92817a9",
+      "name": "Synod Centurion",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/6e2c0a63-5128-408a-bf95-2489b92817a9?size=small"
+    },
+    {
+      "id": "f4468fff-cd6f-428c-b7a0-ff89f5bbea2e",
+      "name": "Juggernaut",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Juggernaut",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/f4468fff-cd6f-428c-b7a0-ff89f5bbea2e?size=small"
+    },
+    {
+      "id": "b2991802-e313-40de-b167-0ede5efff101",
+      "name": "Frogmite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Frog",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/b2991802-e313-40de-b167-0ede5efff101?size=small"
+    },
+    {
+      "id": "84f68c98-7260-43e0-aad4-f3523dff1d8f",
+      "name": "Clockwork Condor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact Creature — Bird",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/84f68c98-7260-43e0-aad4-f3523dff1d8f?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403701,
+  "updated": 1789869403701
+}

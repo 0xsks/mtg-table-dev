@@ -1,0 +1,522 @@
+{
+  "id": "f789d22a30",
+  "name": "Duel: Sorin vs. Tibalt — Sorin",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "e5b16141-d185-4be2-97c1-5b0ef5483728",
+      "name": "Lingering Souls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/e5b16141-d185-4be2-97c1-5b0ef5483728?size=small"
+    },
+    {
+      "id": "7a5e69fc-9a3e-4830-a0ea-36183274325a",
+      "name": "Zealous Persecution",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "image_small": "/api/img/7a5e69fc-9a3e-4830-a0ea-36183274325a?size=small"
+    },
+    {
+      "id": "9964629e-d79e-46e4-b3fd-e7d1759cbc60",
+      "name": "Spectral Procession",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2/W}{2/W}{2/W}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9964629e-d79e-46e4-b3fd-e7d1759cbc60?size=small"
+    },
+    {
+      "id": "88e85619-3a7d-48c2-b9b0-20718c913696",
+      "name": "Mortify",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "image_small": "/api/img/88e85619-3a7d-48c2-b9b0-20718c913696?size=small"
+    },
+    {
+      "id": "f4868145-fb8b-4624-8554-ddbab3d5a43c",
+      "name": "Decompose",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f4868145-fb8b-4624-8554-ddbab3d5a43c?size=small"
+    },
+    {
+      "id": "041606a6-d20b-4241-ae5a-2dd004c47487",
+      "name": "Urge to Feed",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/041606a6-d20b-4241-ae5a-2dd004c47487?size=small"
+    },
+    {
+      "id": "c0dacbb2-21e1-4220-bf43-75a0729cdc60",
+      "name": "Sorin's Thirst",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c0dacbb2-21e1-4220-bf43-75a0729cdc60?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "58c45158-7858-409e-ab37-8a9a66ad8714",
+      "name": "Gatekeeper of Malakir",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Creature — Vampire Warrior",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/58c45158-7858-409e-ab37-8a9a66ad8714?size=small"
+    },
+    {
+      "id": "864930ce-7c56-4ad2-9b90-57b10e5a0842",
+      "name": "Mesmeric Fiend",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Nightmare Horror",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/864930ce-7c56-4ad2-9b90-57b10e5a0842?size=small"
+    },
+    {
+      "id": "481b1eb5-9fbb-4e27-8d0a-5ca6c34179b6",
+      "name": "Twilight Drover",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Spirit",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/481b1eb5-9fbb-4e27-8d0a-5ca6c34179b6?size=small"
+    },
+    {
+      "id": "3d134bb2-17ec-4e65-976e-f06fa983f3fb",
+      "name": "Wall of Omens",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Wall",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/3d134bb2-17ec-4e65-976e-f06fa983f3fb?size=small"
+    },
+    {
+      "id": "6d0dea1b-43dc-4e76-aabd-f12e121a78af",
+      "name": "Unmake",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W/B}{W/B}{W/B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "image_small": "/api/img/6d0dea1b-43dc-4e76-aabd-f12e121a78af?size=small"
+    },
+    {
+      "id": "0c947c96-b4a5-4c3b-aacb-85ee0bf3afda",
+      "name": "Vampire Lacerator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Vampire Warrior",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/0c947c96-b4a5-4c3b-aacb-85ee0bf3afda?size=small"
+    },
+    {
+      "id": "f9b3ad9c-ef51-4ba6-a126-ec25d8f25b78",
+      "name": "Ancient Craving",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Sorcery",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f9b3ad9c-ef51-4ba6-a126-ec25d8f25b78?size=small"
+    },
+    {
+      "id": "6723d783-e2c5-4c01-8adc-fade22e4936e",
+      "name": "Duskhunter Bat",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Bat",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6723d783-e2c5-4c01-8adc-fade22e4936e?size=small"
+    },
+    {
+      "id": "d908bf00-86ba-4911-b15b-1af2a79dff85",
+      "name": "Mark of the Vampire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d908bf00-86ba-4911-b15b-1af2a79dff85?size=small"
+    },
+    {
+      "id": "3887af00-a87d-4396-b82b-38b88c084e8e",
+      "name": "Child of Night",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/3887af00-a87d-4396-b82b-38b88c084e8e?size=small"
+    },
+    {
+      "id": "8a03d414-bff9-4aba-8b0a-0ed57982251e",
+      "name": "Doomed Traveler",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8a03d414-bff9-4aba-8b0a-0ed57982251e?size=small"
+    },
+    {
+      "id": "ab98caf7-cc24-4027-ad8a-026150b61858",
+      "name": "Sorin, Lord of Innistrad",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{B}",
+      "type_line": "Legendary Planeswalker — Sorin",
+      "cmc": 4,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "image_small": "/api/img/ab98caf7-cc24-4027-ad8a-026150b61858?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "2b497736-e502-4e0c-b5dc-6ce5e9e8d4ab",
+      "name": "Fiend Hunter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Creature — Human Cleric",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2b497736-e502-4e0c-b5dc-6ce5e9e8d4ab?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "692013da-b090-49d1-9c7a-ff5863d6ffd5",
+      "name": "Bloodrage Vampire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/692013da-b090-49d1-9c7a-ff5863d6ffd5?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "c6eeab6f-a738-4005-91c2-a5f81df5c569",
+      "name": "Tainted Field",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c6eeab6f-a738-4005-91c2-a5f81df5c569?size=small"
+    },
+    {
+      "id": "32c1d966-b3c5-4480-be58-054a88141e44",
+      "name": "Vampire Outcasts",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/32c1d966-b3c5-4480-be58-054a88141e44?size=small"
+    },
+    {
+      "id": "c0318a48-30e4-4ef7-be3d-5e561c5ce428",
+      "name": "Evolving Wilds",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/c0318a48-30e4-4ef7-be3d-5e561c5ce428?size=small"
+    },
+    {
+      "id": "7cd6f616-2b22-42ed-818d-02d4a474ca8f",
+      "name": "Death Grasp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{W}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B",
+        "W"
+      ],
+      "image_small": "/api/img/7cd6f616-2b22-42ed-818d-02d4a474ca8f?size=small"
+    },
+    {
+      "id": "2bd4af62-ed1e-47be-991b-0ce984a7b321",
+      "name": "Phantom General",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Spirit Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2bd4af62-ed1e-47be-991b-0ce984a7b321?size=small"
+    },
+    {
+      "id": "e319956e-982b-4bba-829a-67bf4ef79d74",
+      "name": "Absorb Vis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{B}",
+      "type_line": "Sorcery",
+      "cmc": 7,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/e319956e-982b-4bba-829a-67bf4ef79d74?size=small"
+    },
+    {
+      "id": "849bea7e-74e5-4310-be5a-d517d7b19be6",
+      "name": "Mausoleum Guard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Human Scout",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/849bea7e-74e5-4310-be5a-d517d7b19be6?size=small"
+    },
+    {
+      "id": "7aff07f9-9528-4149-9af0-f4e3c66c9dc5",
+      "name": "Vampire Nighthawk",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7aff07f9-9528-4149-9af0-f4e3c66c9dc5?size=small"
+    },
+    {
+      "id": "020dc072-96e2-4923-b9c9-1791a0732c29",
+      "name": "Field of Souls",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Enchantment",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/020dc072-96e2-4923-b9c9-1791a0732c29?size=small"
+    },
+    {
+      "id": "9d805499-0739-403e-8447-ed2707dc9eb2",
+      "name": "Butcher of Malakir",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{B}{B}",
+      "type_line": "Creature — Vampire Warrior",
+      "cmc": 7,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9d805499-0739-403e-8447-ed2707dc9eb2?size=small"
+    },
+    {
+      "id": "57003079-3d0f-48fe-8fc1-94d38a94d1a8",
+      "name": "Vampire's Bite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/57003079-3d0f-48fe-8fc1-94d38a94d1a8?size=small"
+    },
+    {
+      "id": "52f23f01-67f0-49d3-b907-6203976cdf4d",
+      "name": "Revenant Patriarch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}",
+      "type_line": "Creature — Spirit",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/52f23f01-67f0-49d3-b907-6203976cdf4d?size=small"
+    },
+    {
+      "id": "de652420-eacf-4f9d-9f13-c6bc02b0fa72",
+      "name": "Sengir Vampire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/de652420-eacf-4f9d-9f13-c6bc02b0fa72?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403705,
+  "updated": 1789869403705
+}

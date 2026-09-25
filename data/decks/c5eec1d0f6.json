@@ -1,0 +1,478 @@
+{
+  "id": "c5eec1d0f6",
+  "name": "Duel: Heroes vs. Monsters — Heroes",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "2072badc-d4ec-469b-b3cd-6977cbe42fbd",
+      "name": "Undying Rage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/2072badc-d4ec-469b-b3cd-6977cbe42fbd?size=small"
+    },
+    {
+      "id": "5266595d-5320-4dea-8e4a-dd6c1a032871",
+      "name": "Battle Mastery",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/5266595d-5320-4dea-8e4a-dd6c1a032871?size=small"
+    },
+    {
+      "id": "39b8cf5e-10f6-49aa-82eb-2f56cc29d393",
+      "name": "Griffin Guide",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/39b8cf5e-10f6-49aa-82eb-2f56cc29d393?size=small"
+    },
+    {
+      "id": "9c103163-31b7-4d25-aa2c-02ca082ee1bf",
+      "name": "Smite the Monstrous",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/9c103163-31b7-4d25-aa2c-02ca082ee1bf?size=small"
+    },
+    {
+      "id": "8b5b719d-9527-4df1-b51f-f1827952cab4",
+      "name": "Stand Firm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8b5b719d-9527-4df1-b51f-f1827952cab4?size=small"
+    },
+    {
+      "id": "c552cb9e-41f2-4006-8ff4-5e214b91652e",
+      "name": "Cavalry Pegasus",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Pegasus",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c552cb9e-41f2-4006-8ff4-5e214b91652e?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 11,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "d2910df2-e288-4fa0-9859-c5ca35da2d55",
+      "name": "Righteousness",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d2910df2-e288-4fa0-9859-c5ca35da2d55?size=small"
+    },
+    {
+      "id": "2975ce11-589a-4da8-a016-854bbaeb869c",
+      "name": "Magma Jet",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/2975ce11-589a-4da8-a016-854bbaeb869c?size=small"
+    },
+    {
+      "id": "b17da4d0-f9fd-43af-85fc-ede9fa3962bf",
+      "name": "Moment of Heroism",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b17da4d0-f9fd-43af-85fc-ede9fa3962bf?size=small"
+    },
+    {
+      "id": "cc5dbb93-63a2-478e-b874-1fdf3a03cbff",
+      "name": "Bonds of Faith",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/cc5dbb93-63a2-478e-b874-1fdf3a03cbff?size=small"
+    },
+    {
+      "id": "322fdd11-7874-46f6-adc5-051119a6c978",
+      "name": "Armory Guard",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{W}",
+      "type_line": "Creature — Giant Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/322fdd11-7874-46f6-adc5-051119a6c978?size=small"
+    },
+    {
+      "id": "63cb977e-bd42-43b1-83d1-124e7a413aca",
+      "name": "Anax and Cymede",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{W}",
+      "type_line": "Legendary Creature — Human Soldier",
+      "cmc": 3,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/63cb977e-bd42-43b1-83d1-124e7a413aca?size=small"
+    },
+    {
+      "id": "f6aba9c7-7f91-4f06-915b-70ed7db8f95f",
+      "name": "Gustcloak Sentinel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 4,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/f6aba9c7-7f91-4f06-915b-70ed7db8f95f?size=small"
+    },
+    {
+      "id": "549ca818-f7bf-47a8-9005-18ddabd3c360",
+      "name": "Dawnstrike Paladin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/549ca818-f7bf-47a8-9005-18ddabd3c360?size=small"
+    },
+    {
+      "id": "28fd10fc-11de-4fd9-a8af-855f116d71d0",
+      "name": "Freewind Equenaut",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Archer",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/28fd10fc-11de-4fd9-a8af-855f116d71d0?size=small"
+    },
+    {
+      "id": "25f98f02-9ada-4561-93fd-9cfcb0f48b5d",
+      "name": "Pyrokinesis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/25f98f02-9ada-4561-93fd-9cfcb0f48b5d?size=small"
+    },
+    {
+      "id": "8dee155b-1f06-4d74-afa8-a1244c254978",
+      "name": "Winds of Rath",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8dee155b-1f06-4d74-afa8-a1244c254978?size=small"
+    },
+    {
+      "id": "457ea1f3-890c-4bff-9938-cd46252477f4",
+      "name": "Pay No Heed",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/457ea1f3-890c-4bff-9938-cd46252477f4?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 9,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "2b3459d9-a667-4cee-9b39-844013576d0b",
+      "name": "Miraculous Recovery",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/2b3459d9-a667-4cee-9b39-844013576d0b?size=small"
+    },
+    {
+      "id": "d0957032-6d98-4cac-889b-890e9bfe1f86",
+      "name": "Auramancer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d0957032-6d98-4cac-889b-890e9bfe1f86?size=small"
+    },
+    {
+      "id": "a42906c1-cf32-4c14-b08a-d800d1858d8f",
+      "name": "Truefire Paladin",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{W}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/a42906c1-cf32-4c14-b08a-d800d1858d8f?size=small"
+    },
+    {
+      "id": "efb74ccc-5ae5-4437-a0b4-c621ab4c2257",
+      "name": "Ordeal of Purphoros",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/efb74ccc-5ae5-4437-a0b4-c621ab4c2257?size=small"
+    },
+    {
+      "id": "7a65dd4d-f838-4964-bd5a-a517960cc644",
+      "name": "Kamahl, Pit Fighter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{R}{R}",
+      "type_line": "Legendary Creature — Human Barbarian",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7a65dd4d-f838-4964-bd5a-a517960cc644?size=small"
+    },
+    {
+      "id": "277bdef5-4887-42f5-b7c2-8c18f03db365",
+      "name": "Stun Sniper",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{R}{W}",
+      "type_line": "Creature — Human Archer",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/277bdef5-4887-42f5-b7c2-8c18f03db365?size=small"
+    },
+    {
+      "id": "0f002636-1971-468d-b171-7b8147829972",
+      "name": "Nobilis of War",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R/W}{R/W}{R/W}{R/W}{R/W}",
+      "type_line": "Creature — Spirit Avatar",
+      "cmc": 5,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/0f002636-1971-468d-b171-7b8147829972?size=small"
+    },
+    {
+      "id": "a8a8282b-bba6-4815-80fe-7a37a1fec3c1",
+      "name": "Thraben Valiant",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/a8a8282b-bba6-4815-80fe-7a37a1fec3c1?size=small"
+    },
+    {
+      "id": "994094f8-e175-4e2e-aa39-c096f0ed9e6a",
+      "name": "Fencing Ace",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/994094f8-e175-4e2e-aa39-c096f0ed9e6a?size=small"
+    },
+    {
+      "id": "a11a0f9c-2253-468f-a9c0-42e1e38aad96",
+      "name": "New Benalia",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a11a0f9c-2253-468f-a9c0-42e1e38aad96?size=small"
+    },
+    {
+      "id": "10c77d2d-ca35-4021-9e29-95be41385fd4",
+      "name": "Daily Regimen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/10c77d2d-ca35-4021-9e29-95be41385fd4?size=small"
+    },
+    {
+      "id": "3e3c74ea-40e9-4ad9-a491-c208403b68ad",
+      "name": "Boros Guildgate",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Gate",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3e3c74ea-40e9-4ad9-a491-c208403b68ad?size=small"
+    },
+    {
+      "id": "0c93201b-7664-4bfd-a462-f1c684ebedf6",
+      "name": "Condemn",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/0c93201b-7664-4bfd-a462-f1c684ebedf6?size=small"
+    },
+    {
+      "id": "6d779966-4bd4-4315-8b45-d3a4492f2bb2",
+      "name": "Figure of Destiny",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R/W}",
+      "type_line": "Creature — Kithkin",
+      "cmc": 1,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/6d779966-4bd4-4315-8b45-d3a4492f2bb2?size=small"
+    },
+    {
+      "id": "45acf61c-0cc6-4f74-8c81-5ea4b8282e2a",
+      "name": "Somberwald Vigilante",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Human Warrior",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/45acf61c-0cc6-4f74-8c81-5ea4b8282e2a?size=small"
+    },
+    {
+      "id": "3d6eacf2-f6c7-4ede-b5a5-7463602699ae",
+      "name": "Sun Titan",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{W}{W}",
+      "type_line": "Creature — Giant",
+      "cmc": 6,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/3d6eacf2-f6c7-4ede-b5a5-7463602699ae?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403702,
+  "updated": 1789869403702
+}

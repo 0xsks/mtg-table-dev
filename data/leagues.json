@@ -1,0 +1,225 @@
+[
+  {
+    "id": "league-championship-2026",
+    "name": "👑 Multiverse Grand Championship (Season 1)",
+    "description": "The premier competitive LAN circuit. 10 rounds of high-stakes duels culminating in the Top 4 playoff.",
+    "format": "duel",
+    "entryFee": 250,
+    "prizePool": 18250,
+    "status": "active",
+    "season": "Season 1",
+    "rules": "Best of 3, 20 life, standard banlist. 3 points per match victory.",
+    "standings": [
+      {
+        "userId": "u-5e7eae2581",
+        "name": "amber",
+        "wins": 6,
+        "losses": 0,
+        "points": 18,
+        "deck": "Sylvan Ramp"
+      },
+      {
+        "userId": "u-p2",
+        "name": "Jace Beleren",
+        "wins": 4,
+        "losses": 2,
+        "points": 12,
+        "deck": "Blue Control"
+      },
+      {
+        "userId": "u-p3",
+        "name": "Chandra Nalaar",
+        "wins": 3,
+        "losses": 3,
+        "points": 9,
+        "deck": "Mono Red Burn"
+      },
+      {
+        "userId": "u-p4",
+        "name": "Liliana Vess",
+        "wins": 2,
+        "losses": 4,
+        "points": 6,
+        "deck": "Reanimator"
+      },
+      {
+        "userId": "u-d09c40426d",
+        "name": "Mage gbjb2s",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-757bd18adb",
+        "name": "Mage 4y2z66",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-71a574d0ab",
+        "name": "Mage xxobdq",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-9651a6c557",
+        "name": "Mage 5fvp88",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-098c3311db",
+        "name": "Mage 35ddu1",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-cf9f445908",
+        "name": "Mage 6cwhjh",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-ca5a52490f",
+        "name": "Mage ui339p",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-c910c0c689",
+        "name": "Mage 39yl5m",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-d62dba6097",
+        "name": "Mage 4ptdki",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-c1cf42c83f",
+        "name": "Mage n657eh",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-dc1810975e",
+        "name": "Mage 0tmimi",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-05f5d7fb32",
+        "name": "Mage w7c2q8",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      },
+      {
+        "userId": "u-9fd0bc07f4",
+        "name": "Mage gi5x6h",
+        "wins": 1,
+        "losses": 0,
+        "points": 3,
+        "deck": "Celestial Storm"
+      }
+    ]
+  },
+  {
+    "id": "league-pauper-blitz",
+    "name": "⚡ Pauper Lightning Circuit",
+    "description": "Commons-only adrenaline duels. High speed, accessible format, fast rounds!",
+    "format": "duel",
+    "entryFee": 50,
+    "prizePool": 3500,
+    "status": "active",
+    "season": "Weekly Circuit #4",
+    "rules": "Commons only. 20 life. Quick 20-minute rounds. 3 points per win.",
+    "standings": [
+      {
+        "userId": "u-p5",
+        "name": "Kuldotha Raider",
+        "wins": 5,
+        "losses": 1,
+        "points": 15,
+        "deck": "Kuldotha Red"
+      },
+      {
+        "userId": "u-p6",
+        "name": "Delver Fanatic",
+        "wins": 4,
+        "losses": 2,
+        "points": 12,
+        "deck": "Mono Blue Terror"
+      },
+      {
+        "userId": "u-5e7eae2581",
+        "name": "amber",
+        "wins": 3,
+        "losses": 1,
+        "points": 9,
+        "deck": "Golgari Gardens"
+      }
+    ]
+  },
+  {
+    "id": "league-commander-masters",
+    "name": "🐉 Commander Masters Pod Invitational",
+    "description": "40 life multiplayer pod showdown. Politics, diplomacy, and colossal legendary commanders.",
+    "format": "commander",
+    "entryFee": 500,
+    "prizePool": 20000,
+    "status": "active",
+    "season": "Spring 2026",
+    "rules": "100-card singleton, 40 life, commander damage 21. Pod-based tournament scoring.",
+    "standings": [
+      {
+        "userId": "u-5e7eae2581",
+        "name": "amber",
+        "wins": 4,
+        "losses": 0,
+        "points": 16,
+        "deck": "Omnath Locus of Mana"
+      },
+      {
+        "userId": "u-p7",
+        "name": "Uril Miststalker",
+        "wins": 3,
+        "losses": 1,
+        "points": 12,
+        "deck": "Voltron Auras"
+      },
+      {
+        "userId": "u-p8",
+        "name": "Nekusar Wheel",
+        "wins": 2,
+        "losses": 2,
+        "points": 8,
+        "deck": "Grixis Wheels"
+      }
+    ]
+  }
+]

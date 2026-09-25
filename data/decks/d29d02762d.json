@@ -1,0 +1,21 @@
+{
+  "id": "d29d02762d",
+  "userId": "u-4e19ff80a8",
+  "authorName": "Lord Chandra ft1fl8",
+  "name": "🔥 Chandra's Fury Burn",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "name": "Mountain",
+      "count": 20
+    },
+    {
+      "name": "Lightning Bolt",
+      "count": 40
+    }
+  ],
+  "starter": false,
+  "created": 1789961508563,
+  "updated": 1789961508563
+}

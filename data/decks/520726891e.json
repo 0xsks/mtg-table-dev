@@ -1,0 +1,178 @@
+{
+  "id": "520726891e",
+  "name": "White-Blue Deck",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "069cfaa5-bba4-4503-b54e-b98fa9f0a0fc",
+      "name": "Healer's Hawk",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Creature — Bird",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/069cfaa5-bba4-4503-b54e-b98fa9f0a0fc?size=small"
+    },
+    {
+      "id": "ed363208-cf66-4205-8512-b999b67227d3",
+      "name": "Judge's Familiar",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{W/U}",
+      "type_line": "Creature — Bird",
+      "cmc": 1,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/ed363208-cf66-4205-8512-b999b67227d3?size=small"
+    },
+    {
+      "id": "5ef30b6c-0806-4bf6-9a84-c2aea8d84cf1",
+      "name": "Spectral Sailor",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Spirit Pirate",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5ef30b6c-0806-4bf6-9a84-c2aea8d84cf1?size=small"
+    },
+    {
+      "id": "f47bda42-8eb7-49c5-8f3b-e988e377a7f5",
+      "name": "Mausoleum Wanderer",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Spirit",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/f47bda42-8eb7-49c5-8f3b-e988e377a7f5?size=small"
+    },
+    {
+      "id": "577e99a7-4a55-4314-8f08-2ae0c33b85c7",
+      "name": "Empyrean Eagle",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{1}{W}{U}",
+      "type_line": "Creature — Bird Spirit",
+      "cmc": 3,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/577e99a7-4a55-4314-8f08-2ae0c33b85c7?size=small"
+    },
+    {
+      "id": "354b9ea4-3d55-48cc-b426-c46b1d1bb397",
+      "name": "Watcher of the Spheres",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{W}{U}",
+      "type_line": "Creature — Bird Wizard",
+      "cmc": 2,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/354b9ea4-3d55-48cc-b426-c46b1d1bb397?size=small"
+    },
+    {
+      "id": "1de89026-13a6-4ae3-9059-460bdd657285",
+      "name": "Favorable Winds",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Enchantment",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/1de89026-13a6-4ae3-9059-460bdd657285?size=small"
+    },
+    {
+      "id": "4f616706-ec97-4923-bb1e-11a69fbaa1f8",
+      "name": "Counterspell",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{U}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/4f616706-ec97-4923-bb1e-11a69fbaa1f8?size=small"
+    },
+    {
+      "id": "8dd4374f-0301-4b2e-bc99-2cd19568cb3b",
+      "name": "Spell Pierce",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/8dd4374f-0301-4b2e-bc99-2cd19568cb3b?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 14,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "3c726a60-8de7-4d5e-8ad5-8405e6ac36b5",
+      "name": "Glacial Fortress",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/3c726a60-8de7-4d5e-8ad5-8405e6ac36b5?size=small"
+    },
+    {
+      "id": "b7285986-7e08-4969-86ef-452dc5bfdd9f",
+      "name": "Hallowed Fountain",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Plains Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7285986-7e08-4969-86ef-452dc5bfdd9f?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "created": 1789869403698,
+  "updated": 1789940174062,
+  "userId": null,
+  "authorName": null
+}

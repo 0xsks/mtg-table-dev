@@ -1,0 +1,487 @@
+{
+  "id": "2d2c9640e7",
+  "name": "Duel: Phyrexia vs. Coalition — Coalition",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    },
+    {
+      "id": "74ee66b2-5b69-461b-9590-1143adc692af",
+      "name": "Treva, the Renewer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{G}{W}{U}",
+      "type_line": "Legendary Creature — Dragon",
+      "cmc": 6,
+      "colors": [
+        "G",
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/74ee66b2-5b69-461b-9590-1143adc692af?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "942acc59-3644-47be-80ab-fc8f27626aa3",
+      "name": "Darigaaz, the Igniter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{R}{G}",
+      "type_line": "Legendary Creature — Dragon",
+      "cmc": 6,
+      "colors": [
+        "B",
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/942acc59-3644-47be-80ab-fc8f27626aa3?size=small"
+    },
+    {
+      "id": "e1a75961-39a3-4221-9367-a763cf871d42",
+      "name": "Rith, the Awakener",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{G}{W}",
+      "type_line": "Legendary Creature — Dragon",
+      "cmc": 6,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/e1a75961-39a3-4221-9367-a763cf871d42?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "a3d4b427-7fef-4a56-91a4-89cfbd881c89",
+      "name": "Charging Troll",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}{W}",
+      "type_line": "Creature — Troll",
+      "cmc": 4,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/a3d4b427-7fef-4a56-91a4-89cfbd881c89?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "447c8c98-ac0e-4a12-a99e-f75d82b7a51f",
+      "name": "Gerrard Capashen",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Legendary Creature — Human Soldier",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/447c8c98-ac0e-4a12-a99e-f75d82b7a51f?size=small"
+    },
+    {
+      "id": "6d11de19-fb40-4dc6-ad61-3b7e95163c0b",
+      "name": "Shivan Oasis",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/6d11de19-fb40-4dc6-ad61-3b7e95163c0b?size=small"
+    },
+    {
+      "id": "cf0a1951-4482-4ba0-b29e-2091adde0628",
+      "name": "Verduran Emissary",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/cf0a1951-4482-4ba0-b29e-2091adde0628?size=small"
+    },
+    {
+      "id": "a81f924b-0527-4311-8120-9bfff71524f6",
+      "name": "Terramorphic Expanse",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a81f924b-0527-4311-8120-9bfff71524f6?size=small"
+    },
+    {
+      "id": "27dacbde-a646-418c-b569-4a4f11c9faae",
+      "name": "Yavimaya Elder",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}{G}",
+      "type_line": "Creature — Human Druid",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/27dacbde-a646-418c-b569-4a4f11c9faae?size=small"
+    },
+    {
+      "id": "ddb1475d-abee-4eec-8615-bf5e286afb4a",
+      "name": "Thunderscape Battlemage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/ddb1475d-abee-4eec-8615-bf5e286afb4a?size=small"
+    },
+    {
+      "id": "2dea7475-af87-4cee-bfdc-804351a632b5",
+      "name": "Allied Strategies",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/2dea7475-af87-4cee-bfdc-804351a632b5?size=small"
+    },
+    {
+      "id": "1ddd0084-349d-4d5f-86af-a3a65dcce73a",
+      "name": "Elfhame Palace",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/1ddd0084-349d-4d5f-86af-a3a65dcce73a?size=small"
+    },
+    {
+      "id": "d286f930-28ca-4c59-8a53-99686ac6030e",
+      "name": "Thornscape Battlemage",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Elf Wizard",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/d286f930-28ca-4c59-8a53-99686ac6030e?size=small"
+    },
+    {
+      "id": "f63c6e81-8d78-4f20-b572-6015385e03ba",
+      "name": "Treva's Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}{U}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/f63c6e81-8d78-4f20-b572-6015385e03ba?size=small"
+    },
+    {
+      "id": "679e3d63-8902-458e-a9a3-cefe14f6b415",
+      "name": "Sunscape Battlemage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/679e3d63-8902-458e-a9a3-cefe14f6b415?size=small"
+    },
+    {
+      "id": "20bc8710-3d56-45fb-81e7-383a274a2374",
+      "name": "Power Armor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/20bc8710-3d56-45fb-81e7-383a274a2374?size=small"
+    },
+    {
+      "id": "0a353fed-e01c-4eaf-afb5-446644628284",
+      "name": "Rith's Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{G}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/0a353fed-e01c-4eaf-afb5-446644628284?size=small"
+    },
+    {
+      "id": "fc4a26f7-36df-4018-8dab-a1294c36b0f0",
+      "name": "Nomadic Elf",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Nomad",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/fc4a26f7-36df-4018-8dab-a1294c36b0f0?size=small"
+    },
+    {
+      "id": "74a39656-769f-4540-9a30-f637a8ec302e",
+      "name": "Quirion Elves",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/74a39656-769f-4540-9a30-f637a8ec302e?size=small"
+    },
+    {
+      "id": "fa232c65-dbb4-4414-bd95-b3bbd321c653",
+      "name": "Armadillo Cloak",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}{W}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/fa232c65-dbb4-4414-bd95-b3bbd321c653?size=small"
+    },
+    {
+      "id": "5c91e364-c157-494e-bb1b-f2cef004900f",
+      "name": "Urza's Rage",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5c91e364-c157-494e-bb1b-f2cef004900f?size=small"
+    },
+    {
+      "id": "ef276e2e-7e4d-48a0-af51-70cd843c6561",
+      "name": "Thornscape Apprentice",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/ef276e2e-7e4d-48a0-af51-70cd843c6561?size=small"
+    },
+    {
+      "id": "928af23d-1558-4d20-8841-554a327db861",
+      "name": "Darigaaz's Charm",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{R}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B",
+        "G",
+        "R"
+      ],
+      "image_small": "/api/img/928af23d-1558-4d20-8841-554a327db861?size=small"
+    },
+    {
+      "id": "1eff81c4-c402-437d-aace-dfe875d9857d",
+      "name": "Exotic Curse",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/1eff81c4-c402-437d-aace-dfe875d9857d?size=small"
+    },
+    {
+      "id": "3e76be46-cf81-4fef-bc5b-f87666cb0413",
+      "name": "Harrow",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/3e76be46-cf81-4fef-bc5b-f87666cb0413?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "ef44324a-32bd-47e9-8fd9-258ba668de53",
+      "name": "Coalition Relic",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/ef44324a-32bd-47e9-8fd9-258ba668de53?size=small"
+    },
+    {
+      "id": "c730b0c4-e8cf-4c6f-b65c-faebf508fc3c",
+      "name": "Narrow Escape",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/c730b0c4-e8cf-4c6f-b65c-faebf508fc3c?size=small"
+    },
+    {
+      "id": "83778d03-6196-4994-8f78-4db6cec823fb",
+      "name": "Fertile Ground",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{G}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/83778d03-6196-4994-8f78-4db6cec823fb?size=small"
+    },
+    {
+      "id": "cdb56601-35dd-4b79-80d1-1dff785e32cd",
+      "name": "Gerrard's Command",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{G}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "G",
+        "W"
+      ],
+      "image_small": "/api/img/cdb56601-35dd-4b79-80d1-1dff785e32cd?size=small"
+    },
+    {
+      "id": "d8fad630-bd1c-42df-86b5-cc00da28abfd",
+      "name": "Evasive Action",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/d8fad630-bd1c-42df-86b5-cc00da28abfd?size=small"
+    },
+    {
+      "id": "d22418cd-4c49-4754-aa75-17f6eaf1639a",
+      "name": "Tribal Flames",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d22418cd-4c49-4754-aa75-17f6eaf1639a?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403705,
+  "updated": 1789869403705
+}

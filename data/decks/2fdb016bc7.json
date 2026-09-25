@@ -1,0 +1,438 @@
+{
+  "id": "2fdb016bc7",
+  "name": "Duel: Phyrexia vs. Coalition — Phyrexia",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "2c1fa0c5-8eef-484e-9d5f-38e87d99ed73",
+      "name": "Sanguine Guard",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Phyrexian Zombie Knight",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/2c1fa0c5-8eef-484e-9d5f-38e87d99ed73?size=small"
+    },
+    {
+      "id": "edf4c9e1-eff6-4abc-ad4e-ffd7f1895d8d",
+      "name": "Phyrexian Broodlings",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Phyrexian Minion",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/edf4c9e1-eff6-4abc-ad4e-ffd7f1895d8d?size=small"
+    },
+    {
+      "id": "8cbc4c4c-f1f5-4593-9894-1d8715a2f2c1",
+      "name": "Priest of Gix",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Human Cleric Minion",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/8cbc4c4c-f1f5-4593-9894-1d8715a2f2c1?size=small"
+    },
+    {
+      "id": "43752240-10b1-4920-bb89-e4a4a1e78219",
+      "name": "Phyrexian Ghoul",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Zombie",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/43752240-10b1-4920-bb89-e4a4a1e78219?size=small"
+    },
+    {
+      "id": "7165a9ac-3f44-4d14-93bb-d4d4970ab41b",
+      "name": "Bone Shredder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Minion",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7165a9ac-3f44-4d14-93bb-d4d4970ab41b?size=small"
+    },
+    {
+      "id": "1444786c-fb9f-4398-b442-c7cfd6f1df40",
+      "name": "Phyrexian Denouncer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Phyrexian Carrier",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/1444786c-fb9f-4398-b442-c7cfd6f1df40?size=small"
+    },
+    {
+      "id": "6aceeffd-f6d9-46ff-97f8-8accad49ff8d",
+      "name": "Phyrexian Battleflies",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Phyrexian Insect",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6aceeffd-f6d9-46ff-97f8-8accad49ff8d?size=small"
+    },
+    {
+      "id": "0a19da90-880e-4eca-8cf7-6d7baf090d53",
+      "name": "Carrion Feeder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Creature — Zombie",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/0a19da90-880e-4eca-8cf7-6d7baf090d53?size=small"
+    },
+    {
+      "id": "04789161-f0a8-4ba5-832f-4d585c5117a6",
+      "name": "Phyrexian Processor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/04789161-f0a8-4ba5-832f-4d585c5117a6?size=small"
+    },
+    {
+      "id": "7b3543e0-c15f-4fed-9a68-8f590b40ab16",
+      "name": "Phyrexian Negator",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7b3543e0-c15f-4fed-9a68-8f590b40ab16?size=small"
+    },
+    {
+      "id": "0784b6f0-9ebf-43d2-ba0f-a6bc93ba0c48",
+      "name": "Phyrexian Arena",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/0784b6f0-9ebf-43d2-ba0f-a6bc93ba0c48?size=small"
+    },
+    {
+      "id": "a3ea39a8-48d1-4a58-8662-88841eabec92",
+      "name": "Hornet Cannon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}",
+      "type_line": "Artifact",
+      "cmc": 4,
+      "colors": [],
+      "image_small": "/api/img/a3ea39a8-48d1-4a58-8662-88841eabec92?size=small"
+    },
+    {
+      "id": "94dcbf68-faa7-4fa1-be17-2f71a0f9ad5e",
+      "name": "Slay",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/94dcbf68-faa7-4fa1-be17-2f71a0f9ad5e?size=small"
+    },
+    {
+      "id": "69ece875-81eb-47fc-9ad9-080b654d49f5",
+      "name": "Hideous End",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/69ece875-81eb-47fc-9ad9-080b654d49f5?size=small"
+    },
+    {
+      "id": "a3f31ac4-09ca-4712-a311-50d28824bfad",
+      "name": "Whispersilk Cloak",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/a3f31ac4-09ca-4712-a311-50d28824bfad?size=small"
+    },
+    {
+      "id": "ace686ad-9e3f-41b3-b8eb-d1b6d45eb4e1",
+      "name": "Worn Powerstone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/ace686ad-9e3f-41b3-b8eb-d1b6d45eb4e1?size=small"
+    },
+    {
+      "id": "e184c465-4f19-4054-b853-dbf8c2efb4aa",
+      "name": "Phyrexian Vault",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/e184c465-4f19-4054-b853-dbf8c2efb4aa?size=small"
+    },
+    {
+      "id": "53e0bb82-c64a-4ae6-962a-7a0c45329159",
+      "name": "Puppet Strings",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/53e0bb82-c64a-4ae6-962a-7a0c45329159?size=small"
+    },
+    {
+      "id": "31593a02-d026-4108-82e0-21ad5ff8c890",
+      "name": "Phyrexian Totem",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}",
+      "type_line": "Artifact",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/31593a02-d026-4108-82e0-21ad5ff8c890?size=small"
+    },
+    {
+      "id": "11e12a84-e7be-4afc-a230-c2e644743fa8",
+      "name": "Dark Ritual",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{B}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/11e12a84-e7be-4afc-a230-c2e644743fa8?size=small"
+    },
+    {
+      "id": "b61634ae-05be-4b56-8ebb-9d4ade902e42",
+      "name": "Lightning Greaves",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact — Equipment",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/b61634ae-05be-4b56-8ebb-9d4ade902e42?size=small"
+    },
+    {
+      "id": "25ff2fcb-dcf4-41dc-8178-8e3f6c7839fa",
+      "name": "Phyrexian Colossus",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{7}",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "cmc": 7,
+      "colors": [],
+      "image_small": "/api/img/25ff2fcb-dcf4-41dc-8178-8e3f6c7839fa?size=small"
+    },
+    {
+      "id": "6dd61957-f3a2-4976-8f15-88258f71406a",
+      "name": "Voltaic Key",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}",
+      "type_line": "Artifact",
+      "cmc": 1,
+      "colors": [],
+      "image_small": "/api/img/6dd61957-f3a2-4976-8f15-88258f71406a?size=small"
+    },
+    {
+      "id": "304bc0a2-0cf4-4609-a0fc-de933402c64a",
+      "name": "Phyrexian Hulk",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}",
+      "type_line": "Artifact Creature — Phyrexian Golem",
+      "cmc": 6,
+      "colors": [],
+      "image_small": "/api/img/304bc0a2-0cf4-4609-a0fc-de933402c64a?size=small"
+    },
+    {
+      "id": "08648c0a-e075-45ac-ad8c-80c425d3487e",
+      "name": "Phyrexian Gargantua",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{B}{B}",
+      "type_line": "Creature — Phyrexian Horror",
+      "cmc": 6,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/08648c0a-e075-45ac-ad8c-80c425d3487e?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "6a4a7dcf-b624-4462-859f-e7b2c4ab02ce",
+      "name": "Phyrexian Defiler",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Phyrexian Carrier",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/6a4a7dcf-b624-4462-859f-e7b2c4ab02ce?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "d0894a99-13e0-406c-8ca3-5552c64e3154",
+      "name": "Phyrexian Plaguelord",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Creature — Phyrexian Carrier",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/d0894a99-13e0-406c-8ca3-5552c64e3154?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 7,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "f3e2c6ac-455e-4d99-983b-1b154fd8bb24",
+      "name": "Phyrexian Debaser",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Phyrexian Carrier",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f3e2c6ac-455e-4d99-983b-1b154fd8bb24?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "49e5ff9f-9ec9-4c96-b28f-938a2abd15bf",
+      "name": "Order of Yawgmoth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}{B}",
+      "type_line": "Creature — Phyrexian Zombie Knight",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/49e5ff9f-9ec9-4c96-b28f-938a2abd15bf?size=small"
+    },
+    {
+      "id": "c338b459-6bb8-4bc7-a6b5-945a09589c05",
+      "name": "Tendrils of Corruption",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c338b459-6bb8-4bc7-a6b5-945a09589c05?size=small"
+    },
+    {
+      "id": "4ac29c46-f8ee-42ba-a98c-d785ba65485e",
+      "name": "Living Death",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/4ac29c46-f8ee-42ba-a98c-d785ba65485e?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403705,
+  "updated": 1789869403705
+}

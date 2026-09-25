@@ -1,0 +1,166 @@
+{
+  "id": "fcf7f21725",
+  "name": "Green Stompy",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "6a0b230b-d391-4998-a3f7-7b158a0ec2cd",
+      "name": "Llanowar Elves",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/6a0b230b-d391-4998-a3f7-7b158a0ec2cd?size=small"
+    },
+    {
+      "id": "08b9a296-3b76-4f8f-9d71-7c9af92bb3b4",
+      "name": "Elvish Mystic",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Druid",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/08b9a296-3b76-4f8f-9d71-7c9af92bb3b4?size=small"
+    },
+    {
+      "id": "3b551403-47dd-4c2b-95c8-0e2e674d6fcf",
+      "name": "Experiment One",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Human Ooze",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/3b551403-47dd-4c2b-95c8-0e2e674d6fcf?size=small"
+    },
+    {
+      "id": "bf1fb137-205c-480f-b6dc-dfa137793ae3",
+      "name": "Strangleroot Geist",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Spirit",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bf1fb137-205c-480f-b6dc-dfa137793ae3?size=small"
+    },
+    {
+      "id": "bee125cb-12b9-4f78-8e1d-6018d9c52275",
+      "name": "Pelt Collector",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Creature — Elf Warrior",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/bee125cb-12b9-4f78-8e1d-6018d9c52275?size=small"
+    },
+    {
+      "id": "55f97b4c-42c7-4986-a150-0b8de11f0537",
+      "name": "Leatherback Baloth",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}{G}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/55f97b4c-42c7-4986-a150-0b8de11f0537?size=small"
+    },
+    {
+      "id": "135946fc-fe67-401f-821d-d7145c63f030",
+      "name": "Kalonian Tusker",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}{G}",
+      "type_line": "Creature — Beast",
+      "cmc": 2,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/135946fc-fe67-401f-821d-d7145c63f030?size=small"
+    },
+    {
+      "id": "86d6b411-4a31-4bfc-8dd6-e19f553bb29b",
+      "name": "Rancor",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/86d6b411-4a31-4bfc-8dd6-e19f553bb29b?size=small"
+    },
+    {
+      "id": "fd1f95bf-48ea-455a-8a6c-0249b11c8900",
+      "name": "Giant Growth",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/fd1f95bf-48ea-455a-8a6c-0249b11c8900?size=small"
+    },
+    {
+      "id": "19353629-07be-47e2-a7d5-3a5e5e1120c8",
+      "name": "Aspect of Hydra",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{G}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/19353629-07be-47e2-a7d5-3a5e5e1120c8?size=small"
+    },
+    {
+      "id": "b8b4ebbf-1613-42a0-97ff-2f36dc8d984a",
+      "name": "Dungrove Elder",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{G}",
+      "type_line": "Creature — Treefolk",
+      "cmc": 3,
+      "colors": [
+        "G"
+      ],
+      "image_small": "/api/img/b8b4ebbf-1613-42a0-97ff-2f36dc8d984a?size=small"
+    },
+    {
+      "id": "dce15387-4114-4b3e-91aa-5b42b45c44ac",
+      "name": "Forest",
+      "count": 20,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Forest",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/dce15387-4114-4b3e-91aa-5b42b45c44ac?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "created": 1789869403697,
+  "updated": 1789869403697
+}

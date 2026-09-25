@@ -1,0 +1,553 @@
+{
+  "id": "f36f2150a4",
+  "name": "Duel: Speed vs. Cunning — Cunning",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "22331eb5-c791-4d38-a6f7-cc5f4ef815ef",
+      "name": "Sparkmage Apprentice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/22331eb5-c791-4d38-a6f7-cc5f4ef815ef?size=small"
+    },
+    {
+      "id": "6d31d5b6-0973-43d2-aae0-a3f3e7a61800",
+      "name": "Lone Missionary",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Kor Monk",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/6d31d5b6-0973-43d2-aae0-a3f3e7a61800?size=small"
+    },
+    {
+      "id": "3bb510af-2cc7-4992-aeef-556e8a63f146",
+      "name": "Steam Augury",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}{R}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "U"
+      ],
+      "image_small": "/api/img/3bb510af-2cc7-4992-aeef-556e8a63f146?size=small"
+    },
+    {
+      "id": "38fd9091-2d22-411f-955a-24c32293cdca",
+      "name": "Jeskai Elder",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Monk",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/38fd9091-2d22-411f-955a-24c32293cdca?size=small"
+    },
+    {
+      "id": "0b062fbb-9eb2-4773-83aa-b2daca4fe80d",
+      "name": "Traumatic Visions",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/0b062fbb-9eb2-4773-83aa-b2daca4fe80d?size=small"
+    },
+    {
+      "id": "6e6a3551-250c-4563-8c30-6d8f49e6429f",
+      "name": "Willbender",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6e6a3551-250c-4563-8c30-6d8f49e6429f?size=small"
+    },
+    {
+      "id": "b8eacbc6-362e-4257-b29f-78682f4130c1",
+      "name": "Coral Trickster",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Merfolk Rogue",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/b8eacbc6-362e-4257-b29f-78682f4130c1?size=small"
+    },
+    {
+      "id": "d20ee9c8-6d58-42fc-8b27-bfd0ea6d4374",
+      "name": "Hold the Line",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}{W}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/d20ee9c8-6d58-42fc-8b27-bfd0ea6d4374?size=small"
+    },
+    {
+      "id": "8c8e6ca4-9678-4032-aca5-c74aac7cd897",
+      "name": "Inferno Trap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant — Trap",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8c8e6ca4-9678-4032-aca5-c74aac7cd897?size=small"
+    },
+    {
+      "id": "6c0f831e-2eb0-499f-9502-418c04ac34a0",
+      "name": "Fathom Seer",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Creature — Illusion",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/6c0f831e-2eb0-499f-9502-418c04ac34a0?size=small"
+    },
+    {
+      "id": "9d31e3e3-f398-4c0e-a2c9-4c614a4d41de",
+      "name": "Arcanis the Omnipotent",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}{U}",
+      "type_line": "Legendary Creature — Wizard",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/9d31e3e3-f398-4c0e-a2c9-4c614a4d41de?size=small"
+    },
+    {
+      "id": "179236d9-6fe2-4db6-bdfb-f851e8d531a2",
+      "name": "Mana Leak",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/179236d9-6fe2-4db6-bdfb-f851e8d531a2?size=small"
+    },
+    {
+      "id": "cdec8e65-8914-4a7a-9ed0-991a73242f3f",
+      "name": "Faerie Impostor",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Creature — Faerie Rogue",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/cdec8e65-8914-4a7a-9ed0-991a73242f3f?size=small"
+    },
+    {
+      "id": "4101e3fe-b0e7-4f0f-b9ac-9b61a4d628b3",
+      "name": "Lightning Helix",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}{W}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R",
+        "W"
+      ],
+      "image_small": "/api/img/4101e3fe-b0e7-4f0f-b9ac-9b61a4d628b3?size=small"
+    },
+    {
+      "id": "df2cc327-715b-4fb6-8218-9d01711d1022",
+      "name": "Swift Justice",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/df2cc327-715b-4fb6-8218-9d01711d1022?size=small"
+    },
+    {
+      "id": "3ec50625-5e14-4fd0-9a96-86f195342695",
+      "name": "Impulse",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/3ec50625-5e14-4fd0-9a96-86f195342695?size=small"
+    },
+    {
+      "id": "c0b86a7b-4912-43a7-ab89-c3432385baa1",
+      "name": "Fleeting Distraction",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/c0b86a7b-4912-43a7-ab89-c3432385baa1?size=small"
+    },
+    {
+      "id": "8257cc36-4886-449a-bb45-51f6abf09e82",
+      "name": "Stave Off",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{W}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/8257cc36-4886-449a-bb45-51f6abf09e82?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "5bd5cd33-20e2-4063-b422-2bde13021888",
+      "name": "Sphinx of Uthuun",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{U}{U}",
+      "type_line": "Creature — Sphinx",
+      "cmc": 7,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5bd5cd33-20e2-4063-b422-2bde13021888?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "5546fbd6-908d-46be-8d17-9470842f78a7",
+      "name": "Faerie Invaders",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}",
+      "type_line": "Creature — Faerie Rogue",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/5546fbd6-908d-46be-8d17-9470842f78a7?size=small"
+    },
+    {
+      "id": "8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c",
+      "name": "Plains",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Plains",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/8ab0f4c0-b331-4c57-b68f-2e24bb5ba06c?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "f73d6480-2ddb-465d-8d21-11163744378d",
+      "name": "Thousand Winds",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{4}{U}{U}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/f73d6480-2ddb-465d-8d21-11163744378d?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "faaf07b2-57b0-4437-a8d7-51ff8894a7db",
+      "name": "Hussar Patrol",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}{U}",
+      "type_line": "Creature — Human Knight",
+      "cmc": 4,
+      "colors": [
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/faaf07b2-57b0-4437-a8d7-51ff8894a7db?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "384cf91c-6cea-4279-b66d-d81b5791d411",
+      "name": "Lightning Angel",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{U}{R}{W}",
+      "type_line": "Creature — Angel",
+      "cmc": 4,
+      "colors": [
+        "R",
+        "U",
+        "W"
+      ],
+      "image_small": "/api/img/384cf91c-6cea-4279-b66d-d81b5791d411?size=small"
+    },
+    {
+      "id": "ad0997f0-865f-422b-b34e-485ff8178625",
+      "name": "Stonecloaker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Gargoyle",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/ad0997f0-865f-422b-b34e-485ff8178625?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "69402ba7-5dac-43f6-bba4-429fac35a96b",
+      "name": "Aquamorph Entity",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{U}{U}",
+      "type_line": "Creature — Shapeshifter",
+      "cmc": 4,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/69402ba7-5dac-43f6-bba4-429fac35a96b?size=small"
+    },
+    {
+      "id": "f3cc07cd-cc79-4745-b0b7-eade60175cc3",
+      "name": "Island",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/f3cc07cd-cc79-4745-b0b7-eade60175cc3?size=small"
+    },
+    {
+      "id": "e856fbd5-0e8b-4f28-bfea-0ad73418d140",
+      "name": "Echo Tracer",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{U}",
+      "type_line": "Creature — Human Wizard",
+      "cmc": 3,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/e856fbd5-0e8b-4f28-bfea-0ad73418d140?size=small"
+    },
+    {
+      "id": "bc23343a-3a01-4975-8430-17bf15fa639d",
+      "name": "Mystic Monastery",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/bc23343a-3a01-4975-8430-17bf15fa639d?size=small"
+    },
+    {
+      "id": "1c77d014-8ea2-4203-88b4-53be3819bf3c",
+      "name": "Kor Hookmaster",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{W}",
+      "type_line": "Creature — Kor Soldier",
+      "cmc": 3,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/1c77d014-8ea2-4203-88b4-53be3819bf3c?size=small"
+    },
+    {
+      "id": "a81f924b-0527-4311-8120-9bfff71524f6",
+      "name": "Terramorphic Expanse",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/a81f924b-0527-4311-8120-9bfff71524f6?size=small"
+    },
+    {
+      "id": "b8b3ea52-2338-4499-9100-c4be73cdfc32",
+      "name": "Arrow Volley Trap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{W}{W}",
+      "type_line": "Instant — Trap",
+      "cmc": 5,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/b8b3ea52-2338-4499-9100-c4be73cdfc32?size=small"
+    },
+    {
+      "id": "88bd93e9-4fc8-4c10-8183-c87363601033",
+      "name": "Master Decoy",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{W}",
+      "type_line": "Creature — Human Soldier",
+      "cmc": 2,
+      "colors": [
+        "W"
+      ],
+      "image_small": "/api/img/88bd93e9-4fc8-4c10-8183-c87363601033?size=small"
+    },
+    {
+      "id": "265b80cd-2e9c-4e4b-a065-eafb29b3e07a",
+      "name": "Repeal",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{X}{U}",
+      "type_line": "Instant",
+      "cmc": 1,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/265b80cd-2e9c-4e4b-a065-eafb29b3e07a?size=small"
+    },
+    {
+      "id": "0d828c7c-4e55-40be-a96f-48101e407aef",
+      "name": "Whiplash Trap",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{U}{U}",
+      "type_line": "Instant — Trap",
+      "cmc": 5,
+      "colors": [
+        "U"
+      ],
+      "image_small": "/api/img/0d828c7c-4e55-40be-a96f-48101e407aef?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403706,
+  "updated": 1789869403706
+}

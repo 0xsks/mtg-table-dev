@@ -1,0 +1,434 @@
+{
+  "id": "5944bb8459",
+  "name": "Duel: Zendikar vs. Eldrazi — Eldrazi",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "12e7e2b5-3141-4a19-aa49-91ab7e5c211c",
+      "name": "Dominator Drone",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Eldrazi Drone",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/12e7e2b5-3141-4a19-aa49-91ab7e5c211c?size=small"
+    },
+    {
+      "id": "b2ce0a6f-4990-41ae-a37d-b89da2b9e4de",
+      "name": "Heartstabber Mosquito",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{3}{B}",
+      "type_line": "Creature — Insect",
+      "cmc": 4,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b2ce0a6f-4990-41ae-a37d-b89da2b9e4de?size=small"
+    },
+    {
+      "id": "ba9153ce-2acd-4170-a2ab-c8b660614152",
+      "name": "Induce Despair",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/ba9153ce-2acd-4170-a2ab-c8b660614152?size=small"
+    },
+    {
+      "id": "0f8f9dc0-67c3-4ded-bf95-02452d4ee635",
+      "name": "Corpsehatch",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/0f8f9dc0-67c3-4ded-bf95-02452d4ee635?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 5,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "b7387103-1df1-4fd0-9e91-1544509792c7",
+      "name": "Swamp",
+      "count": 4,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Swamp",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/b7387103-1df1-4fd0-9e91-1544509792c7?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "9861ea61-d635-4f1c-b5eb-d608e12713ec",
+      "name": "Marsh Casualties",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{B}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9861ea61-d635-4f1c-b5eb-d608e12713ec?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "35fab29d-1bcc-4ba0-90bf-427d95bf6699",
+      "name": "Emrakul's Hatcher",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "{4}{R}",
+      "type_line": "Creature — Eldrazi Drone",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/35fab29d-1bcc-4ba0-90bf-427d95bf6699?size=small"
+    },
+    {
+      "id": "b3198f96-f9d8-494f-a556-24ce3ad3895d",
+      "name": "Read the Bones",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Sorcery",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/b3198f96-f9d8-494f-a556-24ce3ad3895d?size=small"
+    },
+    {
+      "id": "c1b0377c-efd6-4fab-89f0-b219ca2c4c22",
+      "name": "Pawn of Ulamog",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c1b0377c-efd6-4fab-89f0-b219ca2c4c22?size=small"
+    },
+    {
+      "id": "7aff07f9-9528-4149-9af0-f4e3c66c9dc5",
+      "name": "Vampire Nighthawk",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/7aff07f9-9528-4149-9af0-f4e3c66c9dc5?size=small"
+    },
+    {
+      "id": "cf605c8e-e59f-4f49-bb55-1824e7eadec0",
+      "name": "Smother",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/cf605c8e-e59f-4f49-bb55-1824e7eadec0?size=small"
+    },
+    {
+      "id": "9312fada-fc31-46ac-b6a1-cfffd776856f",
+      "name": "Artisan of Kozilek",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{9}",
+      "type_line": "Creature — Eldrazi",
+      "cmc": 9,
+      "colors": [],
+      "image_small": "/api/img/9312fada-fc31-46ac-b6a1-cfffd776856f?size=small"
+    },
+    {
+      "id": "ca08b369-783d-4fe4-8fc8-9cd595638550",
+      "name": "It That Betrays",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{12}",
+      "type_line": "Creature — Eldrazi",
+      "cmc": 12,
+      "colors": [],
+      "image_small": "/api/img/ca08b369-783d-4fe4-8fc8-9cd595638550?size=small"
+    },
+    {
+      "id": "82bc94b5-8c22-4120-87ba-6125c62b271b",
+      "name": "Oblivion Sower",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}",
+      "type_line": "Creature — Eldrazi",
+      "cmc": 6,
+      "colors": [],
+      "image_small": "/api/img/82bc94b5-8c22-4120-87ba-6125c62b271b?size=small"
+    },
+    {
+      "id": "8e1649a2-adc4-4703-a453-df3cfdb423a2",
+      "name": "Hellion Eruption",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8e1649a2-adc4-4703-a453-df3cfdb423a2?size=small"
+    },
+    {
+      "id": "364ed745-0dff-477a-a2c5-987639936337",
+      "name": "Forked Bolt",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Sorcery",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/364ed745-0dff-477a-a2c5-987639936337?size=small"
+    },
+    {
+      "id": "b30a8f92-ce42-4b27-a893-bcf97fde228d",
+      "name": "Mind Stone",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/b30a8f92-ce42-4b27-a893-bcf97fde228d?size=small"
+    },
+    {
+      "id": "a38aba41-a83f-47ef-9fc9-ea3424fc6d64",
+      "name": "Forerunner of Slaughter",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{B}{R}",
+      "type_line": "Creature — Eldrazi Drone",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/a38aba41-a83f-47ef-9fc9-ea3424fc6d64?size=small"
+    },
+    {
+      "id": "229dec8c-ec73-4bab-8c37-517cb4a01988",
+      "name": "Torch Slinger",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Shaman",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/229dec8c-ec73-4bab-8c37-517cb4a01988?size=small"
+    },
+    {
+      "id": "08c571fe-54ef-4234-98c3-5d4a7b07e7d2",
+      "name": "Magmaw",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/08c571fe-54ef-4234-98c3-5d4a7b07e7d2?size=small"
+    },
+    {
+      "id": "cbab7e1f-305e-4733-aa70-b27285740925",
+      "name": "Eldrazi Temple",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/cbab7e1f-305e-4733-aa70-b27285740925?size=small"
+    },
+    {
+      "id": "2aa1f7c6-f888-4384-9626-f106571e164c",
+      "name": "Rocky Tar Pit",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2aa1f7c6-f888-4384-9626-f106571e164c?size=small"
+    },
+    {
+      "id": "efedf97b-8901-4558-8bd0-3f488097f686",
+      "name": "Runed Servitor",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact Creature — Construct",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/efedf97b-8901-4558-8bd0-3f488097f686?size=small"
+    },
+    {
+      "id": "51aecc57-f0cc-4e35-af38-ead25cf8a1b8",
+      "name": "Akoum Refuge",
+      "count": 3,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/51aecc57-f0cc-4e35-af38-ead25cf8a1b8?size=small"
+    },
+    {
+      "id": "c94dcaed-55da-41f4-a61f-2a79ef6c1459",
+      "name": "Consume the Meek",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{B}{B}",
+      "type_line": "Instant",
+      "cmc": 5,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/c94dcaed-55da-41f4-a61f-2a79ef6c1459?size=small"
+    },
+    {
+      "id": "f06ab823-9591-460d-a896-3073d9843df0",
+      "name": "Cadaver Imp",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}{B}",
+      "type_line": "Creature — Imp",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/f06ab823-9591-460d-a896-3073d9843df0?size=small"
+    },
+    {
+      "id": "9d805499-0739-403e-8447-ed2707dc9eb2",
+      "name": "Butcher of Malakir",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{B}{B}",
+      "type_line": "Creature — Vampire Warrior",
+      "cmc": 7,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/9d805499-0739-403e-8447-ed2707dc9eb2?size=small"
+    },
+    {
+      "id": "ee7354fe-fb76-4196-a69b-0916af73bf45",
+      "name": "Bloodthrone Vampire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{B}",
+      "type_line": "Creature — Vampire",
+      "cmc": 2,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/ee7354fe-fb76-4196-a69b-0916af73bf45?size=small"
+    },
+    {
+      "id": "94ebd19f-c3ec-41de-bde0-3118b34b76a4",
+      "name": "Bloodrite Invoker",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{B}",
+      "type_line": "Creature — Vampire Shaman",
+      "cmc": 3,
+      "colors": [
+        "B"
+      ],
+      "image_small": "/api/img/94ebd19f-c3ec-41de-bde0-3118b34b76a4?size=small"
+    },
+    {
+      "id": "699c0f6f-b26b-4741-8140-8a6030cad127",
+      "name": "Ulamog's Crusher",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{8}",
+      "type_line": "Creature — Eldrazi",
+      "cmc": 8,
+      "colors": [],
+      "image_small": "/api/img/699c0f6f-b26b-4741-8140-8a6030cad127?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403707,
+  "updated": 1789869403707
+}

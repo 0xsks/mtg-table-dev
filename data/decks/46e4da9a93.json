@@ -1,0 +1,452 @@
+{
+  "id": "46e4da9a93",
+  "name": "Duel: Knights vs. Dragons — Dragons",
+  "format": "duel",
+  "commander": null,
+  "cards": [
+    {
+      "id": "cbb60f03-7bcf-46a3-9310-c2067d9c5396",
+      "name": "Breath of Darigaaz",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/cbb60f03-7bcf-46a3-9310-c2067d9c5396?size=small"
+    },
+    {
+      "id": "0d732b87-08e5-41b6-8448-62dd6bf20d9c",
+      "name": "Dragon's Claw",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/0d732b87-08e5-41b6-8448-62dd6bf20d9c?size=small"
+    },
+    {
+      "id": "b381d3c4-b318-4dff-a214-8a16a3872107",
+      "name": "Punishing Fire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Instant",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b381d3c4-b318-4dff-a214-8a16a3872107?size=small"
+    },
+    {
+      "id": "f9abe517-f601-4784-8d62-2350bd755146",
+      "name": "Dragon Fodder",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/f9abe517-f601-4784-8d62-2350bd755146?size=small"
+    },
+    {
+      "id": "d33cfe2d-150d-4ab7-990a-c8b0b6ff4d37",
+      "name": "Shivan Hellkite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 7,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d33cfe2d-150d-4ab7-990a-c8b0b6ff4d37?size=small"
+    },
+    {
+      "id": "af3ae93e-6094-483d-b2c0-ae117ad01293",
+      "name": "Armillary Sphere",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}",
+      "type_line": "Artifact",
+      "cmc": 2,
+      "colors": [],
+      "image_small": "/api/img/af3ae93e-6094-483d-b2c0-ae117ad01293?size=small"
+    },
+    {
+      "id": "9ff75ff4-495f-4a0c-9d98-69eff1b3fa32",
+      "name": "Thunder Dragon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 7,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/9ff75ff4-495f-4a0c-9d98-69eff1b3fa32?size=small"
+    },
+    {
+      "id": "4dfcc240-9010-4e0c-afda-7f70c42da7d2",
+      "name": "Cinder Wall",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Wall",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/4dfcc240-9010-4e0c-afda-7f70c42da7d2?size=small"
+    },
+    {
+      "id": "22dd2242-2fd8-4752-886c-fc6dbabcf89a",
+      "name": "Bogardan Hellkite",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{6}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 8,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/22dd2242-2fd8-4752-886c-fc6dbabcf89a?size=small"
+    },
+    {
+      "id": "147a6ab8-e49c-402c-ae6a-17231054b1fa",
+      "name": "Captive Flame",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Enchantment",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/147a6ab8-e49c-402c-ae6a-17231054b1fa?size=small"
+    },
+    {
+      "id": "7bc508b3-8b38-4cf0-89a7-a2cb247ed083",
+      "name": "Skirk Prospector",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{R}",
+      "type_line": "Creature — Goblin",
+      "cmc": 1,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7bc508b3-8b38-4cf0-89a7-a2cb247ed083?size=small"
+    },
+    {
+      "id": "de1aa8f9-8200-4ddd-9ab5-1a8181cc1792",
+      "name": "Spitting Earth",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Sorcery",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/de1aa8f9-8200-4ddd-9ab5-1a8181cc1792?size=small"
+    },
+    {
+      "id": "29739dd4-5775-4491-8245-ca2dc38a686e",
+      "name": "Ghostfire",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [],
+      "image_small": "/api/img/29739dd4-5775-4491-8245-ca2dc38a686e?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "803f388a-0f92-4984-ace5-02fbeaa0cf28",
+      "name": "Fire-Belly Changeling",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Shapeshifter",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/803f388a-0f92-4984-ace5-02fbeaa0cf28?size=small"
+    },
+    {
+      "id": "5b018d93-a1c5-4729-b9c7-01d6ca5130f6",
+      "name": "Jaws of Stone",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Sorcery",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/5b018d93-a1c5-4729-b9c7-01d6ca5130f6?size=small"
+    },
+    {
+      "id": "734ad23e-7603-4625-b8e3-54466ad86736",
+      "name": "Bloodmark Mentor",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 2,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/734ad23e-7603-4625-b8e3-54466ad86736?size=small"
+    },
+    {
+      "id": "1ed3229f-40ab-420d-a41a-57f1ff8ab7ad",
+      "name": "Fiery Fall",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Instant",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1ed3229f-40ab-420d-a41a-57f1ff8ab7ad?size=small"
+    },
+    {
+      "id": "9b434a60-0875-47f4-a626-2c9bfa3c9b3b",
+      "name": "Cone of Flame",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Sorcery",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/9b434a60-0875-47f4-a626-2c9bfa3c9b3b?size=small"
+    },
+    {
+      "id": "8a42fcd6-32ce-4a20-af4d-83bd32a7ed3e",
+      "name": "Shiv's Embrace",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/8a42fcd6-32ce-4a20-af4d-83bd32a7ed3e?size=small"
+    },
+    {
+      "id": "d37747ce-d532-469b-9963-ad25c95a8361",
+      "name": "Temporary Insanity",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}",
+      "type_line": "Instant",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/d37747ce-d532-469b-9963-ad25c95a8361?size=small"
+    },
+    {
+      "id": "f01d6807-8fbd-4593-9582-71d4cd720728",
+      "name": "Henge Guardian",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}",
+      "type_line": "Artifact Creature — Dragon Wurm",
+      "cmc": 5,
+      "colors": [],
+      "image_small": "/api/img/f01d6807-8fbd-4593-9582-71d4cd720728?size=small"
+    },
+    {
+      "id": "1bd90bc0-93b6-427f-96ad-b303dcc0383f",
+      "name": "Claws of Valakut",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Enchantment — Aura",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/1bd90bc0-93b6-427f-96ad-b303dcc0383f?size=small"
+    },
+    {
+      "id": "7f7bdfb7-1dc1-4ddf-8146-9276dff37b2b",
+      "name": "Dragon Whelp",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 4,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7f7bdfb7-1dc1-4ddf-8146-9276dff37b2b?size=small"
+    },
+    {
+      "id": "972d0b03-8602-4ada-86b9-4262941bae67",
+      "name": "Seismic Strike",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/972d0b03-8602-4ada-86b9-4262941bae67?size=small"
+    },
+    {
+      "id": "7b0a2799-197e-4d61-ab23-67d974458a05",
+      "name": "Dragonspeaker Shaman",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{1}{R}{R}",
+      "type_line": "Creature — Human Barbarian Shaman",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/7b0a2799-197e-4d61-ab23-67d974458a05?size=small"
+    },
+    {
+      "id": "20c19ccf-999b-4c7d-ae5b-f93555d08a7a",
+      "name": "Mudbutton Torchrunner",
+      "count": 2,
+      "board": "main",
+      "mana_cost": "{2}{R}",
+      "type_line": "Creature — Goblin Warrior",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/20c19ccf-999b-4c7d-ae5b-f93555d08a7a?size=small"
+    },
+    {
+      "id": "3ba971e7-0b7a-4750-896f-7cf063e66b2a",
+      "name": "Blazing Firesinger // Seething Song",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{2}{R} // {2}{R}",
+      "type_line": "Creature — Dwarf Bard // Instant",
+      "cmc": 3,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/3ba971e7-0b7a-4750-896f-7cf063e66b2a?size=small"
+    },
+    {
+      "id": "67bbc1c3-8806-49d4-9111-a2334c66e5ec",
+      "name": "Kilnmouth Dragon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 7,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/67bbc1c3-8806-49d4-9111-a2334c66e5ec?size=small"
+    },
+    {
+      "id": "b278baec-573a-4864-9bc5-4941ceb5adb2",
+      "name": "Mordant Dragon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/b278baec-573a-4864-9bc5-4941ceb5adb2?size=small"
+    },
+    {
+      "id": "04128756-cfdc-4e7e-be5f-c9a34c2a0ccc",
+      "name": "Bogardan Rager",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{5}{R}",
+      "type_line": "Creature — Elemental",
+      "cmc": 6,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/04128756-cfdc-4e7e-be5f-c9a34c2a0ccc?size=small"
+    },
+    {
+      "id": "fbda3a22-2aff-49db-8779-38551142b860",
+      "name": "Voracious Dragon",
+      "count": 1,
+      "board": "main",
+      "mana_cost": "{3}{R}{R}",
+      "type_line": "Creature — Dragon",
+      "cmc": 5,
+      "colors": [
+        "R"
+      ],
+      "image_small": "/api/img/fbda3a22-2aff-49db-8779-38551142b860?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    },
+    {
+      "id": "2a844b96-6616-4c39-8f4f-5d14a3b2bd55",
+      "name": "Mountain",
+      "count": 6,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Basic Land — Mountain",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/2a844b96-6616-4c39-8f4f-5d14a3b2bd55?size=small"
+    }
+  ],
+  "unknown": [],
+  "starter": true,
+  "source": "xmage-duel-decks",
+  "created": 1789869403704,
+  "updated": 1789869403704
+}
