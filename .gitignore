@@ -13,3 +13,6 @@ data/friends.json
 
 # token signing secret — never commit this
 data/.auth-secret
+
+# card art cache — refetched from Scryfall on demand, 170MB+ and regenerable
+data/images/

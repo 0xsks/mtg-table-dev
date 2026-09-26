@@ -1,1 +1,769 @@
-/home/jane/mtg-table/data/old-sets.json
+[
+  {
+    "id": "oldschool",
+    "name": "Old School 93/94",
+    "sets": [
+      {
+        "code": "lea",
+        "name": "Alpha",
+        "count": 295
+      },
+      {
+        "code": "leb",
+        "name": "Beta",
+        "count": 302
+      },
+      {
+        "code": "2ed",
+        "name": "Unlimited",
+        "count": 302
+      },
+      {
+        "code": "3ed",
+        "name": "Revised",
+        "count": 306
+      },
+      {
+        "code": "arn",
+        "name": "Arabian Nights",
+        "count": 92
+      },
+      {
+        "code": "atq",
+        "name": "Antiquities",
+        "count": 102
+      },
+      {
+        "code": "leg",
+        "name": "Legends",
+        "count": 310
+      },
+      {
+        "code": "drk",
+        "name": "The Dark",
+        "count": 122
+      },
+      {
+        "code": "fem",
+        "name": "Fallen Empires",
+        "count": 187
+      }
+    ]
+  },
+  {
+    "id": "iceage",
+    "name": "Ice Age era",
+    "sets": [
+      {
+        "code": "ice",
+        "name": "Ice Age",
+        "count": 383
+      },
+      {
+        "code": "all",
+        "name": "Alliances",
+        "count": 199
+      },
+      {
+        "code": "hml",
+        "name": "Homelands",
+        "count": 140
+      },
+      {
+        "code": "csp",
+        "name": "Coldsnap",
+        "count": 155
+      },
+      {
+        "code": "chr",
+        "name": "Chronicles",
+        "count": 125
+      }
+    ]
+  },
+  {
+    "id": "core",
+    "name": "Core sets",
+    "sets": [
+      {
+        "code": "4ed",
+        "name": "Fourth Edition",
+        "count": 380
+      },
+      {
+        "code": "5ed",
+        "name": "Fifth Edition",
+        "count": 460
+      },
+      {
+        "code": "6ed",
+        "name": "Sixth Edition",
+        "count": 351
+      },
+      {
+        "code": "7ed",
+        "name": "Seventh Edition",
+        "count": 708
+      }
+    ]
+  },
+  {
+    "id": "mirage",
+    "name": "Mirage block",
+    "sets": [
+      {
+        "code": "mir",
+        "name": "Mirage",
+        "count": 353
+      },
+      {
+        "code": "vis",
+        "name": "Visions",
+        "count": 167
+      },
+      {
+        "code": "wth",
+        "name": "Weatherlight",
+        "count": 167
+      }
+    ]
+  },
+  {
+    "id": "tempest",
+    "name": "Tempest block",
+    "sets": [
+      {
+        "code": "tmp",
+        "name": "Tempest",
+        "count": 350
+      },
+      {
+        "code": "sth",
+        "name": "Stronghold",
+        "count": 143
+      },
+      {
+        "code": "exo",
+        "name": "Exodus",
+        "count": 143
+      }
+    ]
+  },
+  {
+    "id": "urza",
+    "name": "Urza's block",
+    "sets": [
+      {
+        "code": "usg",
+        "name": "Urza's Saga",
+        "count": 357
+      },
+      {
+        "code": "ulg",
+        "name": "Urza's Legacy",
+        "count": 143
+      },
+      {
+        "code": "uds",
+        "name": "Urza's Destiny",
+        "count": 143
+      }
+    ]
+  },
+  {
+    "id": "masques",
+    "name": "Masques block",
+    "sets": [
+      {
+        "code": "mmq",
+        "name": "Mercadian Masques",
+        "count": 350
+      },
+      {
+        "code": "nem",
+        "name": "Nemesis",
+        "count": 143
+      },
+      {
+        "code": "pcy",
+        "name": "Prophecy",
+        "count": 144
+      }
+    ]
+  },
+  {
+    "id": "invasion",
+    "name": "Invasion block",
+    "sets": [
+      {
+        "code": "inv",
+        "name": "Invasion",
+        "count": 354
+      },
+      {
+        "code": "pls",
+        "name": "Planeshift",
+        "count": 146
+      },
+      {
+        "code": "apc",
+        "name": "Apocalypse",
+        "count": 143
+      }
+    ]
+  },
+  {
+    "id": "odyssey",
+    "name": "Odyssey block",
+    "sets": [
+      {
+        "code": "ody",
+        "name": "Odyssey",
+        "count": 353
+      },
+      {
+        "code": "tor",
+        "name": "Torment",
+        "count": 143
+      },
+      {
+        "code": "jud",
+        "name": "Judgment",
+        "count": 143
+      }
+    ]
+  },
+  {
+    "id": "onslaught",
+    "name": "Onslaught block",
+    "sets": [
+      {
+        "code": "ons",
+        "name": "Onslaught",
+        "count": 351
+      },
+      {
+        "code": "lgn",
+        "name": "Legions",
+        "count": 145
+      },
+      {
+        "code": "scg",
+        "name": "Scourge",
+        "count": 143
+      }
+    ]
+  },
+  {
+    "id": "portal",
+    "name": "Portal & Starter",
+    "sets": [
+      {
+        "code": "por",
+        "name": "Portal",
+        "count": 257
+      },
+      {
+        "code": "p02",
+        "name": "Portal Second Age",
+        "count": 165
+      },
+      {
+        "code": "ptk",
+        "name": "Portal Three Kingdoms",
+        "count": 180
+      },
+      {
+        "code": "s99",
+        "name": "Starter 1999",
+        "count": 173
+      },
+      {
+        "code": "s00",
+        "name": "Starter 2000",
+        "count": 20
+      }
+    ]
+  },
+  {
+    "id": "mirrodin",
+    "name": "Mirrodin block",
+    "sets": [
+      {
+        "code": "mrd",
+        "name": "Mirrodin",
+        "count": 306
+      },
+      {
+        "code": "dst",
+        "name": "Darksteel",
+        "count": 165
+      },
+      {
+        "code": "5dn",
+        "name": "Fifth Dawn",
+        "count": 165
+      }
+    ]
+  },
+  {
+    "id": "kamigawa",
+    "name": "Kamigawa block",
+    "sets": [
+      {
+        "code": "chk",
+        "name": "Champions of Kamigawa",
+        "count": 307
+      },
+      {
+        "code": "bok",
+        "name": "Betrayers of Kamigawa",
+        "count": 165
+      },
+      {
+        "code": "sok",
+        "name": "Saviors of Kamigawa",
+        "count": 165
+      }
+    ]
+  },
+  {
+    "id": "ravnica",
+    "name": "Ravnica block",
+    "sets": [
+      {
+        "code": "rav",
+        "name": "Ravnica: City of Guilds",
+        "count": 306
+      },
+      {
+        "code": "gpt",
+        "name": "Guildpact",
+        "count": 167
+      },
+      {
+        "code": "dis",
+        "name": "Dissension",
+        "count": 180
+      }
+    ]
+  },
+  {
+    "id": "timespiral",
+    "name": "Time Spiral block",
+    "sets": [
+      {
+        "code": "tsp",
+        "name": "Time Spiral",
+        "count": 301
+      },
+      {
+        "code": "tsb",
+        "name": "Timeshifted",
+        "count": 121
+      },
+      {
+        "code": "plc",
+        "name": "Planar Chaos",
+        "count": 165
+      },
+      {
+        "code": "fut",
+        "name": "Future Sight",
+        "count": 180
+      }
+    ]
+  },
+  {
+    "id": "lorwyn",
+    "name": "Lorwyn & Shadowmoor",
+    "sets": [
+      {
+        "code": "lrw",
+        "name": "Lorwyn",
+        "count": 301
+      },
+      {
+        "code": "mor",
+        "name": "Morningtide",
+        "count": 150
+      },
+      {
+        "code": "shm",
+        "name": "Shadowmoor",
+        "count": 302
+      },
+      {
+        "code": "eve",
+        "name": "Eventide",
+        "count": 180
+      }
+    ]
+  },
+  {
+    "id": "alara",
+    "name": "Shards of Alara block",
+    "sets": [
+      {
+        "code": "ala",
+        "name": "Shards of Alara",
+        "count": 250
+      },
+      {
+        "code": "con",
+        "name": "Conflux",
+        "count": 145
+      },
+      {
+        "code": "arb",
+        "name": "Alara Reborn",
+        "count": 145
+      }
+    ]
+  },
+  {
+    "id": "zendikar",
+    "name": "Zendikar block",
+    "sets": [
+      {
+        "code": "zen",
+        "name": "Zendikar",
+        "count": 269
+      },
+      {
+        "code": "wwk",
+        "name": "Worldwake",
+        "count": 145
+      },
+      {
+        "code": "roe",
+        "name": "Rise of the Eldrazi",
+        "count": 248
+      }
+    ]
+  },
+  {
+    "id": "scars",
+    "name": "Scars of Mirrodin",
+    "sets": [
+      {
+        "code": "som",
+        "name": "Scars of Mirrodin",
+        "count": 249
+      },
+      {
+        "code": "mbs",
+        "name": "Mirrodin Besieged",
+        "count": 155
+      },
+      {
+        "code": "nph",
+        "name": "New Phyrexia",
+        "count": 175
+      }
+    ]
+  },
+  {
+    "id": "innistrad",
+    "name": "Innistrad block",
+    "sets": [
+      {
+        "code": "isd",
+        "name": "Innistrad",
+        "count": 264
+      },
+      {
+        "code": "dka",
+        "name": "Dark Ascension",
+        "count": 158
+      },
+      {
+        "code": "avr",
+        "name": "Avacyn Restored",
+        "count": 244
+      }
+    ]
+  },
+  {
+    "id": "rtr",
+    "name": "Return to Ravnica block",
+    "sets": [
+      {
+        "code": "rtr",
+        "name": "Return to Ravnica",
+        "count": 274
+      },
+      {
+        "code": "gtc",
+        "name": "Gatecrash",
+        "count": 249
+      },
+      {
+        "code": "dgm",
+        "name": "Dragon's Maze",
+        "count": 156
+      }
+    ]
+  },
+  {
+    "id": "theros",
+    "name": "Theros block",
+    "sets": [
+      {
+        "code": "ths",
+        "name": "Theros",
+        "count": 249
+      },
+      {
+        "code": "bng",
+        "name": "Born of the Gods",
+        "count": 165
+      },
+      {
+        "code": "jou",
+        "name": "Journey into Nyx",
+        "count": 165
+      }
+    ]
+  },
+  {
+    "id": "tarkir",
+    "name": "Khans of Tarkir block",
+    "sets": [
+      {
+        "code": "ktk",
+        "name": "Khans of Tarkir",
+        "count": 293
+      },
+      {
+        "code": "frf",
+        "name": "Fate Reforged",
+        "count": 191
+      },
+      {
+        "code": "dtk",
+        "name": "Dragons of Tarkir",
+        "count": 264
+      }
+    ]
+  },
+  {
+    "id": "modernhorizons",
+    "name": "Modern Horizons",
+    "sets": [
+      {
+        "code": "mh1",
+        "name": "Modern Horizons",
+        "count": 255
+      },
+      {
+        "code": "mh2",
+        "name": "Modern Horizons 2",
+        "count": 493
+      },
+      {
+        "code": "mh3",
+        "name": "Modern Horizons 3",
+        "count": 528
+      }
+    ]
+  },
+  {
+    "id": "commander",
+    "name": "Commander Sets",
+    "sets": [
+      {
+        "code": "cmd",
+        "name": "Commander 2011",
+        "count": 318
+      },
+      {
+        "code": "c13",
+        "name": "Commander 2013",
+        "count": 356
+      },
+      {
+        "code": "c14",
+        "name": "Commander 2014",
+        "count": 337
+      },
+      {
+        "code": "c15",
+        "name": "Commander 2015",
+        "count": 342
+      },
+      {
+        "code": "c16",
+        "name": "Commander 2016",
+        "count": 351
+      },
+      {
+        "code": "c17",
+        "name": "Commander 2017",
+        "count": 309
+      },
+      {
+        "code": "c18",
+        "name": "Commander 2018",
+        "count": 307
+      },
+      {
+        "code": "c19",
+        "name": "Commander 2019",
+        "count": 302
+      },
+      {
+        "code": "c20",
+        "name": "Commander 2020",
+        "count": 322
+      },
+      {
+        "code": "c21",
+        "name": "Commander 2021",
+        "count": 409
+      },
+      {
+        "code": "cmr",
+        "name": "Commander Legends",
+        "count": 718
+      },
+      {
+        "code": "clb",
+        "name": "Battle for Baldur's Gate",
+        "count": 936
+      },
+      {
+        "code": "cmm",
+        "name": "Commander Masters",
+        "count": 1067
+      }
+    ]
+  },
+  {
+    "id": "moderncore",
+    "name": "Modern Core Sets",
+    "sets": [
+      {
+        "code": "8ed",
+        "name": "Eighth Edition",
+        "count": 711
+      },
+      {
+        "code": "9ed",
+        "name": "Ninth Edition",
+        "count": 710
+      },
+      {
+        "code": "10e",
+        "name": "Tenth Edition",
+        "count": 510
+      },
+      {
+        "code": "m10",
+        "name": "Magic 2010",
+        "count": 249
+      },
+      {
+        "code": "m11",
+        "name": "Magic 2011",
+        "count": 249
+      },
+      {
+        "code": "m12",
+        "name": "Magic 2012",
+        "count": 249
+      },
+      {
+        "code": "m13",
+        "name": "Magic 2013",
+        "count": 249
+      },
+      {
+        "code": "m14",
+        "name": "Magic 2014",
+        "count": 249
+      },
+      {
+        "code": "m15",
+        "name": "Magic 2015",
+        "count": 284
+      },
+      {
+        "code": "ori",
+        "name": "Magic Origins",
+        "count": 288
+      },
+      {
+        "code": "m19",
+        "name": "Core Set 2019",
+        "count": 314
+      },
+      {
+        "code": "m20",
+        "name": "Core Set 2020",
+        "count": 346
+      },
+      {
+        "code": "m21",
+        "name": "Core Set 2021",
+        "count": 397
+      }
+    ]
+  },
+  {
+    "id": "masters",
+    "name": "Masters Series",
+    "sets": [
+      {
+        "code": "mma",
+        "name": "Modern Masters",
+        "count": 229
+      },
+      {
+        "code": "mm2",
+        "name": "Modern Masters 2015",
+        "count": 249
+      },
+      {
+        "code": "ema",
+        "name": "Eternal Masters",
+        "count": 249
+      },
+      {
+        "code": "mm3",
+        "name": "Modern Masters 2017",
+        "count": 249
+      },
+      {
+        "code": "ima",
+        "name": "Iconic Masters",
+        "count": 249
+      },
+      {
+        "code": "a25",
+        "name": "Masters 25",
+        "count": 249
+      },
+      {
+        "code": "uma",
+        "name": "Ultimate Masters",
+        "count": 254
+      },
+      {
+        "code": "2xm",
+        "name": "Double Masters",
+        "count": 384
+      },
+      {
+        "code": "2x2",
+        "name": "Double Masters 2022",
+        "count": 579
+      },
+      {
+        "code": "dmr",
+        "name": "Dominaria Remastered",
+        "count": 457
+      }
+    ]
+  }
+]

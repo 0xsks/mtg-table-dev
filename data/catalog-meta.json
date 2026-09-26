@@ -1,1 +1,8 @@
-/home/jane/mtg-table/data/catalog-meta.json
+{
+  "source": "scryfall oracle-cards",
+  "imported_at": "2026-09-20T01:42:43.824Z",
+  "raw": 38906,
+  "kept": 36151,
+  "skipped": 2755,
+  "bytes": 36496425
+}
