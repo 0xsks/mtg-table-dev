@@ -1,5 +1,6 @@
 const { WebSocket } = require("ws");
-const BASE = "http://127.0.0.1:8877";
+const { signIn } = require("./lib/wallet");
+const { BASE, WS_URL } = require("./lib/target");
 
 async function run() {
   console.log("=== MULTIVERSE COMPREHENSIVE SUITE ===");
@@ -26,27 +27,16 @@ async function run() {
 
   // 2. User registration, profile upload, avatar check
   console.log("\n2. Testing Player Profile, Cute Stats & Avatar Upload...");
-  const rand = Math.random().toString(36).slice(2, 8);
-  const u = {
-    username: `wizard_${rand}`,
-    password: "Password123!",
-    displayName: "Archmage Lily ✨",
-  };
-  const regRes = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(u),
-  }).then((r) => r.json());
-  if (!regRes.ok || !regRes.token) throw new Error("Registration failed: " + JSON.stringify(regRes));
-  const token = regRes.token;
-  const userId = regRes.user.id;
-  console.log(`  ✓ Registered user ${u.username} (${userId})`);
+  const user = await signIn({ displayName: "Archmage Lily ✨" });
+  const token = user.token;
+  const userId = user.id;
+  console.log(`  ✓ Signed in as ${user.username} (${userId})`);
 
   // Check initial stats
-  if (!regRes.user.stats || !Array.isArray(regRes.user.badges)) {
-    throw new Error("Missing stats or badges in user object: " + JSON.stringify(regRes.user));
+  if (!user.stats || !Array.isArray(user.badges)) {
+    throw new Error("Missing stats or badges in user object: " + JSON.stringify(user));
   }
-  console.log(`  ✓ Initial stats: Streak: ${regRes.user.stats.streak}, Badges: ${regRes.user.badges.join(", ")}`);
+  console.log(`  ✓ Initial stats: Streak: ${user.stats.streak}, Badges: ${user.badges.join(", ")}`);
 
   // Upload custom base64 avatar & update bio
   const fakePngBase64 = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg==";
@@ -112,7 +102,7 @@ async function run() {
   console.log("\n4. Testing Custom Match Wager Table Creation via WebSocket...");
   const customWager = 350; // Custom wager amount
   const wsClient = await new Promise((resolve, reject) => {
-    const ws = new WebSocket("ws://127.0.0.1:8877/ws");
+    const ws = new WebSocket(WS_URL);
     const inbox = [];
     ws.on("error", reject);
     ws.on("open", () => {

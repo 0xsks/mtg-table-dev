@@ -2,9 +2,8 @@
 "use strict";
 
 const { WebSocket } = require("ws");
-
-const BASE_URL = process.env.URL || "http://127.0.0.1:8877";
-const WS_URL = process.env.WS_URL || "ws://127.0.0.1:8877/ws";
+const { signIn } = require("./lib/wallet");
+const { BASE: BASE_URL, WS_URL } = require("./lib/target");
 
 function createClient(name, playerId, token) {
   const ws = new WebSocket(WS_URL);
@@ -47,17 +46,9 @@ async function main() {
   if (starters.length < 2) throw new Error("At least 2 starter decks required");
   console.log(`✓ Found ${starters.length} starter decks (${starters[0].name}, ${starters[1].name})`);
 
-  // Register Alice (Player 1)
-  const auth1 = await fetch(`${BASE_URL}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username: "p1_" + Date.now(),
-      password: "password123",
-      displayName: "Alice",
-    }),
-  }).then((r) => r.json());
-  console.log("✓ Registered Player 1:", auth1.user.username);
+  // Sign in Alice (Player 1)
+  const auth1 = await signIn({ displayName: "Alice" });
+  console.log("✓ Signed in Player 1:", auth1.username);
 
   // Connect Player 1
   const p1 = createClient("Alice", "p1_pid_" + Date.now(), auth1.token);

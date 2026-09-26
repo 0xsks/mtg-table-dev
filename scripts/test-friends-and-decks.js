@@ -2,8 +2,8 @@
 "use strict";
 
 const WebSocket = require("ws");
-
-const BASE = "http://127.0.0.1:8877";
+const { signIn } = require("./lib/wallet");
+const { BASE, WS_URL } = require("./lib/target");
 
 async function req(url, opts = {}) {
   const res = await fetch(BASE + url, {
@@ -25,15 +25,10 @@ function uid(n = 6) {
 async function run() {
   console.log("=== 1. Testing Deck Builder Save & Account Association ===");
 
-  // Register user for deck testing
-  const u1Name = `deckwiz_${uid()}`;
-  const reg1 = await req("/api/auth/register", {
-    method: "POST",
-    body: { username: u1Name, password: "password123", displayName: "Deck Wizard" },
-  });
-  const token1 = reg1.token;
-  const user1 = reg1.user;
-  console.log("Registered test user:", user1.username, user1.id);
+  // Sign in a user for deck testing
+  const user1 = await signIn({ displayName: "Deck Wizard" });
+  const token1 = user1.token;
+  console.log("Signed in test user:", user1.username, user1.id);
 
   // 1a. Create new deck authenticated
   const newDeck = await req("/api/decks", {
@@ -87,7 +82,7 @@ async function run() {
 
   // Connect a WebSocket client
   const p1Id = `p_test_${uid()}`;
-  const ws = new WebSocket("ws://127.0.0.1:8877/ws");
+  const ws = new WebSocket(WS_URL);
   await new Promise((resolve, reject) => {
     ws.on("open", () => {
       ws.send(
@@ -124,14 +119,9 @@ async function run() {
 
   console.log("\n=== 3. Testing Friends System ===");
 
-  // Register a second user
-  const u2Name = `friendwiz_${uid()}`;
-  const reg2 = await req("/api/auth/register", {
-    method: "POST",
-    body: { username: u2Name, password: "password123", displayName: "Friend Wizard" },
-  });
-  const token2 = reg2.token;
-  const user2 = reg2.user;
+  // Sign in a second user
+  const user2 = await signIn({ displayName: "Friend Wizard" });
+  const token2 = user2.token;
 
   // 3a. User1 sends friend request to User2 by username
   const sendReq = await req("/api/friends/request", {

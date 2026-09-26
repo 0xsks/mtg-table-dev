@@ -2,27 +2,17 @@
 "use strict";
 
 const { WebSocket } = require("ws");
-const BASE = "http://127.0.0.1:8877";
+const { signIn } = require("./lib/wallet");
+const { BASE, WS_URL } = require("./lib/target");
 
 async function run() {
   console.log("=== TESTING MATCH SCREEN CHARACTER PROFILE DECKS ===");
 
   // 1. Register a test user
   const rand = Math.random().toString(36).slice(2, 8);
-  const u = {
-    username: `char_wiz_${rand}`,
-    password: "Password123!",
-    displayName: `Lord Chandra ${rand}`,
-  };
-  const regRes = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(u),
-  }).then((r) => r.json());
-  if (!regRes.ok || !regRes.token) throw new Error("Reg failed: " + JSON.stringify(regRes));
-  const token = regRes.token;
-  const user = regRes.user;
-  console.log(`✓ Registered user: ${user.username} (ID: ${user.id})`);
+  const user = await signIn({ displayName: `Lord Chandra ${rand}` });
+  const token = user.token;
+  console.log(`✓ Signed in as ${user.username} (ID: ${user.id})`);
 
   // 2. Create 2 custom decks for this character
   const deck1 = await fetch(`${BASE}/api/decks`, {
@@ -66,7 +56,7 @@ async function run() {
   console.log(`✓ Character profile decks accurately identified in system: ${charDecks.map((d) => d.name).join(", ")}`);
 
   // 4. Test WebSocket match table creation & selecting the character's deck
-  const ws = new WebSocket(`ws://127.0.0.1:8877/ws`);
+  const ws = new WebSocket(WS_URL);
   await new Promise((resolve, reject) => {
     ws.on("error", reject);
     ws.on("open", () => {

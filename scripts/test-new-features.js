@@ -1,7 +1,8 @@
 #!/usr/bin/env node
 "use strict";
 
-const BASE = "http://127.0.0.1:8877";
+const { signIn } = require("./lib/wallet");
+const { BASE } = require("./lib/target");
 
 async function run() {
   console.log("=== TESTING NEW MULTIVERSE CAPABILITIES ===");
@@ -9,24 +10,17 @@ async function run() {
   // 1. Test Avatar update with logged-in user and guest
   console.log("\n1. Testing Avatar Changes (No 'not logged in' error)...");
   const rand = Math.random().toString(36).slice(2, 8);
-  const regRes = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      username: `mage_${rand}`,
-      password: "Password123!",
-      displayName: `Mage ${rand}`,
-    }),
-  }).then((r) => r.json());
-  if (!regRes.ok || !regRes.token) throw new Error("Register failed: " + JSON.stringify(regRes));
-  console.log(`  ✓ Registered user: ${regRes.user.username}`);
+  const user = await signIn({ displayName: `Mage ${rand}` });
+  const token = user.token;
+  const userId = user.id;
+  console.log(`  ✓ Signed in as ${user.username}`);
 
   // Change avatar while logged in
   const profRes1 = await fetch(`${BASE}/api/auth/profile`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ avatar: "preset:fairy" }),
   }).then((r) => r.json());
@@ -60,7 +54,7 @@ async function run() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ feePercent: 5 }),
   }).then((r) => r.json());
@@ -84,15 +78,19 @@ async function run() {
   // 3. Test Guilds System
   console.log("\n3. Testing Guilds System...");
   const guilds = await fetch(`${BASE}/api/guilds`).then((r) => r.json());
-  if (!Array.isArray(guilds) || guilds.length === 0) throw new Error("Failed to load guilds: " + JSON.stringify(guilds));
-  console.log(`  ✓ Found ${guilds.length} guilds. First guild: "${guilds[0].name}" (Crest: ${guilds[0].crest}, Vault: ${guilds[0].vault} 🪙)`);
+  if (!Array.isArray(guilds)) throw new Error("Failed to load guilds: " + JSON.stringify(guilds));
+  // A fresh install legitimately has no guilds yet, so only log the first
+  // one if the list happens to be populated.
+  console.log(guilds.length
+    ? `  ✓ Found ${guilds.length} guilds. First guild: "${guilds[0].name}" (Crest: ${guilds[0].crest}, Vault: ${guilds[0].vault} 🪙)`
+    : "  ✓ Guild list loads (empty on a fresh install)");
 
   // Create a new guild
   const createGuildRes = await fetch(`${BASE}/api/guilds`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       name: `Sanctum of Starlight ${rand}`,
@@ -109,7 +107,7 @@ async function run() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ amount: 200 }),
   }).then((r) => r.json());
@@ -121,7 +119,7 @@ async function run() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ text: "All wizards meet at Table 1 for the grand rally!" }),
   }).then((r) => r.json());
@@ -130,31 +128,62 @@ async function run() {
 
   // 4. Test Leagues System
   console.log("\n4. Testing Leagues System...");
-  const leagues = await fetch(`${BASE}/api/leagues`).then((r) => r.json());
-  if (!Array.isArray(leagues) || leagues.length === 0) throw new Error("Failed to load leagues: " + JSON.stringify(leagues));
-  console.log(`  ✓ Found ${leagues.length} leagues. First league: "${leagues[0].name}" (Prize pool: ${leagues[0].prizePool} 🪙)`);
+  const existing = await fetch(`${BASE}/api/leagues`).then((r) => r.json());
+  if (!Array.isArray(existing)) throw new Error("Failed to load leagues: " + JSON.stringify(existing));
 
-  // Join a league
-  const targetLeague = leagues[0];
+  // A fresh install has no leagues, so create one to join. The creator is
+  // seeded into the standings by the server.
+  let targetLeague = existing[0];
+  let createdLeague = false;
+  if (!targetLeague) {
+    const createRes = await fetch(`${BASE}/api/leagues`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+      body: JSON.stringify({
+        name: `Seasoned Circuit ${rand}`,
+        description: "A test league created by the end-to-end suite.",
+        format: "duel",
+        entryFee: 100,
+      }),
+    }).then((r) => r.json());
+    if (!createRes.ok || !createRes.league) throw new Error("League creation failed: " + JSON.stringify(createRes));
+    targetLeague = createRes.league;
+    createdLeague = true;
+    console.log(`  ✓ Created league "${targetLeague.name}" (Prize pool: ${targetLeague.prizePool} 🪙)`);
+  } else {
+    console.log(`  ✓ Found ${existing.length} leagues. First league: "${existing[0].name}" (Prize pool: ${existing[0].prizePool} 🪙)`);
+  }
+  // Join a league. Creating one already seeds our standing, so the join
+  // round-trip is only meaningful for a league we didn't create.
   const joinLeagueRes = await fetch(`${BASE}/api/leagues/${targetLeague.id}/join`, {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({ deck: "Celestial Storm" }),
   }).then((r) => r.json());
-  if (!joinLeagueRes.ok) throw new Error("Join league failed: " + JSON.stringify(joinLeagueRes));
-  console.log(`  ✓ Registered for league "${targetLeague.name}". New prize pool: ${joinLeagueRes.league.prizePool} 🪙`);
+  if (createdLeague) {
+    if (!joinLeagueRes.ok && !/already registered/i.test(joinLeagueRes.error || "")) {
+      throw new Error("League membership check failed: " + JSON.stringify(joinLeagueRes));
+    }
+    console.log(`  ✓ Registered in league "${targetLeague.name}". Prize pool: ${targetLeague.prizePool} 🪙`);
+  } else {
+    if (!joinLeagueRes.ok) throw new Error("Join league failed: " + JSON.stringify(joinLeagueRes));
+    console.log(`  ✓ Registered for league "${targetLeague.name}". New prize pool: ${joinLeagueRes.league.prizePool} 🪙`);
+  }
 
   // Report match victory in league
   const reportRes = await fetch(`${BASE}/api/leagues/${targetLeague.id}/match`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ winnerId: regRes.user.id }),
+    body: JSON.stringify({ winnerId: userId }),
   }).then((r) => r.json());
   if (!reportRes.ok || !Array.isArray(reportRes.standings)) throw new Error("Report match failed: " + JSON.stringify(reportRes));
-  const myStanding = reportRes.standings.find((s) => s.userId === regRes.user.id);
+  const myStanding = reportRes.standings.find((s) => s.userId === userId);
   if (!myStanding || myStanding.points !== 3) throw new Error("Points not updated: " + JSON.stringify(myStanding));
   console.log(`  ✓ Reported match victory! User points in league: ${myStanding.points} pts (Wins: ${myStanding.wins})`);
 
@@ -169,7 +198,7 @@ async function run() {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
-      Authorization: `Bearer ${regRes.token}`,
+      Authorization: `Bearer ${token}`,
     },
     body: JSON.stringify({
       title: "⚔️ Siege of the Crimson Citadel",

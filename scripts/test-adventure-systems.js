@@ -4,10 +4,15 @@
 //   node scripts/test-adventure-systems.js
 import assert from "node:assert";
 import WebSocket from "ws";
+import { createRequire } from "node:module";
 
-const PORT = process.env.PORT || 8888;
-const API = `http://127.0.0.1:${PORT}/api`;
-const WS_URL = `ws://127.0.0.1:${PORT}/ws`;
+// This file is parsed as ESM (package.json has no "type"), so a plain
+// require() isn't available. The wallet helper is CommonJS.
+const require = createRequire(import.meta.url);
+const { signIn } = require("./lib/wallet.js");
+
+const { BASE, WS_URL } = require("./lib/target.js");
+const API = `${BASE}/api`;
 
 const R = (s) => (Math.random().toString(36).slice(2, 8) + s).slice(0, 30);
 const UNAME = "tadv" + R("");
@@ -58,14 +63,13 @@ function connectClient(playerId, name, token) {
 async function run() {
   console.log("=== TEST: Adventure Systems ===");
 
-  // 1. register
-  console.log("1. Register test planeswalker…");
-  const reg = await api("/auth/register", { method: "POST", body: { username: UNAME, password: "test1234", displayName: "Advent Tester" } });
-  token = reg.token;
-  user = reg.user;
+  // 1. sign in with a throwaway wallet (password auth is gone)
+  console.log("1. Sign in as a test planeswalker…");
+  user = await signIn({ displayName: "Advent Tester" });
+  token = user.token;
   balance = user.balance;
   assert(balance === 1000, `starter gold should be 1000 (got ${balance})`);
-  console.log(`✓ registered ${UNAME} with ${balance} 🪙`);
+  console.log(`✓ signed in as ${user.username} with ${balance} 🪙`);
 
   // 2. packs catalog
   console.log("2. Fetch booster pack catalog…");

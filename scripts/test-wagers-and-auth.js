@@ -2,9 +2,8 @@
 "use strict";
 
 const { WebSocket } = require("ws");
-
-const BASE = "http://127.0.0.1:8877";
-const WS_URL = "ws://127.0.0.1:8877/ws";
+const { signIn } = require("./lib/wallet");
+const { BASE, WS_URL } = require("./lib/target");
 
 function client(playerId, name, token) {
   const ws = new WebSocket(WS_URL);
@@ -40,38 +39,21 @@ function waitFor(inbox, pred, ms = 5000) {
 
 (async () => {
   console.log("1. Testing Auth Endpoints...");
-  const u1Name = "alice_" + Date.now().toString(36);
-  const u2Name = "bob_" + Date.now().toString(36);
 
-  // Register Alice
-  const regA = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: u1Name, password: "password123", displayName: "Alice Mage" }),
-  }).then((r) => r.json());
-  if (!regA.ok || regA.user.balance !== 1000) throw new Error("Alice register failed: " + JSON.stringify(regA));
-
-  // Register Bob
-  const regB = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: u2Name, password: "password456", displayName: "Bob Knight" }),
-  }).then((r) => r.json());
-  if (!regB.ok || regB.user.balance !== 1000) throw new Error("Bob register failed: " + JSON.stringify(regB));
-
-  // Verify Login
-  const logA = await fetch(`${BASE}/api/auth/login`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ username: u1Name, password: "password123" }),
-  }).then((r) => r.json());
-  if (!logA.ok || !logA.token) throw new Error("Alice login failed: " + JSON.stringify(logA));
+  // Sign in Alice and Bob with throwaway wallets. Password auth is gone —
+  // wallet sign-in is the only way in.
+  const alice = await signIn({ displayName: "Alice Mage" });
+  if (alice.balance !== 1000) throw new Error("Alice sign-in balance wrong: " + JSON.stringify(alice));
+  const bob = await signIn({ displayName: "Bob Knight" });
+  if (bob.balance !== 1000) throw new Error("Bob sign-in balance wrong: " + JSON.stringify(bob));
+  const regA = alice;
+  const regB = bob;
 
   // Verify /api/auth/me
   const meA = await fetch(`${BASE}/api/auth/me`, {
     headers: { Authorization: `Bearer ${regA.token}` },
   }).then((r) => r.json());
-  if (!meA.ok || meA.user.username !== u1Name) throw new Error("Alice me check failed");
+  if (!meA.ok || meA.user.username !== regA.username) throw new Error("Alice me check failed");
 
   // Verify Faucet
   const faucetA = await fetch(`${BASE}/api/auth/faucet`, {
@@ -80,7 +62,7 @@ function waitFor(inbox, pred, ms = 5000) {
   }).then((r) => r.json());
   if (!faucetA.ok || faucetA.balance !== 1500) throw new Error("Faucet failed: " + JSON.stringify(faucetA));
 
-  console.log("Auth passed! Alice balance:", faucetA.balance, "Bob balance:", regB.user.balance);
+  console.log("Auth passed! Alice balance:", faucetA.balance, "Bob balance:", regB.balance);
 
   console.log("2. Testing Wager & Table Match Payouts...");
   const decks = await fetch(`${BASE}/api/decks`).then((r) => r.json());
@@ -153,7 +135,7 @@ function waitFor(inbox, pred, ms = 5000) {
 
   // Test Leaderboard
   const lb = await fetch(`${BASE}/api/leaderboard`).then((r) => r.json());
-  const topAlice = lb.find((u) => u.username === u1Name);
+  const topAlice = lb.find((u) => u.username === regA.username);
   if (!topAlice || topAlice.balance < 1688) throw new Error("Leaderboard check failed: " + JSON.stringify(lb));
   console.log("Leaderboard verified! Alice on leaderboard with " + topAlice.balance + " Gold (>= 1688).");
 

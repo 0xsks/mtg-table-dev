@@ -5,26 +5,17 @@
 //  - on the player's first turn, create a 4/4 token creature
 //  - attack with it -> verify bot life drops by 4, token taps, phase -> combat
 const { WebSocket } = require("ws");
-const BASE = "http://127.0.0.1:8877";
+const { signIn } = require("./lib/wallet");
+const { BASE, WS_URL } = require("./lib/target");
 
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 
 async function run() {
   console.log("=== TESTING COMBAT ATTACK ACTION ===");
 
-  const u = {
-    username: `combat_wiz_${Math.random().toString(36).slice(2, 8)}`,
-    password: "Password123!",
-    displayName: "Combat Wizard",
-  };
-  const regRes = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(u),
-  }).then((r) => r.json());
-  if (!regRes.ok || !regRes.token) throw new Error("Reg failed: " + JSON.stringify(regRes));
-  const token = regRes.token;
-  console.log(`✓ Registered ${u.username}`);
+  const user = await signIn({ displayName: "Combat Wizard" });
+  const token = user.token;
+  console.log(`✓ Signed in as ${user.username}`);
 
   // Grab a starter deck id
   const decks = await fetch(`${BASE}/api/decks`, {
@@ -35,7 +26,7 @@ async function run() {
   console.log(`✓ Starter deck: ${starter.name} (${starter.id})`);
 
   const ws = await new Promise((resolve, reject) => {
-    const w = new WebSocket("ws://127.0.0.1:8877/ws");
+    const w = new WebSocket(WS_URL);
     const inbox = [];
     w.on("error", reject);
     w.on("open", () => w.send(JSON.stringify({ t: "hello", token })));

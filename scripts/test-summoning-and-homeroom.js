@@ -9,9 +9,8 @@
 
 const { WebSocket } = require("ws");
 const assert = require("assert");
-const PORT = process.env.PORT || 8888;
-const BASE = `http://127.0.0.1:${PORT}`;
-const WS_BASE = `ws://127.0.0.1:${PORT}/ws`;
+const { signIn } = require("./lib/wallet");
+const { BASE, PORT, WS_URL: WS_BASE } = require("./lib/target");
 
 function sleep(ms) { return new Promise((r) => setTimeout(r, ms)); }
 
@@ -32,18 +31,8 @@ async function run() {
   console.log("✓ index.html references /js/rpg.js");
 
   console.log("\n=== 2. VERIFYING SUMMONING SICKNESS & TURN ADVANCEMENT ===");
-  const u = {
-    username: `sick_test_${Math.random().toString(36).slice(2, 8)}`,
-    password: "Password123!",
-    displayName: "Summoning Tester",
-  };
-  const regRes = await fetch(`${BASE}/api/auth/register`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(u),
-  }).then((r) => r.json());
-  assert(regRes.ok && regRes.token, "Register failed");
-  const token = regRes.token;
+  const user = await signIn({ displayName: "Summoning Tester" });
+  const token = user.token;
 
   // Starter deck
   const decks = await fetch(`${BASE}/api/decks`, {
