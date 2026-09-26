@@ -1,8 +1,20 @@
 {
-  "balance": 15246,
+  "balance": 15276,
   "feePercent": 3,
-  "totalCollected": 246,
+  "totalCollected": 276,
   "transactions": [
+    {
+      "id": "tx-2fa3eed5",
+      "timestamp": 1790380403717,
+      "type": "wager_fee",
+      "amount": 30,
+      "pot": 1000,
+      "feePercent": 3,
+      "tableCode": "B9PA4E",
+      "tableName": "✨ Cozy Kitchen Table",
+      "winner": "Eth_0x017a…7b6c",
+      "description": "3% DAO Treasury fee from Match B9PA4E (Eth_0x017a…7b6c won 970 🪙 of 1000 🪙 pot)"
+    },
     {
       "id": "tx-47c7153d",
       "timestamp": 1790311579985,

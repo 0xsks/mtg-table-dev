@@ -18,13 +18,13 @@
      Each room has: id, name, icon, color, bg, enter/exit draw fn, panel html
   ────────────────────────────────────────────────────────────────────────── */
   const ROOM_DEFS = {
-    arena:   { id: "arena",   name: "The Grand Arena",       icon: "🏰", color: "#ef4444", bg: "#0d0505" },
-    builder: { id: "builder", name: "Tolarian Archive",      icon: "📖", color: "#38bdf8", bg: "#030d1a" },
-    guilds:  { id: "guilds",  name: "Citadel of Guilds",     icon: "⚔️", color: "#f59e0b", bg: "#0d0a00" },
-    dao:     { id: "dao",     name: "Royal DAO Treasury",    icon: "🏛️", color: "#fbbf24", bg: "#0d0b00" },
-    dnd:     { id: "dnd",     name: "Astral Rift Portal",    icon: "🐉", color: "#c084fc", bg: "#06000d" },
-    bazaar:  { id: "bazaar",  name: "The Oracle Bazaar",     icon: "🎴", color: "#10b981", bg: "#00100a" },
-    mirror:  { id: "mirror",  name: "Mystic Mirror",         icon: "🪞", color: "#f472b6", bg: "#0d0008" },
+    arena:   { id: "arena",   name: "The Colosseum",      icon: "⚔️", color: "#ef4444", bg: "#0d0505" },
+    builder: { id: "builder", name: "The Gardens",         icon: "🌱", color: "#38bdf8", bg: "#030d1a" },
+    guilds:  { id: "guilds",  name: "The Tavern",          icon: "🍺", color: "#f59e0b", bg: "#0d0a00" },
+    dao:     { id: "dao",     name: "The Bank",            icon: "🏦", color: "#fbbf24", bg: "#0d0b00" },
+    dnd:     { id: "dnd",     name: "The Alchemist",       icon: "⚗️", color: "#c084fc", bg: "#06000d" },
+    bazaar:  { id: "bazaar",  name: "The Marketplace",     icon: "⚖️", color: "#10b981", bg: "#00100a" },
+    mirror:  { id: "mirror",  name: "Meditation Circle",   icon: "🔮", color: "#f472b6", bg: "#0d0008" },
     overworld: { id: "overworld", name: "Overworld", icon: "🗺️", color: "#d7b45c", bg: "#153322" },
   };
 
@@ -103,10 +103,93 @@
     let viewW = 1200, viewH = 800;
 
     /* ── FF7 WORLD MAP & LUNAR SPRITE ENGINE ── */
-    const ff7MapImg = new Image();
-    let ff7MapLoaded = false;
-    ff7MapImg.onload = () => { ff7MapLoaded = true; };
-    ff7MapImg.src = "/assets/ff7_world_map.jpg";
+    let pixelMap = null;
+    let pixelMapKey = "";
+
+    function paintImperialCity(w, h) {
+      const cnv = document.createElement("canvas");
+      cnv.width = w;
+      cnv.height = h;
+      const g = cnv.getContext("2d");
+      const img = g.createImageData(w, h);
+      const px = img.data;
+      const set = (x, y, r, gg, b) => {
+        if (x < 0 || y < 0 || x >= w || y >= h) return;
+        const i = (y * w + x) * 4;
+        px[i] = r; px[i + 1] = gg; px[i + 2] = b; px[i + 3] = 255;
+      };
+      const cx = w * 0.5;
+      const cy = h * 0.47;
+      const R = Math.min(w, h) * 0.34;
+      const zones = [
+        [214, 176, 92],
+        [196, 96, 84],
+        [98, 162, 90],
+        [170, 148, 198],
+        [216, 198, 164],
+        [102, 170, 160],
+      ];
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          const dx = x - cx;
+          const dy = y - cy;
+          const dist = Math.hypot(dx, dy);
+          let ang = Math.atan2(dx, -dy);
+          if (ang < 0) ang += Math.PI * 2;
+          const spoke = ((ang + Math.PI / 6) % (Math.PI / 3)) - Math.PI / 6;
+          const onSpoke = Math.abs(spoke) < 0.05;
+          const zone = Math.floor(ang / (Math.PI / 3)) % 6;
+          let r = 22;
+          let gg = 72;
+          let b = 128;
+          if (dist < R * 1.14 && dist > R) {
+            r = 46; gg = 114; b = 160;
+          }
+          const onBridge = Math.abs(dy) < Math.max(5, R * 0.04) && dx < -R * 0.9 && dx > -R * 1.82;
+          const onFarShore = Math.hypot((dx + R * 1.96) / (R * 0.26), dy / (R * 0.2)) < 1;
+          const onDocks = dy > R * 0.96 && dy < R * 1.34 && Math.abs(dx) < R * 0.58;
+          const onArcane = Math.hypot(x - (cx + R * 1.48), y - cy) < R * 0.26;
+          const onPrison = Math.hypot(x - (cx + R * 0.9), y - (cy - R * 1.16)) < R * 0.16;
+          const onCause = Math.abs(dy) < Math.max(4, R * 0.028) && dx > R * 0.92 && dx < R * 1.24;
+          if (dist <= R) {
+            if (dist < R * 0.2) {
+              r = 48; gg = 108; b = 64;
+            } else if (dist < R * 0.27 || (onSpoke && dist < R * 0.9)) {
+              r = 236; gg = 228; b = 208;
+            } else if (dist > R * 0.91) {
+              if (onSpoke) { r = 236; gg = 228; b = 208; }
+              else { r = 74; gg = 68; b = 62; }
+            } else {
+              const z = zones[zone];
+              const shade = ((x + y * 3) & 15) === 0 ? -12 : 0;
+              r = z[0] + shade; gg = z[1] + shade; b = z[2] + shade;
+            }
+          } else if (onDocks) {
+            r = 154; gg = 126; b = 84;
+            if ((x & 6) === 0) { r = 92; gg = 74; b = 48; }
+          } else if (onArcane) {
+            r = 146; gg = 126; b = 178;
+          } else if (onPrison) {
+            r = 132; gg = 130; b = 124;
+          } else if (onBridge || onCause) {
+            r = 176; gg = 164; b = 138;
+          } else if (onFarShore) {
+            r = 108; gg = 150; b = 84;
+          }
+          set(x, y, r, gg, b);
+        }
+      }
+      g.putImageData(img, 0, 0);
+      return cnv;
+    }
+
+    function ensurePixelKingdom() {
+      const key = viewW + "x" + viewH;
+      if (pixelMap && pixelMapKey === key) return pixelMap;
+      pixelMap = paintImperialCity(Math.max(320, viewW), Math.max(240, viewH));
+      pixelMapKey = key;
+      return pixelMap;
+    }
 
     const lunarHeroImg = new Image();
     let lunarHeroLoaded = false;
@@ -309,65 +392,65 @@
     ──────────────────────────────────────────────────────────────── */
     const landmarks = [
       {
-        id: "arena", name: "🏰 The Grand Arena (Midgar)",
-        shortName: "🏰 Midgar Arena",
-        subtitle: "Virtual MTG Tabletop · Duel & Commander",
-        tag: "⚔️ Multi-Player LAN", desc: "High-stakes Magic duels at the Midgar Metropolis.",
-        icon: "🏰", x: 780, y: 300, w: 200, h: 120,
+        id: "arena", name: "⚔️ The Colosseum",
+        shortName: "⚔️ Colosseum",
+        subtitle: "PVP combat · DFK Chain duels",
+        tag: "⚔️ PVP", desc: "Hero versus hero combat, the same job as the DFK Colosseum.",
+        icon: "⚔️", x: 780, y: 300, w: 200, h: 120,
         route: "/tables", color: "#ef4444", glow: "rgba(239,68,68,0.45)",
         buildingType: "castle",
       },
       {
-        id: "builder", name: "📖 Tolarian Archive (Rocket Town)",
-        shortName: "📖 Tolarian Archive",
-        subtitle: "Deck Crafting · 60-Card & Commander Forge",
-        tag: "📜 36,158 Cards", desc: "Forge decks with instant Scryfall search.",
-        icon: "📖", x: 420, y: 310, w: 180, h: 120,
+        id: "builder", name: "🌱 The Gardens",
+        shortName: "🌱 Gardens",
+        subtitle: "Stake LP seeds · Master Gardener",
+        tag: "🌱 Emissions", desc: "Plant liquidity seeds and earn JEWEL, CRYSTAL, or JADE.",
+        icon: "🌱", x: 420, y: 310, w: 180, h: 120,
         route: "/builder", color: "#38bdf8", glow: "rgba(56,189,248,0.45)",
         buildingType: "tower",
       },
       {
-        id: "guilds", name: "⚔️ Citadel of Guilds (Junon)",
-        shortName: "⚔️ Junon Guilds",
-        subtitle: "War Banners & Competitive Prize Leagues",
-        tag: "🛡️ 10 Guild Orders", desc: "Rally guilds, earn seasonal glory at the Cannon Port.",
-        icon: "⚔️", x: 730, y: 430, w: 200, h: 120,
+        id: "guilds", name: "🍺 The Tavern",
+        shortName: "🍺 Tavern",
+        subtitle: "Buy, sell, and hire Heroes",
+        tag: "🍺 Scarlet Hearth", desc: "Hero catalog, auctions, and rentals.",
+        icon: "🍺", x: 730, y: 430, w: 200, h: 120,
         route: "/guilds", color: "#f59e0b", glow: "rgba(245,158,11,0.45)",
         buildingType: "fortress",
       },
       {
-        id: "dao", name: "🏛️ Royal DAO Treasury (Gold Saucer)",
-        shortName: "🏛️ DAO Treasury",
-        subtitle: "Community Vault · Wager Pool & Staking",
-        tag: "🪙 3% Wager Pool", desc: "Vote on governance, claim staking rewards at the Gold Spire.",
-        icon: "🏛️", x: 470, y: 460, w: 180, h: 120,
+        id: "dao", name: "🏦 The Bank",
+        shortName: "🏦 Bank",
+        subtitle: "Lock JEWEL · Banker and xJEWEL",
+        tag: "🏦 xJEWEL", desc: "Deposit JEWEL with the Banker and claim locked rewards.",
+        icon: "🏦", x: 470, y: 460, w: 180, h: 120,
         route: "/dao", color: "#fbbf24", glow: "rgba(251,191,36,0.5)",
         buildingType: "pantheon",
       },
       {
-        id: "dnd", name: "🐉 Astral Rift (Cosmo Canyon)",
-        shortName: "🐉 Astral Rift",
-        subtitle: "Blind Eternities · 2D D&D Battlemaps",
-        tag: "🎲 Campaign Engine", desc: "Tile battlemaps, tokens, dice & Bugenhagen's Spire.",
-        icon: "🐉", x: 320, y: 540, w: 180, h: 120,
+        id: "dnd", name: "⚗️ The Alchemist",
+        shortName: "⚗️ Alchemist",
+        subtitle: "Brew potions · restore stamina",
+        tag: "⚗️ Crafting", desc: "Turn quest reagents into potions and consumables.",
+        icon: "⚗️", x: 320, y: 540, w: 180, h: 120,
         route: "/dnd", color: "#c084fc", glow: "rgba(192,132,252,0.5)",
         buildingType: "portal",
       },
       {
-        id: "bazaar", name: "🎴 The Oracle Bazaar (Costa del Sol)",
-        shortName: "🎴 Oracle Bazaar",
-        subtitle: "36,000+ Cards Catalog & Scryfall Market",
-        tag: "✨ Full Oracle DB", desc: "Comprehensive multiverse card market by the bay.",
-        icon: "🎴", x: 590, y: 410, w: 190, h: 110,
+        id: "bazaar", name: "⚖️ The Marketplace",
+        shortName: "⚖️ Marketplace",
+        subtitle: "Trader · seeds · item vendor",
+        tag: "⚖️ DEX", desc: "Swap tokens, mint LP seeds, and sell quest items for gold.",
+        icon: "⚖️", x: 590, y: 410, w: 190, h: 110,
         route: "/cards", color: "#10b981", glow: "rgba(16,185,129,0.45)",
         buildingType: "market",
       },
       {
-        id: "mirror", name: "🪞 Mystic Mirror (Northern Crater)",
-        shortName: "🪞 Mystic Mirror",
-        subtitle: "Planeswalker Avatar & Themes",
-        tag: "✨ Wardrobe", desc: "Lifestream wardrobe and multiverse themes.",
-        icon: "🪞", x: 580, y: 170, w: 140, h: 100,
+        id: "mirror", name: "🔮 Meditation Circle",
+        shortName: "🔮 Meditation",
+        subtitle: "Level a Hero · spend runes",
+        tag: "🔮 Level up", desc: "When a Hero's experience is full, meditate here to level up.",
+        icon: "🔮", x: 580, y: 170, w: 140, h: 100,
         action: "profile", color: "#f472b6", glow: "rgba(244,114,182,0.45)",
         buildingType: "shrine",
       },
@@ -402,36 +485,47 @@
     let areaCooldown = 0;
 
     /* ── RESIZE ── */
+    function citySpot(W, H, deg, scale) {
+      const cx = W * 0.5;
+      const cy = H * 0.47;
+      const R = Math.min(W, H) * 0.34;
+      const a = deg * Math.PI / 180;
+      return {
+        x: Math.round(cx + Math.sin(a) * R * scale),
+        y: Math.round(cy - Math.cos(a) * R * scale),
+        cx, cy, R,
+      };
+    }
+
     function updateLandmarkPositions() {
       const W = viewW, H = viewH;
-      // Spread each area onto its own stretch of continent. x/y are sprite centers.
-      // Midgar — northeast plateau of the eastern continent
-      landmarks[0].x = Math.round(W * 0.76); landmarks[0].y = Math.round(H * 0.38);
-      landmarks[0].w = Math.min(150, Math.round(W * 0.12)); landmarks[0].h = Math.min(120, Math.round(H * 0.14));
-
-      // Rocket Town — northwest highlands of the western continent
-      landmarks[1].x = Math.round(W * 0.24); landmarks[1].y = Math.round(H * 0.36);
-      landmarks[1].w = Math.min(140, Math.round(W * 0.11)); landmarks[1].h = Math.min(120, Math.round(H * 0.14));
-
-      // Junon — southwest coast of the eastern continent, across the sea from Costa
-      landmarks[2].x = Math.round(W * 0.68); landmarks[2].y = Math.round(H * 0.64);
-      landmarks[2].w = Math.min(150, Math.round(W * 0.12)); landmarks[2].h = Math.min(120, Math.round(H * 0.14));
-
-      // Gold Saucer — desert in the middle of the western continent
-      landmarks[3].x = Math.round(W * 0.34); landmarks[3].y = Math.round(H * 0.50);
-      landmarks[3].w = Math.min(140, Math.round(W * 0.11)); landmarks[3].h = Math.min(100, Math.round(H * 0.12));
-
-      // Cosmo Canyon — far southwest of the western continent
-      landmarks[4].x = Math.round(W * 0.28); landmarks[4].y = Math.round(H * 0.78);
-      landmarks[4].w = Math.min(140, Math.round(W * 0.11)); landmarks[4].h = Math.min(110, Math.round(H * 0.13));
-
-      // Costa del Sol — east-coast peninsula of the western continent
-      landmarks[5].x = Math.round(W * 0.44); landmarks[5].y = Math.round(H * 0.66);
-      landmarks[5].w = Math.min(140, Math.round(W * 0.11)); landmarks[5].h = Math.min(100, Math.round(H * 0.12));
-
-      // Northern Crater — snow continent, kept clear of the western highlands
-      landmarks[6].x = Math.round(W * 0.54); landmarks[6].y = Math.round(H * 0.17);
-      landmarks[6].w = Math.min(120, Math.round(W * 0.10)); landmarks[6].h = Math.min(100, Math.round(H * 0.12));
+      const hub = citySpot(W, H, 0, 0);
+      const place = (i, deg, scale) => {
+        const p = citySpot(W, H, deg, scale);
+        landmarks[i].x = p.x;
+        landmarks[i].y = p.y;
+      };
+      // Clockwise from the north, matching the Imperial City wheel.
+      place(5, 30, 0.58);  // Marketplace in the Market district
+      place(0, 90, 0.58);  // Colosseum in the Arena district
+      place(6, 210, 0.58); // Meditation in the Temple district
+      place(3, 270, 0.58); // Bank in Talos Plaza
+      place(1, 330, 0.58); // Gardens in the Elven Gardens
+      landmarks[2].x = hub.cx; // Tavern on the waterfront docks
+      landmarks[2].y = Math.round(hub.cy + hub.R * 1.12);
+      landmarks[4].x = Math.round(hub.cx + hub.R * 1.48); // Alchemist on the east island
+      landmarks[4].y = hub.cy;
+      const size = (i, wf, hf) => {
+        landmarks[i].w = Math.min(150, Math.round(W * wf));
+        landmarks[i].h = Math.min(120, Math.round(H * hf));
+      };
+      size(0, 0.11, 0.13);
+      size(1, 0.10, 0.13);
+      size(2, 0.11, 0.13);
+      size(3, 0.10, 0.12);
+      size(4, 0.10, 0.12);
+      size(5, 0.10, 0.12);
+      size(6, 0.09, 0.11);
 
       // Calculate dedicated Area Portal Pads for each section of the main map
       landmarks.forEach((lm) => {
@@ -442,11 +536,28 @@
         lm.padRadius = 16;
       });
 
-      manaWell.x = Math.round(W * 0.42); manaWell.y = Math.round(H * 0.23);
-      manaWell.radius = Math.min(32, Math.round(Math.min(W, H) * 0.04));
-      campfire.x = Math.round(W * 0.18); campfire.y = Math.round(H * 0.44);
-      dummy.x = Math.round(W * 0.84); dummy.y = Math.round(H * 0.58);
-      sparky.x = Math.round(W * 0.55); sparky.y = Math.round(H * 0.46);
+      manaWell.x = hub.cx;
+      manaWell.y = hub.cy;
+      manaWell.radius = Math.min(28, Math.round(Math.min(W, H) * 0.032));
+      campfire.x = Math.round(hub.cx - hub.R * 0.28);
+      campfire.y = Math.round(hub.cy + hub.R * 1.12);
+      dummy.x = Math.round(hub.cx + hub.R * 0.9);
+      dummy.y = Math.round(hub.cy - hub.R * 1.16);
+      sparky.x = Math.round(hub.cx + hub.R * 0.16);
+      sparky.y = Math.round(hub.cy + hub.R * 0.16);
+      overworldDecor[0].xRel = (hub.cx - hub.R * 1.95) / W;
+      overworldDecor[0].yRel = hub.cy / H;
+      overworldDecor[1].xRel = (hub.cx - hub.R * 1.95) / W;
+      overworldDecor[1].yRel = (hub.cy + hub.R * 0.28) / H;
+      overworldDecor[2].xRel = (hub.cx - hub.R * 0.36) / W;
+      overworldDecor[2].yRel = (hub.cy + hub.R * 1.12) / H;
+      overworldDecor[3].xRel = (hub.cx + hub.R * 1.48) / W;
+      overworldDecor[3].yRel = (hub.cy - hub.R * 0.22) / H;
+      if (!hero._citySpawn) {
+        hero.x = Math.round(hub.cx - hub.R * 1.2);
+        hero.y = hub.cy;
+        hero._citySpawn = true;
+      }
     }
 
     function resizeCanvas() {
@@ -579,255 +690,109 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
        ROOM INTERIOR ENVIRONMENTS — each room is a fully drawn canvas world
     ══════════════════════════════════════════════════════════════════════ */
 
+    const colosseumMap = new Image();
+    let colosseumMapLoaded = false;
+    colosseumMap.onload = () => { colosseumMapLoaded = true; };
+    colosseumMap.src = "/assets/rooms/colosseum.jpg";
+
+    function colosseumFrame(W, H) {
+      const iw = colosseumMap.naturalWidth || 1200;
+      const ih = colosseumMap.naturalHeight || 1350;
+      const scale = Math.min((W * 0.96) / iw, (H * 0.94) / ih);
+      const dw = iw * scale;
+      const dh = ih * scale;
+      return { x: (W - dw) / 2, y: (H - dh) / 2, dw, dh };
+    }
+
     function drawRoomArena(c, W, H, t, rh) {
-      // Stone arena floor
-      c.fillStyle = "#1a0a0a"; c.fillRect(0, 0, W, H);
-      // Checker stone tiles
-      for (let ty = 0; ty < H; ty += 40) {
-        for (let tx = 0; tx < W; tx += 40) {
-          c.fillStyle = ((tx / 40 + ty / 40) % 2 === 0) ? "#200a0a" : "#2a0d0d";
-          c.fillRect(tx, ty, 40, 40);
-        }
-      }
-      // Arena ellipse pitch
-      const arenaGrd = c.createRadialGradient(W/2, H * 0.52, 20, W/2, H * 0.52, Math.min(W, H) * 0.44);
-      arenaGrd.addColorStop(0, "rgba(34,197,94,0.25)");
-      arenaGrd.addColorStop(0.7, "rgba(22,101,52,0.15)");
-      arenaGrd.addColorStop(1, "rgba(0,0,0,0)");
-      c.fillStyle = arenaGrd;
-      c.beginPath(); c.ellipse(W/2, H * 0.52, W * 0.42, H * 0.38, 0, 0, Math.PI * 2); c.fill();
-
-      // MTG playmat outline
-      c.strokeStyle = "rgba(215,180,92,0.5)"; c.lineWidth = 2;
-      c.beginPath(); c.ellipse(W/2, H * 0.52, W * 0.42, H * 0.38, 0, 0, Math.PI * 2); c.stroke();
-      c.strokeStyle = "rgba(215,180,92,0.2)"; c.lineWidth = 1;
-      c.beginPath(); c.ellipse(W/2, H * 0.52, W * 0.3, H * 0.26, 0, 0, Math.PI * 2); c.stroke();
-
-      // Spectator stands (sides)
-      const standH = Math.round(H * 0.25);
-      // Left stands
-      c.fillStyle = "#2d0505"; c.fillRect(0, 0, Math.round(W * 0.12), H);
-      // Right stands
-      c.fillStyle = "#2d0505"; c.fillRect(Math.round(W * 0.88), 0, Math.round(W * 0.12), H);
-      // Top stands
-      c.fillStyle = "#2d0505"; c.fillRect(0, 0, W, standH);
-      // Bottom stands
-      c.fillStyle = "#2d0505"; c.fillRect(0, H - standH, W, standH);
-
-      // Stand tiers (left & right)
-      for (let tier = 1; tier <= 4; tier++) {
-        c.strokeStyle = `rgba(139,0,0,${0.35 + tier * 0.08})`; c.lineWidth = 2;
-        c.beginPath(); c.moveTo(Math.round(W * 0.12), tier * (H / 5)); c.lineTo(0, tier * (H / 5)); c.stroke();
-        c.beginPath(); c.moveTo(Math.round(W * 0.88), tier * (H / 5)); c.lineTo(W, tier * (H / 5)); c.stroke();
-        c.beginPath(); c.moveTo(tier * (W / 6), Math.round(H * 0.25)); c.lineTo(tier * (W / 6), 0); c.stroke();
-        c.beginPath(); c.moveTo(tier * (W / 6), H - Math.round(H * 0.25)); c.lineTo(tier * (W / 6), H); c.stroke();
-      }
-
-      // Grand Castle Keep overlooking the arena
-      const castleAsset = buildingAssets.arena;
-      if (castleAsset && (castleAsset.loaded || castleAsset.img.complete) && castleAsset.img.naturalWidth > 0) {
+      c.fillStyle = "#140c08";
+      c.fillRect(0, 0, W, H);
+      if (colosseumMapLoaded && colosseumMap.naturalWidth > 0) {
+        const fr = colosseumFrame(W, H);
         c.save();
-        const sc = 0.50;
-        const cw = Math.round(castleAsset.img.naturalWidth * sc);
-        const ch = Math.round(castleAsset.img.naturalHeight * sc);
-        c.drawImage(castleAsset.img, Math.round(W/2 - cw/2), Math.round(H * 0.02), cw, ch);
+        c.imageSmoothingEnabled = true;
+        c.drawImage(colosseumMap, fr.x, fr.y, fr.dw, fr.dh);
         c.restore();
+        const ex = fr.x + fr.dw * 0.5;
+        const ey = fr.y + fr.dh * 0.9;
+        c.fillStyle = "#1a1008";
+        c.beginPath();
+        c.ellipse(ex, ey, 34, 14, 0, 0, Math.PI * 2);
+        c.fill();
+        c.strokeStyle = "#ef4444";
+        c.lineWidth = 2;
+        c.stroke();
+        c.font = "bold 9px system-ui,sans-serif";
+        c.fillStyle = "#f3dd9a";
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        c.fillText("EXIT", ex, ey);
       }
-
-      // Spectator figures
-      const speakAngles = [0, 0.4, 0.8, 1.2, 1.6, 2.0, 2.5, 3.1, 3.8, 4.4, 5.0, 5.5];
-      for (let ai = 0; ai < speakAngles.length; ai++) {
-        const sa = speakAngles[ai];
-        const r = Math.min(W, H) * 0.45;
-        const spx = W/2 + Math.cos(sa) * r;
-        const spy = H * 0.52 + Math.sin(sa) * (r * 0.75);
-        c.save(); c.globalAlpha = 0.45;
-        c.font = "13px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
-        c.fillText(["🧙","🧚","🐱","👑","🤘","🤖","💀","🦄","🐉"][ai % 9], spx, spy);
-        c.restore();
-      }
-
-      // Torches on pillars
-      const torchPositions = [
-        [W * 0.12, H * 0.5], [W * 0.88, H * 0.5],
-        [W * 0.5, H * 0.25], [W * 0.5, H * 0.75],
-      ];
-      for (const [tx2, ty2] of torchPositions) {
-        const torchFlicker = 0.6 + Math.sin(t * 0.015 + tx2 * 0.01) * 0.4;
-        c.save(); c.globalAlpha = torchFlicker;
-        c.fillStyle = "#f97316"; c.beginPath(); c.arc(tx2, ty2, 10, 0, Math.PI * 2); c.fill();
-        c.fillStyle = "#fbbf24"; c.beginPath(); c.arc(tx2, ty2, 5, 0, Math.PI * 2); c.fill();
-        c.restore();
-        c.font = "16px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText("🔥", tx2, ty2 - 14);
-      }
-
-      // Floating card effect on playmat
-      const cardT = t * 0.003;
-      for (let ci = 0; ci < 5; ci++) {
-        const ca = cardT + ci * 1.26;
-        const cr = Math.min(W, H) * 0.16;
-        const cx2 = W/2 + Math.cos(ca) * cr;
-        const cy2 = H * 0.52 + Math.sin(ca) * cr * 0.7;
-        c.save(); c.globalAlpha = 0.5 + Math.sin(t * 0.007 + ci) * 0.3;
-        c.font = "18px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
-        c.fillText("🃏", cx2, cy2); c.restore();
-      }
-
-      // Hero
       _drawRoomHero(c, rh, t);
+    }
 
-      // Exit arch (bottom center)
-      c.fillStyle = "#0d0505";
-      c.beginPath(); c.arc(W/2, H - 4, 28, Math.PI, 0); c.rect(W/2 - 28, H - 4, 56, 30); c.fill();
-      c.strokeStyle = "#ef4444"; c.lineWidth = 2;
-      c.beginPath(); c.arc(W/2, H - 4, 28, Math.PI, 0); c.stroke();
-      c.font = "bold 9px system-ui,sans-serif"; c.fillStyle = "#ef4444"; c.textAlign = "center"; c.textBaseline = "top";
-      c.fillText("← EXIT", W/2, H - 32);
+    const gardensMap = new Image();
+    let gardensMapLoaded = false;
+    gardensMap.onload = () => { gardensMapLoaded = true; };
+    gardensMap.src = "/assets/rooms/gardens.jpg";
+
+    function gardensFrame(W, H) {
+      const iw = gardensMap.naturalWidth || 1000;
+      const ih = gardensMap.naturalHeight || 1200;
+      const scale = Math.min((W * 0.96) / iw, (H * 0.94) / ih);
+      const dw = iw * scale;
+      const dh = ih * scale;
+      return { x: (W - dw) / 2, y: (H - dh) / 2, dw, dh };
     }
 
     function drawRoomBuilder(c, W, H, t, rh) {
-      // Deep library interior
-      c.fillStyle = "#020c1a"; c.fillRect(0, 0, W, H);
-      // Stone floor with arcane pattern
-      for (let ty = 0; ty < H; ty += 36) {
-        for (let tx = 0; tx < W; tx += 36) {
-          c.fillStyle = ((tx / 36 + ty / 36) % 2 === 0) ? "#030f22" : "#040e1f";
-          c.fillRect(tx, ty, 36, 36);
-        }
-      }
-      // Arcane floor sigil
-      c.save(); c.globalAlpha = 0.12;
-      c.strokeStyle = "#38bdf8"; c.lineWidth = 1.5;
-      c.beginPath(); c.arc(W/2, H * 0.55, Math.min(W, H) * 0.32, 0, Math.PI * 2); c.stroke();
-      c.beginPath(); c.arc(W/2, H * 0.55, Math.min(W, H) * 0.22, 0, Math.PI * 2); c.stroke();
-      for (let ri = 0; ri < 6; ri++) {
-        const ra = (ri / 6) * Math.PI * 2;
-        c.beginPath(); c.moveTo(W/2, H * 0.55); c.lineTo(W/2 + Math.cos(ra) * Math.min(W,H)*0.32, H * 0.55 + Math.sin(ra) * Math.min(W,H)*0.32); c.stroke();
-      }
-      c.restore();
-
-      // Tolarian Magic Tower in background
-      const towerAsset = buildingAssets.builder;
-      if (towerAsset && (towerAsset.loaded || towerAsset.img.complete) && towerAsset.img.naturalWidth > 0) {
+      c.fillStyle = "#143018";
+      c.fillRect(0, 0, W, H);
+      if (gardensMapLoaded && gardensMap.naturalWidth > 0) {
+        const fr = gardensFrame(W, H);
         c.save();
-        const sc = 0.62;
-        const tw = Math.round(towerAsset.img.naturalWidth * sc);
-        const th = Math.round(towerAsset.img.naturalHeight * sc);
-        c.drawImage(towerAsset.img, Math.round(W/2 - tw/2), Math.round(H * 0.05), tw, th);
+        c.imageSmoothingEnabled = false;
+        c.drawImage(gardensMap, fr.x, fr.y, fr.dw, fr.dh);
         c.restore();
+        const ex = fr.x + fr.dw * 0.5;
+        const ey = fr.y + fr.dh * 0.93;
+        c.fillStyle = "#143018";
+        c.beginPath();
+        c.ellipse(ex, ey, 34, 14, 0, 0, Math.PI * 2);
+        c.fill();
+        c.strokeStyle = "#86efac";
+        c.lineWidth = 2;
+        c.stroke();
+        c.font = "bold 9px system-ui,sans-serif";
+        c.fillStyle = "#ecfccb";
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        c.fillText("EXIT", ex, ey);
       }
-
-      // Tall bookshelves on walls
-      const shelfColor = "#1a0f08";
-      const shelfH = H * 0.65;
-      // Left wall shelf
-      c.fillStyle = shelfColor; c.fillRect(0, H - shelfH, 70, shelfH);
-      c.strokeStyle = "#3d2010"; c.lineWidth = 1;
-      for (let sy = H - shelfH + 24; sy < H - 10; sy += 28) { c.beginPath(); c.moveTo(4, sy); c.lineTo(66, sy); c.stroke(); }
-      // Right wall shelf
-      c.fillStyle = shelfColor; c.fillRect(W - 70, H - shelfH, 70, shelfH);
-      for (let sy = H - shelfH + 24; sy < H - 10; sy += 28) { c.beginPath(); c.moveTo(W - 66, sy); c.lineTo(W - 4, sy); c.stroke(); }
-
-      // Books on shelves (colorful spines)
-      const bookColors = ["#ef4444","#f97316","#eab308","#22c55e","#06b6d4","#6366f1","#a855f7","#ec4899","#14b8a6","#64748b"];
-      for (let shelf = 0; shelf < 8; shelf++) {
-        const shelfY = H - shelfH + 20 + shelf * 28;
-        let bx = 5;
-        while (bx < 64) {
-          const bw = 4 + Math.floor(Math.random() * 0 + ((bx * shelf + 7) % 4 + 4));
-          c.fillStyle = bookColors[(bx + shelf) % bookColors.length];
-          c.fillRect(bx, shelfY - 20, bw, 20);
-          c.strokeStyle = "rgba(0,0,0,0.5)"; c.lineWidth = 0.5; c.strokeRect(bx, shelfY - 20, bw, 20);
-          bx += bw + 1;
-        }
-        // Right shelf books
-        bx = 4;
-        while (bx < 64) {
-          const bw = 4 + (bx * shelf + 3) % 4 + 4;
-          c.fillStyle = bookColors[(bx * 3 + shelf * 2) % bookColors.length];
-          c.fillRect(W - 68 + bx, shelfY - 20, bw, 20);
-          c.strokeStyle = "rgba(0,0,0,0.5)"; c.lineWidth = 0.5; c.strokeRect(W - 68 + bx, shelfY - 20, bw, 20);
-          bx += bw + 1;
-        }
-      }
-
-      // Floating spell books orbiting center
-      const bookOrbit = t * 0.003;
-      const orbitBooks = ["📚","📖","📜","🗺️","📄"];
-      for (let bi = 0; bi < orbitBooks.length; bi++) {
-        const ba = bookOrbit + bi * (Math.PI * 2 / orbitBooks.length);
-        const br = Math.min(W,H) * 0.2;
-        const bx = W/2 + Math.cos(ba) * br;
-        const by = H * 0.45 + Math.sin(ba) * br * 0.55;
-        c.save();
-        c.translate(bx, by);
-        c.rotate(ba + Math.PI/2);
-        c.globalAlpha = 0.85;
-        c.font = "20px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
-        c.fillText(orbitBooks[bi], 0, 0);
-        c.restore();
-      }
-
-      // Arcane writing desk (center)
-      c.fillStyle = "#3d1f08"; c.fillRect(W/2 - 60, H * 0.6, 120, 50);
-      c.fillStyle = "#5d2f0a"; c.fillRect(W/2 - 55, H * 0.6 - 4, 110, 10);
-      // Quill & inkwell
-      c.font = "18px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
-      c.fillText("🪶", W/2 - 18, H * 0.625); c.fillText("🖊️", W/2 + 18, H * 0.625);
-      // Scroll on desk
-      c.fillStyle = "#fef3c7"; c.fillRect(W/2 - 30, H * 0.604, 60, 30);
-      c.strokeStyle = "#92400e"; c.lineWidth = 1; c.strokeRect(W/2 - 30, H * 0.604, 60, 30);
-      c.fillStyle = "#78350f"; c.font = "7px monospace"; c.textAlign = "center";
-      for (let li = 0; li < 4; li++) {
-        c.fillRect(W/2 - 22, H * 0.608 + li * 6 + 2, 44, 1);
-      }
-
-      // Arcane glowing orb on lectern (left of desk)
-      const orbPulse = 0.5 + Math.sin(t * 0.007) * 0.45;
-      c.fillStyle = "#1a2a4a"; c.fillRect(W/2 - 90, H * 0.58, 22, 40);
-      const orbGrd = c.createRadialGradient(W/2 - 79, H * 0.57, 2, W/2 - 79, H * 0.57, 16);
-      orbGrd.addColorStop(0, "#ffffff"); orbGrd.addColorStop(0.3, "#38bdf8"); orbGrd.addColorStop(1, "rgba(56,189,248,0)");
-      c.fillStyle = orbGrd; c.save(); c.globalAlpha = orbPulse;
-      c.beginPath(); c.arc(W/2 - 79, H * 0.57, 16, 0, Math.PI * 2); c.fill(); c.restore();
-
-      // Floating mana crystals
-      const crystalData = [
-        {x: W * 0.15, y: H * 0.35, color: "#fef08a", sym: "☀️"},
-        {x: W * 0.85, y: H * 0.35, color: "#38bdf8", sym: "💧"},
-        {x: W * 0.12, y: H * 0.65, color: "#c084fc", sym: "💀"},
-        {x: W * 0.88, y: H * 0.65, color: "#f87171", sym: "🔥"},
-        {x: W * 0.5, y: H * 0.22, color: "#4ade80", sym: "🌳"},
-      ];
-      for (const crys of crystalData) {
-        const cf = Math.sin(t * 0.006 + crys.x * 0.01) * 8;
-        c.save(); c.globalAlpha = 0.7 + Math.sin(t * 0.008 + crys.y) * 0.25;
-        c.font = "22px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle";
-        c.fillText(crys.sym, crys.x, crys.y + cf); c.restore();
-      }
-
-      // Candle sconces on back wall
-      const candleX = [W * 0.3, W * 0.5, W * 0.7];
-      for (const cx of candleX) {
-        const cf2 = 0.5 + Math.sin(t * 0.012 + cx) * 0.5;
-        c.font = "14px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText("🕯️", cx, 30 + cf2 * 2);
-        c.save(); c.globalAlpha = cf2 * 0.4;
-        c.fillStyle = "#fbbf24"; c.beginPath(); c.arc(cx, 28, 18, 0, Math.PI * 2); c.fill(); c.restore();
-      }
-
-      // Hero
       _drawRoomHero(c, rh, t);
-
-      // Exit
-      c.fillStyle = "#020c1a";
-      c.beginPath(); c.arc(W/2, H, 28, Math.PI, 0); c.rect(W/2 - 28, H - 4, 56, 30); c.fill();
-      c.strokeStyle = "#38bdf8"; c.lineWidth = 2;
-      c.beginPath(); c.arc(W/2, H, 28, Math.PI, 0); c.stroke();
-      c.font = "bold 9px system-ui,sans-serif"; c.fillStyle = "#38bdf8"; c.textAlign = "center"; c.textBaseline = "top";
-      c.fillText("← EXIT", W/2, H - 28);
     }
 
     function drawRoomGuilds(c, W, H, t, rh) {
       c.fillStyle = "#120a00"; c.fillRect(0, 0, W, H);
+      if (tavernInteriorLoaded && tavernInterior.naturalWidth > 0) {
+        const fr = tavernFrame(W, H);
+        c.save();
+        c.imageSmoothingEnabled = false;
+        c.drawImage(tavernInterior, fr.x, fr.y, fr.dw, fr.dh);
+        c.restore();
+        c.fillStyle = "#1a1008";
+        c.beginPath();
+        c.ellipse(fr.x + fr.dw * 0.5, fr.y + fr.dh * 0.9, 34, 16, 0, 0, Math.PI * 2);
+        c.fill();
+        c.strokeStyle = "#f59e0b";
+        c.lineWidth = 2;
+        c.stroke();
+        c.font = "bold 9px system-ui,sans-serif";
+        c.fillStyle = "#f59e0b";
+        c.textAlign = "center";
+        c.textBaseline = "middle";
+        c.fillText("EXIT", fr.x + fr.dw * 0.5, fr.y + fr.dh * 0.9);
+      } else {
       // Warm stone floor
       for (let ty = 0; ty < H; ty += 48) {
         for (let tx = 0; tx < W; tx += 64) {
@@ -902,17 +867,8 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
       }
       // Map/document on table
       c.font = "22px sans-serif"; c.textAlign = "center"; c.textBaseline = "middle"; c.fillText("📜", W/2, H * 0.58);
-
-      // Hero
+      }
       _drawRoomHero(c, rh, t);
-
-      // Exit
-      c.fillStyle = "#120a00";
-      c.beginPath(); c.arc(W/2, H, 28, Math.PI, 0); c.rect(W/2 - 28, H - 4, 56, 30); c.fill();
-      c.strokeStyle = "#f59e0b"; c.lineWidth = 2;
-      c.beginPath(); c.arc(W/2, H, 28, Math.PI, 0); c.stroke();
-      c.font = "bold 9px system-ui,sans-serif"; c.fillStyle = "#f59e0b"; c.textAlign = "center"; c.textBaseline = "top";
-      c.fillText("← EXIT", W/2, H - 28);
     }
 
     function drawRoomDao(c, W, H, t, rh) {
@@ -1475,7 +1431,8 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
       const go = (path) => { if (typeof onNavigate === "function") onNavigate(path); else window.MTG && window.MTG.go && window.MTG.go(path); };
 
       switch (roomId) {
-        case "arena":
+        case "arena": {
+          const fr = colosseumMapLoaded ? colosseumFrame(W, H) : { x: 0, y: 0, dw: W, dh: H };
           return [
             {
               id: "arena_tables",
@@ -1483,9 +1440,9 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
               subtitle: "Browse Live & Open Tables",
               icon: "🏰",
               promptText: "Open Tables",
-              x: W * 0.5,
-              y: H * 0.32,
-              radius: 80,
+              x: fr.x + fr.dw * 0.5,
+              y: fr.y + fr.dh * 0.4,
+              radius: 70,
               onInteract() {
                 if (window.MTG && window.MTG.openTablesModal) window.MTG.openTablesModal();
               }
@@ -1496,9 +1453,9 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
               subtitle: "Quick Match vs Bot",
               icon: "🤖",
               promptText: "Duel Bot",
-              x: W * 0.5,
-              y: H * 0.52,
-              radius: 80,
+              x: fr.x + fr.dw * 0.5,
+              y: fr.y + fr.dh * 0.7,
+              radius: 70,
               onInteract() {
                 sessionStorage.setItem("mtg-pending-create", JSON.stringify({
                   name: "⚔️ Quick Match vs Bot",
@@ -1512,6 +1469,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
               }
             }
           ];
+        }
 
         case "builder":
           return [
@@ -1587,35 +1545,37 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
             }
           ];
 
-        case "guilds":
+        case "guilds": {
+          const fr = tavernInteriorLoaded ? tavernFrame(W, H) : { x: 0, y: 0, dw: W, dh: H };
           return [
             {
               id: "guilds_table",
-              name: "🛡️ High Council Round Table",
-              subtitle: "The 10 Guild Orders & Chambers",
-              icon: "🛡️",
+              name: "🍺 The Bar",
+              subtitle: "Guild orders and the common room",
+              icon: "🍺",
               promptText: "Guild Chambers",
-              x: W * 0.5,
-              y: H * 0.58,
-              radius: 85,
+              x: fr.x + fr.dw * 0.62,
+              y: fr.y + fr.dh * 0.58,
+              radius: 70,
               onInteract() {
                 if (window.MTG && window.MTG.openGuildsModal) window.MTG.openGuildsModal();
               }
             },
             {
               id: "guilds_throne",
-              name: "👑 Grand High Dais",
-              subtitle: "Prize Leagues & Seasonal Brackets",
-              icon: "👑",
+              name: "🔥 The Hearth",
+              subtitle: "Prize leagues and seasonal brackets",
+              icon: "🔥",
               promptText: "Prize Leagues",
-              x: W * 0.5,
-              y: H * 0.14,
-              radius: 80,
+              x: fr.x + fr.dw * 0.86,
+              y: fr.y + fr.dh * 0.46,
+              radius: 64,
               onInteract() {
                 if (window.MTG && window.MTG.openGuildsModal) window.MTG.openGuildsModal({ tab: "leagues" });
               }
             }
           ];
+        }
 
         case "dao":
           return [
@@ -1870,6 +1830,14 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
             const fy = Math.round((viewH - fh) / 2);
             roomHero.x = Math.round(viewW * 0.5);
             roomHero.y = fy + fh - Math.round(36 * fScale);
+          } else if (roomId === "arena") {
+            const fr = colosseumFrame(viewW, viewH);
+            roomHero.x = Math.round(fr.x + fr.dw * 0.5);
+            roomHero.y = Math.round(fr.y + fr.dh * 0.72);
+          } else if (roomId === "guilds") {
+            const fr = tavernFrame(viewW, viewH);
+            roomHero.x = Math.round(fr.x + fr.dw * 0.28);
+            roomHero.y = Math.round(fr.y + fr.dh * 0.62);
           } else {
             roomHero.x = Math.round(viewW * 0.5);
             roomHero.y = Math.round(viewH * 0.84);
@@ -1935,8 +1903,8 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
       switch (roomId) {
         case "arena": return `
           <div class="dfk-room-section">
-            <h3>⚔️ Enter the Arena</h3>
-            <p class="muted" style="font-size:12px">Choose your battle format and find a match. The crowd awaits, Planeswalker.</p>
+            <h3>⚔️ The Colosseum</h3>
+            <p class="muted" style="font-size:12px">Hero versus hero combat. Local tables stand in until the Colosseum contracts on Metis are connected.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-lobby">🏰 Browse Open Tables</button>
               <button class="btn gold" id="room-btn-bot">🤖 Quick Match vs Bot</button>
@@ -1970,7 +1938,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "builder": return `
           <div class="dfk-room-section">
-            <h3>📖 Deck Forge</h3>
+            <h3>🌱 The Gardens</h3>
             <p class="muted" style="font-size:12px">Craft, import, and analyze your decks with full Scryfall oracle data.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-newdeck">✨ Create New Deck</button>
@@ -1994,7 +1962,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "guilds": return `
           <div class="dfk-room-section">
-            <h3>⚔️ Guild Orders</h3>
+            <h3>🍺 The Tavern</h3>
             <p class="muted" style="font-size:12px">Join a Ravnica guild, earn seasonal glory, and climb prize league brackets.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-guilds">🛡️ View All Guilds</button>
@@ -2012,7 +1980,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "dao": return `
           <div class="dfk-room-section">
-            <h3>🏛️ DAO Governance</h3>
+            <h3>🏦 The Bank</h3>
             <p class="muted" style="font-size:12px">Vote on proposals, manage the wager fee treasury, and claim staking rewards.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-dao">🗳️ Open DAO Panel</button>
@@ -2029,7 +1997,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "dnd": return `
           <div class="dfk-room-section">
-            <h3>🐉 D&D Campaign Engine</h3>
+            <h3>⚗️ The Alchemist</h3>
             <p class="muted" style="font-size:12px">2D tile battlemaps, token positioning, dice rolling, and multiplayer chronicles.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-dnd">🗺️ Open Battlemap</button>
@@ -2046,7 +2014,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "bazaar": return `
           <div class="dfk-room-section">
-            <h3>🎴 Oracle Bazaar</h3>
+            <h3>⚖️ The Marketplace</h3>
             <p class="muted" style="font-size:12px">Boosters, card collection, Limited drafts, and the Chronicler's quest board.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-marketplace">🛒 Open Card Marketplace</button>
@@ -2082,7 +2050,7 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           </div>`;
         case "mirror": return `
           <div class="dfk-room-section">
-            <h3>🪞 Mystic Mirror</h3>
+            <h3>🔮 Meditation Circle</h3>
             <p class="muted" style="font-size:12px">Customize your planeswalker avatar, inspect stats, and change themes.</p>
             <div style="display:flex;flex-direction:column;gap:8px;margin-top:12px">
               <button class="btn gold" id="room-btn-profile">✨ Open Character Sheet</button>
@@ -2891,12 +2859,9 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
       const mW = 160, mH = 110;
       mmCtx.clearRect(0, 0, mW, mH);
       // Background
-      if (ff7MapLoaded || (ff7MapImg.complete && ff7MapImg.naturalWidth > 0)) {
-        mmCtx.drawImage(ff7MapImg, 0, 0, mW, mH);
-        mmCtx.fillStyle = "rgba(4, 8, 18, 0.4)"; mmCtx.fillRect(0, 0, mW, mH);
-      } else {
-        mmCtx.fillStyle = "rgba(8,12,20,0.92)"; mmCtx.fillRect(0, 0, mW, mH);
-      }
+      const kingdom = ensurePixelKingdom();
+      mmCtx.imageSmoothingEnabled = false;
+      mmCtx.drawImage(kingdom, 0, 0, mW, mH);
       mmCtx.strokeStyle = "rgba(215,180,92,0.6)"; mmCtx.lineWidth = 1; mmCtx.strokeRect(0, 0, mW, mH);
 
       // Mana well
@@ -3337,7 +3302,21 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
           roomHero.x += (dx / dist) * roomHero.speed; roomHero.y += (dy / dist) * roomHero.speed; roomHero.isMoving = true;
         } else { roomHero.targetX = null; roomHero.targetY = null; roomHero.isMoving = false; }
       } else { roomHero.isMoving = false; }
-      if (currentRoom === "mirror") {
+      if (currentRoom === "arena" && colosseumMapLoaded) {
+        const fr = colosseumFrame(viewW, viewH);
+        roomHero.x = Math.max(fr.x + fr.dw * 0.28, Math.min(fr.x + fr.dw * 0.72, roomHero.x));
+        roomHero.y = Math.max(fr.y + fr.dh * 0.58, Math.min(fr.y + fr.dh * 0.9, roomHero.y));
+        if (roomHero.y > fr.y + fr.dh * 0.84 && Math.abs(roomHero.x - (fr.x + fr.dw * 0.5)) < 48) {
+          transitionToRoom("overworld");
+        }
+      } else if (currentRoom === "guilds" && tavernInteriorLoaded) {
+        const fr = tavernFrame(viewW, viewH);
+        roomHero.x = Math.max(fr.x + fr.dw * 0.14, Math.min(fr.x + fr.dw * 0.86, roomHero.x));
+        roomHero.y = Math.max(fr.y + fr.dh * 0.4, Math.min(fr.y + fr.dh * 0.9, roomHero.y));
+        if (roomHero.y > fr.y + fr.dh * 0.82 && Math.abs(roomHero.x - (fr.x + fr.dw * 0.5)) < 42) {
+          transitionToRoom("overworld");
+        }
+      } else if (currentRoom === "mirror") {
         const fScale = Math.min((viewW * 0.90) / 352, (viewH * 0.90) / 319, 1.85);
         const fw = Math.round(352 * fScale);
         const fh = Math.round(319 * fScale);
@@ -3363,6 +3342,35 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
        DRAW — OVERWORLD
     ══════════════════════════════════════════════════════════════════════ */
 
+    function drawImperialLabels(ctx) {
+      const cx = viewW * 0.5;
+      const cy = viewH * 0.47;
+      const R = Math.min(viewW, viewH) * 0.34;
+      const labels = [
+        ["Market", 30],
+        ["Arena", 90],
+        ["Arboretum", 150],
+        ["Temple", 210],
+        ["Talos", 270],
+        ["Gardens", 330],
+      ];
+      ctx.save();
+      ctx.font = "bold 12px system-ui, sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.lineWidth = 3;
+      ctx.strokeStyle = "rgba(255,248,230,0.85)";
+      ctx.fillStyle = "#1c140c";
+      for (const [name, deg] of labels) {
+        const a = deg * Math.PI / 180;
+        const x = cx + Math.sin(a) * R * 0.33;
+        const y = cy - Math.cos(a) * R * 0.33;
+        ctx.strokeText(name, x, y);
+        ctx.fillText(name, x, y);
+      }
+      ctx.restore();
+    }
+
     function draw(t) {
       const dpr = window.devicePixelRatio || 1;
       ctx.save(); ctx.scale(dpr, dpr);
@@ -3376,39 +3384,13 @@ function drawPixelSprite(c, type, x, y, scale, bob) {
 
       // ── OVERWORLD ──
 
-      // 1. FF7 World Map Rendering
-      if (ff7MapLoaded || (ff7MapImg.complete && ff7MapImg.naturalWidth > 0)) {
-        ctx.drawImage(ff7MapImg, 0, 0, viewW, viewH);
+      // 1. Pixel kingdom overworld
+      const kingdom = ensurePixelKingdom();
+      ctx.imageSmoothingEnabled = false;
+      ctx.drawImage(kingdom, 0, 0, viewW, viewH);
+      drawImperialLabels(ctx);
 
-        // Planetary atmospheric vignette & depth shading
-        const vig = ctx.createRadialGradient(viewW * 0.5, viewH * 0.52, Math.min(viewW, viewH) * 0.35, viewW * 0.5, viewH * 0.52, Math.max(viewW, viewH) * 0.72);
-        vig.addColorStop(0, "rgba(0,0,0,0)");
-        vig.addColorStop(0.7, "rgba(2, 6, 16, 0.22)");
-        vig.addColorStop(1, "rgba(1, 3, 10, 0.52)");
-        ctx.fillStyle = vig;
-        ctx.fillRect(0, 0, viewW, viewH);
-
-        // Subtle drifting cloud mist
-        const cTime = t * 0.0002;
-        ctx.fillStyle = "rgba(255, 255, 255, 0.035)";
-        const c1X = ((cTime * 140) % (viewW + 200)) - 100;
-        ctx.beginPath(); ctx.ellipse(c1X, viewH * 0.32, 140, 32, -0.05, 0, Math.PI * 2); ctx.fill();
-        const c2X = (((cTime * 110) + 450) % (viewW + 300)) - 150;
-        ctx.beginPath(); ctx.ellipse(c2X, viewH * 0.62, 180, 42, 0.06, 0, Math.PI * 2); ctx.fill();
-      } else {
-        ctx.fillStyle = "#0c182a";
-        ctx.fillRect(0, 0, viewW, viewH);
-      }
-
-      // 2. Lifestream & Mana Ley-Lines (emanating from Northern Crater)
-      const leyPulse = 0.38 + Math.sin(Date.now() * 0.004) * 0.14;
-      const leyColors = { arena: `rgba(239,68,68,${leyPulse})`, builder: `rgba(56,189,248,${leyPulse})`, guilds: `rgba(245,158,11,${leyPulse})`, dao: `rgba(251,191,36,${leyPulse})`, dnd: `rgba(192,132,252,${leyPulse})`, bazaar: `rgba(16,185,129,${leyPulse})` };
-      landmarks.forEach(lm => {
-        ctx.strokeStyle = leyColors[lm.id] || `rgba(215,180,92,${leyPulse})`; ctx.lineWidth = 2.2;
-        ctx.setLineDash([8, 12]);
-        ctx.beginPath(); ctx.moveTo(manaWell.x, manaWell.y); ctx.lineTo(lm.x, lm.y); ctx.stroke();
-        ctx.setLineDash([]);
-      });
+      // Roads are baked into the pixel map. No overlay lines.
 
       // 8. The 5-Color Mana Well
       ctx.fillStyle = "#0f172a"; ctx.beginPath(); ctx.arc(manaWell.x, manaWell.y, manaWell.radius, 0, Math.PI * 2); ctx.fill();

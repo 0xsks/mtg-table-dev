@@ -34,20 +34,9 @@
       "image_small": "/api/img/577e99a7-4a55-4314-8f08-2ae0c33b85c7?size=small"
     },
     {
-      "id": "3c726a60-8de7-4d5e-8ad5-8405e6ac36b5",
-      "name": "Glacial Fortress",
-      "count": 20,
-      "board": "main",
-      "mana_cost": "",
-      "type_line": "Land",
-      "cmc": 0,
-      "colors": [],
-      "image_small": "/api/img/3c726a60-8de7-4d5e-8ad5-8405e6ac36b5?size=small"
-    },
-    {
       "id": "5041dcfd-c1af-448c-91f7-75fd1d34e93e",
       "name": "Serra Avatar",
-      "count": 3,
+      "count": 1,
       "board": "main",
       "mana_cost": "{4}{W}{W}{W}",
       "type_line": "Creature — Avatar",
@@ -99,7 +88,7 @@
     {
       "id": "a9f39d28-08eb-4eff-ae55-abd377877a27",
       "name": "Dragonlord Ojutai",
-      "count": 2,
+      "count": 1,
       "board": "main",
       "mana_cost": "{3}{W}{U}",
       "type_line": "Legendary Creature — Elder Dragon",
@@ -161,10 +150,32 @@
         "U"
       ],
       "image_small": "/api/img/43417d07-725e-4c3d-99d2-bbbfbdeee770?size=small"
+    },
+    {
+      "id": "50ef0ac3-e911-4d67-a751-8d86160ae843",
+      "name": "Azorius Chancery",
+      "count": 15,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/50ef0ac3-e911-4d67-a751-8d86160ae843?size=small"
+    },
+    {
+      "id": "efd35cb4-862d-4699-a197-b744989b3ceb",
+      "name": "Tundra",
+      "count": 8,
+      "board": "main",
+      "mana_cost": "",
+      "type_line": "Land — Plains Island",
+      "cmc": 0,
+      "colors": [],
+      "image_small": "/api/img/efd35cb4-862d-4699-a197-b744989b3ceb?size=small"
     }
   ],
   "starter": false,
   "forkedFrom": "520726891e",
   "created": 1790307141692,
-  "updated": 1790311669442
+  "updated": 1790380704848
 }

@@ -13,12 +13,50 @@
     overlay = document.createElement("div");
     overlay.id = "table-full-overlay";
     overlay.style.cssText = "position:fixed;top:0;left:0;width:100vw;height:100vh;z-index:100050;background:var(--bg);";
-    overlay.innerHTML = `<div class="table-screen" id="table-root" style="height:100%;"><div class="playmat"><div class="pregame"><h2>Connecting…</h2><p class="muted">Talking to the table on this computer.</p></div></div><aside class="sidebar"></aside></div>
+    overlay.innerHTML = `<div class="table-screen" id="table-root" style="height:100%;"><div class="playmat"><div class="pregame"><h2>Connecting…</h2><p class="muted">Talking to the table on this computer.</p></div></div><aside class="sidebar"></aside><button type="button" id="sidebar-toggle" class="sidebar-toggle" title="Hide the side panel">⟩</button></div>
       <div class="preview" id="preview" hidden></div>
       <div class="menu" id="cmenu" hidden></div>
       <div id="atk-fx" class="atk-fx" hidden></div>
-      <button style="position:fixed;top:10px;left:10px;z-index:10000;background:rgba(0,0,0,0.6);" class="btn ghost small" onclick="document.getElementById('table-full-overlay').remove(); window.MTG_TABLE_CONN && window.MTG_TABLE_CONN.close(); window.location.hash = '#/';">⬅️ Leave Table</button>`;
+      <button type="button" id="leave-table" style="position:fixed;top:10px;left:10px;z-index:10000;background:rgba(0,0,0,0.6);" class="btn ghost small">⬅️ Leave Table</button>`;
     document.body.appendChild(overlay);
+
+    let sidebarOpen = true;
+    try { sidebarOpen = localStorage.getItem("mtg-sidebar") !== "0"; } catch { sidebarOpen = true; }
+    function applySidebar() {
+      const root = document.getElementById("table-root");
+      const btn = document.getElementById("sidebar-toggle");
+      if (root) root.classList.toggle("sidebar-shut", !sidebarOpen);
+      if (btn) {
+        btn.textContent = sidebarOpen ? "⟩" : "⟨";
+        btn.title = sidebarOpen ? "Hide the side panel" : "Show the side panel";
+      }
+    }
+    applySidebar();
+    const sideBtn = document.getElementById("sidebar-toggle");
+    if (sideBtn) {
+      sideBtn.onclick = () => {
+        sidebarOpen = !sidebarOpen;
+        try { localStorage.setItem("mtg-sidebar", sidebarOpen ? "1" : "0"); } catch {}
+        applySidebar();
+      };
+    }
+    function leaveMatch(openLobby) {
+      window.MTG_RECONNECT = null;
+      const wrap = window.MTG_TABLE_CONN;
+      if (wrap && wrap.ws) {
+        window.MTG_WS = null;
+        try { wrap.ws.close(); } catch {}
+      }
+      window.MTG_TABLE_CONN = null;
+      overlay.remove();
+      document.body.classList.remove("view-table");
+      if (location.hash.indexOf("#/table") === 0) location.hash = "#/";
+      if (openLobby) {
+        setTimeout(() => window.MTG.openTablesModal && window.MTG.openTablesModal(), 60);
+      }
+    }
+    const leaveBtn = document.getElementById("leave-table");
+    if (leaveBtn) leaveBtn.onclick = () => leaveMatch(false);
 
     let state = null;
     let hovered = null;
@@ -29,6 +67,9 @@
     let autoPickedDeck = false;
     const firstSeen = new Map();
     const attacking = new Set();
+    const attackPick = new Set();
+    let pickingAttackers = false;
+    let blockPick = null;
     const attachments = new Map();
     let primedBf = false;
     let lastActive = null;
@@ -53,14 +94,29 @@
     function hasDefender(c) {
       return /\bDefender\b/i.test(`${c.type_line || ""} ${c.oracle_text || ""} ${(c.keywords || []).join(" ")}`);
     }
-    function canAttack(c, mine) {
-      if (!state || state.phase !== "combat" || !state.started || state.ended) return false;
-      if (!myTurn()) return false;
-      if (!mine || c._zone !== "battlefield") return false;
+    function legalAttacker(c) {
       if (!isCreature(c)) return false;
-      if (c.tapped || attacking.has(c.iid) || c.hasAttacked) return false;
-      if (isSick(c)) return false;
-      if (hasDefender(c)) return false;
+      if (c.tapped || c.hasAttacked) return false;
+      if (isSick(c) || hasDefender(c)) return false;
+      return true;
+    }
+    function canAttack(c, mine) {
+      if (!pickingAttackers) return false;
+      if (!state || !state.started || state.ended) return false;
+      if (state.combat && state.combat.step === "blockers") return false;
+      if (!myTurn() || !mine) return false;
+      if (c._zone !== "battlefield") return false;
+      return legalAttacker(c);
+    }
+    function defenderSeat() {
+      if (!state || !state.combat) return -1;
+      return (state.combat.attackerSeat + 1) % 2;
+    }
+    function canBlock(c, mine) {
+      if (!state || !state.combat || state.combat.step !== "blockers") return false;
+      if (state.you !== defenderSeat()) return false;
+      if (!mine || c._zone !== "battlefield") return false;
+      if (!isCreature(c) || c.tapped) return false;
       return true;
     }
     function isInstant(c) {
@@ -659,8 +715,12 @@
       const tapped = !c._style && c.tapped ? "tapped" : "";
       const down = c.faceDown || c.hidden ? "face-down" : "";
       const sick = c._zone === "battlefield" && isSick(c) ? "sick" : "";
-      const atk = attacking.has(c.iid) ? "attacking" : "";
+      const atk = c._isAttacker || attacking.has(c.iid) ? "attacking" : "";
       const canAtk = c._canAttack ? "can-attack" : "";
+      const picked = c._attackPicked ? "attack-picked" : "";
+      const canBlk = c._canBlock ? "can-block" : "";
+      const blkTgt = c._blockTarget ? "block-target" : "";
+      const blocking = c._blocking ? "blocking" : "";
       const ench = c._enchanted ? "enchanted" : "";
       const aura = isAura(c) ? "aura" : "";
       const extra = c._extra ? "extra-hand" : "";
@@ -668,14 +728,18 @@
       const flags = [
         c.tapped ? `<i>↷ Tapped</i>` : "",
         sick ? `<i class="sick">💤 Sick</i>` : "",
-        canAtk ? `<i class="can-atk">⚔️ Attack</i>` : "",
-        atk ? `<i class="atk">⚔️ Attacking</i>` : "",
+        canAtk ? `<i class="can-atk">⚔️ Can attack</i>` : "",
+        picked ? `<i class="picked">✓ Selected</i>` : "",
+        atk ? `<i class="atk">⚔️ Attacking${c._blockLabel ? " · " + escapeHtml(c._blockLabel) : ""}</i>` : "",
+        blkTgt ? `<i class="tgt">🎯 Block this</i>` : "",
+        canBlk ? `<i class="can-blk">🛡️ Can block</i>` : "",
+        blocking ? `<i class="blk">🛡️ ${c._blockLabel ? escapeHtml(c._blockLabel) : "Blocking"}</i>` : "",
         isAura(c) ? `<i class="aura">✨ Aura</i>` : "",
         isEnchantment(c) && !isAura(c) ? `<i class="ench">✨ Enchant</i>` : "",
         c._enchanted ? `<i class="ench">✨ Enchanted</i>` : "",
         extra ? `<i class="over">+${handMax()}</i>` : "",
       ].filter(Boolean).join("");
-      return `<div class="mtg-card ${cls} ${tapped} ${down} ${sick} ${atk} ${canAtk} ${ench} ${aura} ${extra} ${castable}"
+      return `<div class="mtg-card ${cls} ${tapped} ${down} ${sick} ${atk} ${canAtk} ${picked} ${canBlk} ${blkTgt} ${blocking} ${ench} ${aura} ${extra} ${castable}"
         data-iid="${c.iid}" data-zone="${c._zone || ""}" data-seat="${c.ownerSeat}"
         style="${c._style || ""}">
         <img src="${cardImg(c)}" alt="${escapeHtml(c.name || "")}" />
@@ -688,14 +752,26 @@
       const enchanted = enchantedSet();
       return (cards || [])
         .map((c) => {
-          const atk = attacking.has(c.iid);
-          const eligible = canAttack(c, mine);
+          const declared = state.combat && state.combat.attackers.find((a) => a.iid === c.iid);
+          const picked = attackPick.has(c.iid);
+          const atk = !!(declared || picked);
+          const assigned = state.combat && state.combat.attackers.find((a) => a.blockedBy === c.iid);
+          const view = { ...c, _zone: "battlefield" };
           const rot = c.tapped ? " rotate(88deg)" : atk ? " translateY(-12px)" : "";
           const copy = {
-            ...c,
-            _zone: "battlefield",
+            ...view,
             _enchanted: enchanted.has(c.iid),
-            _canAttack: eligible,
+            _canAttack: canAttack(view, mine),
+            _attackPicked: picked,
+            _canBlock: canBlock(view, mine),
+            _isAttacker: atk,
+            _blockTarget: !!(declared && state.combat.step === "blockers" && state.you === defenderSeat()),
+            _blocking: blockPick === c.iid || !!assigned,
+            _blockLabel: declared && declared.blockerName
+              ? `blocked by ${declared.blockerName}`
+              : assigned
+                ? `blocking ${assigned.name}`
+                : "",
             _style: `left:${(c.x || 0.5) * 100}%;top:${(c.y || 0.5) * 100}%;z-index:${c.z || 1};transform:translate(-50%,-50%)${rot}`,
           };
           return renderCard(copy, mine ? "mine" : "theirs locked");
@@ -783,16 +859,7 @@
               ? (state.stack || [])
                   .map((c) => renderCard({ ...c, _zone: "stack" }, "in-stack"))
                   .join("") + `<button class="btn gold small" data-act="resolve">Resolve</button>`
-              : state.phase === "combat"
-                ? `<div class="combat-hud-banner">
-                    <div class="combat-hud-title">
-                      <span class="combat-icon">⚔️</span>
-                      <span>COMBAT PHASE — Click your creatures to attack!</span>
-                      <span class="combat-tally">${combatTallyHTML(my)}</span>
-                    </div>
-                    <button type="button" class="btn gold pulse" data-act="passCombat" id="btn-pass-combat">⏭️ Pass Combat</button>
-                  </div>`
-                : `— ${state.phase === "combat" ? "COMBAT" : "stack"} —`}
+              : combatBannerHTML(you)}
           </div>
           <div class="bf you ${mineTurn ? "active-side" : ""}" data-drop="battlefield" data-seat="${my.seat}">
             <span class="bf-label">Your battlefield</span>
@@ -825,7 +892,7 @@
             ${state.ended ? `<button class="btn gold pulse" data-act="rematch" style="grid-column: 1 / -1; font-weight: 700; padding: 10px; font-size: 14px">⚔️ Rematch</button>` : ""}
             ${state.phase === "combat" ? `<button class="btn gold pulse" data-act="passCombat" ${mineTurn ? "" : "disabled"}>⏭️ Pass Combat</button>` : `<button class="btn gold" data-act="nextPhase" ${mineTurn ? "" : "disabled"}>💫 Next phase</button>`}
             <button class="btn ${mineTurn ? "gold pulse" : ""}" data-act="passTurn" ${mineTurn ? "" : "disabled"}>✨ Pass turn</button>
-            <button class="btn gold" data-act="attack" ${mineTurn ? "" : "disabled"}>⚔️ Attack</button>
+            <button class="btn gold" data-act="attack" ${mineTurn && !(state.combat && state.combat.step === "blockers") ? "" : "disabled"}>⚔️ Attack</button>
             <button class="btn" data-act="draw">🎴 Draw</button>
             <button class="btn" data-act="untapAll">🌿 Untap all</button>
             <button class="btn" data-act="shuffle">🔮 Shuffle</button>
@@ -914,10 +981,12 @@
       </div>`;
     }
 
+    const ZONE_NAME = { library: "Library", graveyard: "Graveyard", exile: "Exile", command: "Command" };
     function zoneBtn(z, s) {
-      return `<div class="zone" data-drop="${z}" data-seat="${s.seat}" data-open="${z}">
-        <b>${zoneCount(s.zones[z])}</b>${z.slice(0, 3)}
-      </div>`;
+      const label = ZONE_NAME[z] || z;
+      return `<button type="button" class="zone" data-drop="${z}" data-seat="${s.seat}" data-open="${z}" title="Open ${label}">
+        <b>${zoneCount(s.zones[z])}</b><span>${label}</span>
+      </button>`;
     }
 
     function victoryBannerHTML() {
@@ -965,7 +1034,7 @@
           </div>
           <div class="victory-actions">
             <button type="button" class="btn gold pulse" id="rematch-btn">⚔️ Rematch</button>
-            <a class="btn ghost" onclick="window.MTG.openTablesModal && window.MTG.openTablesModal(); return false;" href="#">🚪 Return to Tables</a>
+            <button type="button" class="btn ghost" id="return-tables">🚪 Return to Tables</button>
           </div>
         </div>
       `;
@@ -1232,6 +1301,8 @@
     function bindPlay() {
       const rematchBtn = $("#rematch-btn");
       if (rematchBtn) rematchBtn.onclick = () => sendAction("rematch");
+      const returnBtn = $("#return-tables");
+      if (returnBtn) returnBtn.onclick = () => leaveMatch(true);
       $$("[data-life]").forEach((b) => {
         b.onclick = () => {
           const seat = Number(b.closest("[data-seat]").dataset.seat);
@@ -1252,6 +1323,7 @@
         });
         el.addEventListener("dblclick", (e) => {
           e.preventDefault();
+          if (pickingAttackers || (state && state.combat && state.combat.step === "blockers")) return;
           if (!isMine(el.dataset.iid)) {
             toast("You can only tap your own cards");
             return;
@@ -1269,12 +1341,35 @@
         });
         el.addEventListener("click", (e) => {
           if (e.detail === 2) return;
+          const blockingNow = state && state.combat && state.combat.step === "blockers" && state.you === defenderSeat();
+          if (blockingNow) {
+            if (el.classList.contains("can-block")) {
+              blockPick = blockPick === el.dataset.iid ? null : el.dataset.iid;
+              render();
+              return;
+            }
+            const atk = (state.combat.attackers || []).find((a) => a.iid === el.dataset.iid);
+            if (atk) {
+              if (!blockPick) {
+                toast("Click one of your creatures first, then the attacker");
+                return;
+              }
+              sendAction("assignBlock", {
+                attacker: atk.iid,
+                blocker: atk.blockedBy === blockPick ? null : blockPick,
+              });
+              blockPick = null;
+              return;
+            }
+          }
           if (el.classList.contains("theirs")) return;
           selected = el.dataset.iid;
           $$(".mtg-card.selected").forEach((n) => n.classList.remove("selected"));
           el.classList.add("selected");
-          if (state && state.phase === "combat" && myTurn() && el.classList.contains("can-attack")) {
-            declareAttack();
+          if (pickingAttackers && el.classList.contains("can-attack")) {
+            if (attackPick.has(el.dataset.iid)) attackPick.delete(el.dataset.iid);
+            else attackPick.add(el.dataset.iid);
+            render();
           }
         });
       });
@@ -1452,13 +1547,25 @@
       if (act === "mulligan") sendAction("mulligan");
       if (act === "nextPhase") sendAction("nextPhase");
       if (act === "passCombat") {
+        if (state.combat && state.combat.step === "blockers") {
+          toast("Wait for the other player to finish blocking");
+          return;
+        }
+        pickingAttackers = false;
+        attackPick.clear();
         attacking.clear();
         sendAction("setPhase", { phase: "main2" });
-        toast("Combat passed ⚔️→🛡️");
+        render();
       }
       if (act === "passTurn") autoFinishTurn();
       if (act === "resolve") sendAction("resolve");
-      if (act === "attack") declareAttack();
+      if (act === "attack") beginAttackPick();
+      if (act === "confirmAttackers") confirmAttackers();
+      if (act === "confirmBlocks") sendAction("confirmBlocks");
+      if (act === "clearBlock") {
+        blockPick = null;
+        render();
+      }
       if (act === "roll") sendAction("roll", { sides: 20, n: 1 });
       if (act === "mill") sendAction("mill", { n: 1 });
       if (act === "interrupt") sendAction("interrupt");
@@ -1512,30 +1619,77 @@
       }
     }
 
-    function declareAttack() {
+    function combatBannerHTML(you) {
+      const combat = state.combat;
+      if (pickingAttackers) {
+        const n = attackPick.size;
+        return `<div class="combat-hud-banner">
+          <div class="combat-hud-title">
+            <span class="combat-icon">⚔️</span>
+            <span>Click the glowing creatures, then confirm.</span>
+            <span class="combat-tally">${n} selected</span>
+          </div>
+          <button type="button" class="btn gold pulse" data-act="confirmAttackers" ${n ? "" : "disabled"}>Confirm attack</button>
+          <button type="button" class="btn ghost" data-act="passCombat">Cancel</button>
+        </div>`;
+      }
+      if (combat && combat.step === "blockers") {
+        const names = combat.attackers.map((a) => a.blockerName ? `${a.name} (blocked by ${a.blockerName})` : a.name).join(", ");
+        if (you === defenderSeat()) {
+          const pickedName = blockPick ? findInst(blockPick)?.card?.name : "";
+          return `<div class="combat-hud-banner">
+            <div class="combat-hud-title">
+              <span class="combat-icon">🛡️</span>
+              <span>${pickedName ? `Selected ${escapeHtml(pickedName)}. Click the attacker it blocks.` : "Block step. Click one of your creatures, then the attacker. Confirm with no blocks to take the damage."}</span>
+              <span class="combat-tally">${escapeHtml(names)}</span>
+            </div>
+            <button type="button" class="btn gold pulse" data-act="confirmBlocks">Confirm blocks</button>
+          </div>`;
+        }
+        return `<div class="combat-hud-banner">
+          <div class="combat-hud-title">
+            <span class="combat-icon">🛡️</span>
+            <span>Waiting for blocks: ${escapeHtml(names)}</span>
+          </div>
+        </div>`;
+      }
+      if (state.phase === "combat") {
+        return `<div class="combat-hud-banner">
+          <div class="combat-hud-title"><span class="combat-icon">⚔️</span><span>Combat — press Attack to choose creatures.</span></div>
+          <button type="button" class="btn gold pulse" data-act="passCombat">⏭️ Pass combat</button>
+        </div>`;
+      }
+      return "— stack —";
+    }
+
+    function beginAttackPick() {
       if (!myTurn()) {
         toast("Not your turn");
         return;
       }
-      const f = selected ? findInst(selected) : null;
-      if (!f || !isMine(selected) || !isCreature(f.card)) {
-        toast("Select one of your creatures, then Attack");
+      if (state.combat && state.combat.step === "blockers") {
+        toast("Waiting for the other player to block");
         return;
       }
-      if (isSick(f.card)) {
-        toast(`${f.card.name} has summoning sickness`);
-        return;
-      }
-      if (f.card.tapped) {
-        toast("That creature is tapped");
-        return;
-      }
+      const any = (state.seats[state.you].zones.battlefield || []).some((c) => legalAttacker(c));
+      pickingAttackers = true;
+      attackPick.clear();
       if (state.phase !== "combat") sendAction("setPhase", { phase: "combat" });
-      attacking.add(f.card.iid);
-      sendAction("attack", { iid: f.card.iid });
-      sendAction("chat", { text: `attacks with ${f.card.name}` });
-      sendAction("pos", { iid: f.card.iid, x: f.card.x || 0.5, y: Math.max(0.12, (f.card.y || 0.55) - 0.16) });
-      showCombatFx(f.card);
+      if (!any) toast("No creatures can attack right now");
+      render();
+    }
+
+    function confirmAttackers() {
+      if (!attackPick.size) {
+        toast("Click at least one glowing creature");
+        return;
+      }
+      const iids = [...attackPick];
+      pickingAttackers = false;
+      attackPick.clear();
+      sendAction("declareAttackers", { iids });
+      const names = iids.map((id) => findInst(id)?.card?.name).filter(Boolean);
+      if (names.length) showCombatFx(names.join(", "));
     }
 
     let lastAtkFx = 0;
@@ -1682,6 +1836,8 @@
         el.ondragstart = (e) => e.preventDefault();
         el.addEventListener("pointerdown", (e) => {
           if (e.button !== 0) return;
+          if (pickingAttackers && el.classList.contains("can-attack")) return;
+          if (state && state.combat && state.combat.step === "blockers" && (el.classList.contains("can-block") || el.classList.contains("block-target") || el.classList.contains("attacking"))) return;
           if (!canDrag(el.dataset.iid)) return;
           const from = findInst(el.dataset.iid);
           drag = { iid: el.dataset.iid, zone: from ? from.zone : el.dataset.zone };
@@ -1711,7 +1867,7 @@
       if (e.key === "d" || e.key === "D") sendAction("draw");
       if (e.key === "n" || e.key === "N") sendAction("nextPhase");
       if (e.key === "p" || e.key === "P") autoFinishTurn();
-      if (e.key === "a" || e.key === "A") declareAttack();
+      if (e.key === "a" || e.key === "A") beginAttackPick();
       if (e.key === "u" || e.key === "U") sendAction("untapAll");
       if (!iid || !isMine(iid)) return;
       if (e.key === "t" || e.key === "T") sendAction("tap", { iid });

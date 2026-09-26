@@ -1,0 +1,73 @@
+{
+  "source": "Kingdom Studios public repos and https://devs.defikingdoms.com",
+  "localRepos": "/home/jane/defi-kingdoms",
+  "realms": {
+    "serendale": "Kaia (formerly Klaytn). Power token JADE. Early Harmony contracts live in contracts/.",
+    "crystalvale": "DFK Chain, an Avalanche L1. Power token CRYSTAL. Gas is JEWEL.",
+    "colosseum": "Metis. PVP only."
+  },
+  "areas": [
+    {
+      "id": "bazaar",
+      "name": "The Marketplace",
+      "does": "Swap tokens on the UniswapV2 DEX, mint LP seeds, and sell quest items to the vendor for gold.",
+      "contracts": ["UniswapV2Router02", "UniswapV2Factory", "JewelToken"],
+      "docs": "docs/how-defi-kingdoms-works/decentralized-exchange.md"
+    },
+    {
+      "id": "builder",
+      "name": "The Gardens",
+      "does": "Stake LP seeds in MasterGardener pools to earn power-token emissions. Heroes can run gardening quests on the same pools.",
+      "contracts": ["MasterGardener"],
+      "docs": "docs/how-defi-kingdoms-works/the-gardens/README.md"
+    },
+    {
+      "id": "guilds",
+      "name": "The Tavern",
+      "does": "Hero catalog, sale auctions, rentals for summoning, and sending a hero to another profile.",
+      "contracts": ["Hero auction", "Hero rental"],
+      "docs": "https://devs.defikingdoms.com/contracts/sales-and-rentals/hero-auction.md",
+      "code": "dfktools/auctions and dfktools/hero"
+    },
+    {
+      "id": "dao",
+      "name": "The Bank",
+      "does": "Lock JEWEL for xJEWEL and claim vested rewards through the Banker.",
+      "contracts": ["Bank", "Banker"],
+      "docs": "contracts/contracts/Bank.sol"
+    },
+    {
+      "id": "dnd",
+      "name": "The Alchemist",
+      "does": "Craft potions and consumables from profession reagents.",
+      "contracts": ["Alchemist crafting"],
+      "docs": "https://devs.defikingdoms.com/crafting/alchemist.md"
+    },
+    {
+      "id": "mirror",
+      "name": "Meditation Circle",
+      "does": "Spend runes to level a hero once their experience bar is full.",
+      "contracts": ["MeditationCircle"],
+      "docs": "https://devs.defikingdoms.com/contracts/meditation-circle.md",
+      "code": "dfktools/meditation"
+    },
+    {
+      "id": "arena",
+      "name": "The Colosseum",
+      "does": "PVP combat on Metis. Local matches stand in until those contracts are called.",
+      "contracts": ["PVP combat"],
+      "docs": "https://devs.defikingdoms.com/contracts/pvp-combat.md"
+    }
+  ],
+  "harmonyAddresses": {
+    "note": "Serendale 1.0 addresses published in KingdomStudiosIO/contracts README. Later realms use different addresses listed on devs.defikingdoms.com.",
+    "UniswapV2Factory": "0x9014B937069918bd319f80e8B3BB4A2cf6FAA5F7",
+    "UniswapV2Router02": "0x24ad62502d1C652Cc7684081169D04896aC20f30",
+    "JewelToken": "0x72Cb10C6bfA5624dD07Ef608027E366bd690048F",
+    "Bank": "0xA9cE83507D872C5e1273E745aBcfDa849DAA654F",
+    "Banker": "0x3685Ec75Ea531424Bbe67dB11e07013ABeB95f1e",
+    "MasterGardener": "0xDB30643c71aC9e2122cA0341ED77d09D5f99F924",
+    "Profiles": "0x6391F796D56201D279a42fD3141aDa7e26A3B4A5",
+    "Airdrop": "0xa678d193fEcC677e137a00FEFb43a9ccffA53210"
+  }
+}

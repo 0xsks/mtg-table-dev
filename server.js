@@ -1694,10 +1694,115 @@ function viewFor(t, playerId) {
     botDifficulty: t.botDifficulty || "normal",
     you: mySeat,
     seats,
+    combat: t.combat
+      ? {
+          step: t.combat.step,
+          attackerSeat: t.combat.attackerSeat,
+          attackers: (t.combat.attackers || []).map((a) => ({
+            iid: a.iid,
+            name: a.name,
+            power: a.power,
+            blockedBy: a.blockedBy || null,
+            blockerName: a.blockerName || null,
+          })),
+        }
+      : null,
     chat: t.chat.slice(-80),
     log: t.log.slice(-120),
     joinUrl: `${preferLanUrl()}/#/table/${t.code}`,
   };
+}
+
+function creaturePower(card) {
+  const base = parseInt(card.power, 10);
+  const plus = (card.counters && card.counters.p1p1) || 0;
+  const minus = (card.counters && card.counters.m1m1) || 0;
+  return Math.max(0, (Number.isNaN(base) ? 0 : base) + plus - minus);
+}
+
+function creatureToughness(card) {
+  const base = parseInt(card.toughness, 10);
+  const plus = (card.counters && card.counters.p1p1) || 0;
+  const minus = (card.counters && card.counters.m1m1) || 0;
+  return Math.max(0, (Number.isNaN(base) ? 0 : base) + plus - minus);
+}
+
+function isCreatureCard(card) {
+  return /\bCreature\b/i.test(card.type_line || "") || card.power != null;
+}
+
+function hasHasteCard(card) {
+  return /\bHaste\b/i.test(`${card.type_line || ""} ${card.oracle_text || ""} ${(card.keywords || []).join(" ")}`);
+}
+
+function isSummoningSick(t, card) {
+  if (hasHasteCard(card)) return false;
+  if (card.enteredAtTurn == null || card.enteredAtTurn === 0) return false;
+  return card.enteredAtTurn === t.turn && card.enteredAtSeat === t.activeSeat;
+}
+
+function buryCreature(t, iid) {
+  const found = findCard(t, iid);
+  if (!found || found.zone !== "battlefield") return null;
+  const [card] = found.list.splice(found.idx, 1);
+  t.seats[found.seat].zones.graveyard.unshift(card);
+  return card;
+}
+
+function scheduleBotEnd(table, seatIdx) {
+  if (!table) return;
+  setTimeout(() => {
+    if (!table.started || table.ended || table.activeSeat !== seatIdx || table.combat) return;
+    table.phase = "end";
+    table._botThinking = false;
+    passTurnInternal(table, true);
+    broadcast(table);
+  }, 800);
+}
+
+function resolveCombat(t) {
+  const combat = t.combat;
+  if (!combat || combat.step !== "blockers") return;
+  const atkSeat = combat.attackerSeat;
+  const defSeat = (atkSeat + 1) % 2;
+  const def = t.seats[defSeat];
+  let playerDmg = 0;
+  const deaths = [];
+  for (const a of combat.attackers) {
+    const atkFound = findCard(t, a.iid);
+    const aPow = atkFound ? creaturePower(atkFound.card) : a.power;
+    if (!a.blockedBy) {
+      playerDmg += aPow;
+      log(t, `⚔️ ${a.name} is not blocked (${aPow} damage)`, atkSeat);
+      continue;
+    }
+    const blkFound = findCard(t, a.blockedBy);
+    if (!blkFound) {
+      playerDmg += aPow;
+      continue;
+    }
+    const bPow = creaturePower(blkFound.card);
+    const bTou = creatureToughness(blkFound.card);
+    const aTou = atkFound ? creatureToughness(atkFound.card) : 0;
+    log(t, `🛡️ ${blkFound.card.name} blocks ${a.name}`, defSeat);
+    if (aPow >= bTou && bTou >= 0) deaths.push(a.blockedBy);
+    if (atkFound && bPow >= aTou) deaths.push(a.iid);
+  }
+  for (const iid of deaths) {
+    const dead = buryCreature(t, iid);
+    if (dead) log(t, `💀 ${dead.name} dies in combat`);
+  }
+  if (def && playerDmg > 0) {
+    def.life = Math.max(0, def.life - playerDmg);
+    log(t, `⚔️ ${playerDmg} combat damage to ${def.name} (life ${def.life})`, atkSeat);
+    if (!t.ended && def.life <= 0) {
+      endGame(t, atkSeat, `${def.name}'s life reached 0 from combat damage`);
+    }
+  }
+  const attackerWasBot = !!(t.seats[atkSeat] && t.seats[atkSeat].isBot);
+  t.combat = null;
+  if (!t.ended) t.phase = "main2";
+  if (attackerWasBot && !t.ended) scheduleBotEnd(t, atkSeat);
 }
 
 function applyAction(t, playerId, a) {
@@ -1917,6 +2022,7 @@ function applyAction(t, playerId, a) {
     }
     case "nextPhase": {
       if (t.started && t.activeSeat !== seat) return;
+      if (t.combat && t.combat.step === "blockers") return;
       const i = PHASES.indexOf(t.phase);
       t.phase = PHASES[(i + 1) % PHASES.length];
       if (t.phase === "untap") passTurnInternal(t, false);
@@ -1924,6 +2030,7 @@ function applyAction(t, playerId, a) {
       return;
     }
     case "setPhase": {
+      if (t.combat && t.combat.step === "blockers") return;
       if (t.started && t.activeSeat !== seat) return;
       if (PHASES.includes(a.phase)) t.phase = a.phase;
       if (t.phase === "draw") drawForTurn(t);
@@ -1931,6 +2038,7 @@ function applyAction(t, playerId, a) {
     }
     case "passTurn": {
       if (t.started && t.activeSeat !== seat) return;
+      if (t.combat && t.combat.step === "blockers") return;
       passTurnInternal(t, true);
       return;
     }
@@ -1941,38 +2049,86 @@ function applyAction(t, playerId, a) {
       beginTurn(t);
       return;
     }
-    case "attack": {
+    case "declareAttackers": {
       if (t.started && t.activeSeat !== seat) return;
-      const found = findCard(t, a.iid);
-      if (!found || found.zone !== "battlefield" || found.seat !== seat) return;
-      const card = found.card;
-      if (card.tapped) return;
-      card.tapped = true;
-      card.hasAttacked = true;
-      t.phase = "combat";
-
-      // Calculate attack damage (including counters)
-      let dmg = 0;
-      if (a.damage != null) {
-        dmg = Math.max(0, Number(a.damage));
-      } else {
-        const baseP = parseInt(card.power, 10);
-        const p1p1 = (card.counters && card.counters.p1p1) || 0;
-        dmg = Math.max(0, (isNaN(baseP) ? 1 : baseP) + p1p1);
+      if (t.combat && t.combat.step === "blockers") return;
+      const iids = Array.isArray(a.iids) ? a.iids : [];
+      const attackers = [];
+      for (const iid of iids) {
+        const found = findCard(t, iid);
+        if (!found || found.zone !== "battlefield" || found.seat !== seat) continue;
+        const card = found.card;
+        if (card.tapped || card.hasAttacked) continue;
+        if (!isCreatureCard(card)) continue;
+        if (isSummoningSick(t, card)) continue;
+        if (/\bDefender\b/i.test(`${card.type_line || ""} ${card.oracle_text || ""}`)) continue;
+        card.tapped = true;
+        card.hasAttacked = true;
+        attackers.push({
+          iid: card.iid,
+          name: card.name,
+          power: creaturePower(card),
+          blockedBy: null,
+          blockerName: null,
+        });
       }
-
-      const oppSeat = (seat + 1) % 2;
-      const opp = t.seats[oppSeat];
-      if (opp && dmg > 0) {
-        opp.life = Math.max(0, opp.life - dmg);
-        log(t, `⚔️ ${card.name} attacks ${opp.name} for ${dmg} damage! (${opp.name} life: ${opp.life})`, seat);
-        if (!t.ended && opp.life <= 0) {
-          endGame(t, seat, `${opp.name}'s life reached 0 from ${card.name}'s combat attack!`);
-        }
-      } else {
-        log(t, `⚔️ ${card.name} attacks! (0 damage)`, seat);
+      if (!attackers.length) {
+        log(t, `${me.name} has no legal attackers`, seat);
+        return;
+      }
+      t.phase = "combat";
+      t.combat = { step: "blockers", attackerSeat: seat, attackers };
+      const def = t.seats[(seat + 1) % 2];
+      log(t, `⚔️ ${me.name} attacks with ${attackers.map((x) => x.name).join(", ")}. ${def ? def.name : "Opponent"} may block.`, seat);
+      if (def && def.isBot) {
+        setTimeout(() => {
+          if (!t.combat || t.combat.step !== "blockers" || t.ended) return;
+          log(t, `${def.name} does not block.`);
+          resolveCombat(t);
+          broadcast(t);
+        }, 700);
       }
       return;
+    }
+    case "assignBlock": {
+      if (!t.combat || t.combat.step !== "blockers") return;
+      const defSeat = (t.combat.attackerSeat + 1) % 2;
+      if (seat !== defSeat) return;
+      const atk = t.combat.attackers.find((x) => x.iid === a.attacker);
+      if (!atk) return;
+      if (!a.blocker) {
+        atk.blockedBy = null;
+        atk.blockerName = null;
+        log(t, `${atk.name} is no longer blocked`, seat);
+        return;
+      }
+      const blocker = findCard(t, a.blocker);
+      if (!blocker || blocker.zone !== "battlefield" || blocker.seat !== seat) return;
+      if (blocker.card.tapped || !isCreatureCard(blocker.card)) return;
+      for (const other of t.combat.attackers) {
+        if (other.blockedBy === blocker.card.iid) {
+          other.blockedBy = null;
+          other.blockerName = null;
+        }
+      }
+      atk.blockedBy = blocker.card.iid;
+      atk.blockerName = blocker.card.name;
+      log(t, `🛡️ ${blocker.card.name} will block ${atk.name}`, seat);
+      return;
+    }
+    case "confirmBlocks": {
+      if (!t.combat || t.combat.step !== "blockers") return;
+      const defSeat = (t.combat.attackerSeat + 1) % 2;
+      if (seat !== defSeat && !t.seats[defSeat].isBot) return;
+      resolveCombat(t);
+      return;
+    }
+    case "attack": {
+      if (t.started && t.activeSeat !== seat) return;
+      if (!a.iid) return;
+      a.iids = [a.iid];
+      a.kind = "declareAttackers";
+      return applyAction(t, playerId, a);
     }
     case "token": {
       let card = a.cardId ? byId.get(a.cardId) : lookupName(a.name);
@@ -2156,6 +2312,8 @@ function drawForTurn(t) {
 }
 
 function passTurnInternal(t, announce) {
+  if (t.combat && t.combat.step === "blockers") resolveCombat(t);
+  t.combat = null;
   t.activeSeat = (t.activeSeat + 1) % 2;
   t.phase = "untap";
   t.drewThisTurn = false;
@@ -2369,36 +2527,29 @@ function executeBotTurn(t, seatIdx) {
       }
 
       if (attackers.length > 0) {
-        let totalPower = 0;
-        for (const a of attackers) {
-          a.tapped = true;
-          const p = parseInt(a.power, 10);
-          totalPower += Number.isNaN(p) ? 2 : Math.max(1, p);
-        }
-        opp.life = Math.max(0, opp.life - totalPower);
-        log(
-          t,
-          `⚔️ ${bot.name} attacks with ${attackers.map((c) => c.name).join(", ")} for ${totalPower} damage!`,
-          seatIdx
-        );
-        if (opp.life <= 0) {
-          endGame(t, seatIdx, "Combat damage");
-        }
+        t.combat = {
+          step: "blockers",
+          attackerSeat: seatIdx,
+          attackers: attackers.map((c) => {
+            c.tapped = true;
+            c.hasAttacked = true;
+            return {
+              iid: c.iid,
+              name: c.name,
+              power: creaturePower(c),
+              blockedBy: null,
+              blockerName: null,
+            };
+          }),
+        };
+        log(t, `⚔️ ${bot.name} attacks with ${attackers.map((c) => c.name).join(", ")}. You may block.`, seatIdx);
         broadcast(t);
+        if (t) t._botThinking = false;
+        return;
       }
 
-      setTimeout(() => {
-        if (!t || !t.started || t.ended || t.activeSeat !== seatIdx) {
-          if (t) t._botThinking = false;
-          return;
-        }
-
-        // 5. End Turn
-        t.phase = "end";
-        t._botThinking = false;
-        passTurnInternal(t, true);
-        broadcast(t);
-      }, 800);
+      scheduleBotEnd(t, seatIdx);
+      return;
     }
 
     setTimeout(() => castStep(0), 650);

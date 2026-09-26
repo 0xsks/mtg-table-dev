@@ -358,6 +358,7 @@
         const rect = playmatEl.getBoundingClientRect();
         const c = p.createCanvas(rect.width || 800, rect.height || 600);
         c.parent(overlayDiv);
+        if (c.elt) c.elt.style.pointerEvents = "none";
         p.frameRate(35);
       };
 
