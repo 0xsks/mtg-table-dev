@@ -122,33 +122,7 @@
     return res.json();
   }
 
-  async function login(username, password, second = false) {
-    const res = await api("/api/auth/login", {
-      method: "POST",
-      second,
-      body: { username, password },
-    });
-    if (res && res.token) {
-      setToken(res.token, second);
-      setCachedUser(res.user, second);
-      toast(`Welcome back, ${res.user.displayName || res.user.username}! ✨`);
-    }
-    return res ? res.user : null;
-  }
-
-  async function register(username, password, displayName, second = false) {
-    const res = await api("/api/auth/register", {
-      method: "POST",
-      second,
-      body: { username, password, displayName },
-    });
-    if (res && res.token) {
-      setToken(res.token, second);
-      setCachedUser(res.user, second);
-      toast(`Account created! +1,000 🪙 Starter Gold granted! ✨`);
-    }
-    return res ? res.user : null;
-  }
+  // Password auth has been removed — wallet sign-in is the only way in.
 
   const eip6963Providers = [];
   if (typeof window !== "undefined") {
@@ -501,13 +475,18 @@
         toast("Could not switch to Sepolia. Signing in with this account anyway.");
       }
 
-      // 3. Create authentic cryptographic sign-in challenge message.
+      // 3. Ask the server for a single-use sign-in challenge. The message is
+      // built server-side so a captured signature can never be replayed.
       // Balance lookups are intentionally not on this path — a stuck RPC
       // call was preventing the signature prompt from ever appearing.
-      const nonce = "0x" + Math.random().toString(16).slice(2, 10) + Date.now().toString(16);
-      const isoTimestamp = new Date().toISOString();
-      const domain = location.host || "multiverse-hearth.eth";
-      const msg = `${domain} wants you to sign in with your Ethereum account:\n${addr}\n\nSign in to Multiverse Hearth on Sepolia Testnet (Chain ID: 11155111).\n\nURI: ${location.origin}\nVersion: 1\nChain ID: 11155111\nNonce: ${nonce}\nIssued At: ${isoTimestamp}`;
+      const challenge = await api("/api/auth/challenge", {
+        method: "POST",
+        second,
+        body: { address: addr, chain: "ethereum" },
+      });
+      const msg = challenge && challenge.message;
+      const nonce = challenge && challenge.nonce;
+      if (!msg || !nonce) throw new Error("Could not obtain a sign-in challenge from the server.");
 
       toast(`Please sign the authentication message in ${walletLabel}… ✍️`);
 
@@ -538,6 +517,7 @@
           chain: "ethereum",
           signature: sig,
           message: msg,
+          nonce,
           network: "sepolia",
           displayName: `Eth_${addr.slice(0, 6)}…${addr.slice(-4)}`,
         },
@@ -569,9 +549,15 @@
       const resp = await provider.connect();
       const addr = resp.publicKey ? resp.publicKey.toString() : (resp.address || String(resp));
       
-      const nonce = Date.now();
-      const msg = `Sign in to MTG Multiverse Hearth:\nSolana Address: ${addr}\nNonce: ${nonce}\nTimestamp: ${new Date().toISOString()}`;
-      
+      const challenge = await api("/api/auth/challenge", {
+        method: "POST",
+        second,
+        body: { address: addr, chain: "solana" },
+      });
+      const msg = challenge && challenge.message;
+      const nonce = challenge && challenge.nonce;
+      if (!msg || !nonce) throw new Error("Could not obtain a sign-in challenge from the server.");
+
       toast("Please sign the authentication message in Phantom… ✍️");
       let sigHex = "";
       try {
@@ -597,6 +583,7 @@
           chain: "solana",
           signature: sigHex,
           message: msg,
+          nonce,
           displayName: `Phantom_${addr.slice(0, 4)}…${addr.slice(-4)}`,
         },
       });
@@ -2745,35 +2732,7 @@
       if (form) {
         form.onsubmit = async (e) => {
           e.preventDefault();
-          const errEl = $("#auth-err");
-          if (errEl) errEl.style.display = "none";
-          const submitBtn = $("#btn-auth-submit");
-          if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.textContent = tab === "register" ? "Creating Account…" : "Logging in…";
-          }
-          const un = $("#auth-un").value.trim();
-          const pw = $("#auth-pw").value;
-          try {
-            if (tab === "register") {
-              const dn = $("#auth-dn").value.trim();
-              await register(un, pw, dn, second);
-            } else {
-              await login(un, pw, second);
-            }
-            closeModal();
-            render();
-          } catch (err) {
-            if (errEl) {
-              errEl.textContent = `⚠️ ${err.message || "Authentication failed"}`;
-              errEl.style.display = "block";
-            }
-            if (submitBtn) {
-              submitBtn.disabled = false;
-              submitBtn.textContent = tab === "register" ? "✨ Register (+1,000 🪙)" : "Log In";
-            }
-            toast(err.message || "Authentication failed");
-          }
+          toast("Password sign-in has been removed. Connect a wallet to sign in. 🔮");
         };
       }
 

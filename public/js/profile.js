@@ -767,81 +767,30 @@
         };
       });
 
-      // Login form submission
+      // Password sign-in was removed — both forms now route users to their wallet.
+      const walletOnlyNotice = (errElId, btnId, wasCreating) => {
+        const notice = (e) => {
+          e.preventDefault();
+          const errEl = $(`#${errElId}`);
+          if (errEl) {
+            errEl.textContent = "🔮 Password accounts were retired. Connect a wallet to sign in — it takes one signature.";
+            errEl.style.display = "block";
+          }
+          const b = $(`#${btnId}`);
+          if (b) b.disabled = false;
+          toast("Connect a wallet to sign in. 🔮");
+        };
+        return notice;
+      };
       const loginForm = $("#portal-login-form");
       if (loginForm) {
-        loginForm.onsubmit = async (e) => {
-          e.preventDefault();
-          const errEl = $("#portal-auth-err");
-          if (errEl) errEl.style.display = "none";
-          const subBtn = $("#btn-portal-login-submit");
-          if (subBtn) {
-            subBtn.disabled = true;
-            subBtn.textContent = "Logging in…";
-          }
-          const un = $("#portal-un").value.trim();
-          const pw = $("#portal-pw").value;
-          try {
-            await login(un, pw, second);
-            activeTab = "profile";
-            draw();
-            spawnSparkles(window.innerWidth / 2, window.innerHeight / 2, "sparkle");
-          } catch (err) {
-            if (errEl) {
-              errEl.textContent = `⚠️ ${err.message || "Login failed"}`;
-              errEl.style.display = "block";
-            }
-            if (subBtn) {
-              subBtn.disabled = false;
-              subBtn.textContent = "🔑 Log In to Hearth";
-            }
-            toast(err.message || "Login failed");
-          }
-        };
+        loginForm.onsubmit = walletOnlyNotice("portal-auth-err", "btn-portal-login-submit", false);
       }
 
       // Register form submission
       const regForm = $("#portal-reg-form");
       if (regForm) {
-        regForm.onsubmit = async (e) => {
-          e.preventDefault();
-          const errEl = $("#portal-auth-err");
-          if (errEl) errEl.style.display = "none";
-          const subBtn = $("#btn-portal-reg-submit");
-          if (subBtn) {
-            subBtn.disabled = true;
-            subBtn.textContent = "Creating Character…";
-          }
-          const un = $("#portal-reg-un").value.trim();
-          const dn = $("#portal-reg-dn").value.trim();
-          const pw = $("#portal-reg-pw").value;
-          try {
-            await register(un, pw, dn, second);
-            // Save selected avatar
-            if (selectedPreset) {
-              await api("/api/auth/profile", {
-                method: "POST",
-                second,
-                body: { avatar: selectedPreset, playerId: me.id },
-              });
-              const fresh = await fetchMe(second);
-              if (fresh) setCachedUser(fresh, second);
-            }
-            activeTab = "profile";
-            draw();
-            spawnSparkles(window.innerWidth / 2, window.innerHeight / 2, "confetti");
-          } catch (err) {
-            if (errEl) {
-              errEl.textContent = `⚠️ ${err.message || "Registration failed"}`;
-              errEl.style.display = "block";
-            }
-            if (subBtn) {
-              subBtn.disabled = false;
-              subBtn.textContent = "✨ Create Character & Claim 1,000 🪙 Gold";
-            }
-            toast(err.message || "Registration failed");
-          }
-        };
+        regForm.onsubmit = walletOnlyNotice("portal-auth-err", "btn-portal-reg-submit", true);
       }
 
       // Guest start button

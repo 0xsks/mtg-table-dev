@@ -10,3 +10,6 @@ data/sessions.json
 data/avatars/
 data/tables.json
 data/friends.json
+
+# token signing secret — never commit this
+data/.auth-secret

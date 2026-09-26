@@ -77,28 +77,12 @@ function saveDaoData() {
 }
 loadDaoData();
 
+// Sessions are stateless signed tokens now; there is no server-side session
+// store to load or persist.
 const SESSIONS_PATH = path.join(DATA, "sessions.json");
 const GUILDS_PATH = path.join(DATA, "guilds.json");
 const LEAGUES_PATH = path.join(DATA, "leagues.json");
 const DND_PATH = path.join(DATA, "dnd.json");
-
-function loadSessions() {
-  if (fs.existsSync(SESSIONS_PATH)) {
-    try {
-      const arr = JSON.parse(fs.readFileSync(SESSIONS_PATH, "utf8"));
-      if (Array.isArray(arr)) {
-        for (const [k, v] of arr) {
-          sessions.set(k, v);
-        }
-      }
-    } catch {}
-  }
-}
-function saveSessions() {
-  try {
-    fs.writeFileSync(SESSIONS_PATH, JSON.stringify([...sessions.entries()]), "utf8");
-  } catch {}
-}
 
 let guilds = [];
 function loadGuilds() {
@@ -179,8 +163,117 @@ function saveFriends() {
 }
 loadFriends();
 
-function hashPassword(password, salt) {
-  return crypto.scryptSync(password, salt, 64).toString("hex");
+// ---------------------------------------------------------------------------
+// Auth: wallet-only. No passwords are stored or accepted anywhere.
+// ---------------------------------------------------------------------------
+
+// Signing secret. Prefer AUTH_SECRET from the environment (required in prod);
+// otherwise generate one once and persist it outside version control.
+function loadAuthSecret() {
+  if (process.env.AUTH_SECRET) return process.env.AUTH_SECRET;
+  const p = path.join(DATA, ".auth-secret");
+  try {
+    if (fs.existsSync(p)) {
+      const v = fs.readFileSync(p, "utf8").trim();
+      if (v) return v;
+    }
+  } catch {}
+  const generated = crypto.randomBytes(32).toString("hex");
+  try {
+    fs.writeFileSync(p, generated, "utf8");
+    fs.chmodSync(p, 0o600);
+  } catch {}
+  return generated;
+}
+
+const AUTH_SECRET = loadAuthSecret();
+const TOKEN_TTL_SEC = Number(process.env.AUTH_TTL_SEC || 24 * 60 * 60); // 24h default
+
+// Revoked token ids (jti), so logout still works with stateless tokens.
+const REVOKED_TOKENS = new Set();
+
+// Users whose wallet was unlinked — all their tokens are rejected.
+const REVOKED_BY_USER = new Set();
+
+function b64url(input) {
+  return Buffer.from(input).toString("base64url");
+}
+
+function issueToken(user) {
+  const header = b64url(JSON.stringify({ alg: "HS256", typ: "JWT" }));
+  const iat = Math.floor(Date.now() / 1000);
+  const payload = b64url(
+    JSON.stringify({
+      sub: user.id,
+      username: user.username,
+      jti: crypto.randomBytes(12).toString("hex"),
+      iat,
+      exp: iat + TOKEN_TTL_SEC,
+    })
+  );
+  const sig = crypto.createHmac("sha256", AUTH_SECRET).update(`${header}.${payload}`).digest("base64url");
+  return { token: `${header}.${payload}.${sig}`, jti: JSON.parse(Buffer.from(payload, "base64url").toString("utf8")).jti };
+}
+
+function verifyToken(token) {
+  const parts = String(token || "").split(".");
+  if (parts.length !== 3) return null;
+  const [header, payload, sig] = parts;
+  const expected = crypto.createHmac("sha256", AUTH_SECRET).update(`${header}.${payload}`).digest("base64url");
+  const a = Buffer.from(String(sig));
+  const b = Buffer.from(expected);
+  if (a.length !== b.length || !crypto.timingSafeEqual(a, b)) return null;
+  let claims;
+  try {
+    claims = JSON.parse(Buffer.from(payload, "base64url").toString("utf8"));
+  } catch {
+    return null;
+  }
+  if (!claims || !claims.sub || !claims.exp) return null;
+  if (claims.exp * 1000 < Date.now()) return null;
+  if (claims.jti && REVOKED_TOKENS.has(claims.jti)) return null;
+  if (REVOKED_BY_USER.has(claims.sub)) return null;
+  return claims;
+}
+
+// Single-use sign-in challenges. The server builds the canonical message, the
+// wallet signs it verbatim, and the nonce is consumed on first successful use.
+// This is what makes a captured signature useless to an attacker.
+const SIGNIN_CHALLENGES = new Map();
+const CHALLENGE_TTL_MS = Number(process.env.CHALLENGE_TTL_SEC || 300) * 1000;
+
+function pruneChallenges() {
+  const t = Date.now();
+  for (const [nonce, c] of SIGNIN_CHALLENGES) {
+    if (c.expiresAt < t) SIGNIN_CHALLENGES.delete(nonce);
+  }
+}
+
+function buildSignInMessage({ domain, origin, address, chain, nonce }) {
+  const issuedAt = new Date().toISOString();
+  if (chain === "solana") {
+    return `Sign in to MTG Multiverse Hearth:\nAddress: ${address}\nURI: ${origin}\nNonce: ${nonce}\nIssued At: ${issuedAt}`;
+  }
+  return `${domain} wants you to sign in with your Ethereum account:\n${address}\n\nSign in to Multiverse Hearth on Sepolia Testnet (Chain ID: 11155111).\n\nURI: ${origin}\nVersion: 1\nChain ID: 11155111\nNonce: ${nonce}\nIssued At: ${issuedAt}`;
+}
+
+// Returns an error string, or null when the challenge is valid. Consumes it.
+function consumeChallenge(nonce, message, address) {
+  pruneChallenges();
+  const c = SIGNIN_CHALLENGES.get(nonce);
+  if (!c) return "Sign-in challenge is unknown or expired. Please try again.";
+  if (c.used) return "Sign-in challenge has already been used.";
+  if (c.expiresAt < Date.now()) {
+    SIGNIN_CHALLENGES.delete(nonce);
+    return "Sign-in challenge has expired. Please try again.";
+  }
+  if (c.address.toLowerCase() !== String(address).toLowerCase()) {
+    return "Sign-in challenge was issued for a different address.";
+  }
+  if (c.message !== message) return "Signed message does not match the issued challenge.";
+  c.used = true;
+  SIGNIN_CHALLENGES.delete(nonce);
+  return null;
 }
 
 function findUserById(id) {
@@ -238,8 +331,6 @@ function sanitizeUser(u) {
   };
 }
 
-const sessions = new Map(); // token -> { userId, username, created }
-loadSessions();
 const guestUsers = new Map(); // playerId -> { id, username, displayName, balance, wins, losses, isGuest }
 
 function getPlayerRecord(seat) {
@@ -3119,61 +3210,38 @@ function getAuthToken(req) {
 
 function authUser(req) {
   const token = getAuthToken(req);
-  if (!token || !sessions.has(token)) return null;
-  const sess = sessions.get(token);
-  return findUserById(sess.userId) || null;
+  if (!token) return null;
+  const claims = verifyToken(token);
+  if (!claims) return null;
+  return findUserById(claims.sub) || null;
 }
 
-app.post("/api/auth/register", (req, res) => {
-  const { username, password, displayName } = req.body || {};
-  const un = String(username || "").trim();
-  if (!un || un.length < 3 || un.length > 24 || !/^[a-zA-Z0-9_\-]+$/.test(un)) {
-    return res.status(400).json({ error: "Username must be 3-24 alphanumeric characters, underscores, or hyphens" });
+// Issue a single-use, server-signed sign-in challenge. The wallet must sign
+// the exact message returned here.
+app.post("/api/auth/challenge", (req, res) => {
+  const { address, chain = "ethereum" } = req.body || {};
+  const addr = String(address || "").trim();
+  if (!addr || addr.length < 8 || addr.length > 90) {
+    return res.status(400).json({ error: "A valid wallet address is required" });
   }
-  const pw = String(password || "");
-  if (!pw || pw.length < 4) {
-    return res.status(400).json({ error: "Password must be at least 4 characters" });
-  }
-  if (findUserByUsername(un)) {
-    return res.status(400).json({ error: "Username already taken" });
-  }
-  const salt = crypto.randomBytes(16).toString("hex");
-  const user = {
-    id: "u-" + uid(10),
-    username: un,
-    displayName: String(displayName || un).trim().slice(0, 32),
-    passwordHash: hashPassword(pw, salt),
-    salt,
-    balance: 1000,
-    wins: 0,
-    losses: 0,
-    created: now(),
-    lastFaucet: now(),
-  };
-  users.push(user);
-  saveUsers();
-  const token = uid(32);
-  sessions.set(token, { userId: user.id, username: user.username, created: now() });
-  saveSessions();
-  res.json({ ok: true, token, user: sanitizeUser(user) });
-});
+  const ch = chain === "solana" ? "solana" : "ethereum";
 
-app.post("/api/auth/login", (req, res) => {
-  const { username, password } = req.body || {};
-  const un = String(username || "").trim();
-  const pw = String(password || "");
-  const user = findUserByUsername(un);
-  if (!user) {
-    return res.status(401).json({ error: "Invalid username or password" });
-  }
-  const hashed = hashPassword(pw, user.salt);
-  if (hashed !== user.passwordHash) {
-    return res.status(401).json({ error: "Invalid username or password" });
-  }
-  const token = uid(32);
-  sessions.set(token, { userId: user.id, username: user.username, created: now() });
-  saveSessions();
-  res.json({ ok: true, token, user: sanitizeUser(user) });
+  pruneChallenges();
+  const nonce = crypto.randomBytes(16).toString("hex");
+  const host = req.get("host") || "localhost";
+  const origin = `${req.protocol}://${host}`;
+  const domain = host.split(":")[0] || "multiverse-hearth.eth";
+  const message = buildSignInMessage({ domain, origin, address: addr, chain: ch, nonce });
+
+  SIGNIN_CHALLENGES.set(nonce, {
+    message,
+    address: addr,
+    chain: ch,
+    expiresAt: Date.now() + CHALLENGE_TTL_MS,
+    used: false,
+  });
+
+  res.json({ ok: true, nonce, message, chain: ch, expiresIn: Math.floor(CHALLENGE_TTL_MS / 1000) });
 });
 
 const BS58_ALPHABET = "123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz";
@@ -3211,15 +3279,8 @@ function verifySolanaSignature(message, signatureHex, address) {
   return crypto.verify(null, Buffer.from(String(message), "utf8"), key, sig);
 }
 
-function dropSessionsFor(userId) {
-  for (const [tok, sess] of sessions.entries()) {
-    if (sess.userId === userId) sessions.delete(tok);
-  }
-  saveSessions();
-}
-
 app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
-  const { address, chain = "ethereum", signature, message, displayName, network } = req.body || {};
+  const { address, chain = "ethereum", signature, message, nonce, displayName, network } = req.body || {};
   const addr = String(address || "").trim();
   if (!addr || addr.length < 8 || addr.length > 90) {
     return res.status(400).json({ error: "A valid wallet address is required" });
@@ -3228,11 +3289,23 @@ app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
   const isSolana = chain === "solana";
   const lowerAddr = addr.toLowerCase();
 
-  // Cryptographically verify authentic EVM signature from real wallet
+  if (!signature || !message) {
+    return res.status(400).json({ error: "Cryptographic signature and sign-in message required for wallet authentication" });
+  }
+  if (!nonce) {
+    return res.status(400).json({ error: "Missing sign-in challenge. Request /api/auth/challenge first." });
+  }
+
+  // Replay protection: the signed message must match a live, single-use
+  // challenge the server issued for this exact address.
+  const challengeErr = consumeChallenge(nonce, message, addr);
+  if (challengeErr) {
+    console.warn(`[auth/wallet] ❌ Challenge rejected for ${addr}: ${challengeErr}`);
+    return res.status(400).json({ error: challengeErr });
+  }
+
+  // Cryptographically verify authentic signature from a real wallet
   if (chain === "ethereum") {
-    if (!signature || !message) {
-      return res.status(400).json({ error: "Cryptographic signature and sign-in message required for Ethereum authentication" });
-    }
     try {
       const recovered = ethers.verifyMessage(message, signature);
       if (recovered.toLowerCase() !== lowerAddr) {
@@ -3249,9 +3322,6 @@ app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
       });
     }
   } else if (isSolana) {
-    if (!signature || !message) {
-      return res.status(400).json({ error: "Cryptographic signature and sign-in message required for Solana authentication" });
-    }
     try {
       if (!verifySolanaSignature(message, signature, addr)) {
         return res.status(400).json({ error: "Solana signature verification failed" });
@@ -3280,11 +3350,10 @@ app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
     if (!Array.isArray(currentAuthed.badges)) currentAuthed.badges = [];
     if (!currentAuthed.badges.includes("web3_verified")) currentAuthed.badges.push("web3_verified");
     saveUsers();
-    const token = getAuthToken(req) || uid(32);
-    if (!sessions.has(token)) {
-      sessions.set(token, { userId: currentAuthed.id, username: currentAuthed.username, created: now() });
-      saveSessions();
-    }
+    // Reuse the caller's existing valid token if present, otherwise mint one.
+    const existing = getAuthToken(req);
+    const claims = existing ? verifyToken(existing) : null;
+    const token = claims && claims.sub === currentAuthed.id ? existing : issueToken(currentAuthed).token;
     return res.json({ ok: true, token, user: sanitizeUser(currentAuthed) });
   }
 
@@ -3307,8 +3376,6 @@ app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
       displayName: String(displayName || defaultDn).trim().slice(0, 32),
       walletAddress: addr,
       walletChain: chain,
-      passwordHash: "",
-      salt: "",
       balance: 1000,
       wins: 0,
       losses: 0,
@@ -3336,9 +3403,7 @@ app.post(["/api/auth/wallet", "/api/auth/web3"], (req, res) => {
   });
   saveUsers();
 
-  const token = uid(32);
-  sessions.set(token, { userId: user.id, username: user.username, created: now() });
-  saveSessions();
+  const { token } = issueToken(user);
   res.json({ ok: true, token, user: sanitizeUser(user) });
 });
 
@@ -3350,10 +3415,8 @@ app.get("/api/auth/me", (req, res) => {
 
 app.post("/api/auth/logout", (req, res) => {
   const token = getAuthToken(req);
-  if (token) {
-    sessions.delete(token);
-    saveSessions();
-  }
+  const claims = token ? verifyToken(token) : null;
+  if (claims && claims.jti) REVOKED_TOKENS.add(claims.jti);
   res.json({ ok: true });
 });
 
@@ -3512,13 +3575,16 @@ app.post("/api/auth/profile", (req, res) => {
     if (Array.isArray(user.badges)) {
       user.badges = user.badges.filter((b) => b !== "web3_verified");
     }
-    const web3Only = !user.isGuest && !user.passwordHash;
     if (!user.isGuest) saveUsers();
-    if (web3Only) {
-      dropSessionsFor(user.id);
-      return res.json({ ok: true, loggedOut: true, user: null });
+    // Auth is wallet-only: without a linked wallet the account can never
+    // sign in again, so always revoke outstanding tokens.
+    const tok = getAuthToken(req);
+    const claims = tok ? verifyToken(tok) : null;
+    if (claims && claims.jti) REVOKED_TOKENS.add(claims.jti);
+    if (!user.isGuest) {
+      REVOKED_BY_USER.add(user.id);
     }
-    return res.json({ ok: true, user: sanitizeUser(user) });
+    return res.json({ ok: true, loggedOut: true, user: null });
   }
   if (displayName) {
     user.displayName = String(displayName).trim().slice(0, 32);
@@ -4606,9 +4672,9 @@ function handleWs(ws, msg) {
     ws.statusText = msg.statusText || "In Lobby";
     ws.lastSeen = now();
     let authUserObj = null;
-    if (ws.token && sessions.has(ws.token)) {
-      const sess = sessions.get(ws.token);
-      const u = findUserById(sess.userId);
+    if (ws.token) {
+      const claims = verifyToken(ws.token);
+      const u = claims ? findUserById(claims.sub) : null;
       if (u) {
         ws.userId = u.id;
         ws.playerName = u.displayName || u.username;
