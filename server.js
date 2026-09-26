@@ -13,16 +13,31 @@ const { attachRpgWorld } = require("./rpg-world");
 const { ethers } = require("ethers");
 
 const ROOT = __dirname;
-const DATA = path.join(ROOT, "data");
+
+// The card catalog ships with the code and is read-only, so it stays in the
+// checkout. Everything mutable — accounts, tables, guilds, decks, avatars,
+// the image cache and the token secret — lives in DATA.
+//
+// DATA defaults to ./data for local dev, but a deployment should point it
+// somewhere durable (DATA_DIR=/var/lib/mtg-table) so replacing the code
+// directory on deploy can't destroy player data. The catalog is not looked
+// up under DATA.
+const DATA = process.env.DATA_DIR
+  ? path.resolve(process.env.DATA_DIR)
+  : path.join(ROOT, "data");
+
+const CATALOG = path.join(ROOT, "data");
+
 const DECKS_DIR = path.join(DATA, "decks");
 const IMG_DIR = path.join(DATA, "images");
 const PUBLIC = path.join(ROOT, "public");
-const CARDS_PATH = path.join(DATA, "cards.json");
-const META_PATH = path.join(DATA, "catalog-meta.json");
+const CARDS_PATH = path.join(CATALOG, "cards.json");
+const META_PATH = path.join(CATALOG, "catalog-meta.json");
 
 const HOST = process.env.HOST || "0.0.0.0";
 const PORT = Number(process.env.PORT || 8888);
 
+fs.mkdirSync(DATA, { recursive: true });
 fs.mkdirSync(DECKS_DIR, { recursive: true });
 fs.mkdirSync(path.join(IMG_DIR, "normal"), { recursive: true });
 fs.mkdirSync(path.join(IMG_DIR, "small"), { recursive: true });
@@ -391,8 +406,8 @@ function preferLanUrl() {
 
 console.log("loading card catalog…");
 const cards = JSON.parse(fs.readFileSync(CARDS_PATH, "utf8"));
-const OLD_PRINTINGS_PATH = path.join(DATA, "old-printings.json");
-const OLD_SETS_PATH = path.join(DATA, "old-sets.json");
+const OLD_PRINTINGS_PATH = path.join(CATALOG, "old-printings.json");
+const OLD_SETS_PATH = path.join(CATALOG, "old-sets.json");
 const oldPrintings = fs.existsSync(OLD_PRINTINGS_PATH)
   ? JSON.parse(fs.readFileSync(OLD_PRINTINGS_PATH, "utf8"))
   : [];
@@ -1034,6 +1049,32 @@ function seedDecksIfEmpty() {
   if (n) console.log(`imported ${n} XMage duel decks`);
 }
 
+// When DATA is a separate durable directory (DATA_DIR), the deck library ships
+// in the checkout and would otherwise be missing on a fresh deploy. Copy the
+// shipped decks across once, only while the state directory is still empty,
+// so player-created decks are never overwritten.
+function seedShippedDecks() {
+  if (DATA === CATALOG) return;
+  const shipped = path.join(CATALOG, "decks");
+  if (!fs.existsSync(shipped)) return;
+  const existing = fs.readdirSync(DECKS_DIR).filter((f) => f.endsWith(".json"));
+  if (existing.length) return;
+  let copied = 0;
+  for (const f of fs.readdirSync(shipped)) {
+    if (!f.endsWith(".json")) continue;
+    try {
+      fs.copyFileSync(path.join(shipped, f), path.join(DECKS_DIR, f));
+      copied++;
+    } catch (err) {
+      console.log(`  could not seed deck ${f}: ${err.message}`);
+    }
+  }
+  if (copied) console.log(`seeded ${copied} shipped decks into ${DECKS_DIR}`);
+}
+
+// Shipped decks first: seedDecksIfEmpty() bails as soon as any deck exists, so
+// on a fresh DATA_DIR the library has to be populated before it runs.
+seedShippedDecks();
 seedDecksIfEmpty();
 
 /* ---------- images ---------- */
@@ -4624,7 +4665,27 @@ function ensureLanCert() {
   return { key: fs.readFileSync(keyPath), cert: fs.readFileSync(certPath) };
 }
 
-const server = https.createServer(ensureLanCert(), app);
+// TLS material. By default we mint a self-signed cert for the local
+// interfaces, which browsers and wallets warn about. A deployment should
+// point TLS_CERT/TLS_KEY at a real certificate — on a tailnet,
+// `tailscale cert <host>.<tailnet>.ts.net` issues a publicly-trusted one.
+function loadTls() {
+  const cert = process.env.TLS_CERT;
+  const key = process.env.TLS_KEY;
+  if (cert && key) {
+    if (!fs.existsSync(cert) || !fs.existsSync(key)) {
+      throw new Error(`TLS_CERT/TLS_KEY not readable: ${cert} / ${key}`);
+    }
+    console.log(`using TLS certificate ${cert}`);
+    return { cert: fs.readFileSync(cert), key: fs.readFileSync(key) };
+  }
+  if (cert || key) {
+    throw new Error("set both TLS_CERT and TLS_KEY, or neither");
+  }
+  return ensureLanCert();
+}
+
+const server = https.createServer(loadTls(), app);
 attachUpgrade(server);
 
 wss.on("connection", (ws) => {

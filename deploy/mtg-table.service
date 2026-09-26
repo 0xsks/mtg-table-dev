@@ -1,0 +1,50 @@
+[Unit]
+Description=MTG Table (Multiverse Hearth)
+Documentation=https://github.com/0xsks/mtg-table-dev
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mtg
+Group=mtg
+WorkingDirectory=/opt/mtg-table
+
+# Mutable state lives outside the code directory so a deploy can replace
+# /opt/mtg-table without touching player data.
+Environment=DATA_DIR=/var/lib/mtg-table
+Environment=HOST=0.0.0.0
+Environment=PORT=8888
+Environment=NODE_ENV=production
+
+# Secrets live in a separate file, mode 0600, owned by root. Generate
+# AUTH_SECRET once with:  openssl rand -hex 32
+# It must be stable across restarts or every issued token is invalidated.
+EnvironmentFile=-/etc/mtg-table/env
+
+# A tailnet deployment should set these in the env file instead, e.g.
+#   TLS_CERT=/var/lib/mtg-table/tls/fullchain.pem
+#   TLS_KEY=/var/lib/mtg-table/tls/privkey.pem
+# Left unset, the server mints a self-signed LAN certificate.
+
+ExecStart=/usr/bin/node /opt/mtg-table/server.js
+
+Restart=always
+RestartSec=3
+# Give up if it crash-loops, but survive ordinary restarts.
+StartLimitBurst=5
+StartLimitIntervalSec=60
+
+# The process only ever writes inside DATA_DIR and its own cache.
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/var/lib/mtg-table
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=mtg-table
+
+[Install]
+WantedBy=multi-user.target
