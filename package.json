@@ -4,6 +4,9 @@
   "private": true,
   "description": "LAN Magic table with deck builder, using Scryfall/XMage card data",
   "main": "server.js",
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "start": "node server.js",
     "import-cards": "node scripts/import-cards.js"
@@ -14,8 +17,6 @@
     "@rpgjs/server": "^4.3.0",
     "ethers": "^6.17.0",
     "express": "^5.1.0",
-    "p5": "^2.3.3",
-    "puppeteer": "^25.11.0",
     "ws": "^8.18.3"
   }
 }
