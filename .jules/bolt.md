@@ -1,0 +1,3 @@
+## 2024-05-18 - Hoisting operations and precomputing fields
+**Learning:** In performance-critical search functions inside loops working with tens of thousands of items (like MTG cards), operations such as `toLowerCase()`, `replace()`, and `.join("")` create a huge overhead. Moving constant string transformations outside the loop and precomputing item-specific string fields during server startup drastically reduces loop execution time from ~1.5s down to ~400ms for heavy queries.
+**Action:** When finding loops traversing over thousands of static records, always inspect string transformations in the body and look for opportunities to precompute them.
