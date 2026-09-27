@@ -448,8 +448,18 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+// ⚡ Bolt Optimization: Precompute lowercase and cleaned name variants during startup
+// to avoid thousands of redundant string allocations and regex executions per search query.
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name.toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name.toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -571,6 +581,9 @@ function searchCards(query) {
   const limit = Math.min(250, Math.max(1, Number(query.limit || 60)));
   const offset = Math.max(0, Number(query.offset || 0));
 
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+
   let pool;
   if (setCode) {
     const poolMap = new Map();
@@ -646,12 +659,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._nameLower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._nameClean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
