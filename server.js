@@ -448,8 +448,18 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._type_line_lower = c.type_line ? c.type_line.toLowerCase() : "";
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._type_line_lower = c.type_line ? c.type_line.toLowerCase() : "";
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -571,6 +581,9 @@ function searchCards(query) {
   const limit = Math.min(250, Math.max(1, Number(query.limit || 60)));
   const offset = Math.max(0, Number(query.offset || 0));
 
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+
   let pool;
   if (setCode) {
     const poolMap = new Map();
@@ -595,7 +608,7 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type && !c._type_line_lower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
@@ -646,12 +659,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._name_lower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._name_clean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
