@@ -1,0 +1,3 @@
+## 2024-05-19 - Removed Hot-Loop `.toLowerCase()` and Regex in Card Search
+**Learning:** Calling `.toLowerCase()` and `string.replace()` using Regex in a full-table-scan array loop (`searchCards` traversing ~36k+ cards) imposes major CPU overhead due to constant JS engine object allocation and garbage collection per array iteration. The code originally ran these transforms for every card instance on every request.
+**Action:** Pre-compute standard lowercased or normalized string comparisons globally (`_typeLineLower`, `_nameLower`, `_nameClean`) when loading static datasets. For search query parameters like text and colors, apply standardizations (like `.toLowerCase()`, replacements, `.sort().join("")`) exactly *once* before the search array loop begins.
