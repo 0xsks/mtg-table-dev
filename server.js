@@ -586,58 +586,94 @@ function searchCards(query) {
     pool = cards;
   }
 
+  // Optimization: Hoist loop invariants and string/array parsing outside the 36k+ iteration loop
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmc = cmcParts && cmcParts.length ? cmcParts.map(p => {
+    if (p.endsWith("+")) {
+      const min = Number(p.slice(0, -1));
+      return { min: Number.isNaN(min) ? null : min, exact: null };
+    }
+    const val = Number(p);
+    return { min: null, exact: Number.isNaN(val) ? null : val };
+  }) : null;
+
+  const isColorIdentity = colorMode === "identity";
+  const isColorExact = colorMode === "exact";
+  const isColorAny = colorMode === "any";
+  const colorsExactSort = colors ? [...colors].sort().join("") : "";
+  const colorArray = colors ? [...colors] : [];
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
 
   const hits = [];
-  for (const c of pool) {
+  // Optimization: Use index-based loop instead of functional closures for massive in-memory arrays
+  for (let i = 0; i < pool.length; i++) {
+    const c = pool[i];
+
     if (token) {
       if (!c.token) continue;
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type) {
+      if (!(c.type_line && c.type_line.toLowerCase().includes(type))) continue;
+    }
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc) {
+      let matchCmc = false;
+      for (let j = 0; j < parsedCmc.length; j++) {
+        const p = parsedCmc[j];
+        if (p.min !== null) {
+          if (c.cmc >= p.min) { matchCmc = true; break; }
+        } else {
+          if (c.cmc === p.exact) { matchCmc = true; break; }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
     if (hasColorless && !colors) {
-      if ((c.colors || []).length > 0) continue;
+      if (c.colors && c.colors.length > 0) continue;
     } else if (colors) {
-      const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
-      const isCardColorless = (c.colors || []).length === 0;
+      const ident = (isColorIdentity ? c.color_identity : c.colors) || [];
+      const isCardColorless = !c.colors || c.colors.length === 0;
 
       if (hasColorless && isCardColorless) {
-        // Allowed if colorless is selected alongside colors
-      } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        // Allowed
+      } else if (isColorExact) {
+        if (colorsExactSort !== (ident.length > 0 ? [...ident].sort().join("") : "")) continue;
         if (colors.length === 0 && ident.length) continue;
-      } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
-      } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+      } else if (isColorIdentity) {
+        let hasForeign = false;
+        for (let j = 0; j < ident.length; j++) {
+          if (!colors.includes(ident[j])) { hasForeign = true; break; }
+        }
+        if (hasForeign) continue;
+      } else if (isColorAny) {
+        let hasAny = false;
+        for (let j = 0; j < colorArray.length; j++) {
+          if (ident.includes(colorArray[j])) { hasAny = true; break; }
+        }
+        if (!hasAny) continue;
+      } else {
+        let hasAll = true;
+        for (let j = 0; j < colorArray.length; j++) {
+          if (!ident.includes(colorArray[j])) { hasAll = false; break; }
+        }
+        if (!hasAll) continue;
       }
     }
 
     if (terms.length) {
       const hay = c._hay || "";
       let matches = true;
-      for (const t of terms) {
+      for (let j = 0; j < terms.length; j++) {
+        const t = terms[j];
         if (!hay.includes(t.raw) && (!t.clean || !hay.includes(t.clean))) {
           matches = false;
           break;
@@ -649,14 +685,22 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
-      else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
-      else score = 6;
+      else {
+        let allTerms = true;
+        for (let j = 0; j < terms.length; j++) {
+          const t = terms[j];
+          if (!(name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) {
+            allTerms = false;
+            break;
+          }
+        }
+        if (allTerms) score = 3;
+        else score = 6;
+      }
     }
     if (c.name.startsWith("_")) score += 30;
     hits.push({ score, c });
