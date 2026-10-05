@@ -588,6 +588,22 @@ function searchCards(query) {
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
 
+  // OPTIMIZATION: Pre-parse CMC constraints to avoid string manipulation and .some() allocation in the hot loop
+  let parsedCmc = null;
+  if (cmcParts && cmcParts.length) {
+    parsedCmc = [];
+    for (let i = 0; i < cmcParts.length; i++) {
+      const p = cmcParts[i];
+      if (p.endsWith("+")) {
+        const val = Number(p.slice(0, -1));
+        if (!Number.isNaN(val)) parsedCmc.push({ min: val, exact: null });
+      } else {
+        const val = Number(p);
+        if (!Number.isNaN(val)) parsedCmc.push({ min: null, exact: val });
+      }
+    }
+  }
+
   const hits = [];
   for (const c of pool) {
     if (token) {
@@ -601,15 +617,17 @@ function searchCards(query) {
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc) {
+      let matchCmc = false;
+      const c_cmc = c.cmc;
+      for (let j = 0; j < parsedCmc.length; j++) {
+        const p = parsedCmc[j];
+        if (p.min !== null) {
+          if (c_cmc >= p.min) { matchCmc = true; break; }
+        } else if (p.exact !== null) {
+          if (c_cmc === p.exact) { matchCmc = true; break; }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 

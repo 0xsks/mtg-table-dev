@@ -1,0 +1,3 @@
+## 2026-10-05 - Pre-parsing in Hot Loops
+**Learning:** The in-memory array search (`searchCards`) is highly sensitive to repeated string manipulations and type conversions. When properties like `cmc` are queried, doing `.split()`, `.endsWith()`, and `Number()` inside `.some()` on an array of >36k objects creates measurable overhead.
+**Action:** When filtering in-memory arrays in this codebase, pre-parse user query parameters into a structured format *before* the loop, and use simple equality or range checks inside the loop. Avoid assigning null to the parsed rule array if it's empty to preserve intended behavior for invalid queries.
