@@ -561,6 +561,9 @@ function searchCards(query) {
   const rawColors = (query.colors || "").toUpperCase();
   const hasColorless = query.colorless === "1" || rawColors.includes("C");
   const colors = rawColors.replace(/[^WUBRG]/g, "");
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const sortedColors = colors ? [...colors].sort().join("") : "";
   const colorMode = query.colorMode || "identity";
   const rarity = (query.rarity || "").toLowerCase();
   const format = (query.format || "").toLowerCase();
@@ -586,7 +589,16 @@ function searchCards(query) {
     pool = cards;
   }
 
-  const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmc = cmcParam ? cmcParam.split(",").map((s) => {
+    s = s.trim();
+    if (!s) return null;
+    if (s.endsWith("+")) {
+      const min = Number(s.slice(0, -1));
+      return Number.isNaN(min) ? null : { type: 'min', val: min };
+    }
+    const val = Number(s);
+    return Number.isNaN(val) ? null : { type: 'exact', val: val };
+  }).filter(Boolean) : null;
 
   const hits = [];
   for (const c of pool) {
@@ -601,15 +613,13 @@ function searchCards(query) {
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
-        }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+    if (parsedCmc && parsedCmc.length) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmc.length; i++) {
+        const p = parsedCmc[i];
+        if (p.type === 'min' && c.cmc >= p.val) { matchCmc = true; break; }
+        else if (p.type === 'exact' && c.cmc === p.val) { matchCmc = true; break; }
+      }
       if (!matchCmc) continue;
     }
 
@@ -617,20 +627,31 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (sortedColors !== [...ident].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        let match = true;
+        for (let i = 0; i < ident.length; i++) {
+          if (!colors.includes(ident[i])) { match = false; break; }
+        }
+        if (!match) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        let match = false;
+        for (let i = 0; i < colors.length; i++) {
+          if (ident.includes(colors[i])) { match = true; break; }
+        }
+        if (!match) continue;
+      } else {
+        let match = true;
+        for (let i = 0; i < colors.length; i++) {
+          if (!ident.includes(colors[i])) { match = false; break; }
+        }
+        if (!match) continue;
       }
     }
 
@@ -649,14 +670,22 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
-      else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
-      else score = 6;
+      else {
+        let termsMatch = true;
+        for (let i = 0; i < terms.length; i++) {
+          const t = terms[i];
+          if (!name.includes(t.raw) && !(t.clean && nameClean.includes(t.clean))) {
+            termsMatch = false;
+            break;
+          }
+        }
+        if (termsMatch) score = 3;
+        else score = 6;
+      }
     }
     if (c.name.startsWith("_")) score += 30;
     hits.push({ score, c });
