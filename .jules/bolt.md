@@ -1,0 +1,3 @@
+## 2024-05-18 - [Optimize searchCards array parsing]
+**Learning:** In hot loops over thousands of in-memory items (like searchCards), using `.split().map().filter()` and functional array methods like `.some()`, `.every()` and allocating regex string replacements dynamically per item causes massive GC pressure and execution time overhead in Node.js.
+**Action:** Pre-parse parameters outside the search loop, convert complex closures and array methods into basic `for` loops, and cache heavily accessed lowercased string properties (`c.name.toLowerCase()`, `c.type_line.toLowerCase()`) into the global card cache upfront rather than resolving per-card per-query.
