@@ -1,0 +1,3 @@
+## 2026-10-08 - Hoist Invariant Code & Replace Closures in Search Loops
+**Learning:** In highly iterated loops like the `searchCards` array search (36k+ items), array methods with closures (`.some()`, `.every()`), array spreads (`[...]`), and redundant string processing (like `toLowerCase()` and `.replace()`) create severe GC overhead and execution drag.
+**Action:** When filtering massive in-memory datasets, always pre-parse constraints (like regex replacements and sorting lookup strings) before the loop. Use standard index-based `for` loops inside the hot path instead of higher-order array methods to minimize allocations and maximize speed.
