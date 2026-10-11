@@ -448,8 +448,18 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._type_line_lower = (c.type_line || "").toLowerCase();
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._type_line_lower = (c.type_line || "").toLowerCase();
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -557,10 +567,12 @@ function searchCards(query) {
       .replace(/[^a-z0-9]/g, "");
     return { raw: t, clean };
   });
+  const termsLen = terms.length;
 
   const rawColors = (query.colors || "").toUpperCase();
   const hasColorless = query.colorless === "1" || rawColors.includes("C");
   const colors = rawColors.replace(/[^WUBRG]/g, "");
+  const colorsLen = colors.length;
   const colorMode = query.colorMode || "identity";
   const rarity = (query.rarity || "").toLowerCase();
   const format = (query.format || "").toLowerCase();
@@ -574,13 +586,13 @@ function searchCards(query) {
   let pool;
   if (setCode) {
     const poolMap = new Map();
-    for (const c of oldPrintings) if (c.set === setCode) poolMap.set(c.id, c);
-    for (const c of cards) if (c.set === setCode && !poolMap.has(c.id)) poolMap.set(c.id, c);
+    for (let i = 0; i < oldPrintings.length; i++) if (oldPrintings[i].set === setCode) poolMap.set(oldPrintings[i].id, oldPrintings[i]);
+    for (let i = 0; i < cards.length; i++) if (cards[i].set === setCode && !poolMap.has(cards[i].id)) poolMap.set(cards[i].id, cards[i]);
     pool = [...poolMap.values()];
   } else if (group) {
     const poolMap = new Map();
-    for (const c of oldPrintings) if (groupSet && groupSet.has(c.set)) poolMap.set(c.id, c);
-    for (const c of cards) if (groupSet && groupSet.has(c.set) && !poolMap.has(c.id)) poolMap.set(c.id, c);
+    for (let i = 0; i < oldPrintings.length; i++) if (groupSet && groupSet.has(oldPrintings[i].set)) poolMap.set(oldPrintings[i].id, oldPrintings[i]);
+    for (let i = 0; i < cards.length; i++) if (groupSet && groupSet.has(cards[i].set) && !poolMap.has(cards[i].id)) poolMap.set(cards[i].id, cards[i]);
     pool = [...poolMap.values()];
   } else {
     pool = cards;
@@ -588,28 +600,49 @@ function searchCards(query) {
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
 
+  // ⚡ Bolt optimization: Pre-parse cmc functions to avoid string parsing in hot loop
+  const cmcChecks = cmcParts ? cmcParts.map(p => {
+    if (p.endsWith("+")) {
+      const min = Number(p.slice(0, -1));
+      return (val) => !Number.isNaN(min) && val >= min;
+    }
+    const target = Number(p);
+    return (val) => !Number.isNaN(target) && val === target;
+  }) : null;
+  const cmcChecksLen = cmcChecks ? cmcChecks.length : 0;
+
+  // ⚡ Bolt optimization: Pre-compute string operations and sorts for the search loop
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const colorsSorted = colorMode === "exact" ? [...colors].sort().join("") : "";
+
   const hits = [];
-  for (const c of pool) {
+  const poolLen = pool.length;
+
+  // ⚡ Bolt optimization: Switch from for...of to standard index-based for loop
+  for (let i = 0; i < poolLen; i++) {
+    const c = pool[i];
     if (token) {
       if (!c.token) continue;
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    // ⚡ Bolt optimization: Use cached lowercase properties instead of generating per iteration
+    if (type && !c._type_line_lower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (cmcChecksLen > 0) {
+      let matchCmc = false;
+      // ⚡ Bolt optimization: Replace Array.some() with standard loop
+      for (let j = 0; j < cmcChecksLen; j++) {
+        if (cmcChecks[j](c.cmc)) {
+          matchCmc = true;
+          break;
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
@@ -617,27 +650,53 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
+      const identLen = ident.length;
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
-        if (colors.length === 0 && ident.length) continue;
+        const setSorted = [...ident].sort().join("");
+        if (colorsSorted !== setSorted) continue;
+        if (colorsLen === 0 && identLen) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        let ok = true;
+        // ⚡ Bolt optimization: Replace Array.some() with standard loop
+        for (let k = 0; k < identLen; k++) {
+          if (!colors.includes(ident[k])) {
+            ok = false;
+            break;
+          }
+        }
+        if (!ok) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        let ok = false;
+        // ⚡ Bolt optimization: Replace Array.some() with standard loop
+        for (let k = 0; k < colorsLen; k++) {
+          if (ident.includes(colors[k])) {
+            ok = true;
+            break;
+          }
+        }
+        if (!ok) continue;
+      } else {
+        let ok = true;
+        // ⚡ Bolt optimization: Replace Array.every() with standard loop
+        for (let k = 0; k < colorsLen; k++) {
+          if (!ident.includes(colors[k])) {
+            ok = false;
+            break;
+          }
+        }
+        if (!ok) continue;
       }
     }
 
-    if (terms.length) {
+    if (termsLen > 0) {
       const hay = c._hay || "";
       let matches = true;
-      for (const t of terms) {
+      for (let j = 0; j < termsLen; j++) {
+        const t = terms[j];
         if (!hay.includes(t.raw) && (!t.clean || !hay.includes(t.clean))) {
           matches = false;
           break;
@@ -646,17 +705,26 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._name_lower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._name_clean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
-      else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
-      else score = 6;
+      else {
+        let matchTerms = true;
+        // ⚡ Bolt optimization: Replace Array.every() with standard loop
+        for (let j = 0; j < termsLen; j++) {
+          const t = terms[j];
+          if (!(name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) {
+            matchTerms = false;
+            break;
+          }
+        }
+        if (matchTerms) score = 3;
+        else score = 6;
+      }
     }
     if (c.name.startsWith("_")) score += 30;
     hits.push({ score, c });
@@ -672,7 +740,6 @@ function searchCards(query) {
     hasMore: hits.length > offset + limit,
   };
 }
-
 function publicCard(c) {
   return {
     id: c.id,

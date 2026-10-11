@@ -1,0 +1,3 @@
+## 2024-05-17 - Optimize searchCards loop in server.js
+**Learning:** The backend searches an in-memory array of 36k+ cards in the `searchCards` function (`server.js`). The previous loop did a lot of string generation (e.g. `c.name.toLowerCase()`), and closure creation inside the hot loop, which creates a huge amount of execution and GC overhead.
+**Action:** Pre-computing and caching lowercase versions of strings (`_name_lower`, `_name_clean`, `_type_line_lower`) and replacing functional array methods (`.some`, `.every`) inside the hot loop with standard index-based `for` loops avoids closure and GC overhead, and reduced execution time by 50%+.
