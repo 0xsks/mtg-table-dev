@@ -587,6 +587,26 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  let parsedCmc = null;
+  if (cmcParts && cmcParts.length > 0) {
+    parsedCmc = cmcParts.map((p) => {
+      if (p.endsWith("+")) {
+        return { isMin: true, val: Number(p.slice(0, -1)) };
+      }
+      return { isMin: false, val: Number(p) };
+    });
+  }
+
+  // Precompute color settings
+  const sortedColors = colorMode === "exact" ? [...colors].sort().join("") : "";
+
+  // Precompute query strings
+  let qLower = "";
+  let qClean = "";
+  if (q) {
+    qLower = q.toLowerCase();
+    qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
+  }
 
   const hits = [];
   for (const c of pool) {
@@ -601,15 +621,19 @@ function searchCards(query) {
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc && parsedCmc.length > 0) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmc.length; i++) {
+        const p = parsedCmc[i];
+        if (Number.isNaN(p.val)) {
+            continue; // Emulate original behavior
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+        if (p.isMin) {
+          if (c.cmc >= p.val) { matchCmc = true; break; }
+        } else {
+          if (c.cmc === p.val) { matchCmc = true; break; }
+        }
+      }
       if (!matchCmc) continue;
     }
 
@@ -623,7 +647,7 @@ function searchCards(query) {
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (sortedColors !== [...set].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
         if ([...ident].some((x) => !colors.includes(x))) continue;
@@ -649,8 +673,6 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
