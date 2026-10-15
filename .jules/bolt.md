@@ -1,0 +1,3 @@
+## 2023-10-15 - Optimizing server-side in-memory array filtering
+**Learning:** In this codebase's large in-memory array searches (like `searchCards`), repeated string parsing, type conversions, array allocations via spread operator, and dynamic sorting inside the hot loop (which runs for 36k+ cards) introduce significant overhead.
+**Action:** Always pre-parse constraints (like `cmcParts`), cache target properties (like `colors` array), and pre-sort strings outside the hot loop to reduce operations per iteration. Avoid unnecessary array spreading `[...ident]` when the property is already an array.
