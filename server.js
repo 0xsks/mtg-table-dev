@@ -448,8 +448,30 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._type_line_lower = c.type_line ? c.type_line.toLowerCase() : "";
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._sorted_colors = (c.colors || []).slice().sort().join("");
+  c._sorted_color_identity = (c.color_identity || []).slice().sort().join("");
+  c._is_colorless = (c.colors || []).length === 0;
+  c._is_token = !!c.token;
+  c._rarity_lower = c.rarity ? c.rarity.toLowerCase() : "";
+  c._is_underscore_name = c.name.startsWith("_");
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._type_line_lower = c.type_line ? c.type_line.toLowerCase() : "";
+  c._name_lower = c.name.toLowerCase();
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._sorted_colors = (c.colors || []).slice().sort().join("");
+  c._sorted_color_identity = (c.color_identity || []).slice().sort().join("");
+  c._is_colorless = (c.colors || []).length === 0;
+  c._is_token = !!c.token;
+  c._rarity_lower = c.rarity ? c.rarity.toLowerCase() : "";
+  c._is_underscore_name = c.name.startsWith("_");
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -587,57 +609,97 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmcParts = cmcParts ? cmcParts.map((p) => {
+    if (p.endsWith("+")) {
+      return { type: '+', val: Number(p.slice(0, -1)) };
+    }
+    return { type: '=', val: Number(p) };
+  }) : null;
+  const parsedCmcPartsLen = parsedCmcParts ? parsedCmcParts.length : 0;
+
+  const sortedColors = colors ? [...colors].sort().join("") : "";
+  const colorsArr = colors ? [...colors] : [];
+  const colorsArrLen = colorsArr.length;
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+
+  const isColorModeExact = colorMode === "exact";
+  const isColorModeIdentity = colorMode === "identity";
+  const isColorModeAny = colorMode === "any";
+
+  const tokenFilter = token ? 1 : 0;
+
+  const hasTypeFilter = !!type;
+  const hasRarityFilter = !!rarity;
+  const hasFormatFilter = !!format;
+  const hasSetCodeFilter = !!setCode;
+  const hasGroupSetFilter = !!groupSet;
+  const hasCmcFilter = parsedCmcPartsLen > 0;
+  const hasColorsFilter = !!colors;
+  const termsLen = terms.length;
+  const hasTermsFilter = termsLen > 0;
+  const hasQFilter = !!q;
 
   const hits = [];
-  for (const c of pool) {
-    if (token) {
-      if (!c.token) continue;
-    } else if (c.token) {
-      continue;
-    }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
-    if (rarity && c.rarity !== rarity) continue;
-    if (format && c.legalities?.[format] !== "legal") continue;
-    if (setCode && c.set !== setCode) continue;
-    if (groupSet && !groupSet.has(c.set)) continue;
+  for (let poolIdx = 0, poolLen = pool.length; poolIdx < poolLen; poolIdx++) {
+    const c = pool[poolIdx];
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (tokenFilter) { if (!c._is_token) continue; } else if (c._is_token) { continue; }
+    if (hasTypeFilter && !c._type_line_lower.includes(type)) continue;
+    if (hasRarityFilter && c._rarity_lower !== rarity) continue;
+    if (hasFormatFilter && c.legalities?.[format] !== "legal") continue;
+    if (hasSetCodeFilter && c.set !== setCode) continue;
+    if (hasGroupSetFilter && !groupSet.has(c.set)) continue;
+
+    if (hasCmcFilter) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmcPartsLen; i++) {
+        const p = parsedCmcParts[i];
+        if (p.type === '+') {
+          if (!Number.isNaN(p.val) && c.cmc >= p.val) { matchCmc = true; break; }
+        } else {
+          if (!Number.isNaN(p.val) && c.cmc === p.val) { matchCmc = true; break; }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
-    if (hasColorless && !colors) {
-      if ((c.colors || []).length > 0) continue;
-    } else if (colors) {
-      const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
-      const isCardColorless = (c.colors || []).length === 0;
-
-      if (hasColorless && isCardColorless) {
-        // Allowed if colorless is selected alongside colors
-      } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
-        if (colors.length === 0 && ident.length) continue;
-      } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
-      } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+    if (hasColorless && !hasColorsFilter) {
+      if (!c._is_colorless) continue;
+    } else if (hasColorsFilter) {
+      const ident = (isColorModeIdentity ? c.color_identity : c.colors) || [];
+      if (hasColorless && c._is_colorless) {
+      } else if (isColorModeExact) {
+        const sortedIdent = isColorModeIdentity ? c._sorted_color_identity : c._sorted_colors;
+        if (sortedColors !== sortedIdent) continue;
+        if (colorsArrLen === 0 && ident.length) continue;
+      } else if (isColorModeIdentity) {
+        let match = true;
+        for (let i = 0; i < ident.length; i++) {
+          if (!colorsArr.includes(ident[i])) { match = false; break; }
+        }
+        if (!match) continue;
+      } else if (isColorModeAny) {
+        let match = false;
+        for (let i = 0; i < colorsArrLen; i++) {
+          if (ident.includes(colorsArr[i])) { match = true; break; }
+        }
+        if (!match) continue;
+      } else {
+        let match = true;
+        for (let i = 0; i < colorsArrLen; i++) {
+          if (!ident.includes(colorsArr[i])) { match = false; break; }
+        }
+        if (!match) continue;
       }
     }
 
-    if (terms.length) {
+    if (hasTermsFilter) {
       const hay = c._hay || "";
       let matches = true;
-      for (const t of terms) {
+      for (let i = 0; i < termsLen; i++) {
+        const t = terms[i];
         if (!hay.includes(t.raw) && (!t.clean || !hay.includes(t.clean))) {
           matches = false;
           break;
@@ -646,19 +708,27 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
     let score = 10;
-    if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+    if (hasQFilter) {
+      const name = c._name_lower;
+      const nameClean = c._name_clean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
-      else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
-      else score = 6;
+      else {
+        let allTermsMatch = true;
+        for (let i = 0; i < termsLen; i++) {
+          const t = terms[i];
+          if (!name.includes(t.raw) && (!t.clean || !nameClean.includes(t.clean))) {
+            allTermsMatch = false;
+            break;
+          }
+        }
+        if (allTermsMatch) score = 3;
+        else score = 6;
+      }
     }
-    if (c.name.startsWith("_")) score += 30;
+    if (c._is_underscore_name) score += 30;
     hits.push({ score, c });
   }
 
