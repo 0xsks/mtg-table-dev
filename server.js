@@ -587,6 +587,16 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmc = cmcParts ? cmcParts.map(p => {
+    const isPlus = p.endsWith("+");
+    const val = Number(isPlus ? p.slice(0, -1) : p);
+    return { isPlus, val, valid: !Number.isNaN(val) };
+  }) : null;
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const exactColors = colorMode === "exact" && colors ? [...colors].sort().join("") : null;
+  const colorsArr = colors ? Array.from(colors) : [];
 
   const hits = [];
   for (const c of pool) {
@@ -601,15 +611,16 @@ function searchCards(query) {
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc && parsedCmc.length) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmc.length; i++) {
+        const p = parsedCmc[i];
+        if (!p.valid) continue;
+        if (p.isPlus ? c.cmc >= p.val : c.cmc === p.val) {
+          matchCmc = true;
+          break;
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
@@ -623,13 +634,13 @@ function searchCards(query) {
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (exactColors !== [...set].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if (ident.some((x) => !colors.includes(x))) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
+        if (!colorsArr.some((x) => ident.includes(x))) continue;
+      } else if (!colorsArr.every((x) => ident.includes(x))) {
         continue;
       }
     }
@@ -649,8 +660,6 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
