@@ -587,6 +587,31 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  // Pre-parse CMC constraints outside the loop
+  let parsedCmc = null;
+  if (cmcParts && cmcParts.length) {
+    parsedCmc = cmcParts.map(p => {
+      if (p.endsWith("+")) {
+        const val = Number(p.slice(0, -1));
+        return { type: 'min', val, valid: !Number.isNaN(val) };
+      } else {
+        const val = Number(p);
+        return { type: 'exact', val, valid: !Number.isNaN(val) };
+      }
+    });
+  }
+
+  // Pre-parse Color constraints
+  let colorsArr = null;
+  let colorsSorted = null;
+  if (colors) {
+    colorsArr = [...colors];
+    colorsSorted = [...colors].sort().join("");
+  }
+
+  // Pre-clean query string
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
 
   const hits = [];
   for (const c of pool) {
@@ -601,15 +626,17 @@ function searchCards(query) {
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmc.length; i++) {
+        const p = parsedCmc[i];
+        if (!p.valid) continue;
+        if (p.type === 'min') {
+          if (c.cmc >= p.val) { matchCmc = true; break; }
+        } else {
+          if (c.cmc === p.val) { matchCmc = true; break; }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
@@ -617,20 +644,32 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        const identSorted = [...ident].sort().join("");
+        if (colorsSorted !== identSorted) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        let hasForeign = false;
+        for (let i = 0; i < ident.length; i++) {
+          if (!colorsArr.includes(ident[i])) { hasForeign = true; break; }
+        }
+        if (hasForeign) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        let hasAny = false;
+        for (let i = 0; i < colorsArr.length; i++) {
+          if (ident.includes(colorsArr[i])) { hasAny = true; break; }
+        }
+        if (!hasAny) continue;
+      } else { // ALL
+        let hasAll = true;
+        for (let i = 0; i < colorsArr.length; i++) {
+          if (!ident.includes(colorsArr[i])) { hasAll = false; break; }
+        }
+        if (!hasAll) continue;
       }
     }
 
@@ -649,20 +688,32 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
-      else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
-      else score = 6;
+      else {
+        let allTermsMatch = true;
+        for (let i = 0; i < terms.length; i++) {
+          const t = terms[i];
+          if (!name.includes(t.raw) && !(t.clean && nameClean.includes(t.clean))) {
+            allTermsMatch = false;
+            break;
+          }
+        }
+        if (allTermsMatch) score = 3;
+        else score = 6;
+      }
     }
     if (c.name.startsWith("_")) score += 30;
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  // Bolt: using direct string comparison instead of localeCompare inside the array sort hot loop saves time
+  hits.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.c.name < b.c.name ? -1 : (a.c.name > b.c.name ? 1 : 0);
+  });
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
