@@ -586,7 +586,20 @@ function searchCards(query) {
     pool = cards;
   }
 
-  const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const cmcPartsRaw = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const cmcParts = cmcPartsRaw ? cmcPartsRaw.map((p) => {
+    if (p.endsWith("+")) {
+      return { isPlus: true, val: Number(p.slice(0, -1)) };
+    }
+    return { isPlus: false, val: Number(p) };
+  }) : null;
+
+  // --- PRECOMPUTATIONS ---
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+
+  const colorsArr = colors ? [...colors] : [];
+  const colorsSortedStr = colorsArr.length ? [...colorsArr].sort().join("") : "";
 
   const hits = [];
   for (const c of pool) {
@@ -603,12 +616,8 @@ function searchCards(query) {
 
     if (cmcParts && cmcParts.length) {
       const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
-        }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
+        if (p.isPlus) return !Number.isNaN(p.val) && c.cmc >= p.val;
+        return !Number.isNaN(p.val) && c.cmc === p.val;
       });
       if (!matchCmc) continue;
     }
@@ -617,19 +626,18 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (colorsSortedStr !== [...ident].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if (ident.some((x) => !colors.includes(x))) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
+        if (!colorsArr.some((x) => ident.includes(x))) continue;
+      } else if (!colorsArr.every((x) => ident.includes(x))) {
         continue;
       }
     }
@@ -649,8 +657,6 @@ function searchCards(query) {
     const name = c.name.toLowerCase();
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
       const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
@@ -662,7 +668,10 @@ function searchCards(query) {
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.c.name < b.c.name ? -1 : (a.c.name > b.c.name ? 1 : 0);
+  });
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
