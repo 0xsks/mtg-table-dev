@@ -448,8 +448,18 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name ? c.name.toLowerCase() : "";
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLower = c.type_line ? c.type_line.toLowerCase() : "";
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name ? c.name.toLowerCase() : "";
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLower = c.type_line ? c.type_line.toLowerCase() : "";
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -586,7 +596,26 @@ function searchCards(query) {
     pool = cards;
   }
 
-  const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+
+  const parsedCmcParts = [];
+  if (cmcParam) {
+    const rawCmc = cmcParam.split(",").map((s) => s.trim()).filter(Boolean);
+    for (const p of rawCmc) {
+      if (p.endsWith("+")) {
+        const min = Number(p.slice(0, -1));
+        parsedCmcParts.push({ min: true, val: min });
+      } else {
+        const val = Number(p);
+        parsedCmcParts.push({ min: false, val: val });
+      }
+    }
+  }
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const colorsSorted = colors ? [...colors].sort().join("") : "";
+  const colorsArray = colors ? [...colors] : [];
+  const typeLower = type ? type.toLowerCase() : "";
 
   const hits = [];
   for (const c of pool) {
@@ -595,41 +624,42 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (typeLower && !(c.type_line && c._typeLower.includes(typeLower))) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmcParts.length) {
+      let matchCmc = false;
+      for (const p of parsedCmcParts) {
+        if (!Number.isNaN(p.val)) {
+          if (p.min) {
+            if (c.cmc >= p.val) { matchCmc = true; break; }
+          } else {
+            if (c.cmc === p.val) { matchCmc = true; break; }
+          }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
     if (hasColorless && !colors) {
-      if ((c.colors || []).length > 0) continue;
+      if (c.colors && c.colors.length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
-      const isCardColorless = (c.colors || []).length === 0;
+      const isCardColorless = !c.colors || c.colors.length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (colorsSorted !== [...ident].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if (ident.some((x) => !colorsArray.includes(x))) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
+        if (!colorsArray.some((x) => ident.includes(x))) continue;
+      } else if (!colorsArray.every((x) => ident.includes(x))) {
         continue;
       }
     }
@@ -646,23 +676,22 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._nameLower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._nameClean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
       else if (terms.every((t) => name.includes(t.raw) || (t.clean && nameClean.includes(t.clean)))) score = 3;
       else score = 6;
     }
-    if (c.name.startsWith("_")) score += 30;
+    if (c.name && c.name.startsWith("_")) score += 30;
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => a.score - b.score || (a.c.name < b.c.name ? -1 : a.c.name > b.c.name ? 1 : 0));
+
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
