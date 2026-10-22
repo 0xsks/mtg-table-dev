@@ -1,0 +1,4 @@
+
+## 2025-02-23 - Optimizing In-Memory Array Search Loops
+**Learning:** In a codebase that filters tens of thousands of objects in memory on each request (like `searchCards`), loop-invariant operations such as repeated type conversions (`Number()`), repeated string operations (`toLowerCase()`, regex `replace()`), array spreading, and `String.prototype.localeCompare` create extreme performance bottlenecks. `localeCompare` is especially expensive (up to 10-100x slower than direct comparisons).
+**Action:** Always pre-parse static filter conditions (e.g. splitting search query constraints) outside the loop. Use a memoization strategy to cache expensive transformations on the objects themselves (e.g., caching `_name_lower`). Replace `localeCompare` with standard `<` and `>` Boolean comparisons when sorting large arrays where strict locale-awareness isn't required.
