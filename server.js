@@ -586,7 +586,15 @@ function searchCards(query) {
     pool = cards;
   }
 
-  const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const cmcPartsRaw = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const cmcParts = cmcPartsRaw ? cmcPartsRaw.map((p) => {
+    if (p.endsWith("+")) {
+      return { isMin: true, val: Number(p.slice(0, -1)) };
+    }
+    return { isMin: false, val: Number(p) };
+  }) : null;
+
+  const sortedColors = colors ? [...colors].sort().join("") : "";
 
   const hits = [];
   for (const c of pool) {
@@ -602,14 +610,16 @@ function searchCards(query) {
     if (groupSet && !groupSet.has(c.set)) continue;
 
     if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+      let matchCmc = false;
+      for (let i = 0; i < cmcParts.length; i++) {
+        const p = cmcParts[i];
+        if (Number.isNaN(p.val)) continue;
+        if (p.isMin) {
+          if (c.cmc >= p.val) { matchCmc = true; break; }
+        } else {
+          if (c.cmc === p.val) { matchCmc = true; break; }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
@@ -617,20 +627,32 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        const sortedSet = [...ident].sort().join("");
+        if (sortedColors !== sortedSet) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        let ok = true;
+        for (let i = 0; i < ident.length; i++) {
+          if (!colors.includes(ident[i])) { ok = false; break; }
+        }
+        if (!ok) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        let ok = false;
+        for (let i = 0; i < colors.length; i++) {
+          if (ident.includes(colors[i])) { ok = true; break; }
+        }
+        if (!ok) continue;
+      } else {
+        let ok = true;
+        for (let i = 0; i < colors.length; i++) {
+          if (!ident.includes(colors[i])) { ok = false; break; }
+        }
+        if (!ok) continue;
       }
     }
 
