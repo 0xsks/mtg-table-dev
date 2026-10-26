@@ -1,0 +1,3 @@
+## 2024-03-12 - Card Search Performance Optimization
+**Learning:** In this codebase's large in-memory array searches (`searchCards`), operations like regex processing/replacements, repeated string parsing/type conversions, array allocations via spread operator (e.g. `[...ident]`), and using `localeCompare` for sorting introduce significant overhead.
+**Action:** Pre-compute and cache heavily used lowercased and regex-cleaned string properties (like `name` or `type_line`, `colorExact`) onto the objects during initial data load. Outside the search loop, pre-parse query parameters (like `cmc` limits). Replace `localeCompare` with direct boolean comparisons `a < b ? -1 : 1` for string sorting.

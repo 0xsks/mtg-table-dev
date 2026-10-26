@@ -448,8 +448,17 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+function computeExtraProps(c) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name.toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLineLower = c.type_line ? c.type_line.toLowerCase() : "";
+  c._colorExact = (c.colors || []).slice().sort().join("");
+  c._colorIdentityExact = (c.color_identity || []).slice().sort().join("");
+}
+
+for (const c of cards) computeExtraProps(c);
+for (const c of oldPrintings) computeExtraProps(c);
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -587,6 +596,17 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmcParts = cmcParts ? cmcParts.map(p => {
+    if (p.endsWith("+")) {
+      return { min: true, val: Number(p.slice(0, -1)) };
+    }
+    return { min: false, val: Number(p) };
+  }) : null;
+
+  const sortedColorsStr = colors ? [...colors].sort().join("") : "";
+  const colorsArr = colors ? [...colors] : [];
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
 
   const hits = [];
   for (const c of pool) {
@@ -595,20 +615,15 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type && !c._typeLineLower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
-        }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
+    if (parsedCmcParts && parsedCmcParts.length) {
+      const matchCmc = parsedCmcParts.some((p) => {
+        return p.min ? c.cmc >= p.val : c.cmc === p.val;
       });
       if (!matchCmc) continue;
     }
@@ -617,20 +632,41 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        const cardExact = colorMode === "identity" ? c._colorIdentityExact : c._colorExact;
+        if (sortedColorsStr !== cardExact) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        let match = true;
+        for (let i = 0; i < ident.length; i++) {
+          if (!colorsArr.includes(ident[i])) {
+            match = false;
+            break;
+          }
+        }
+        if (!match) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        let match = false;
+        for (let i = 0; i < colorsArr.length; i++) {
+          if (ident.includes(colorsArr[i])) {
+            match = true;
+            break;
+          }
+        }
+        if (!match) continue;
+      } else {
+        let match = true;
+        for (let i = 0; i < colorsArr.length; i++) {
+          if (!ident.includes(colorsArr[i])) {
+            match = false;
+            break;
+          }
+        }
+        if (!match) continue;
       }
     }
 
@@ -646,12 +682,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._nameLower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._nameClean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
@@ -662,7 +696,10 @@ function searchCards(query) {
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.c.name < b.c.name ? -1 : (a.c.name > b.c.name ? 1 : 0);
+  });
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
