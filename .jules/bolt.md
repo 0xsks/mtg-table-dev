@@ -1,0 +1,3 @@
+## 2024-05-18 - Optimized searchCards string processing and color checking
+**Learning:** In heavily used array filtering functions like \`searchCards\`, string lowercasing, regex cleaning, and array joining/sorting create massive overhead when iterating over 36k+ elements for every HTTP request.
+**Action:** Compute and cache these properties (\`_nameLower\`, \`_nameClean\`, \`_typeLineLower\`, \`_colorsJoined\`, \`_identJoined\`, \`_colorsExact\`) on the objects during initial load. Use pre-calculated values and avoid spread operators and \`.sort()\` in the loop. Use \`<\` and \`>\` instead of \`localeCompare\` for sorting strings.
