@@ -1,0 +1,3 @@
+## 2024-05-24 - Pre-parsing and caching string operations in hot loops
+**Learning:** In highly trafficked server-side in-memory search functions (`searchCards` traversing > 35,000 items per call), performing regex replacements, array spread mapping (e.g. `[...colors]`), and case transformations (`toLowerCase()`) inside the loop degrades performance significantly.
+**Action:** Pre-compute cached properties (e.g. `c._nameLower`, `c._nameClean`, `c._typeLower`, `c._colors_sorted`) on boot and pre-parse search constraints before loop execution. Avoid operations like `localeCompare` in sort methods and use simpler boolean comparisons (`a < b ? -1 : 1`) for string ordering.

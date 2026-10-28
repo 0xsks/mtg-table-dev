@@ -448,8 +448,22 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+for (const c of cards) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name.toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLower = (c.type_line || "").toLowerCase();
+  c._colors_sorted = c.colors ? [...c.colors].sort().join("") : "";
+  c._color_identity_sorted = c.color_identity ? [...c.color_identity].sort().join("") : "";
+}
+for (const c of oldPrintings) {
+  c._hay = computeCardHay(c);
+  c._nameLower = c.name.toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLower = (c.type_line || "").toLowerCase();
+  c._colors_sorted = c.colors ? [...c.colors].sort().join("") : "";
+  c._color_identity_sorted = c.color_identity ? [...c.color_identity].sort().join("") : "";
+}
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -587,6 +601,17 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmc = cmcParts ? cmcParts.map(p => {
+    if (p.endsWith("+")) {
+      return { isMin: true, val: Number(p.slice(0, -1)) };
+    }
+    return { isMin: false, val: Number(p) };
+  }) : null;
+  const sortedColors = colors ? [...colors].sort().join("") : "";
+  const colorsArr = colors ? [...colors] : [];
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = q ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
 
   const hits = [];
   for (const c of pool) {
@@ -595,42 +620,72 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type && !c._typeLower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
+    if (parsedCmc && parsedCmc.length) {
+      let matchCmc = false;
+      for (let i = 0; i < parsedCmc.length; i++) {
+        const p = parsedCmc[i];
+        if (p.isMin) {
+          if (!Number.isNaN(p.val) && c.cmc >= p.val) {
+            matchCmc = true;
+            break;
+          }
+        } else {
+          if (!Number.isNaN(p.val) && c.cmc === p.val) {
+            matchCmc = true;
+            break;
+          }
         }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
-      });
+      }
       if (!matchCmc) continue;
     }
 
     if (hasColorless && !colors) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
-      const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
-        if (colors.length === 0 && ident.length) continue;
-      } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
-      } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
-        continue;
+        const identSorted = colorMode === "identity" ? c._color_identity_sorted : c._colors_sorted;
+        if (sortedColors !== identSorted) continue;
+        if (colors.length === 0 && identSorted.length) continue;
+      } else {
+        const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
+        if (colorMode === "identity") {
+          let hasUnmatchedColor = false;
+          for (let i = 0; i < ident.length; i++) {
+            if (!colorsArr.includes(ident[i])) {
+              hasUnmatchedColor = true;
+              break;
+            }
+          }
+          if (hasUnmatchedColor) continue;
+        } else if (colorMode === "any") {
+          let hasMatch = false;
+          for (let i = 0; i < colorsArr.length; i++) {
+            if (ident.includes(colorsArr[i])) {
+              hasMatch = true;
+              break;
+            }
+          }
+          if (!hasMatch) continue;
+        } else {
+          let allMatch = true;
+          for (let i = 0; i < colorsArr.length; i++) {
+            if (!ident.includes(colorsArr[i])) {
+              allMatch = false;
+              break;
+            }
+          }
+          if (!allMatch) continue;
+        }
       }
     }
 
@@ -646,12 +701,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._nameLower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._nameClean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
@@ -662,7 +715,7 @@ function searchCards(query) {
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => a.score - b.score || (a.c.name < b.c.name ? -1 : (a.c.name > b.c.name ? 1 : 0)));
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
