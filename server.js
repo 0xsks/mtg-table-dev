@@ -448,8 +448,17 @@ function computeCardHay(c) {
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
-for (const c of cards) c._hay = computeCardHay(c);
-for (const c of oldPrintings) c._hay = computeCardHay(c);
+function cacheCardProps(c) {
+  c._hay = computeCardHay(c);
+  c._type_line_lower = c.type_line ? c.type_line.toLowerCase() : "";
+  c._name_lower = c.name ? c.name.toLowerCase() : "";
+  c._name_clean = c._name_lower.replace(/[\x27\x60\u2019]/g, "");
+  c._colors_sorted = (c.colors || []).slice().sort().join("");
+  c._color_identity_sorted = (c.color_identity || []).slice().sort().join("");
+}
+
+for (const c of cards) cacheCardProps(c);
+for (const c of oldPrintings) cacheCardProps(c);
 
 // Build full sets list including Modern / Expansions from cards.json
 const knownSetCodes = new Set();
@@ -571,6 +580,10 @@ function searchCards(query) {
   const limit = Math.min(250, Math.max(1, Number(query.limit || 60)));
   const offset = Math.max(0, Number(query.offset || 0));
 
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const sortedColorsStr = colors ? [...colors].sort().join("") : "";
+
   let pool;
   if (setCode) {
     const poolMap = new Map();
@@ -595,7 +608,7 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type && !c._type_line_lower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
@@ -617,16 +630,16 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        const setSorted = colorMode === "identity" ? c._color_identity_sorted : c._colors_sorted;
+        if (sortedColorsStr !== setSorted) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if (ident.some((x) => !colors.includes(x))) continue;
       } else if (colorMode === "any") {
         if (![...colors].some((x) => ident.includes(x))) continue;
       } else if (![...colors].every((x) => ident.includes(x))) {
@@ -646,12 +659,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._name_lower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._name_clean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
@@ -662,7 +673,7 @@ function searchCards(query) {
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => a.score - b.score || (a.c.name < b.c.name ? -1 : a.c.name > b.c.name ? 1 : 0));
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
