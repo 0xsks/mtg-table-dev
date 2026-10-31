@@ -1,0 +1,3 @@
+## 2024-10-31 - Hot loop object caching & constraint hoisting
+**Learning:** The `searchCards` function iterates through a ~36k array every request, so string manipulations like `.toLowerCase()`, regex replacements, and array spread sorting inside the loop add immense processing overhead. Furthermore, replacing `localeCompare` with standard boolean operators is a huge win for post-search sort speed.
+**Action:** Always extract static variable string operations to the data-load stage, cache results onto properties, and parse dynamic search query rules outside the iterative loop into standard primitives to save overhead.
