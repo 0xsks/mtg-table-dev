@@ -588,6 +588,9 @@ function searchCards(query) {
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
 
+  const sortedColorsStr = colors ? [...colors].sort().join("") : "";
+  const colorsArr = colors ? [...colors] : [];
+
   const hits = [];
   for (const c of pool) {
     if (token) {
@@ -617,19 +620,19 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        const setStr = [...ident].sort().join("");
+        if (sortedColorsStr !== setStr) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if ([...ident].some((x) => !colorsArr.includes(x))) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
+        if (!colorsArr.some((x) => ident.includes(x))) continue;
+      } else if (!colorsArr.every((x) => ident.includes(x))) {
         continue;
       }
     }
