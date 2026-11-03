@@ -1,0 +1,3 @@
+## 2024-11-03 - Hoisting Array allocations and String Operations out of 36k Item Loop
+**Learning:** The application searches its 36k items entirely in memory per-request without indexes (`searchCards`). Operations like spreading strings to arrays `[...colors]`, string sorting `localeCompare`, array `some/every`, and regex string replacements `name.replace` per-iteration cause massive overhead and blocking execution when compounded by a large dataset.
+**Action:** Always pre-calculate loop invariant values. For example, pre-parse string conditions to simple Array iterations that break early, convert string arrays outside loop execution, and compute fields into cache variables on data structure instantiation at startup rather than per loop iteration.
