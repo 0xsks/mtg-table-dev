@@ -445,6 +445,11 @@ function computeCardHay(c) {
   const noDiacritics = raw.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
   const noPunct = noDiacritics.replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ");
   const noApos = noDiacritics.replace(/[\x27\x60\u2019]/g, "").replace(/[^a-z0-9\s]/g, " ").replace(/\s+/g, " ");
+
+  c._nameLower = (c.name || "").toLowerCase();
+  c._nameClean = c._nameLower.replace(/[\x27\x60\u2019]/g, "");
+  c._typeLineLower = (c.type_line || "").toLowerCase();
+
   return (raw + " " + noPunct + " " + noApos).toLowerCase();
 }
 
@@ -587,6 +592,15 @@ function searchCards(query) {
   }
 
   const cmcParts = cmcParam ? cmcParam.split(",").map((s) => s.trim()).filter(Boolean) : null;
+  const parsedCmc = cmcParts && cmcParts.length > 0 ? cmcParts.map(p => ({
+    isMin: p.endsWith("+"),
+    val: p.endsWith("+") ? Number(p.slice(0, -1)) : Number(p)
+  })) : null;
+
+  const qLower = q ? q.toLowerCase() : "";
+  const qClean = qLower ? qLower.replace(/[\x27\x60\u2019]/g, "") : "";
+  const colorsArr = colors ? [...colors] : [];
+  const colorsSortedJoined = colorsArr.sort().join("");
 
   const hits = [];
   for (const c of pool) {
@@ -595,20 +609,16 @@ function searchCards(query) {
     } else if (c.token) {
       continue;
     }
-    if (type && !c.type_line.toLowerCase().includes(type)) continue;
+    if (type && !c._typeLineLower.includes(type)) continue;
     if (rarity && c.rarity !== rarity) continue;
     if (format && c.legalities?.[format] !== "legal") continue;
     if (setCode && c.set !== setCode) continue;
     if (groupSet && !groupSet.has(c.set)) continue;
 
-    if (cmcParts && cmcParts.length) {
-      const matchCmc = cmcParts.some((p) => {
-        if (p.endsWith("+")) {
-          const min = Number(p.slice(0, -1));
-          return !Number.isNaN(min) && c.cmc >= min;
-        }
-        const val = Number(p);
-        return !Number.isNaN(val) && c.cmc === val;
+    if (parsedCmc) {
+      const matchCmc = parsedCmc.some((p) => {
+        if (Number.isNaN(p.val)) return false;
+        return p.isMin ? c.cmc >= p.val : c.cmc === p.val;
       });
       if (!matchCmc) continue;
     }
@@ -617,19 +627,18 @@ function searchCards(query) {
       if ((c.colors || []).length > 0) continue;
     } else if (colors) {
       const ident = (colorMode === "identity" ? c.color_identity : c.colors) || [];
-      const set = ident.join("");
       const isCardColorless = (c.colors || []).length === 0;
 
       if (hasColorless && isCardColorless) {
         // Allowed if colorless is selected alongside colors
       } else if (colorMode === "exact") {
-        if ([...colors].sort().join("") !== [...set].sort().join("")) continue;
+        if (colorsSortedJoined !== [...ident].sort().join("")) continue;
         if (colors.length === 0 && ident.length) continue;
       } else if (colorMode === "identity") {
-        if ([...ident].some((x) => !colors.includes(x))) continue;
+        if (ident.some((x) => !colorsArr.includes(x))) continue;
       } else if (colorMode === "any") {
-        if (![...colors].some((x) => ident.includes(x))) continue;
-      } else if (![...colors].every((x) => ident.includes(x))) {
+        if (!colorsArr.some((x) => ident.includes(x))) continue;
+      } else if (!colorsArr.every((x) => ident.includes(x))) {
         continue;
       }
     }
@@ -646,12 +655,10 @@ function searchCards(query) {
       if (!matches) continue;
     }
 
-    const name = c.name.toLowerCase();
+    const name = c._nameLower;
     let score = 10;
     if (q) {
-      const qLower = q.toLowerCase();
-      const qClean = qLower.replace(/[\x27\x60\u2019]/g, "");
-      const nameClean = name.replace(/[\x27\x60\u2019]/g, "");
+      const nameClean = c._nameClean;
       if (name === qLower || nameClean === qClean) score = 0;
       else if (name.startsWith(qLower) || nameClean.startsWith(qClean)) score = 1;
       else if (name.includes(qLower) || nameClean.includes(qClean)) score = 2;
@@ -662,7 +669,10 @@ function searchCards(query) {
     hits.push({ score, c });
   }
 
-  hits.sort((a, b) => a.score - b.score || a.c.name.localeCompare(b.c.name));
+  hits.sort((a, b) => {
+    if (a.score !== b.score) return a.score - b.score;
+    return a.c.name < b.c.name ? -1 : (a.c.name > b.c.name ? 1 : 0);
+  });
   const slice = hits.slice(offset, offset + limit);
   return {
     cards: slice.map((h) => publicCard(h.c)),
