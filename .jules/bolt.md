@@ -1,0 +1,3 @@
+## 2025-02-12 - Replacing localeCompare with binary operators (<, >) changes sorting semantics
+**Learning:** While `localeCompare` carries significant overhead and using binary comparison operators (`<` and `>`) speeds up sorting for in-memory JS search results, they do not map 1:1. Binary operators sort based on UTF-16 code units, which means ALL uppercase letters sort before ALL lowercase letters (e.g. `Z < a`). This can lead to subtle sorting differences if not strictly sorting by lowercase equivalents.
+**Action:** When replacing `localeCompare` for speed in a string sort, ensure that if case-insensitive alphabetical sorting is desired, pre-computed lowercase fields are compared (e.g. `a.c._nameLower < b.c._nameLower`), not the raw title-cased fields.
