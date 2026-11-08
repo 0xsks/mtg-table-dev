@@ -1,0 +1,4 @@
+
+## 2024-11-08 - [searchCards inner loop bottleneck]
+**Learning:** The `searchCards` backend function iterates over a 36k+ in-memory card array, meaning ANY string parsing (e.g. `.toLowerCase()`, regex replacements like `c.name.replace(/[\x27\x60\u2019]/g, "")`) or array manipulations (`[...c.colors].sort().join("")`) performed on card attributes per iteration incurs a massive performance overhead.
+**Action:** When working on backend in-memory searches over the `cards` pool, always pre-compute and cache derived lowercase, sanitized strings, or pre-sorted values on the card objects during the initial `loadCards` stage (e.g. assigning `c._nameLower`, `c._nameClean`, `c._colorSorted`) to avoid repeated allocations and executions in the hot loop. Make sure to account for missing or null object properties gracefully when caching.
