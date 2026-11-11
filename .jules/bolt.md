@@ -1,0 +1,3 @@
+## 2025-02-12 - Pre-parsing and caching string operations in hot loops
+**Learning:** In a codebase running searches over large in-memory arrays (~35k items) rather than querying a database, operations like regex replacements, lowercasing, and repeated array spreads (`[...colors]`) inside the search loop cause massive performance overhead.
+**Action:** Always pre-compute and cache expensive string manipulations (like regex cleaning or sorting strings/arrays) onto the static objects during server startup/data load. Hoist array processing and parameter normalization outside the per-request search loops. Be sure to preserve null-checks (e.g. ternary operations for undefined parameters).
